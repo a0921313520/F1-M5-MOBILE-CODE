@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>FUN88乐天堂官网｜2022卡塔尔世界杯最佳投注平台</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+  <meta name="description" content="乐天堂提供2022卡塔尔世界杯最新消息以及多样的世界杯游戏，作为13年资深品牌，安全有保障的品牌，将是你世界杯投注的不二选择。">
+  <meta name="Keywords" content="乐天堂/FUN88/2022 世界杯/世界杯投注/卡塔尔世界杯/世界杯游戏/世界杯最新赔率/世界杯竞彩/世界杯竞彩足球/足彩世界杯/世界杯足球网/世界杯足球赛/世界杯赌球/世界杯体彩app">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="screen-orientation" content="portrait">
+  <link rel="shortcut icon" type="image/x-icon" href="/vn/mobile/img/favicon.ico">
+  <script type="text/javascript" src="/vn/mobile/js/callapp-lib_3.5.3.umd.js"></script>
+  <script type="text/javascript" src="/vn/mobile/appinstall/js/jquery.min.js"></script>
+  <script>
+    const getUrlVars = () => {
+      let vars = {};
+      const hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      for (var i = 0; i < hashes.length; i++) {
+        let hash = hashes[i].split('=');
+        if (hash[1]) {
+          vars[hash[0]] = hash[1].split('#')[0];
+        }
+      }
+      return vars;
+    };
+
+    const urlVarsToQueryString = (vars, removeVarProps = [], withLeadingQ = true) => {
+      //順便指定移除特定參數
+      if (removeVarProps && removeVarProps.length > 0) {
+        removeVarProps.map(prop => {
+          delete vars[prop];
+        })
+      }
+
+      let varArr = [];
+      for(let prop in vars) {
+        varArr.push(prop + '=' + vars[prop]);
+      }
+      if (varArr.length > 0) {
+        return (withLeadingQ ? '?' : '') +  varArr.join('&');
+      }
+      return '';
+    }
+
+    const isSafari = () => {
+      const ua = navigator.userAgent.toLowerCase();
+      if ((ua.indexOf('safari') !== -1) && (ua.indexOf('chrome') === -1)) {
+        return true;
+      }
+      return false;
+    }
+
+    $(function () {
+      const vars = getUrlVars();
+      let appDownloadUrl = '/vn/mobile/Appinstall.html';
+      //如果網址參數有帶aff，則帶到下載頁 或用來開啟app(不使用getAffParam，因為這是從分享功能來的跳轉，而不是本地下載)
+      if (vars.aff) {
+        appDownloadUrl = appDownloadUrl + '?aff=' + vars.aff;
+      }
+
+      const toDownloadPage = () => {
+        window.top.location.replace(appDownloadUrl);
+      }
+
+      if (isSafari()) {
+        //safari使用callappLib
+        const callAppOptions = {
+          scheme: {
+            protocol: 'f1m1p5',
+          },
+          appstore: appDownloadUrl,
+          fallback: appDownloadUrl,
+          timeout: 2000,
+        };
+
+        this.callApplib = new CallApp(callAppOptions);
+        this.callApplib.open({path: 'sb20', param: vars, callback: toDownloadPage});
+      } else {
+        //safari以外使用302跳轉方式
+        const thisUrl = window.location.protocol + '//' + window.location.hostname + '/callapp/sb20' + urlVarsToQueryString(vars);
+        window.top.location.href = thisUrl;
+        setTimeout(toDownloadPage, 4000);
+      }
+    });
+  </script>
+  <style>
+    .loading {
+      position: absolute;
+      top:0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 5vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <img src="/vn/mobile/img/share-loading.gif">
+  </div>
+  <!--  <h1 id="hint" class="hint"></h1>-->
+</body>
+</html>

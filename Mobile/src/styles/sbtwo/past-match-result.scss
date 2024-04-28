@@ -1,0 +1,482 @@
+.Smartcoach {
+  .GameInsightTab {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    .GameInsightTabBox {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 163px;
+      height: 34px;
+      background-color: #F5F5F8;
+      border-radius: 50px;
+      .NamiAnalysis, .GameInsight {
+        text-align: center;
+        width:76px;
+        height: 27px;
+        font-size: 12px;
+        line-height: 27px;
+        color: #666666;
+        &.selected {
+          color: #FFFFFF;
+          background-color: #00A6FF;
+          border-radius: 40px;
+        }
+        &.disabled {
+          color: #bcbec3;
+        }
+      }
+    }
+  }
+  .NamiAnalysisContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+
+    .NamiAnalysisTotal {
+      width: 100%;
+      height: 192px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .NamiAnalysisTotalHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 36px;
+        .NamiAnalysisTeamName {
+          font-size: 12px;
+          color: #000000;
+          line-height: 36px;
+        }
+        .NamiAnalysisTeamLogo {
+          width: 20px;
+          height: 20px;
+        }
+        .NamiAnalysisTeamLeft {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          width: 50%;
+          height: 36px;
+          .NamiAnalysisTeamLogo {
+            margin-left:4px;
+            margin-right:58px;
+          }
+        }
+        .NamiAnalysisTeamRight {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          width: 50%;
+          height: 36px;
+          .NamiAnalysisTeamLogo {
+            margin-right:4px;
+            margin-left:58px;
+          }
+        }
+      }
+      .NamiAnalysisTotalLine {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 295px;
+        height: 32px;
+        background-color: #F7F7F7;
+        border-radius: 4px;
+        margin-bottom: 4px;
+        .NamiAnalysisTotalText {
+          text-align: center;
+          width:116px;
+          font-size: 10px;
+          line-height: 32px;
+          color:#666666;
+        }
+        .NamiAnalysisTotalNumberLeft {
+          width:58px;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 32px;
+          color:#222222;
+          text-align: right;
+        }
+        .NamiAnalysisTotalNumberRight {
+          width:58px;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 32px;
+          color:#222222;
+          text-align: left;
+        }
+        .NamiAnalysisTotalDescNumber{
+          font-size: 12px;
+          color: #666666;
+          font-weight: bold;
+        }
+        .NamiAnalysisTotalDescText {
+          font-size: 12px;
+          color: #666666;
+        }
+        .NamiAnalysisTotalDescLeft {
+          margin-right: 8px;
+        }
+        .NamiAnalysisTotalDescRight {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .NamiAnalysisTitle {
+      width: 100%;
+      height: 34px;
+      background-color: #EFEFF4;
+      text-align: center;
+      line-height: 34px;
+      font-size: 12px;
+      color: #666666;
+    }
+
+    .NamiAnalysisVS {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 8px;
+      .NamiAnalysisVSContainer {
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .NamiAnalysisVSShowAllButton {
+        width: 80px;
+        height: 33px;
+        margin-top: 16px;
+        border-radius: 8px;
+        border: 1px solid #00A6FF;
+        text-align: center;
+        font-size: 12px;
+        color: #00A6FF;
+        line-height: 33px;
+      }
+    }
+
+    .NamiAnalysisOther {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .NamiAnalysisOtherContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .NamiAnalysisOtherCenterLine {
+          width: 1px;
+          height: 160.5px;
+          display: block;
+          border: 0.5px solid #EFEFF4;
+          margin-left: 16px;
+          margin-right: 16px;
+        }
+        .NamiAnalysisTeamName {
+          font-size: 12px;
+          color: #222222;
+          line-height: 28px;
+        }
+        .NamiAnalysisTeamLogo {
+          width: 16px;
+          height: 16px;
+        }
+
+
+        .NamiAnalysisOtherLeftBox,.NamiAnalysisOtherRightBox{
+          width: 50%;
+          flex:1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+        .NamiAnalysisOtherLeftBox {
+          align-items: flex-end;
+          .NamiAnalysisTeamLogo {
+            margin-left: 4px;
+          }
+          .NamiAnalysisTeamLeft {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+          }
+          .NamiAnalysisOtherInnerBox {
+            align-items: flex-end;
+          }
+          .NamiAnalysisOtherRow {
+            justify-content: flex-end;
+          }
+          .NamiAnalysisScore {
+            text-align: right;
+          }
+          .NamiAnalysisOtherNamiTeamLogo {
+            margin-left: 4px;
+          }
+        }
+        .NamiAnalysisOtherRightBox {
+          align-items: flex-start;
+          .NamiAnalysisTeamLogo {
+            margin-right: 4px;
+          }
+          .NamiAnalysisTeamRight {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+          }
+          .NamiAnalysisOtherInnerBox {
+            align-items: flex-start;
+          }
+          .NamiAnalysisOtherRow {
+            justify-content: flex-start;
+          }
+          .NamiAnalysisScore {
+            text-align: center;
+          }
+          .NamiAnalysisOtherNamiTeamLogo {
+            margin-right: 4px;
+          }
+        }
+        .NamiAnalysisOtherInnerBox {
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        .NamiAnalysisOtherRow {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 20px;
+          margin-bottom: 8px;
+          .NamiAnalysisOtherScore, .NamiAnalysisOtherVS, .NamiAnalysisOtherNamiTeamName, .NamiAnalysisOtherHomeOrAway {
+            font-size: 10px;
+            color: #222222;
+            line-height: 20px;
+            height: 20px;
+          }
+          .NamiAnalysisOtherNamiTeamName {
+            margin-left: 4px;
+          }
+          .NamiAnalysisOtherHomeOrAway {
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+          .NamiAnalysisOtherNamiTeamLogo {
+            width: 14px;
+            height: 14px;
+          }
+          .NamiAnalysisOtherWinOrLose {
+            text-align: center;
+            font-size: 10px;
+            color: #FFFFFF;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            border-radius: 40px;
+            &.NamiAnalysisOtherTie {
+              background-color: #EFEFF4;
+              color: #222222;
+            }
+            &.NamiAnalysisOtherWin {
+              background-color: #EB2121;
+            }
+            &.NamiAnalysisOtherLose {
+              background-color: #0BBF38;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//和歷史交鋒彈窗共用
+.NamiAnalysisVSBox {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 8px;
+  .NamiAnalysisVSTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .NamiAnalysisVSTitleDate, .NamiAnalysisVSTitleText{
+      font-size: 10px;
+      color: #666666;
+      line-height: 14px;
+    }
+    .NamiAnalysisVSTitleDate {
+      padding-right: 8px;
+    }
+  }
+  .NamiAnalysisVSRow {
+    margin-top:4px;
+    width: 100vw;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .NamiAnalysisVSScoreBox {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 46px;
+      height: 24px;
+      background-color: #EFEFF4;
+      border-radius: 2px;
+      padding: 2px 8px 2px 8px;
+      .NamiAnalysisVSHomeScore, .NamiAnalysisVSScoreSep, .NamiAnalysisVSAwayScore {
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 20px;
+      }
+    }
+    .NamiAnalysisTeamName {
+      font-size: 12px;
+      color: #222222;
+      line-height: 28px;
+    }
+    .NamiAnalysisTeamLogo {
+      width: 16px;
+      height: 16px;
+    }
+    .NamiAnalysisTeamLeft, .NamiAnalysisTeamRight {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex:1;
+    }
+    .NamiAnalysisTeamLeft {
+      justify-content: flex-end;
+      padding-right: 16px;
+      .NamiAnalysisTeamLogo {
+        margin-left: 4px;
+      }
+    }
+    .NamiAnalysisTeamRight {
+      justify-content: flex-start;
+      padding-left: 16px;
+      .NamiAnalysisTeamLogo {
+        margin-right: 4px;
+      }
+    }
+  }
+  .NamiAnalysisVSBoxBottomLine {
+    width: 295px;
+    height: 7px;
+    display: block;
+    border-bottom: 1px solid #EFEFF4;
+  }
+}
+
+//歷史交鋒 彈窗
+.NamiAnalysisPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+}
+.NamiAnalysisPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  background: #EFEFF4;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 999;
+  min-height: 100vh;
+  .NamiAnalysisPopupHeader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+    background-color: #00a6ff;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .NamiAnalysisPopupBackButton {
+      position: fixed;
+      left: 8px;
+      top: 13px;
+    }
+    .NamiAnalysisPopupBackButton svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff;
+    }
+    .NamiAnalysisPopupHeaderText {
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+  .NamiAnalysisPopupContainer {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin-top: 52px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

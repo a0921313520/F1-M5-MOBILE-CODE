@@ -1,0 +1,41 @@
+diff --git a/node_modules/sbtech-sports-data-api-client/lib/polyfill.js b/node_modules/sbtech-sports-data-api-client/lib/polyfill.js
+index e99942f..37e26d4 100644
+--- a/node_modules/sbtech-sports-data-api-client/lib/polyfill.js
++++ b/node_modules/sbtech-sports-data-api-client/lib/polyfill.js
+@@ -1,3 +1,3 @@
+ var eventSourceLib = require('event-source-polyfill');
+-window.EventSource = eventSourceLib.NativeEventSource || eventSourceLib.EventSourcePolyfill;
++var EventSource = eventSourceLib.NativeEventSource || eventSourceLib.EventSourcePolyfill;
+ //# sourceMappingURL=polyfill.js.map
+\ No newline at end of file
+diff --git a/node_modules/sbtech-sports-data-api-client/lib/query.js b/node_modules/sbtech-sports-data-api-client/lib/query.js
+index 0bbcaf3..3e86741 100644
+--- a/node_modules/sbtech-sports-data-api-client/lib/query.js
++++ b/node_modules/sbtech-sports-data-api-client/lib/query.js
+@@ -40,7 +40,12 @@ var Query = /** @class */ (function () {
+         var format = query.format ? "&format=" + query.format : "";
+         var locale = "&locale=" + (query.locale || defaultLocale);
+         var projection = query.params["projection"] ? "&projection=" + query.params["projection"] : "";
+-        var queryUrl = "?query=" + encodeURIComponent(query.query) + projection + includeMarketsParam + locale + fromParam + timeRangeParam + initialData + untilParam + format;
++        let queryValue = encodeURIComponent(query.query);
++        let queryBlock =  "?query=" + queryValue;
++        if (!queryValue || queryValue.length <= 0)  {
++            queryBlock = "?"; //query如果為空就不要帶，不然會報錯
++        }
++        var queryUrl = queryBlock + projection + includeMarketsParam + locale + fromParam + timeRangeParam + initialData + untilParam + format;
+         return queryUrl;
+     };
+     Query.validate = function (query) {
+diff --git a/node_modules/sbtech-sports-data-api-client/webpack.config.js b/node_modules/sbtech-sports-data-api-client/webpack.config.js
+index 15e9933..5996561 100644
+--- a/node_modules/sbtech-sports-data-api-client/webpack.config.js
++++ b/node_modules/sbtech-sports-data-api-client/webpack.config.js
+@@ -8,7 +8,7 @@ module.exports = function (env) {
+     const isProd = nodeEnv === 'production';
+     const plugins = [
+         new webpack.ProvidePlugin({
+-            'window.fetch': "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
++            'fetch': "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
+ 	    'Promise': "imports-loader?this=>global!exports-loader?global.Promise!core-js/es/promise",
+         }),
+         new webpack.DefinePlugin({

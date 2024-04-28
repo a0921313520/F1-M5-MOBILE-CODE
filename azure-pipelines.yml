@@ -1,0 +1,44 @@
+# 注意!!!!打包上線流程用，不要修改/刪除這個文件!!!!!
+
+trigger:
+  - none
+
+pr: none
+
+resources:
+  repositories:
+    - repository: devops
+      type: github
+      endpoint: MKTFEGitHub
+      name: benjilai008/devops-k8s
+      ref: main
+
+variables:
+  prod: 'f1'
+  lang: 'hi'
+  platform: 'mobile'
+  sourceCodeFolderName: 'F1-M5-MOBILE-CODE/Mobile'
+  paymentGitRepoUrl: 'https://a0921313520:$(gitAccessToken)@github.com/a0921313520/Central-Payment'
+  commitHash: $(Build.SourceVersion)
+  sourcesDirectory: $(Build.SourcesDirectory)
+  buildNumber: $(Build.BuildNumber)
+  acrServConn: 'MKTFEACR'
+  acrServiceUrl: 'mktfeacr.azurecr.io'
+
+pool:
+  vmImage: 'ubuntu-latest'
+  environment: $(serverBranch)
+
+stages:
+  - template: azp/html/pack/pack-template-nextjs.yml@devops
+    parameters:
+      prod: $(prod)
+      lang: $(lang)
+      platform: $(platform)
+      sourceCodeFolderName: $(sourceCodeFolderName)
+      paymentGitRepoUrl: $(paymentGitRepoUrl)
+      commitHash: $(commitHash)
+      sourcesDirectory: $(sourcesDirectory)
+      buildNumber: $(buildNumber)
+      acrServConn: $(acrServConn)
+      acrServiceUrl: $(acrServiceUrl)

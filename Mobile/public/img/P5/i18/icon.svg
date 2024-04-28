@@ -1,0 +1,7 @@
+<svg id="icon-extand" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="icon">
+    <rect id="wrap" width="16" height="16" fill="none"/>
+    <path id="s" d="M5.118,3.263H.47a.469.469,0,0,1-.332-.8L2.462.138a.467.467,0,0,1,.662,0L5.449,2.462A.468.468,0,0,1,5.118,3.263Z" transform="translate(5 4)" />
+    <path id="s-2" data-name="s" d="M.47,0H5.118A.469.469,0,0,1,5.45.8L3.126,3.125a.467.467,0,0,1-.662,0L.138.8A.469.469,0,0,1,.47,0Z" transform="translate(5 8.513)" />
+  </g>
+</svg>

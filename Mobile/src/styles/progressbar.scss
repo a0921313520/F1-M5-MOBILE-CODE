@@ -1,0 +1,94 @@
+ul,
+li {
+	list-style: none;
+}
+.progressbar_container {
+	width: 100%;
+	//   position: absolute;
+	z-index: 1;
+	margin-top: 20px;
+}
+.progressbar {
+	counter-reset: step;
+	display: flex;
+}
+.progressbar li {
+	flex: 1;
+	position: relative;
+	text-align: center;
+}
+.progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #bebebe;
+	display: block;
+	margin: 0 auto 10px auto;
+	border-radius: 50%;
+	line-height: 24px;
+	background: white;
+	color: #bebebe;
+	text-align: center;
+	font-weight: bold;
+}
+.progressbar li:after {
+	content: "";
+	position: absolute;
+	width: 85%;
+	height: 2px;
+	background: #c4c4c4;
+	top: 15px;
+	left: -42%;
+	z-index: 1;
+}
+.progressbar li.active:before {
+	border-color: #00a6ff;
+	background: #00a6ff;
+	color: white;
+}
+.progressbar li:not(:last-child) {
+	&.active:before {
+		content: "";
+		background-image: url($base-path + '/img/verify/tick.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.progressbar li.active:after {
+	background: #00a6ff;
+}
+//   .progressbar li.active - li:after{
+//    background: #00A6FF;
+//   }
+//   .progressbar li.active - li:before{
+//   border-color: #00A6FF;
+//   background: #00A6FF;
+//   color: white
+//   }
+.progressbar li:first-child:after {
+	content: none;
+}
+
+.ProgressBar {
+	/* 进度条的槽 */
+	width: 100%;
+	/* 设置进度条的高度 */
+	height: 8px;
+	/*进度条外层div的背景色，进度未达到的地方的颜色 */
+	background-color: #e0e0e0;
+	border-radius: 15px;
+	margin: 10px 0px;
+	.Progress {
+		/* 进度部分 */
+		/* 利用继承父元素宽度的百分比控制进度 */
+		width: 60%;
+		height: 100%;
+		/* 内层背景色即进度达到的颜色 */
+		background-color: #00a6ff;
+        border-radius: 8px;
+	}
+}

@@ -1,0 +1,26 @@
+.doubleElevenModal {
+	position: relative;
+}
+.doubleElevenModal .t-suspend-button {
+	position: fixed;
+	bottom: 10%;
+	right: 3%;
+	width: 38%;
+	z-index: 1;
+	z-index: 999;
+}
+.doubleElevenModal .t-suspend-button img {
+	width: 100%;
+	height: auto;
+}
+.doubleElevenModal .t-suspend-button-animate {
+	transition-duration: .4s;
+}
+.doubleElevenModal .t-suspend-close {
+	width: 7.68px;
+	height: 7.68px;
+	position: absolute;
+	right: 0%;
+	top: 0;
+	opacity: .6;
+}

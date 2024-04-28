@@ -1,0 +1,119 @@
+#securityCode {
+	margin: 20px;
+	background-color: white;
+	padding: 15px;
+	border-radius: 8px;
+	line-height: 20px;
+	.securityCodeWrap {
+		// border-top: 1px solid #E5E5E5;
+		// margin: 0.3rem 0 0;
+		.numberInput {
+			border-top: 1px solid #E5E5E5;
+			margin: 0.4rem 0 0;
+		}
+		.text {
+			line-height: 22px;
+		}
+		.timer {
+			.red {
+				margin: 5px;
+			}
+		}
+		.tip {
+			background-color: #fff5bf;
+			padding: 10px;
+			color: #83630b;
+			font-size: 12px;
+			margin-top: 10px;
+		}
+	}
+	.creatCodeBtn {
+		background-color: #00a6ff;
+		color: white;
+		padding: 10px;
+		margin: 20px 0 0;
+		text-align: center;
+		border-radius: 8px;
+	}
+	.noFiexd {
+		display: none;
+	}
+	.creatNewCode {
+		padding: 10px;
+		text-align: center;
+		margin-top: 10px;
+		border-radius: 8px;
+	}
+	.noActive {
+		background-color: #efeff4;
+		color: #bcbec3;
+	}
+	.active {
+		background-color: #00a6ff;
+		color: #ffffff;
+	}
+	.span1 {
+		color: #0ccc3c;
+		font-size: 30px;
+		font-weight: 500;
+	}
+	.csBtn {
+		color: #00a6ff;
+	}
+	.yesFiexd {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		.sport-svg-wrap {
+			margin-bottom: 10px;
+		}
+		svg {
+			display: block;
+			width: 36px;
+			height: 36px;
+		}
+	}
+	.noFiexd {
+		svg {
+			display: none;
+		}
+	}
+	.number_wrap {
+		margin: 25px 10px;
+	}
+}
+.securityCodeModal {
+	.note {
+		svg {
+			width: 60px;
+			height: 60px;
+		}
+	}
+    .title{
+        margin: 15px;
+    }
+    .text{
+        // margin: 15px;
+        text-align: center;
+        line-height: 20px;
+    }
+	.btnCon {
+		display: flex;
+		width: 100%;
+		div {
+			padding: 0.4rem 0.1rem;
+			width: 100%;
+			text-align: center;
+			border-radius: 0.21333rem;
+			margin: 0 0.2rem;
+		}
+	}
+	.close {
+		border: 0.01rem solid #00a6ff;
+		color: #00a6ff;
+	}
+	.submit {
+		background-color: #00a6ff;
+		color: white;
+	}
+}

@@ -1,0 +1,1051 @@
+#promotions {
+	position: relative;
+	color: #000;
+	touch-action: pan-y;
+	.wrapContain {
+		color: rgb(255, 255, 255);
+		background: linear-gradient(126deg, #00a6ff 0%, #00a6ff 100%) 0% 0% no-repeat padding-box padding-box
+			transparent;
+		height: 55px;
+		.title {
+			font-size: 24px;
+			padding: 8px 16px;
+		}
+	}
+	.categoryTitle {
+		padding: 16px 0;
+		align-items: center;
+		justify-content: space-between;
+		width: 96%;
+		img {
+			margin-right: 5px;
+		}
+		small {
+			color: #666666;
+			padding-right: 2px;
+		}
+	}
+	.categoryTitle span {
+		display: inline-block;
+		vertical-align: sub;
+		padding-right: 5px;
+	}
+
+	.selectTab {
+		position: absolute;
+		top: 0.36rem;
+		left: 96px;
+		background: #ffffff38 0% 0% no-repeat padding-box;
+		border-radius: 14px;
+		padding: 0 8px;
+		font-size: 12px;
+		z-index: 3;
+		display: flex;
+		align-items: center;
+	}
+	.selectTab span {
+		line-height: 2.3;
+		margin-right: 5px;
+	}
+	.selectTab img {
+		vertical-align: text-top;
+	}
+
+	// 篩選下拉單
+	.rc-collapse {
+		z-index: 2;
+		padding-top: 13px;
+		border: 0;
+		background-color: #00a6ff;
+		position: relative;
+		outline: none;
+	}
+	.rc-collapse-item {
+		background: #00a6ff;
+	}
+	.rc-collapse::before {
+		display: none;
+	}
+	.rc-collapse-header {
+		border-radius: 32px;
+		width: fit-content;
+		text-align: center;
+		padding: 0 8px;
+		background-color: transparent;
+		border: 2px solid #fff;
+		color: #fff;
+		height: 28px;
+		line-height: 1.5;
+		margin-left: 16px;
+	}
+
+	.rc-collapse-header .arrow {
+		display: none;
+	}
+	.rc-collapse .rc-collapse-item .rc-collapse-content {
+		margin-top: 16px;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
+		height: fit-content;
+		z-index: 1;
+		padding: 0px 32px;
+		padding-bottom: 16px;
+	}
+	.rc-collapse .rc-collapse-item .rc-collapse-content .am-flexbox-item {
+		text-align: center;
+		padding-bottom: 16px;
+	}
+	.promoteFilter {
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+	}
+	.promoteFilter span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 3.2px;
+	}
+	.filterIcon {
+		width: 25%;
+		display: flex;
+		flex-flow: column;
+		text-align: center;
+		padding: 8px 0px;
+		line-height: 20px;
+		// height:90px
+		img {
+			width: 48px;
+			height: 48px;
+		}
+		.Active {
+			img {
+				border: 1px solid #00a6ff;
+				border-radius: 13px;
+				padding: 2px;
+			}
+		}
+	}
+	.filterIcon svg {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -20px;
+		margin-top: -20px;
+	}
+	.promoCardDetail {
+		font-size: 12.8px;
+		padding: 8px;
+		color: #333333;
+		font-weight: bold;
+	}
+	.promoTime {
+		color: #999999;
+		font-size: 12px;
+		padding: 0 10px 10px;
+		display: flex;
+	}
+	.selectCircle {
+		position: relative;
+	}
+	.filterSubmitBtn {
+		text-align: center;
+		color: rgb(255, 255, 255);
+		background: #00a6ff;
+		border-radius: 8px;
+		padding: 15px 0px;
+		width: 112px;
+		margin: 20px auto;
+	}
+	.promotionCard {
+		overflow: auto;
+		.Card {
+			height: 160px;
+			width: 327px;
+			border-radius: 10px;
+			background-color: rgb(255, 255, 255);
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: top;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: 114px;
+				border-radius: 10px 10px 0px 0px;
+			}
+		}
+		.swiper-slide {
+			width: 92%;
+		}
+	}
+	.promotionCard::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+	.Title {
+		padding: 20px 10px;
+		font-size: 16px;
+		color: #222222;
+	}
+	.MarginSet {
+		margin-top: 0 !important;
+	}
+	.PromsList {
+		padding: 0 0 0 20px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		.PromoImg {
+			min-height: 114px;
+		}
+		.ItemData:last-child .Selectlist:last-child {
+			margin-bottom: 100px;
+		}
+		.Selectlist {
+			background-color: white;
+			border-radius: 8px;
+			overflow: hidden;
+			margin-bottom: 15px;
+			min-height: 168px;
+		}
+	}
+	.BackTop {
+		position: fixed;
+		bottom: 80px;
+		right: 16px;
+		background-color: white;
+		border: 1px solid #979797;
+		border-radius: 50%;
+		padding: 5px;
+		z-index: 9;
+	}
+	.Mask {
+		width: 100%;
+		height: 100vh;
+		background-color: black;
+		position: absolute;
+		left: 0;
+		right: 0;
+		opacity: .5;
+	}
+
+	.SkeletonPromsList {
+		padding: 20px;
+	}
+
+	/* 我的优惠 */
+	.PromotionsTabs {
+		.PromotionsMy {
+			padding: 15px;
+			.Btn-Common {
+				background: #00a6ff;
+				padding: 10px;
+				margin: 10px 0px 0;
+				text-align: center;
+				color: white;
+				border-radius: 8px;
+			}
+			.list {
+				padding: 20px;
+				background-color: white;
+				border-radius: 8px;
+				margin-bottom: 10px;
+				.name {
+					width: 100%;
+					padding-left: 10px;
+					position: relative;
+					.Freebet-popover {
+						right: -8px;
+						left: unset;
+						top: 20px;
+						.popover_popoverArrow__OkTkC {
+							top: -9px;
+							right: -150px;
+						}
+						.cancelBtn {
+							width: 45px;
+							background-color: white;
+							color: #000;
+							text-align: center;
+							margin-left: 45PX;
+							border-radius: 4px;
+						}
+					}
+				}
+				.time {
+					color: #999999;
+				}
+
+				.ClaimBonus {
+					border: none;
+					background-color: #33c85d;
+					color: white;
+					padding: 15px;
+					text-align: center;
+					border-radius: 8px;
+					margin-top: 15px;
+				}
+			}
+
+			.HidePromos {
+				text-align: center;
+				font-size: 12px;
+				padding-top: 15px;
+				padding-bottom: 20px;
+			}
+			.HidePromosContent {
+				margin-bottom: 10px;
+				filter: grayscale(1);
+				opacity: .7;
+			}
+			.HidePromosContent:last-child {
+				margin-bottom: 100px;		
+			}
+		}
+		.PromotionsFreeBet {
+			padding: 0px 15px;
+			position: relative;
+			.FreeBet {
+				width: 100%;
+				height: 180px;
+				margin: 10px auto;
+				border-radius: 8px;
+				background: white;
+				-webkit-mask-image: radial-gradient(circle at 15px 50%, transparent 15px, white 15.5px),
+					radial-gradient(closest-side circle at 50%, white 99%, transparent 100%);
+				-webkit-mask-size: 100%, 12px 4px;
+				-webkit-mask-repeat: repeat, repeat-x;
+				-webkit-mask-position: -15px, 50% 50%;
+				-webkit-mask-composite: source-out;
+				mask-composite: subtract;
+				position: relative;
+				.Content {
+					height: 100%;
+					justify-content: space-around;
+					padding: 0 30px;
+					.Name {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						position: relative;
+						line-height: 20px;
+					}
+					.Time {
+						color: #999999;
+						padding: 10px 0;
+					}
+				}
+			}
+			.Freebet-popover {
+				right: 20px;
+				left: unset;
+				top: 38px;
+				line-height: 20px;
+				.popover_popoverArrow__OkTkC {
+					position: absolute;
+					top: -8px !important;
+					left: 128px;
+				}
+				.popover_popoverInner__aTBYO {
+					padding: 10px 17px;
+				}
+			}
+		}
+	}
+
+	/* 我的返水 */
+	.Rebate {
+		padding-bottom: 0px;
+		.totalRebate {
+			label {
+				color: #666;
+			}
+			span {
+				color: #222;
+			}
+			display: flex;
+    		justify-content: space-between;
+			background-color: white;
+			margin-top: 10px;
+			border-radius: 12px;
+			padding: 15px 20px;
+		}
+		.itemList {
+			background-color: white;
+			margin-top: 15px;
+			border-radius: 12px;
+			padding: 20px;
+			hr {
+				margin: 13px 0;
+				height: 1.3px;
+				background-color: #0000000A;
+				border: 0;
+			}
+			.DataList {
+				width: 100%;
+				justify-content: space-between;
+				// line-height: 20px;
+				text-align: center;
+				label {
+					margin-bottom: 0.2rem;
+				}
+			}
+		}
+		.backToTop{
+			width: 40px;
+			height: 40px;
+			position: fixed;
+			right: 30px;
+			bottom: 80px;
+			background-color: #fff;
+			border-radius: 50%;
+			z-index: 1;
+			font-size: 24px;
+			text-align: center;
+			padding-top: 5px;
+			box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+		}
+		.pull-load-footer{
+			display: none;
+		}
+		.noMore{
+			line-height: 40px;
+			color: #999;
+		}
+		.loading-gif{
+			width: 50%;
+			line-height: 40px;
+			color: #999;
+			margin: auto;
+			.share-loading{
+				width: 20px;
+				background-image: url($base-path + "/img/P5/icon/loading.gif");
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				margin-right: 5px;
+			}
+		}
+	}
+	.vip-customer-service {
+		position: absolute;
+		right: 55px;
+		top: 10px;
+		width: 30px;
+		height: 30px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.liveChat {
+		position: absolute;
+		right: 16px;
+		top: 10px;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.All {
+	width: 40px;
+	height: 40px;
+}
+
+//详情
+.PromoDetail {
+	.SubmitBtn {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background-color: white;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding: 15px;
+		z-index: 99999991;
+		button {
+			background-color: #00a6ff;
+			border: 0;
+			width: 100%;
+			padding: 10px;
+			color: white;
+			border-radius: 5px;
+		}
+	}
+}
+.DailyGiftPromoDetail {
+	.modal-info-content {
+		background-color: #efeff4 !important;
+	}
+}
+.PromoModalDetail {
+	.modal-info-content {
+		background-color: white;
+		padding-bottom: 100px;
+	}
+	.back-icon {
+		margin-left: 10px;
+	}
+}
+
+.Promotions-nav {
+	background-color: #00a6ff;
+	padding: 18px 10px;
+	height: 60px;
+	.Promotions-nav-list {
+		display: flex;
+		align-items: flex-end;
+		.Promotions-tab-active {
+			.notice_tab {
+				font-size: 18px;
+				color: white;
+			}
+		}
+		.notice_tab {
+			padding: 0px 5px;
+			text-align: center;
+			white-space: nowrap;
+		}
+		// .Promotions-tab:nth-child(1) {
+		// 	flex: 0 0 25%;
+		// }
+		// .Promotions-tab:nth-child(2) {
+		// 	flex: 0 0 40%;
+		// }
+		// .Promotions-tab:nth-child(3) {
+		// 	flex: 0 0 32%;
+		// }
+	}
+}
+
+/* 免费投注 */
+.FreeBet-Modal {
+	.submitBtn {
+		background: #DFDFDF !important;
+	}
+	background-color: #efeff4;
+	.FreeBet-Content {
+		padding: 15px;
+		.Info {
+			background-color: white;
+			padding: 20px;
+			text-align: center;
+			border-radius: 8px;
+			margin-bottom: 20px;
+			.title {
+				padding: 10px 10px 20px;
+			}
+			.list {
+				line-height: 20px;
+				position: relative;
+				justify-content: space-evenly;
+				small {
+					color: #999999;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+					width: 1px;
+					background-color: #e3e3e8;
+					margin: 0 auto;
+					height: 70%;
+					top: 10px;
+					opacity: .7;
+				}
+			}
+		}
+		.Submit {
+			.rc-select {
+				background-color: white;
+			}
+			#submit-btn:disabled {
+				background-color: #DFDFDF !important;
+			}
+		}
+	}
+}
+
+.nav-bar {
+	display: flex;
+
+	.nav-left,
+	.nav-right {
+		height: 44px;
+		line-height: 44px;
+		text-align: center;
+		width: 70px;
+		color: #00a6ff;
+	}
+	.nav-center {
+		flex: 1;
+		height: 44px;
+		line-height: 44px;
+		text-align: center;
+		font-weight: bold;
+	}
+}
+
+//返水
+.Rebate {
+	.Top {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		background-color: #00a6ff;
+		align-items: center;
+	}
+	.dropdown-single {
+		padding-right: 15px;
+		right: 0px;
+		top: -45px;
+		z-index: 9;
+		width: auto;
+		float: right;
+		svg {
+			fill: white;
+		}
+	}
+}
+
+.NullData {
+	display: flex;
+	justify-content: center;
+	flex-flow: COLUMN;
+	align-items: center;
+	margin-top: 80px;
+	color: #999999;
+	line-height: 20px;
+	p {
+		margin-top: 15px;
+	}
+	img {
+		width: 95px;
+	}
+}
+
+//查看运送资料
+#ManualDetail {
+	padding: 15px;
+	height: 100vh;
+	background-color: white;
+	h3 {
+		margin: 10px 0px 20px;
+	}
+	.input__wrap input:disabled {
+		background: #efeff4;
+		color: #999999;
+		// font-weight: BOLD;
+		font-size: 14px !important;
+	}
+	.Note {
+		padding: 15px;
+		background-color: #f7f7fc;
+		font-size: 12px;
+		color: #666666;
+		margin: 10px 0;
+		border-radius: 8px;
+	}
+}
+
+.RebateModalDetail {
+	.itemList {
+		background-color: white;
+		padding: 10px;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.modal-info-content {
+		background-color: #efeff4;
+	}
+}
+
+.Proms {
+	.modal-info-title {
+		color: white;
+		background-color: #00a6ff;
+		padding: 14.4074px;
+		border-radius: 11.0823px 11.0823px 0 0;
+		font-size: 16.6214px;
+		font-weight: 500;
+	}
+	.cap-list {
+		display: flex;
+		flex-flow: wrap;
+	}
+	.txt {
+		font-size: 16px;
+		padding-bottom: 40.0037px;
+		padding-top: 22.1605px;
+		text-align: center;
+	}
+	/* 优惠申请成功 */
+	.Content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 29.9177px;
+		img {
+			width: 55.4074px;
+			margin-bottom: 10px;
+		}
+	}
+	.padding-left-xs {
+		padding-left: 5px;
+	}
+	.Cancell {
+		border: 1px solid #caccd0 !important;
+		color: #c5c7cb !important;
+		margin-right: 10px;
+	}
+	.cancelTitle {
+		font-weight: bold;
+		font-size: 16px;
+		margin-bottom: 0.3rem;
+	}
+	.cancell-list {
+		justify-content: flex-start;
+		margin: 0.26667rem 0.2rem 0.53333rem 0.2rem;
+		.cap-item:nth-child(1) {
+			width: 40%;
+		}
+		.cap-item:nth-child(3) {
+			width: 40%;
+		}
+		.cap-item {
+			height: 35px;
+			padding: 0 !important;
+			// width: 50%;
+			justify-content: flex-start;
+		}
+		.input__wrap {
+			margin-top: -5px;
+			margin-left: 10px;
+			input {
+				border: 0;
+				border-bottom: 1px solid #666666;
+				border-radius: 0;
+				width: 100%;
+				background-color: transparent;
+				padding: 0px 10px;
+			}
+		}
+	}
+	&.cancel-discount-application {
+		.cap-list{
+			margin: 3% 0 3% 3%;
+			width: 97%;
+			.cap-item{
+				&:nth-child(5){
+					flex: 1;
+				}
+			}
+		}
+		.input__wrap{
+			flex: 1;
+			input{
+				width: 100%;
+			}
+		} 
+		.error-msg{
+			width: 92%;
+			margin: 0 0 10px 8%;
+			padding: 0 10px;
+			color: #EB2121;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 38px;
+			border-radius: 8px;
+			background: #FEE5E5;
+		}
+		&.modal-dialog .modal-info-title{
+			width: 100%;
+		}
+	}
+}
+
+/* 每日好礼 */
+.DailyGift {
+	background-color: #efeff4;
+	.TimeBox {
+		.dropdown-single {
+			min-width: 100px;
+			.select-text {
+				width: 100%;
+				justify-content: space-between;
+			}
+			li {
+				text-align: left;
+			}
+			li:last-child {
+				text-align: left !important;
+			}
+			li:first-child {
+				text-align: left !important;
+			}
+		}
+	}
+	.tabsOval-nav {
+		position: fixed;
+	}
+	.tabsOval-content-holder {
+		padding-top: 60px;
+	}
+	.List {
+		padding: 10px;
+		.info {
+			line-height: 20px;
+			.time {
+				color: rgb(153, 153, 153);
+				align-items: center;
+				svg {
+					margin-right: 5px;
+				}
+			}
+		}
+		.LastNumber {
+			background-color: #33c85d;
+			color: white;
+			font-size: 12px;
+			padding: 0.2rem;
+			border-radius: 5px;
+			// line-height: 25px;
+			// height: 25px;
+			flex: 0 0 30%;
+			text-align: center;
+		}
+		.Disable {
+			color: #BCBEC3 !important;
+			background-color: #EFEFF4 !important;
+		}
+	}
+	.card {
+		background-color: white;
+		margin: 10px;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	/* 报表记录 */
+	.Recordlist {
+		background-color: white;
+		padding: 15px;
+		width: 100%;
+		font-size: 12px;
+		border-radius: 8px;
+		margin-bottom: 15px;
+		.item {
+			justify-content: space-between;
+			padding: 10px 0px 10px 0px;
+			label {
+				color: #999999;
+				flex: 0 0 20%;
+			}
+			.data {
+				font-weight: bold;
+				word-wrap: break-word;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				flex: 0 0 30%;
+			}
+		}
+	}
+
+	.dropdown-single {
+		.selection {
+			background-color: #e6e6ea !important;
+			.select-text {
+				color: #666666 !important;
+			}
+		}
+	}
+}
+.PromotionsAddressform {
+	background-color: white;
+	// height: 100vh;
+}
+.DailyGiftAddress,
+.PromotionsAddressform {
+	padding: 20px;
+	.shippingPhone {
+		& > div {
+			width: 100%;
+			display: flex;
+		}
+		.prefixNumber {
+			input {
+			padding: 0.4rem 0.2rem;
+			}
+			width: 1.5rem;
+
+		}
+		.phoneNumber {
+			margin-top: 0 !important;
+			width: 100%;
+			margin-left: 0.2rem;
+		}
+	}
+	.Notice {
+		background-color: #fff5bf;
+		color: #83630b;
+		font-size: 12px;
+		padding: 15px;
+		line-height: 20px;
+		border-radius: 8px;
+		margin-bottom: 13px;
+	}
+	.UserName {
+		.input__wrap {
+			margin-top: 0;
+		}
+		.FirstName {
+			margin-right: 10px;
+		}
+	}
+	.input__prefixText {
+		left: 10px;
+	}
+	.input__wrap input.input__withIcon {
+		padding-left: 50px !important;
+	}
+	.Addresslist {
+		background-color: white;
+		margin-bottom: 10px;
+		padding: 20px 5px 20px 0px;
+		font-size: 12px;
+		line-height: 20px;
+		border-radius: 8px;
+		.cap-list {
+			margin: 0;
+		}
+		.right {
+			position: relative;
+			width: 100%;
+			padding-right: 10px;
+			label {
+				color: #999999;
+				padding-right: 15px;
+			}
+			.sport-svg-wrap {
+				position: absolute;
+				top: -5px;
+				right: 15px;
+				svg {
+					width: 15px;
+				}
+			}
+			.default {
+				right: 1rem;
+				position: absolute;
+				top: -0.05rem;
+				color: #0CCC3C;
+				.sport-svg-wrap {
+					right: 1.5rem;
+					top: -0.1rem;
+				}
+			}
+		}
+	}
+}
+
+.Rebate {
+	padding-bottom: 100px;
+}
+
+.SB20Proms {
+	z-index: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	.PromsList {
+		&::after {
+			position: absolute;
+			left: -30%;
+			width: 160%;
+			height: 3.6rem;
+			content: "";
+			top: 0;
+			z-index: -1;
+			border-radius: 0 0 80% 80%;
+			background-image: linear-gradient(126deg, #00a6ff, #00a6ff);
+		}
+	}
+}
+.Promotions-tab-active {
+	.SB20_notice_tab {
+		border-bottom: 2px solid white;
+		padding: 0 0px 8px 0 !important;
+	}
+}
+
+.ErrorProm {
+	width: 50px;
+	height: 50px;
+}
+
+.sharePronoIcon {
+	position: absolute;
+    right: 15px;
+    top: 18px;
+    z-index: 99999;
+}
+
+.sharePromoModal {
+	margin: 0 !important;
+	width: 100%;
+    background: transparent;
+    box-shadow: none;
+	z-index: 99999999;
+	position: fixed;
+	.modal-info-content {
+		padding: 0 !important;
+		bottom: 0;
+		position: fixed;
+		width: 100%;
+	}
+	.shareActionCon {
+		background: #EFEFF4;
+		height: 3rem;
+		display: flex;
+		.shareAction {
+			padding-top: 1rem;
+			padding-left: 1rem;
+		}
+		.shareActionTitle {
+			margin-left: -0.35rem;
+			margin-top: 0.5rem;
+		}
+	}
+	.sharePromoClose {
+		background: #FFFFFF;
+		height: 2rem;
+		text-align: center;
+		font-size: 18px;
+		color: #00A6FF;
+		font-weight: bold;
+		line-height: 1.9rem;
+	}
+	.sharePromoDetail {
+		background: white;
+		border-radius: 0.2rem;
+		width: 100%;
+		margin: 0.4rem auto;
+		.imgCon {
+			width: 100%;
+			height: 4.5rem;
+			border-radius: 0.2rem 0.2rem 0px 0px;
+		}
+		.shareDetail {
+			padding: 0.3rem;
+			width: 100%;
+			display: flex;
+			p {
+				color: #666;
+				font-size: 14px;
+			}
+		}
+	}
+}
+

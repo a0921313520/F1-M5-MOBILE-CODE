@@ -1,0 +1,287 @@
+.sbtwo {
+    .notice_tab {
+        position: relative;
+        color: #ccedff;
+
+        .notice_active {
+            width: 6px;
+            background: #eb2121;
+            border-radius: 50%;
+            display: block;
+            height: 6px;
+            position: absolute;
+            right: 19px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .information__main {
+        .tabsOval-tab-active .notice_tab {
+            color: #00a6ff;
+        }
+
+        .tabsNormal-content-holder {
+            padding: 13.5px 16px;
+            background: #EFEFF4;
+        }
+
+        .sbtwo-information__box__item {
+            display: flex;
+            background: #fff;
+            border-radius: 10px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 8px;
+
+            &.isRead {
+                background: #e6e6ee;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            svg {
+                fill: #999;
+            }
+        }
+
+        .tab-tag {
+            display: inline;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            margin-left: 4px;
+            padding: 2px 4px;
+            font-size: 10px;
+        }
+    }
+
+    &.sbtwo-message__modal.modal-dialog {
+        height: 100%;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+        overflow: auto;
+    }
+
+    &.sbtwo-message__modal {
+        background: #efeff4;
+
+        .sbtwo-header-wrapper{
+            justify-content: space-around !important;
+            padding: 0;
+        }
+        .message__main {
+            padding: 20px;
+        }
+
+        .message__main__content {
+            margin-top: 20px;
+        }
+
+        .modal-info-content {
+            padding: 0;
+        }
+    }
+
+    .information__item__mid {
+        flex: 1;
+        width: 0;
+    }
+
+    .information__mid__title {
+        display: flex;
+        justify-content: space-between;
+
+        .information__title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 50%;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .information__time {
+            width: 50%;
+            font-size: 10px;
+            color: #bcbec3;
+            text-align: right;
+        }
+    }
+
+    .sbtwo-information__content {
+        color: #999;
+        margin-top: 4px;
+        height: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 90%;
+        line-height: 16px;
+        font-size: 12px;
+
+        &.Transfer_content {
+            overflow: initial;
+            white-space: normal;
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .message__heading {
+        color: #202939;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 11px;
+    }
+
+    .message__time {
+        font-size: 12px;
+        color: #bcbec3;
+        margin-bottom: 16px;
+    }
+
+    .message__main__content {
+        font-size: 12px;
+        color: #666666;
+    }
+
+    .sbtwo-messageIcons {
+        width: 48px;
+        height: 48px;
+        background: url($base-path + '/img/information/messageIcons.png');
+
+        &.Personal {
+            background-position: -152PX -146PX;
+        }
+
+        &.Transfer-3 {
+            background-position: -16PX -78PX;
+        }
+
+        &.Transfer-5 {
+            background-position: -84PX -78PX;
+        }
+
+        &.Transfer-6 {
+            background-position: -152PX -78PX;
+        }
+
+        &.Transfer-4 {
+            background-position: -152PX -10PX;
+        }
+
+        &.Announcement-7 {
+            background-position: -84PX -146PX;
+        }
+
+        &.Announcement-8 {
+            background-position: -16PX -146PX;
+        }
+
+        &.Announcement-9 {
+            background-position: -16PX -10PX;
+        }
+
+        &.Announcement-Other {
+            background-position: -84PX -10PX;
+        }
+    }
+
+    .sbtwo-information__box__readAll {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .readAllText {
+            font-size: 11px;
+            color: #bcbec3;
+        }
+
+        .readAllBtn {
+            font-size: 11px;
+            color: #00a6ff;
+            border-radius: 8px;
+            border: 1px solid hsl(201, 100%, 50%);
+            padding: 5.5px 7px;
+
+            &.allHaveRead {
+                color: #bcbec3;
+                border-color: #bcbec3;
+            }
+        }
+    }
+
+    .more-message {
+        text-align: center;
+        margin: 17px 0;
+        color: #00a6ff;
+        font-size: 11px;
+
+        .noMore {
+            color: #bcbec3;
+        }
+    }
+
+    .moreLoading {
+        display: flex;
+        justify-content: center;
+    }
+
+    .moreLoading-spinner {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 0 20px;
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: rotating 1s infinite ease-in-out;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 15%;
+                height: 15%;
+                background-color: #00a6ff;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .moreLoading-spinner .circle:nth-child(#{$i}) {
+            transform: rotate(30deg * ($i - 1));
+        }
+        .moreLoading-spinner .circle:nth-child(#{$i}) {
+            animation-delay: -0.02s * $i;
+        }
+    }
+
+    @keyframes rotating {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    .information__main {
+        .tabsOval-nav-operations-hidden {
+            position: absolute;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    }
+}

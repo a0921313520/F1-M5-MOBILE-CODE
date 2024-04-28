@@ -1,0 +1,177 @@
+@use "t";
+
+$popoverColor: #363636;
+.popoverArrow {
+    position: absolute;
+    display: block;
+    margin: auto;
+    background: transparent;
+    border-style: solid;
+    width: 8px;
+    height: 8px;
+    background-color: $popoverColor;
+    box-shadow: 0px 0px 3px $popoverColor;
+    z-index: -1;
+}
+.popoverPlacement {
+    opacity: 0;
+    min-height: 30px;
+    line-height: 30px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transform: scale(0);
+    font-size: t.px2rem(12px);
+    * {
+        line-height: inherit;
+    }
+    & > div {
+        position: relative;
+    }
+    &.left {
+        padding-left: 8px;
+        transform-origin: center;
+        .popoverArrow {
+            top: 0;
+            bottom: 0;
+            transform: translateX(50%) rotate(45deg);
+            left: -0.2rem;
+        }
+    }
+    &.right {
+        padding-right: 8px;
+        transform-origin: center;
+        .popoverArrow {
+            top: 0;
+            bottom: 0;
+            transform: translateX(-50%) rotate(45deg);
+            right: -0.2rem;
+        }
+    }
+    &.top {
+        padding-top: 8px;
+        transform-origin: center;
+        .popoverArrow {
+            top: -0.2rem;
+            left: 0;
+            right: 0;
+            transform: translateY(50%) rotate(45deg);
+        }
+    }
+    &.topleft {
+        padding-top: 8px;
+        transform-origin: left top;
+        .popoverArrow {
+            top: -0.2rem;
+            left: t.px2rem(18px);
+            transform: translateY(50%) rotate(45deg);
+        }
+    }
+    &.topright {
+        padding-top: 8px;
+        transform-origin: right top;
+        .popoverArrow {
+            top: -0.2rem;
+            right: t.px2rem(18px);
+            transform: translateY(50%) rotate(45deg);
+        }
+    }
+    &.bottom {
+        padding-top: 8px;
+        transform-origin: center;
+        .popoverArrow {
+            bottom: -0.2rem;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+    &.bottomleft {
+        padding-top: 8px;
+        transform-origin: left top;
+        .popoverArrow {
+            bottom: -0.2rem;
+            left: t.px2rem(18px);
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+    &.bottomright {
+        padding-top: 8px;
+        transform-origin: right top;
+        .popoverArrow {
+            bottom: -0.2rem;
+            right: t.px2rem(18px);
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+}
+.popoverContent {
+
+}
+.popoverInner {
+    background-color: $popoverColor;
+    color: #fff;
+    border-radius: t.px2rem(8px);
+    padding-left: 10px;
+    padding-right: 30px;
+    font-weight: initial;
+    box-shadow: 0 0 3px #363636;
+}
+.popoverInnerContent {
+
+}
+.popoverClose {
+    display: inline!important;
+    svg {
+        fill: #fff;
+        width: t.px2rem(10px);
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        margin: auto;
+    }
+
+    &.topClose {
+        svg {
+            bottom: auto;
+        }
+    }
+    &.bottomClose {
+        svg {
+            top: auto;
+        }
+    }
+}
+
+.popoverPlacement.popoverOpen {
+    animation: popverIn 0.3s cubic-bezier(0.42, 0, 0.24, 0.98);
+    animation-fill-mode: forwards;
+}
+.popoverPlacement.popoverClose {
+    animation: popverOut 0.3s cubic-bezier(0.42, 0, 0.24, 0.98);
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes popverIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes popverOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}

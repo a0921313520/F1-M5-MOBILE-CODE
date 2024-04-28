@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.1" y1="0.058" x2="0.917" y2="0.925" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#69ffdc"/>
+      <stop offset="1" stop-color="#23d9cb"/>
+    </linearGradient>
+    <filter id="Rectangle_13" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#020202" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.599" stop-color="#fff" stop-opacity="0.906"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_10851" data-name="Group 10851" transform="translate(-191 -262)">
+    <g transform="matrix(1, 0, 0, 1, 191, 262)" filter="url(#Rectangle_13)">
+      <rect id="Rectangle_13-2" data-name="Rectangle 13" width="34" height="34" rx="8" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_12618" data-name="Group 12618" transform="translate(-151 -343)">
+      <rect id="Rectangle_2431" data-name="Rectangle 2431" width="16" height="16" transform="translate(360 620)" fill="#fff" opacity="0"/>
+      <g id="Group_7780" data-name="Group 7780" transform="translate(361.92 620.871)">
+        <path id="Exclusion_3" data-name="Exclusion 3" d="M12.039,14.258l0,0L9.684,12.039,7.852,13.764,6.02,12.039,4.188,13.764,2.356,12.039,0,14.255,0,2.094A2.1,2.1,0,0,1,2.094,0H9.945a2.1,2.1,0,0,1,2.094,2.094V14.258ZM3.295,7.844a.561.561,0,0,0-.4.958.554.554,0,0,0,.394.164H8.9a.561.561,0,1,0,0-1.121Zm0-2.524a.561.561,0,1,0,0,1.121H8.9a.561.561,0,1,0,0-1.121Zm0-2.525a.561.561,0,1,0,0,1.122H8.9a.561.561,0,1,0,0-1.122Z" transform="translate(0 0)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

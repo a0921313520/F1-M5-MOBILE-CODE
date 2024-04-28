@@ -1,0 +1,1078 @@
+@function px2rem428 ($px) {
+	$rem: 42.8px; //適配這個活動頁的mockup 頁寬為428px => 42.8  (一般為375 => 37.5)
+	@return ($px / $rem) + rem;
+}
+.ann14-container {
+	width: 100vw;
+	background-image: url($base-path + '/img/events/CNY2023/BG-2.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0px 590px;
+	.ann14-top {
+		width: 100vw;
+		height: 18.130841rem;
+		background-image: url($base-path + '/img/events/CNY2023/BG-1_CN.jpg');
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+		background-size: 100%;
+		padding-top: 90px;
+		.ann14-top-banner {
+			width: 100vw; //16px*2 => 0.748rem
+			margin: px2rem428(10px) 0 px2rem428(5px) 0;
+		}
+		.ann14-top-text-container {
+			width: 100vw;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding-top: 10px;
+			.ann14-top-text {
+				width: 84%;
+				height: px2rem428(100px);
+				// font: normal normal 300 px2rem428(13px)/px2rem428(17px) Microsoft YaHei;
+				color: #ffffff;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				background-image: url($base-path + '/img/events/CNY2023/Date-Container.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				font-size: 16px;
+				color: #ffffff;
+				font-weight: bold;
+				background-position: 0px 15px;
+			}
+		}
+		.ann14-top-countdown-container {
+			width: 100vw;
+			margin-top: px2rem428(20px);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			.ann14-top-countdown-numbers {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				.ann14-top-countdown-number {
+					width: px2rem428(40px);
+					height: px2rem428(60px);
+					font: normal normal bold px2rem428(25px)/px2rem428(35px) Roboto;
+					color: #ffffff;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					background-image: url($base-path + '/img/events/Golden-Week/Countdown.png');
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+				}
+				.ann14-top-countdown-sep {
+					width: px2rem428(14px);
+					height: px2rem428(60px);
+					font: normal normal normal px2rem428(30px)/px2rem428(40px) Microsoft YaHei;
+					color: #ffffff;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+			.ann14-top-countdown-words {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				.TextName {
+					background-color: #a71100;
+					color: white;
+					text-align: center;
+					padding: 5px 10px;
+					border-radius: 7px;
+				}
+				.ann14-top-countdown-word {
+					width: px2rem428(88px);
+					height: px2rem428(15px);
+					margin-top: px2rem428(10px);
+					font: normal normal bold px2rem428(11px)/px2rem428(15px) Microsoft YaHei;
+					color: #7a0a0a;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+				}
+				.ann14-top-countdown-sep {
+					width: px2rem428(14px);
+					height: px2rem428(15px);
+				}
+			}
+		}
+		.ann14-top-portals-container {
+			position: relative;
+			height: px2rem428(350px);
+			.Event_Img {
+				width: 65%;
+				margin: -2px auto;
+				display: flex;
+			}
+			.ann14-top-portal {
+				//background-image: url($base-path + '/img/events/ann14/Popping/Portal.webp');
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: bottom;
+				width: px2rem428(165px);
+				height: px2rem428(177px);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				position: absolute;
+				&.ann14-top-portal-1 {
+					top: px2rem428(14px);
+					left: px2rem428(22px);
+				}
+				&.ann14-top-portal-2 {
+					top: px2rem428(-32px);
+					right: px2rem428(65px);
+				}
+				&.ann14-top-portal-3 {
+					width: px2rem428(189px);
+					height: px2rem428(203px);
+					top: px2rem428(116px);
+					left: px2rem428(33px);
+				}
+				&.ann14-top-portal-4 {
+					width: px2rem428(189px);
+					height: px2rem428(203px);
+					top: px2rem428(69px);
+					right: px2rem428(17px);
+				}
+				&.ann14-top-portal-5 {
+					width: px2rem428(211px);
+					height: px2rem428(225px);
+					top: px2rem428(245px);
+					left: px2rem428(3px);
+				}
+				&.ann14-top-portal-6 {
+					width: px2rem428(211px);
+					height: px2rem428(225px);
+					top: px2rem428(238px);
+					right: px2rem428(5px);
+				}
+				.ann14-top-portal-gif {
+					width: px2rem428(135px);
+					//border: 1px solid red;
+					&.ann14-top-portal-gif-3,
+					&.ann14-top-portal-gif-4 {
+						width: px2rem428(154px);
+					}
+					&.ann14-top-portal-gif-5,
+					&.ann14-top-portal-gif-6 {
+						width: px2rem428(172px);
+					}
+				}
+			}
+		}
+		.ann14-top-time-container {
+			width: 100vw;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: px2rem428(30px);
+			.ann14-top-time {
+				width: px2rem428(314px);
+				height: px2rem428(42px);
+				font: normal normal normal px2rem428(14px)/px2rem428(19px) Microsoft YaHei;
+				color: #cb1c1b;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				background-color: #fcf6e4;
+				border-radius: px2rem428(42px);
+				padding: 23px 30px;
+				font-size: 12px;
+				text-align: center;
+			}
+		}
+		.ann14-top-button-container {
+			width: 100vw;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			//margin-top: px2rem428(61px);
+			padding-left: px2rem428(44px);
+			padding-right: px2rem428(43px);
+			padding-top: px2rem428(122px);
+			.ann14-top-button-deposit,
+			.ann14-top-button-times {
+				background-color: #c01010;
+				color: #ffffff;
+				border: 0;
+				width: px2rem428(160px);
+				height: px2rem428(60px);
+				//border: 1px solid #ffeb9c;
+				border-radius: px2rem428(10px);
+				font: normal normal normal px2rem428(14px)/px2rem428(19px) Microsoft YaHei;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				.ann14-top-button-deposit-row {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					margin-top: px2rem428(3px);
+				}
+			}
+
+			.ann14-top-button-deposit {
+				.ann14-top-button-deposit-refresh {
+					width: px2rem428(18.4px);
+					margin-left: px2rem428(9px);
+				}
+			}
+		}
+	}
+
+	.Content-BG {
+		// background-image: url($base-path + '/img/events/Mid-Autumn/BG-2_Mobile.jpg');
+		// background-repeat: no-repeat;
+		// background-size: 100% 100%;
+		// margin-top: -90px;
+	}
+
+	.ann14-middle {
+		width: 100vw;
+		height: px2rem428(373px);
+		padding-top: 40px;
+		padding-left: 6px;
+		padding-right: 6px;
+		overflow: hidden;
+		.ann14-middle-content {
+			background-image: url($base-path + '/img/events/CNY2023/HowTo-Container_CN.png');
+			background-repeat: no-repeat;
+			background-position: top;
+			background-size: contain;
+			height: 265px;
+		}
+		.ann14-middle-title {
+			width: px2rem428(185px);
+			height: px2rem428(27px);
+			background-image: url($base-path + '/img/events/Mid-Autumn/CN/HowTo_CN.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			font: normal normal normal px2rem428(20px)/px2rem428(30px) Hiragino Sans GB;
+			color: #ffffff;
+			margin: 0px auto 20px;
+		}
+		.ann14-middle-title-container {
+			width: 100vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-top: px2rem428(47px);
+			.ann14-middle-title-1 {
+				color: #ffeb9c;
+				font: normal normal normal px2rem428(20px)/px2rem428(30px) Hiragino Sans GB;
+			}
+			.ann14-middle-title-2 {
+				color: #fef681;
+				font: normal normal normal px2rem428(15px)/px2rem428(22px) Hiragino Sans GB;
+				margin-top: px2rem428(3px);
+			}
+		}
+		.ann14-middle-steps-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: px2rem428(27px);
+			padding-left: px2rem428(15px);
+			padding-right: px2rem428(15px);
+			transform: scale(0.9);
+			.ann14-middle-step {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				// &.ann14-middle-step1 {
+				// 	width: px2rem428(113px);
+				// }
+				// &.ann14-middle-step2 {
+				// 	width: px2rem428(153px);
+				// }
+				// &.ann14-middle-step3 {
+				// 	width: px2rem428(105px);
+				// }
+				.ann14-middle-step-img {
+					width: px2rem428(72px);
+					height: px2rem428(71px);
+				}
+				.ann14-middle-step-title-1 {
+					margin-top: px2rem428(17px);
+					font: normal normal bold px2rem428(14px)/px2rem428(19px) Microsoft YaHei;
+					color: #ffe121;
+					padding-bottom: 5px;
+				}
+				.ann14-middle-step-title-2 {
+					font: normal normal normal px2rem428(12px)/px2rem428(16px) Microsoft YaHei;
+					color: #ffefd9;
+				}
+			}
+		}
+		.ann14-middle-button-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: 100px;
+			.ann14-middle-button {
+				//background-color: #eacf7a;
+				border-radius: px2rem428(14px);
+				width: px2rem428(147px);
+				height: px2rem428(48px);
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				background-image: url($base-path + '/img/events/CNY2023/HowTo-Container-Button_CN.png');
+				background-repeat: no-repeat;
+				background-position: top;
+				background-size: cover;
+			}
+		}
+	}
+
+	.ann14-bottom {
+		// width: 100vw;
+		height: 17.420561rem;
+		margin: 30px 7px 20px 7px;
+		background-image: url($base-path + '/img/events/CNY2023/Prizes-Tab_CN.png');
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: contain;
+		margin-top: -25px;
+		.ann14-bottom-title-container {
+			//width: 100vw;
+			padding-top: px2rem428(45px);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			.ann14-bottom-title {
+				width: px2rem428(185px);
+				height: px2rem428(27px);
+				background-image: url($base-path + '/img/events/Mid-Autumn/CN/PrizeList_CN.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				font: normal normal normal px2rem428(20px)/px2rem428(30px) Hiragino Sans GB;
+				color: #ffffff;
+			}
+		}
+		.ann14-bottom-prizes-box {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			margin-top: px2rem428(27px);
+			padding-left: px2rem428(10px);
+			padding-right: px2rem428(10px);
+			.item:first-child {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.ann14-bottom-prize-img {
+					width: 95px;
+					height: 95px;
+				}
+			}
+			.ann14-bottom-prize-img {
+				width: px2rem428(80px);
+				height: px2rem428(80px);
+				padding: 5px;
+			}
+		}
+		.ann14-bottom-button-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: px2rem428(420px);
+			.ann14-bottom-button {
+				background-image: url($base-path + '/img/events/CNY2023/Prizes-Tab-Button_CN.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				border-radius: px2rem428(14px);
+				width: px2rem428(143px);
+				height: px2rem428(40px);
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				font: normal normal bold px2rem428(15px)/px2rem428(20px) Microsoft YaHei;
+				color: #0a2ea9;
+			}
+		}
+	}
+}
+
+//彈窗共用背景block
+.ann14-popup-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.76);
+}
+.MyPrizes {
+	.ann14-bottom-popup-header {
+		justify-content: space-between !important;
+		padding: 10px;
+	}
+}
+//抽獎結果彈窗
+.ann14-prize-popup {
+	position: absolute;
+	top: px2rem428(149px);
+	left: px2rem428(7px);
+	right: px2rem428(7px);
+	border: none;
+	width: px2rem428(414px);
+	height: px2rem428(414px);
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	outline: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	.ann14-prize-popup-content {
+		width: 100%;
+		margin-top: px2rem428(35px);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		.ann14-prize-popup-content-title {
+			//font-size: 18px;
+			margin-top: 18px;
+			font: normal normal bold px2rem428(18px)/px2rem428(20px) Microsoft YaHei;
+			color: #e61f29;
+		}
+		.ann14-prize-popup-content-prize-img {
+			width: px2rem428(106px);
+			height: px2rem428(106px);
+			margin-top: px2rem428(20px);
+			margin-bottom: px2rem428(20px);
+		}
+		.ann14-prize-popup-content-text {
+			font: normal normal normal 14px/14px Microsoft YaHei;
+			color: #303030;
+			margin: 2px 0;
+			.ann14-prize-popup-content-text-highlight {
+				color: #e61f29;
+			}
+		}
+		.ann14-prize-popup-buttons {
+			width: px2rem428(280px);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: px2rem428(15px);
+			font: normal normal normal px2rem428(10px)/px2rem428(14px) Microsoft YaHei;
+			.ann14-top-popup-button-iknow {
+				width: px2rem428(141px);
+				height: px2rem428(34px);
+				background-image: url($base-path + '/img/events/CNY2023/Button-CN_4.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				margin-right: 10px;
+			}
+			.ann14-prize-popup-button-blue {
+				width: px2rem428(141px);
+				height: px2rem428(34px);
+				background-image: url($base-path + '/img/events/CNY2023/Button-CN_1.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				margin-right: 10px;
+			}
+			.ann14-prize-popup-button-deposit {
+				width: px2rem428(139px);
+				height: px2rem428(34px);
+				background-image: url($base-path + '/img/events/CNY2023/Button-CN_3.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				color: white;
+			}
+			.ann14-prize-popup-button-yellow {
+				width: px2rem428(139px);
+				height: px2rem428(34px);
+				background-image: url($base-path + '/img/events/CNY2023/Button-CN_2.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				color: white;
+			}
+		}
+	}
+}
+
+//溫馨提醒彈窗
+.ann14-top-popup {
+	position: absolute;
+	top: px2rem428(333px);
+	left: px2rem428(46px);
+	right: px2rem428(46px);
+	border: none;
+	background: #fbd893;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	outline: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border-radius: 8PX;
+	.border-type {
+		background-color: #e61f29 !important;
+		border: 2px solid #e61f29 !important;
+		color: #ffffff !important;
+	}
+	.ann14-top-popup-header {
+		background-color: #e61f29;
+		border-radius: 8px 8px 0 0;
+		width: 100%;
+		height: px2rem428(37px);
+		min-height: px2rem428(37px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: px2rem428(15px);
+		padding-right: px2rem428(9px);
+		font: normal normal bold px2rem428(15px)/px2rem428(20px) Microsoft YaHei;
+		color: #f6dab5;
+		border-radius: 8px 8px 0 0;
+		.ann14-top-popup-close {
+			width: px2rem428(23px);
+			height: px2rem428(23px);
+			filter: invert(1);
+		}
+	}
+	.ann14-top-popup-content {
+		padding-top: px2rem428(17px);
+		padding-left: px2rem428(15px);
+		padding-right: px2rem428(17px);
+		padding-bottom: px2rem428(22px);
+		font: normal normal normal 12px/17px Microsoft YaHei;
+		color: #303030;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		.ann14-top-popup-desc {
+			text-align: center;
+			width: px2rem428(304px);
+			height: px2rem428(39px);
+			.ann14-top-popup-desc-single {
+				line-height: px2rem428(39px);
+			}
+		}
+		.ann14-top-popup-buttons {
+			width: px2rem428(304px);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: px2rem428(10px);
+			.ann14-top-popup-button-iknow {
+				width: px2rem428(141px);
+				height: px2rem428(34px);
+				background-image: url($base-path + '/img/events/Mid-Autumn/CN/Button-CN_5.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				color: #13479e;
+				margin-right: 10px;
+			}
+			.ann14-top-popup-button-blue {
+				width: px2rem428(135.43px);
+				height: px2rem428(37px);
+				background-color: #1285f5;
+				border-radius: px2rem428(10px);
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			}
+			.ann14-top-popup-button-orange {
+				width: px2rem428(135.43px);
+				height: px2rem428(37px);
+				border: 2px solid #e61f29;
+				color: #303030;
+				//background-color: #ff734a;
+				border-radius: px2rem428(10px);
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			}
+			.ann14-top-popup-button-yellow {
+				width: px2rem428(135.43px);
+				height: px2rem428(37px);
+				background-color: #e61f29;
+				border-radius: px2rem428(10px);
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				color: #f6dab5;
+			}
+			.ann14-top-popup-button-sep {
+				width: px2rem428(10px);
+			}
+		}
+	}
+}
+
+//活動規則彈窗
+.ann14-middle-popup {
+	position: absolute;
+	top: px2rem428(124px);
+	left: px2rem428(23px);
+	right: px2rem428(23px);
+	bottom: px2rem428(174px);
+	border: none;
+	background: #fbd893;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	outline: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	height: calc(100vh - 150px);
+	border-radius: 8px;
+	.ann14-middle-popup-header {
+		background-color: #e61f29;
+		width: 100%;
+		height: px2rem428(50px);
+		min-height: px2rem428(50px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: px2rem428(18px);
+		padding-right: px2rem428(15px);
+		font: normal normal bold px2rem428(16px)/px2rem428(21px) Microsoft YaHei;
+		color: #f6dab5;
+		border-radius: 8px 8px 0 0;
+		.ann14-middle-popup-close {
+			width: px2rem428(30px);
+			height: px2rem428(30px);
+			filter: invert(1);
+		}
+	}
+
+	.ann14-middle-popup-content {
+		padding-top: px2rem428(18px);
+		padding-left: px2rem428(8px);
+		padding-right: px2rem428(26px);
+		margin: 3px;
+		font: normal normal normal px2rem428(13px)/px2rem428(17px) Microsoft YaHei;
+		color: #303030;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #e61f29;
+			border-radius: px2rem428(9px);
+		}
+
+		.ann14-middle-popup-table {
+			width: px2rem428(320px);
+			text-align: center;
+			border-collapse: collapse;
+			th {
+				border: 2px solid #e61f29;
+				background-color: #e61f29;
+				font: normal normal normal px2rem428(9px)/px2rem428(12px) Microsoft YaHei;
+				color: #f6dab5;
+				height: px2rem428(20px);
+				vertical-align: middle;
+			}
+			td {
+				border: 2px solid #e61f29;
+				font: normal normal normal px2rem428(9px)/px2rem428(12px) Microsoft YaHei;
+				color: #303030;
+				height: px2rem428(20px);
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+//我的中獎紀錄彈窗
+.ann14-bottom-popup {
+	position: absolute;
+	top: px2rem428(223px);
+	left: px2rem428(23px);
+	right: px2rem428(23px);
+	max-height: px2rem428(387px);
+	border: none;
+	background: #FBD893;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	outline: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border-radius: 8px;
+	.ann14-bottom-popup-header {
+		position: relative;
+		background-color: #e61f29;
+		width: 100%;
+		height: px2rem428(33px);
+		min-height: px2rem428(33px);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font: normal normal bold px2rem428(16px)/px2rem428(21px) Microsoft YaHei;
+		color: #f6dab5;
+		border-radius: 8px 8px 0 0;
+		.ann14-bottom-popup-close {
+			position: absolute;
+			right: px2rem428(8px);
+			width: px2rem428(23px);
+			height: px2rem428(23px);
+			filter: invert(1);
+		}
+	}
+	.ann14-bottom-popup-content {
+		padding-top: px2rem428(15px);
+		padding-left: px2rem428(10px);
+		padding-right: px2rem428(10px);
+		padding-bottom: px2rem428(15px);
+		font: normal normal normal px2rem428(10px)/px2rem428(12px) Microsoft YaHei;
+		color: #303030;
+		//overflow-y: scroll;
+		margin: 0 auto;
+		padding-bottom: 80px;
+		width: 100%;
+		&::-webkit-scrollbar {
+			width: px2rem428(6px);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #8f8f8f;
+			border-radius: px2rem428(9px);
+		}
+
+		.ann14-bottom-popup-table {
+			width: 100%;
+			text-align: center;
+			font-size: 13px;
+			//line-height: 14px;
+
+			tr:nth-child(odd) {
+				background-color: #F2CD87;
+			}
+			tr:first-child {
+				background-color: #E61F29;
+				color: white;
+				//border-bottom: px2rem428(6px) solid #E61F29;
+			}
+			tr:nth-child(even) {
+				background-color: #FBD893;
+			}
+			th:first-child {
+				width: px2rem428(120px);
+			}
+			th {
+				height: px2rem428(15px);
+				vertical-align: middle;
+				padding: 10px;
+			}
+			td {
+				height: px2rem428(30px);
+				padding: 10px;
+				vertical-align: middle;
+				border-bottom: px2rem428(2px) solid #F2CD87;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+//debug 彈窗
+.ann14-debug-entry {
+	position: absolute;
+	width: px2rem428(64px);
+	height: px2rem428(64px);
+	right: px2rem428(75px);
+	bottom: px2rem428(80px);
+}
+.ann14-debug-popup {
+	position: absolute;
+	top: 2rem;
+	left: 0.5rem;
+	right: 0.5rem;
+	max-height: calc(100vh - 2rem);
+	border: none;
+	background: #0c2274;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	outline: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	.ann14-debug-popup-header {
+		background-color: #f6dab5;
+		width: 100%;
+		height: px2rem428(37px);
+		min-height: px2rem428(37px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: px2rem428(15px);
+		padding-right: px2rem428(9px);
+		font: normal normal bold px2rem428(15px)/px2rem428(20px) Microsoft YaHei;
+		color: #0c2274;
+		.ann14-debug-popup-close {
+			width: px2rem428(23px);
+			height: px2rem428(23px);
+		}
+	}
+	.ann14-debug-popup-content {
+		width: 100%;
+		padding-top: px2rem428(17px);
+		padding-left: px2rem428(15px);
+		padding-right: px2rem428(17px);
+		padding-bottom: px2rem428(22px);
+		font: normal normal normal px2rem428(13px)/px2rem428(17px) Microsoft YaHei;
+		color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		overflow-y: scroll;
+		.ann14-debug-popup-content-input {
+			width: px2rem428(250px);
+			input {
+				font-size: px2rem428(20px);
+			}
+		}
+		.ann14-debug-popup-content-button {
+			width: px2rem428(135.43px);
+			min-height: px2rem428(37px);
+			background-color: #1285f5;
+			border-radius: px2rem428(10px);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.ann14-debug-popup-content-hints {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
+			.ann14-debug-popup-content-hint-button {
+				width: px2rem428(30px);
+				height: px2rem428(30px);
+				margin: px2rem428(10px);
+				background-color: #1285f5;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		.ann14-debug-popup-content-prizeResultTypes {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
+			.ann14-debug-popup-content-prizeResultType-button {
+				width: px2rem428(30px);
+				height: px2rem428(30px);
+				margin: px2rem428(10px);
+				background-color: #1285f5;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				&.selected {
+					background-color: #eacf7a;
+				}
+			}
+		}
+		.ann14-debug-popup-content-prizeTypes {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
+			.ann14-debug-popup-content-prizeType-button {
+				width: px2rem428(80px);
+				height: px2rem428(30px);
+				margin: px2rem428(10px);
+				background-color: #1285f5;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				&.selected {
+					background-color: #eacf7a;
+				}
+			}
+		}
+		.ann14-debug-popup-content-prize-button {
+			width: px2rem428(135.43px);
+			min-height: px2rem428(37px);
+			background-color: #1285f5;
+			border-radius: px2rem428(10px);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.LotteryBox {
+	position: relative;
+	margin: 60px auto 45px;
+	.lotteryBg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		//z-index: 10;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.lotteryBtn {
+		width: 100px;
+		height: 105px;
+		top: -8px;
+		cursor: pointer;
+		position: relative;
+		//z-index: 40;
+		border-radius: 50%;
+		color: #fff;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		.BtnBgImg {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 90%;
+		}
+	}
+}
+
+//红包雨
+.RedRain {
+	position: absolute;
+	pointer-events: none;
+	#box {
+		width: 100vw;
+		height: 200vh;
+		overflow: hidden;
+		position: relative;
+	}
+	/* 红包的样式*/
+	.redpack {
+		position: absolute;
+		display: block;
+		width: 54px;
+		height: 77px;
+		background: url($base-path + "/img/events/CNY2023/FallingAngpao_CN.gif") no-repeat 0 0;
+		background-size: cover;
+		pointer-events: auto;
+	}
+	/*点击后的红包*/
+	.redpacked {
+		background: url($base-path + "/img/events/CNY2023/FallingAngpao_CN.gif") no-repeat 0 0;
+		background-size: cover;
+	}
+
+	/* 空的红包 */
+	.redPackNone {
+		display: none;
+	}
+}

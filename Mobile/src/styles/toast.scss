@@ -1,0 +1,213 @@
+.sport-message {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 12px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: fixed;
+    top: 16px;
+    left: 0;
+    z-index: 999999999;
+    width: 100%;
+    pointer-events: none;
+}
+.sport-message-notice {
+    padding: 4px;
+    text-align: center;
+}
+.sport-message-notice:first-child {
+    margin-top: -4px;
+}
+.sport-message-notice-content {
+    display: inline-block;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    pointer-events: all;
+    // height: 38px;
+    // line-height: 38px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.sport-message-custom-content {
+    padding: 8px 14px;
+    padding-left: 34px;
+    &.sport-message-error {
+        color: #EB2121;
+        background-color: #FFDADA;
+        max-width: 250px;
+        text-align: start;
+    }
+    &.sport-message-success {
+        color: $light-success-color;
+        background-color: #DAFFE3;
+    }
+    &:not(.sport-message-loading) {
+        .sport-svg-wrap {
+            position: absolute;
+            left: 12px;
+            top: 0;
+            height: 100%;
+            & > span {
+                vertical-align: middle;
+                height: 100%;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 0;
+                    height: 100%;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+.sport-message-success svg {
+    fill: $light-success-color!important;
+}
+.sport-message-error svg {
+    fill: #EB2121!important;
+}
+.sport-message-warning svg {
+    fill: #faad14;
+}
+.sport-message-info svg,
+.sport-message-loading svg {
+    fill: #1890ff;
+}
+.sport-message-loading {
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    & > div {
+        // min-width: 100px;
+        height: 86px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        padding: 0 0.5rem ;
+    }
+    &.sport-message-custom-content.sport-message-success, &.sport-message-custom-content.sport-message-error {
+        background-color: rgba(0, 0, 0, 0.3);
+        & > div {
+            background: #fff;
+            color: #000;
+            font-weight: bold;
+            & > span {
+                display: block;
+            }
+        }
+        span svg {
+            // width: 36px;
+            margin-right: 0;
+        }
+    }
+    span.sport-svg-wrap, span.sport-svg-wrap > span > svg {
+        width: 30px;
+        height: 30px;
+    }
+    .sport-svg-wrap{
+        margin: 15px auto;
+    }
+}
+.sport-message svg {
+    font-size: 16px;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+.sport-message-notice.move-up-leave.move-up-leave-active {
+    overflow: hidden;
+    animation-name: MessageMoveOut;
+    animation-duration: 0.3s;
+}
+
+.move-up-enter,
+.move-up-appear {
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+.move-up-leave {
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+.move-up-enter.move-up-enter-active,
+.move-up-appear.move-up-appear-active {
+    animation-name: sportMoveUpIn;
+    animation-play-state: running;
+}
+.move-up-leave.move-up-leave-active {
+    animation-name: sportMoveUpOut;
+    animation-play-state: running;
+    pointer-events: none;
+}
+.move-up-enter,
+.move-up-appear {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+.move-up-leave {
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+}
+.sport-message-loading svg {
+    fill: #fff;
+}
+
+@keyframes MessageMoveOut {
+    0% {
+        max-height: 150px;
+        padding: 4px;
+        opacity: 1;
+    }
+    100% {
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+    }
+}
+@keyframes sportMoveUpIn {
+    0% {
+        transform: translateY(-100%);
+        transform-origin: 0 0;
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        transform-origin: 0 0;
+        opacity: 1;
+    }
+}
+@keyframes sportMoveUpOut {
+    0% {
+        transform: translateY(0%);
+        transform-origin: 0 0;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        transform-origin: 0 0;
+        opacity: 0;
+    }
+}

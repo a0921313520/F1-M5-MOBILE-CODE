@@ -1,0 +1,943 @@
+@use "t";
+@import './theme/light-variable';
+@import './theme/dark-variable';
+@import './variable';
+
+// Css 样式初始化
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+i {
+	font-style: initial;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+	background-color: #efeff4;
+	font-size: 41.4px;
+	height: 100%;
+	width: 100%;
+}
+body {
+	height: 100%;
+	font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+		"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: t.px2rem(14px);
+	// min-height: 100vh;
+	min-width: 230px;
+	max-width: $max-width;
+	margin: auto;
+	background-color: #efeff4;
+}
+
+body.scrolling-effect:not(.fullscreen-drawer) #__next {
+	filter: blur(2px);
+}
+#__next {
+	height: 100%;
+	@include t.themify() using ($val) {
+		color: t.themed($val, $light-font-color, $dark-font-color);
+		background-color: t.themed($val, $light-bg-color, $dark-font-color);
+	}
+}
+.a {
+	opacity: 0;
+}
+.center {
+	text-align: center;
+}
+.sport-container-wrapper {
+	position: relative;
+}
+.sport-svg-wrap {
+	display: inline-block;
+	& > span {
+		display: inherit;
+	}
+	svg {
+		width: t.px2rem(26px);
+		height: t.px2rem(26px);
+		vertical-align: -0.22rem;
+	}
+}
+.sport-sprite {
+	background-image: url($base-path + '/img/sport_sprite.png?v=3.0');
+	background-repeat: no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.sport-sprite {
+		background: url($base-path + '/img/sport_sprite_retina.png?v=3.0') no-repeat;
+		background-size: 406px 56px;
+	}
+}
+.font-size-16 {
+	font-size: t.px2rem(16px) !important;
+}
+.inline-block {
+	display: inline-block;
+}
+.setting {
+	position: absolute;
+	bottom: 0;
+}
+.No-Uploadfiles {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	margin-top: -80px;
+	font-size: 14px;
+	color: #666666;
+	svg {
+		width: 64px;
+		height: 64px;
+		margin-bottom: 15px;
+	}
+}
+.notification-message {
+	color: #000;
+	font-size: t.px2rem(12px);
+	font-weight: bold;
+	background-color: #ffe6dd;
+	padding: 0 10px;
+	height: 0px;
+	line-height: 0px;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	& > img {
+		width: 36px;
+		height: 36px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	& > .notification-close-icon {
+		float: right;
+		svg {
+			width: 16px;
+			fill: #666;
+		}
+	}
+	&.recommend {
+		background-color: #cce5f6;
+	}
+	.notification-recommend-wrap {
+		display: inline-block;
+		vertical-align: middle;
+		& > h4 {
+			line-height: 1.4;
+			max-width: calc(100vw - 100px);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		& > p {
+			color: #666;
+			line-height: 1.4;
+			max-width: calc(100vw - 100px);
+			max-height: 0.5rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+.notification-scale {
+	&-appear,
+	&-appear-active,
+	&-appear-done,
+	&-enter,
+	&-enter-active,
+	&-enter-done,
+	&-exit,
+	&-exit-active,
+	&-exit-done {
+		transform-origin: top;
+		animation-duration: 0.16s;
+		animation-fill-mode: both;
+		animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+		animation-play-state: paused;
+	}
+	&-appear,
+	&-appear-active,
+	&-appear-done,
+	&-enter,
+	&-enter-active,
+	&-enter-done {
+		animation-name: notificationScaleFadeIn;
+		animation-play-state: running;
+	}
+	&-exit,
+	&-exit-active,
+	&-exit-done {
+		animation-name: notificationScaleFadeOut;
+		animation-play-state: running;
+	}
+}
+@keyframes notificationScaleFadeIn {
+	0% {
+		height: 0px;
+		line-height: 0px;
+	}
+	100% {
+		height: 50px;
+		line-height: 50px;
+	}
+}
+@keyframes notificationScaleFadeOut {
+	0% {
+		height: 50px;
+		line-height: 50px;
+	}
+	100% {
+		height: 0px;
+		line-height: 0px;
+	}
+}
+
+.nextjs-toast-errors-parent {
+	display: none;
+}
+.react-loading-skeleton {
+	margin-bottom: 10px;
+}
+
+.dropdown-arrow {
+	svg {
+		fill: #666666;
+		width: 20px;
+		//padding-right: 10px;
+		height: 20px;
+		vertical-align: middle;
+	}
+}
+.refresh-loading {
+	animation: rotating 2s linear infinite;
+	margin: 0 10px;
+}
+//游戏新窗口
+.openWindowModal {
+	.Cancel {
+		border: 1px solid #00a6ff;
+		width: 124px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		color: #00a6ff;
+		border-radius: 8px;
+		margin-bottom: 3px;
+	}
+	.Confirm {
+		border: 1px solid #00a6ff;
+		width: 124px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		border-radius: 8px;
+		background-color: #00a6ff;
+		margin-bottom: 3px;
+	}
+	.Content {
+		margin-bottom: 12px;
+	}
+	.LaunchGamePopupIconBox {
+		height: 80px;
+	}
+	.LaunchGamePopupText {
+		margin: 12px;
+		text-align: center;
+	}
+	.modal-close:before {
+		background: white;
+	}
+	.modal-close::after {
+		background: white;
+	}
+}
+.specialLogo {
+	margin-right: 8px;
+}
+
+//进程OTP验证
+.OpenOtpModal,
+.ConfirmModal {
+	.modal-info-title {
+		background-color: #00a6ff;
+		color: #ffffff;
+		border-radius: 8px 8px 0px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px !important;
+	}
+	.Cancel {
+		border: 1px solid #00a6ff;
+		width: 110px;
+		justify-content: center;
+		align-items: center;
+		padding: 15px 10px;
+		color: #00a6ff;
+		border-radius: 8px;
+		flex: 0 0 45%;
+	}
+	.Confirm {
+		border: 1px solid #00a6ff;
+		width: 110px;
+		justify-content: center;
+		align-items: center;
+		padding: 15px 10px;
+		color: white;
+		border-radius: 8px;
+		background-color: #00a6ff;
+		flex: 0 0 45%;
+	}
+	.Content {
+		height: auto;
+		line-height: 20px;
+		color: #333333;
+		padding-bottom: 15px;
+	}
+}
+
+.commonModal {
+	.modal-info-title {
+		background-color: #00a6ff;
+		color: #ffffff;
+		border-radius: 8px 8px 0px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px !important;
+	}
+	h2 {
+		margin: 25px 0 0;
+	}
+	.note {
+		text-align: center;
+		line-height: 20px;
+		padding: 10px 10px 25px;
+		color: #000000;
+		font-size: 14px;
+	}
+	.modalInfo-footer-cancel {
+		border: 1px solid #00a6ff;
+		background-color: white;
+		color: #00a6ff;
+	}
+	.Modalicon {
+		svg {
+			width: 60px;
+			height: 60px;
+			margin-bottom: 10px;
+		}
+	}
+	&.vip-customerservice {
+		.content {
+			width: 100%;
+			margin: 0 auto 10px;
+			font-size: t.px2rem(14px);
+			.text1 {
+				color: #666666;
+				line-height: 18px;
+				margin-bottom: 10px;
+			}
+			.textarea-input {
+				width: 100%;
+				height: 88px;
+				padding: 12px;
+				background: #fff;
+				color: #999999;
+				border-radius: 8px;
+				box-sizing: border-box;
+				border: 1px solid #f3f3f3;
+				transition: all 0.2s;
+				outline: none;
+				resize: none;
+				font-family: auto;
+				font-size: t.px2rem(14px);
+				&.error {
+					border: 1px solid #eb2121;
+				}
+				&.hasText {
+					color: #222222;
+				}
+			}
+			.tip {
+				width: 100%;
+				height: 37px;
+				line-height: 37px;
+				border-radius: 6px;
+				color: #eb2121;
+				background-color: #fee5e5;
+				margin: 10px auto 2px;
+				padding: 0 10px;
+				font-size: 12px;
+			}
+			.flexwrap {
+				margin-top: 10px;
+				height: 42px;
+			}
+			img {
+				width: 48px;
+				height: 48px;
+				display: block;
+				margin: 10px auto 15px;
+			}
+			.text2 {
+				color: #222222;
+				line-height: 18px;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+		}
+		.modal-close:before,
+		.modal-close:after {
+			background-color: #fff;
+		}
+	}
+	&.welcomeBanner{
+		top: 50%;
+		left: 45%;
+		transform: translate(-50%,-50%);
+		.modal-info-content{
+			padding: 0;
+			overflow: hidden;
+			img{
+				width: 100%;
+			}
+			.welcomeBanner-btn{
+				width: 88%;
+				margin:  20px auto;
+			}
+		}
+	}
+	&.dont-show-close-button{
+		.modal-close{
+			display: none;
+		}
+	}
+	&.modal-info-resetpwd{
+		.confirm-btn-wrap{
+			margin: 0;
+			.button_sportBtn__mSDS3{
+				width: 50% !important;
+				margin: 0 25%;
+			}
+		}
+	}
+}
+//输入框
+.input__wrap {
+	position: relative;
+	&:not(:first-child) {
+		margin-top: 16px;
+	}
+	.input__icon,
+	.input__prefixText {
+		position: absolute;
+		transform: translateY(-50%);
+	}
+	.input__icon {
+		top: 50%;
+		left: 16px;
+	}
+	.input__prefixText {
+		top: 48%;
+		left: 45px;
+		color: #bcbec3;
+	}
+	.clear-input-val {
+		position: absolute;
+		right: 10px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: 18px;
+		width: 18px;
+		border-radius: 50%;
+		transition: all 0.2s;
+		opacity: 0;
+		background: #dadada;
+		text-align: center;
+		&.show {
+			opacity: 1;
+		}
+		svg {
+			width: 8px;
+			fill: #949494;
+			height: 8px;
+			vertical-align: middle;
+		}
+	}
+	input {
+		width: 100%;
+		padding: 14.5px 12px;
+		background: #fff;
+		border-radius: 8px;
+		box-sizing: border-box;
+		border: 1px solid #e6e6eb;
+		transition: all 0.2s;
+		outline: none;
+		&:disabled {
+			background: #efeff4;
+		}
+		&:focus {
+			border-color: $light-theme-color;
+			border-right-width: 1px !important;
+			outline: 0;
+			-webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+			box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+		}
+		&.input__withIcon {
+			padding-left: 50px;
+		}
+		&.input__withBoth {
+			padding-left: 85px;
+		}
+	}
+}
+.radio__btn{
+		min-width: max-content;
+    padding: 3% 0.32rem;
+    background: #fff;
+    border-radius: 0.21333rem;
+    box-sizing: border-box;
+    border: 0.02667rem solid #e6e6eb;
+    transition: all 0.2s;
+		display: flex;
+    align-items: center;
+}
+
+
+.disband {
+	background-color: #efeff4;
+	color: #bcbec3;
+}
+.ArddressVal {
+	padding: 0 15px;
+	border: 1px solid #e3e3e8;
+	border-radius: 8px;
+	width: 100%;
+	align-items: center;
+	height: 46px;
+}
+.MginRit {
+	margin-right: 10px;
+}
+.Green {
+	color: #34c759;
+}
+.red {
+	color: #f92d2d !important;
+}
+.green {
+	color: #0ccc3c !important;
+}
+.yellow {
+	color: #f0a800 !important;
+}
+.black {
+	color: #000000 !important;
+}
+.gray {
+	color: #999999 !important;
+}
+.light-gray {
+	color: #bcbec3 !important;
+}
+.blue {
+	color: #00a6ff !important;
+}
+.BtnActive {
+	background-color: #00a6ff !important;
+	color: #ffffff !important;
+}
+.BtnSubmit {
+	padding: 15px;
+	width: 100%;
+	border: 0;
+	background-color: #efeff4;
+	color: #bcbec3;
+	border-radius: 8px;
+	margin-top: 20px;
+	text-align: center;
+}
+.line-distance {
+	height: 20px;
+}
+.gameCatComingSoon {
+	font-size: 0.25rem;
+	background: #ff4747;
+	color: #fff;
+	padding: 0 3px;
+	height: 0.4rem;
+	line-height: 0.36rem;
+	position: absolute;
+	top: 0px;
+	right: -20px;
+	border-radius: 0.1rem;
+	min-width: 10%
+}
+
+.drag_selector{
+	.drawer-custom-content-wrapper{
+		height: fit-content !important; 
+		.drag_selector_header{
+			display: flex;
+			justify-content: space-between;
+			padding: 13px 16px;
+			label{
+				color: #222;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 24px; /* 150% */
+			}
+			span{
+				color: #666;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 18px; /* 112.5% */
+			}
+		}
+		.drag_selector_content{
+			height: 330px;
+			position: relative;
+			overflow-y: hidden;
+			.selected{
+				position: absolute;
+				width: 84%;
+				height: 48px;
+				top: 50%;
+				left:50%;
+   			transform: translate(-50%,-44%);
+				border-radius: 8px;
+				background: #E3E3E8;
+			}
+			.neighbour_1st{
+				color: #666;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 22px; /* 137.5% */
+			}
+			.neighbour_2nd{
+				color: #999;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 22px; /* 183.333% */
+			}
+			.noShow{
+				color: transparent;
+			}
+			ul{
+				position: absolute;
+				width: 100%;
+			
+				li{
+					height: 48px;
+					text-align: center;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					&.active{
+						color: #222;
+						text-align: center;
+						font-size: 20px;
+						font-weight: 600;
+						line-height: 22px; /* 110% */
+						width: 84%;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.addressContainer{
+	.selectorBox{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 8px;
+		.addressInput{
+			padding: 11px 8px;
+			border-radius: 8px;
+			border: 1px solid #E3E3E8;
+			background: #FFF;
+			display: grid;
+			grid-template-columns: 1fr auto;
+			align-items: center;
+			p{
+				color: #999;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: normal;
+				text-wrap:nowrap;
+				max-width: 72px;
+				overflow-x: hidden;
+				text-overflow: ellipsis;
+			}
+			&.selected{
+				p{
+					color: #222;
+				}
+			}
+			&.disabled{
+				background-color: #EFEFF4;
+			}
+		}
+	}
+}
+
+@import '~rc-steps/assets/index.css';
+
+@import 'select.css';
+// @import 'rc-collapse.css';
+@import './sbtwo/button';
+@import 'header';
+@import './sbtwo/header';
+@import 'home';
+// 左侧滑动栏目
+@import './sbtwo/slider';
+
+@import 'modal';
+//首页投注
+@import './sbtwo/betting';
+//手风琴
+@import 'collapse';
+@import 'login';
+@import 'toast';
+
+@import 'setting';
+@import 'deposit';
+@import 'transfer';
+@import './sbtwo/rule';
+@import 'other';
+@import './sbtwo/search';
+@import 'bet-records.scss';
+@import './sbtwo/bet-records.scss';
+@import 'default-tabs.scss';
+@import 'swiper/swiper.scss';
+@import './sbtwo/skeleton';
+@import 'Game.scss';
+@import './sbtwo/game-live.scss';
+@import './sbtwo/vendor-notice.scss';
+@import './sbtwo/tutorial';
+// DatePicker
+@import './DatePickerCss/index.css';
+@import './DatePickerCss/date-picker.css';
+@import './DatePickerCss/popup.css';
+@import 'verify';
+@import 'progressbar';
+@import 'information';
+@import './sbtwo/information';
+
+// 赛事详情动画
+@import 'animation';
+
+// DatePicker2
+@import './date-picker/Calendar.css';
+@import './date-picker/DateRangePicker.css';
+
+//下拉刷新 上拉加载
+@import 'reactpullLoad';
+
+@import 'combo-bonus-detail';
+
+@import 'notification-detail';
+
+@import './sbtwo/iconfont';
+
+@import 'appdownload';
+@import './sbtwo/appdownload';
+
+//赛事情报
+@import './sbtwo/smartcoach';
+
+//游戏活动样式
+@import 'minigame';
+
+//提前兌現
+@import './sbtwo/cashout';
+
+//自我限制彈窗
+@import './sbtwo/self-exclusion';
+
+//原生活動
+// @import 'event_Anniversary';//周年活动 弹跳类型
+@import 'event_Mid_Autumn';//中秋活动 大转盘类型.
+//@import 'event_Nationalday2022'; //国庆黄金周活动 弹跳类型.
+//@import 'event_WC2022';
+// @import 'event_CNY2023';
+@import "event_LaborDay2023";
+
+//TabBar
+@import 'TabBar';
+
+@import '~react-loading-skeleton/dist/skeleton.css';
+
+//优惠页面
+@import 'Promotions';
+
+@import 'DrawerFilter';
+
+@import 'Me';
+
+//提款
+@import 'Withdrawal';
+
+@import 'KingClup';
+
+@import 'UI';
+
+@import 'TransactionRecord';
+
+@import 'About';
+
+@import 'Refer';
+
+@import 'Selflimiting';
+
+@import 'Securitycode';
+
+@import 'BankCard';
+
+@import 'Uploadfiles';
+
+@import 'Help';
+
+@import 'SelectArddress';
+
+@import 'tabs';
+
+@import "sbtwo/past-match-result"; //歷史交鋒
+
+@import "Loading";
+
+@import "central-payment/StyleSheet/Mob/M3/F1/withdrawal.scss";//專案中會控制到central payment部分的style;
+
+@import "central-payment/StyleSheet/Mob/M3/F1/common.scss";
+
+@import "central-payment/StyleSheet/Mob/M3/F1/icon.scss";
+

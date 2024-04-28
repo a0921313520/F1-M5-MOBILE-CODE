@@ -1,0 +1,348 @@
+.bet-records-tabs.rc-tabs {
+	.rc-tabs-nav-list {
+		min-width: 100%;
+		background-color: #00A6FF;
+		//border-top: 1px solid #73ceff;
+		.rc-tabs-tab:first-child{
+			border-radius: 15px 0px 0px 0px;
+		}
+		.rc-tabs-tab:nth-child(2){
+			border-radius: 0px 15px 0px 0px;
+		}
+		.rc-tabs-tab {
+			width: 50%;
+			color: #222222;
+			font-weight: initial;
+			background-color: #D7D7DB;
+			
+			.rc-tabs-tab-btn {
+				margin: auto;
+				height: t.px2rem(40px);
+				padding: 0 18px;
+				border-bottom-width: 2px;
+				border-style: solid;
+				border-color: transparent;
+				span:first-child {
+					margin-right: 6px;
+				}
+			}
+			&:first-child {
+				//border-right: 1px solid #73ceff;
+			}
+			&.rc-tabs-tab-active {
+				color: #222222;
+				background-color: #EFEFF4;
+				.rc-tabs-tab-btn {
+					//border-bottom-color: #D7D7DB;
+					outline: none;
+				}
+			}
+		}
+	}
+	.rc-tabs-ink-bar {
+		display: none;
+	}
+}
+
+.bet-records-collapse {
+	max-width: calc(100% - 2.4rem);
+	&.already-result {
+		max-width: calc(100% - 2rem);
+	}
+
+	padding: 10px;
+	&.mix-betting .race-info {
+		line-height: 1;
+		h4,
+		p {
+			display: inline-block;
+		}
+		p {
+			color: #666;
+			font-size: t.px2rem(12px);
+		}
+	}
+	h4 {
+		margin-bottom: 4px;
+		& > span:first-child {
+			margin-right: 6px;
+		}
+	}
+	p {
+		color: #bcbec3;
+	}
+}
+.already-result .race-status {
+	width: t.px2rem(30px);
+	height: t.px2rem(30px) !important;
+	line-height: t.px2rem(30px) !important;
+	text-align: center;
+	border-radius: 50%;
+	&.win {
+		color: #eb2121;
+		background-color: #ffcfcf;
+	}
+	&.lost {
+		color: #0ccc3c;
+		background-color: #c7f7d3;
+	}
+	&.level {
+		color: #888;
+		background-color: #ddd;
+	}
+	&.cashout {
+		color: #0ccc3c;
+		background-color: #dbfdd9;
+		width: auto;
+		border-radius: t.px2rem(16px);
+		font-size: t.px2rem(12px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: t.px2rem(30px) !important;
+		padding: t.px2rem(6px) t.px2rem(12px);
+	}
+}
+.mix-bet-con {
+	.already-result .race-status {
+		font-weight: bold;
+		margin-left: 4px;
+		background-color: transparent;
+	}
+	.race-content .race-item-wrap {
+		border-top: 0;
+	}
+	.race-info p {
+		margin-top: 4px;
+	}
+	.race-info > h4 {
+		font-size: t.px2rem(13px);
+	}
+	.bet-records-collapse {
+		padding-bottom: 0;
+		p {
+			font-size: t.px2rem(12px);
+		}
+	}
+}
+.combo-bonus-bg {
+	padding: 10px 32px;
+	background-image: url($base-path + '/img/combobonus.png');
+	margin-left: 4px;
+	background-size: cover;
+	line-height: 1;
+	padding-left: 16px;
+	color: #fff !important;
+}
+.drawer-content-background {
+	background-color: #fff;
+	height: 100%;
+}
+.bet-records-wrap {
+	.rc-collapse-header {
+		position: relative;
+		.race-status {
+			position: absolute;
+			right: 1.1rem;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			height: 20px;
+			line-height: 20px;
+		}
+	}
+	.rc-collapse {
+		border: 0;
+	}
+	.rc-tabs-content {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	/*這裏只負責上半部圓角 下半部圓角 cashout-button-box 處理*/
+	.rc-collapse-item {
+		border: 0;
+		background-color: #fff;
+		border-top-left-radius: t.px2rem(8px);
+		border-top-right-radius: t.px2rem(8px);
+	}
+}
+.race-content {
+	padding: 0 10px;
+	font-size: t.px2rem(12px);
+	&.mix-race-content .race-time-info-wrap {
+		flex-wrap: wrap;
+		.bet-record-service-wrap {
+			width: 100%;
+		}
+		//.race-result-wrap {
+		//	width: 100%;
+		//	display: flex;
+		//	& > div {
+		//		width: 50%;
+		//	}
+		//}
+	}
+	.race-item-wrap {
+		border-top: 1px solid #dde0e6;
+		border-bottom: 1px solid #dde0e6;
+		padding: 8px 0;
+		line-height: 1.7;
+		& > h4 > span {
+			display: inline-block;
+		}
+		.race__isRB::before {
+			content: '';
+			display: inline-block;
+			background: url('#{$base-path}/img/svg/time.svg') no-repeat 50% 100% / 100%;
+			width: 0.3865rem;
+			height: 0.3865rem;
+			vertical-align: text-bottom;
+			margin-right: 4px;
+		}
+	}
+	.race-time-info-wrap {
+		padding: 8px 0;
+		line-height: 1.7;
+		// display: flex;
+		// justify-content: space-between;
+		// align-items: center;
+		.money-wrap {
+			color: #000;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		.Money-top {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.bet-record-service-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.sport-service {
+			margin-left: t.px2rem(16px);
+		}
+	}
+	.Games-list-title-icon {
+		height: 0.7rem;
+		line-height: 0.4rem;
+		font-size: t.px2rem(17px);
+		background-color: #fde8e8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.35rem;
+		color: red;
+		display: block;
+		padding: 0 10px;
+		transform: scale(0.7);
+		& > b {
+			vertical-align: middle;
+		}
+	}
+	.race-space-between {
+		display: flex;
+		justify-content: space-between;
+		& > span {
+			line-height: t.px2rem(30px) !important;
+		}
+	}
+}
+.red-color {
+	color: #eb2121 !important;
+}
+.blue-color {
+	color: #0ccc3c !important;
+}
+.bet-result-tools-wrapper {
+	padding: 0 10px;
+	& > div {
+		margin-bottom: t.px2rem(10px);
+		& > button {
+			margin-right: t.px2rem(10px);
+			height: 30px;
+			&:not(.active) {
+				color: #666;
+				border-color: #666;
+			}
+		}
+		&.brief > span {
+			margin-right: t.px2rem(10px);
+			color: #666;
+		}
+	}
+}
+.active .sport-svg-wrap.records-date-icon > span > svg {
+	fill: $light-theme-color;
+}
+.sport-svg-wrap.records-date-icon {
+	height: 16px;
+	vertical-align: text-bottom;
+	& > span {
+		height: 100%;
+		& > svg {
+			height: 16px;
+			vertical-align: top;
+			fill: #666;
+		}
+	}
+}
+
+.lightColor {
+	color: #bcbec3;
+}
+
+.bet-records-empty {
+	width: 100%;
+	height: calc(100vh - 7.5rem);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	> .bet-records-empty-img {
+		width: t.px2rem(98px);
+		height: t.px2rem(98px);
+	}
+	> .bet-records-empty-text {
+		color: #bcbec3;
+		font-size: t.px2rem(14px);
+		margin-top: t.px2rem(16px);
+	}
+}
+
+.bet-records-tabs-nav-list {
+	transform: translate(0px, 0px);
+	display: flex;
+	width: 250px;
+	justify-content: space-around;
+	.bet-records-tabs-tab-active {
+		.name {
+			border-bottom: 2px solid white;
+		}
+		.maintain {
+			border-radius: 3px;
+			position: absolute;
+			top: 5px;
+			font-size: 12px;
+			background-color: #ffeda6;
+			color: #704708;
+			height: 15px;
+			display: flex;
+			right: -15px;
+			align-items: center;
+			transform: scale(.9);
+			width: 30px;
+			justify-content: center;
+		}
+	}
+}
+.lineDescWrap {
+	display: flex;
+	padding-top: 5px;
+	.lineDescText {
+		color: #999;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,1058 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #f5f5f5;
+}
+
+* {
+	margin: 0px;
+	padding: 0;
+	border-width: 0;
+}
+
+a {
+	outline: 0;
+}
+
+div {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.swiper-container1 {
+	overflow: hidden;
+	position: relative;
+	background-image: url('./../images/funbg.jpg');
+	background-repeat: no-repeat;
+	/* background-position:center; */
+	background-size: cover;
+	/* overflow:auto; */
+	height: 33rem;
+	background-color: #fff;
+}
+
+.swiper-container1 .swiper-slide h3 {
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.swiper-container1 .swiper-pagination {
+	bottom: 4.5rem !important;
+}
+
+.JBMobileLandingLayout {
+	position: relative;
+	max-width: 1024px;
+	height: 100%;
+	margin: auto;
+
+}
+
+.pageTop img.logoWrapperImg {
+	width: 9rem;
+}
+
+.pageTop {
+	display: flex;
+	padding: .3rem 0;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 15px;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	left: 0;
+	right: 0;
+}
+
+.swiper-container1 .swiper-slide {
+	text-align: center;
+}
+
+.swiper-container1 .swiper-slide img {
+	width: 85%;
+	margin-top: 4rem;
+}
+
+/* .swiper-container1 .swiper-slide img.newImg {
+	padding-top: 60px;
+} */
+
+.swiper-container1 .swiper-pagination .swiper-pagination-bullet {
+	background-color: transparent;
+	border: 3px solid #00A6FF;
+}
+
+.swiper-container1 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: #00A6FF;
+	border: 3px solid #00A6FF;
+}
+
+.swiper-container1-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 8rem;
+}
+
+
+.downloadBox {
+	z-index: 2;
+	position: relative;
+	background-color: #fff;
+	margin-top: -4rem;
+}
+
+.downloadBtn {
+	width: 92%;
+	margin: 0 auto;
+	/* transform:translateY(-4.5rem);
+	z-index:200;
+	position:relative; */
+}
+
+.downloadBtn .downloadBtnText {
+	background-color: #32C75C;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	height: 46px;
+	line-height: 46px;
+	font-weight: bold;
+}
+
+.downloadBtn .downloadBtnBox {
+	height: 38px;
+	margin-top: 15px;
+}
+
+.downloadBtn .downloadBtnBox .downloadBtnBox1 {
+	background-color: #25AAE1;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	border-radius: 6px;
+	color: #fff;
+	font-weight: bold;
+	width: 49%;
+	font-size: 12px;
+}
+
+.downloadBtn .downloadBtnBox .downloadBtnBox1 img {
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+}
+
+.downloadBtn .downloadBtnBox .downloadBtnBox2 {
+	float: left;
+	text-decoration: none;
+}
+
+.downloadBtn .downloadBtnBox .downloadBtnBox3 {
+	float: right;
+}
+
+#OpenCNLive {}
+
+.downText {
+	color: #666;
+	text-decoration: none;
+	/* text-align: center; */
+	/* margin-top: .8rem; */
+	display: contents;
+	height: 40px;
+	font-size: 12px;
+}
+
+.boxA {
+	margin-right: 12px;
+}
+
+.boxB {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.boxC {
+	padding-top: 5px;
+	color: #00A6FF;
+	font-size: 14px;
+	border-bottom-width: 1px;
+	border-bottom-color: #00A6FF;
+	border-bottom-style: solid;
+	display: inline-block;
+}
+
+.imgBox {
+	display: flex;
+	flex-direction: row;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	border-bottom: 1px solid #E0E0E0;
+	width: 100%;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+.imgBox img {
+	width: 60px;
+	height: 60px;
+
+}
+
+
+.button {
+	margin: 0 auto 0.2rem;
+	padding: 10px 10px;
+	border-radius: 18px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.button-download {
+	color: #fff;
+	background: #33C85D;
+	padding-left: 20px;
+	padding-right: 20px;
+	/* border:1px solid #1C8EFF; */
+}
+
+:root {
+	--swiper-theme-color: #fff !important;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+	display: none !important;
+}
+
+.modal {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+
+.modal .modalWrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.modal .modalContainer {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 92%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.swiper-container2 {
+	overflow: hidden;
+	position: relative;
+}
+
+.swiper-box {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.helpText {
+	text-align: center;
+	color: #25AAE1;
+	font-size: 12px;
+	border-bottom: 1px #29aae2 solid;
+	width: 150px;
+	display: inline;
+}
+
+.helpText {}
+
+.modal .swiper-slide img {
+	width: 80%;
+	vertical-align: middle;
+
+}
+
+.swiper-h3text {
+	text-align: center;
+	padding-top: 10px;
+	font-family: "Tahoma", "system-ui", "-apple-system", "Arial", "BlinkMacSystemFont", 'Segoe UI';
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.modalContainerTop p {
+	text-align: center;
+	color: #000000;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.modal .swiper-pagination {
+	position: relative;
+}
+
+.modal .swiper-pagination .swiper-pagination-bullet {
+	background-color: #cccccc;
+}
+
+.modal .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: #29ABE2;
+}
+
+.modal .swiper-slide p {
+	text-align: center;
+	color: rgba(0, 0, 0, .5);
+	margin-bottom: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-size: 12px;
+}
+
+.modal .swiper-slide p span.text1 {
+	color: #00A6FA !important;
+	font-weight: bold !important;
+}
+
+.modal .swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+	right: 30px;
+	transform: scale(.76);
+	margin-top: -3rem;
+}
+
+.modal .swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+	left: 30px;
+	transform: scale(.76);
+	margin-top: -3rem;
+}
+
+.closeButton {
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.closeButton div {
+	background-color: #1CA6FC;
+	color: #fff;
+	width: 80%;
+	margin: auto;
+	border-radius: 6px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.modal .swiper-slide h3 {
+	text-align: center;
+}
+
+.qqweqew {
+	color: red;
+}
+
+
+.hleptextBox {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.hleptextBoxOne {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.hleptextBoxOne h3 {
+	font-size: 16px !important;
+	text-align: center !important;
+}
+
+
+.hleptextBox div h3 {
+	font-size: 14px;
+	text-align: left;
+	padding-left: 15px;
+}
+
+.hleptextBox div p {
+	font-size: 14px;
+	color: #454545;
+	text-align: left;
+	padding-left: 40px;
+	padding-right: 34px;
+	line-height: 20px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.hleptextBoxTwo {}
+
+.hleptextBoxTwo_h3 {
+	padding-left: 5px !important;
+
+}
+
+.line {
+	/* float: left;
+	width: 150px;
+	height: 1px;
+	background-color: #25AAE1; */
+}
+
+.modalDH4 {
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.modalDBtnWrap {
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	border-top-width: 1px;
+	border-top-color: #E8E8E8;
+	border-top-style: solid;
+	display: flex;
+	position: relative;
+}
+
+.modalDBtn {
+	height: 46px;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	width: 50%;
+	display: flex;
+}
+
+.modalDP {
+	text-align: center;
+	font-size: 12px;
+}
+
+.modalDBtnText {
+	color: #3494FC;
+	width: 65%;
+}
+
+.modalDTextWrap {
+	margin: 15px 20px;
+}
+
+.modal .modalContainerD {
+	width: 75%;
+}
+
+.modalDBtnWrap .lineD {
+	position: absolute;
+	width: 1px;
+	background-color: #E8E8E8;
+	height: 46px;
+}
+
+.helpText {
+	color: #007AFF;
+	border-bottom: 1px #007AFF solid;
+	margin: 15px 0;
+	display: inline-block;
+}
+
+.imgBoxLeft {
+	display: flex;
+}
+
+#ENTcerModal .swiper-h3text {
+	padding-bottom: 10px;
+	background: #4FA5F5;
+	color: #fff;
+	padding: 15px 0;
+}
+
+#ENTcerModal .modalContainer {}
+
+#ENTcerModal .img-container {
+	height: 100%;
+	overflow: scroll;
+	background: #EFEFF4;
+}
+
+#ENTcerModal .img-box {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 80px;
+}
+
+#ENTcerModal .img-box .item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#ENTcerModal .img-box img {
+	width: 46%;
+	margin: 2%;
+}
+
+#CSAndroid.modal .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: #00A6FF;
+}
+
+#CSAndroid .closeButton div {
+	background-color: #00A6FF;
+}
+
+#CSAndroid.modal .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: #00A6FF;
+}
+
+#CSAndroid .closeButton div {
+	background-color: #00A6FF;
+}
+
+
+#ENTcerModal.modal .modalContainer {
+	width: 100%;
+	border-radius: 0;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	z-index: 2;
+	height: 80%;
+	position: relative;
+}
+
+#ENTcerModal.modal .modalWrap {
+	align-items: flex-end;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	transform: scale(.8) !important;
+}
+
+.modal .swiper-button-prev {
+	/* left: 60px;
+	margin-top: 20px; */
+	transform: translate(20px, -45px)scale(.8) !important;
+}
+
+.modal .swiper-button-next {
+	/* right: 60px;
+	margin-top: 20px; */
+	transform: translate(-20px, -45px)scale(.8) !important;
+}
+
+div.modal .swiper-slide img {
+	width: 85%;
+}
+
+/* .swiper-container1 .swiper-slide #imgNew {
+	width: 100%;
+} */
+
+#csInforText {
+	color: #8E8E93;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #F5F5F5;
+}
+
+.cstext {
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+#goSafari {}
+
+.alertSafari {
+	background: #F2F2F2;
+	border-radius: 20px;
+	width: 78%;
+	padding: .4rem;
+}
+
+#goSafari .modal-title {
+	position: relative;
+	width: 100%;
+	line-height: 0.82rem;
+}
+
+#goSafari .modal-title .close {
+	position: absolute;
+	display: block;
+	right: -30px;
+	top: 0px;
+	height: 100%;
+	width: 20%;
+	font-size: 24px;
+	color: #000;
+}
+
+#goSafari img {
+	width: 40%;
+	padding-bottom: 10px;
+}
+
+#goSafari .alertBtn {
+	border-color: #F2F2F2;
+	padding-bottom: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#goSafari .alertBtn input {
+	border: 1px solid #F2F2F2;
+	outline: none;
+	width: 100%;
+	background-color: #DADADA;
+	padding: .1rem;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	color: #000000;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#goSafari .alertBtn .currentURL {
+	border: 1px solid #F2F2F2;
+	background-color: #DADADA;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 13px;
+	font-weight: bold;
+	display: flex;
+	/* flex-direction: row;
+	justify-content: center;
+	align-items: center; */
+	flex: 2;
+	height: 35px;
+	padding-left: 10px;
+	border-radius: 0.1rem;
+	overflow: hidden;
+	text-align: left;
+	line-height: 35px;
+}
+
+#goSafari .alertBtn .btn {
+	width: 68px;
+	height: 33px;
+	text-align: center;
+	background-color: #00b324;
+	color: #fff;
+	border-radius: 0.1rem;
+	border: 0px;
+	font-size: 13px;
+	/* margin-left: -3px;
+	width: 1.3rem;
+	background-color: #00B324;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	color: #FFFFFF;
+	font-size: 13px;
+	padding: .1rem; */
+}
+
+.modalWrap1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+#hasCopy {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 20000000;
+	top: 0;
+	left: 0;
+	background-color: rgb(0 0 0 / 70%);
+	display: none;
+}
+
+.alertCopy {
+	padding: 1%;
+	background: #FFFFFF;
+	width: 50%;
+	border-radius: 3px;
+}
+
+.alertCopy .modal-title {
+	font-size: 14px;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #0A0A0A;
+}
+
+.alertCopy .modal-title img {
+	width: 20%;
+	margin-right: .1rem;
+}
+
+#hasCopy .modalBtn {
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	z-index: 20000;
+}
+
+#isStoreModal {
+	display: none;
+}
+
+#isStoreModal .modal-wrap {
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: 999;
+	display: flex;
+	background-color: rgb(0 0 0 / 60%);
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#isStoreModal .modal-content {
+	position: relative;
+	width: 76%;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#isStoreModal .modal-content .storeModalTitle {
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 18px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-family: "Tahoma", "system-ui", "-apple-system", "Arial", "BlinkMacSystemFont", 'Segoe UI';
+}
+
+#isStoreModal .modal-content p {
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    line-height: 16px;
+	padding: 0px 25px 10px 25px;
+}
+
+#isStoreModal .modal-content span {
+	color: #51A2FF;
+}
+
+#isStoreModal .activeStoreDownload {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	border-top: 1px solid #00000029;
+	margin-top: 10px;
+}
+
+#isStoreModal .activeStoreDownload div {
+	text-align: center;
+	width: 49%;
+	line-height: 45px;
+	font-size: 18px;
+}
+
+#storeModalClose {
+	border-right-width: 1px;
+	border-right: 1px solid #00000029;
+	color: #007AFF;
+}
+
+#storeModalDownload {
+	color: #51A2FF;
+}
+
+#APPStoreModal {
+	display: none;
+}
+
+#APPStoreModal .modal-wrap {
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: 999;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#APPStoreModal .modal-content {
+	position: relative;
+	width: 85%;
+	background: #fff;
+	border-radius: 0.1rem;
+}
+
+#APPStoreModal .modal-title {
+	position: relative;
+	width: 100%;
+	height: 0.82rem;
+	line-height: 0.82rem;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#APPStoreModal .modal-title .close {
+	position: absolute;
+	display: block;
+	right: 0;
+	height: 100%;
+	width: 30px;
+	font-size: 24px;
+	color: #222;
+}
+
+#APPStoreModal .teachingimg .tutorialImg {
+	width: 300px;
+	height: 403px;
+	padding: 0px;
+}
+
+#APPStoreModal .teachingimg {
+	text-align: center;
+}
+
+#activeIcon3 {
+	position: absolute;
+	z-index: 9;
+	left: 12px;
+	top: 9px;
+	height: 120px;
+}
+
+#APPStoreModal #activeIcon3 img {
+	width: 98px;
+	height: 98px;
+	padding: 0px;
+	border-radius: 12px;
+}
+
+#activeName3 {
+	position: absolute;
+	z-index: 9;
+	left: 118px;
+	top: 18px;
+	height: 120px;
+}
+
+#activeName3 span {
+	font-size: 15px;
+	line-height: 30px;
+	background: #595959;
+	width: 170px;
+	display: block;
+	text-align: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#activeIcon4 {
+	position: absolute;
+	z-index: 10;
+	left: 31px;
+	top: 93px;
+	height: 120px;
+}
+
+#APPStoreModal #activeIcon4 img {
+	width: 38px;
+	height: 38px;
+	padding: 0px;
+	border-radius: 5px;
+}
+
+#activeName4 {
+	position: absolute;
+	z-index: 9;
+	left: 78px;
+	top: 81px;
+	height: 120px;
+}
+
+#activeName4 span {
+	font-size: 12px;
+	background: rgb(69, 69, 72);
+	width: 200px;
+	display: block;
+	text-align: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#activeIcon5 {
+	position: absolute;
+	z-index: 9;
+	left: 44px;
+	top: 104px;
+	height: 120px;
+}
+
+#APPStoreModal #activeIcon5 img {
+	width: 45px;
+	height: 45px;
+	padding: 0px;
+	border-radius: 5px;
+}
+
+#activeName5 {
+	position: absolute;
+	z-index: 9;
+	left: 27px;
+	top: 146px;
+	height: 120px;
+}
+
+#activeName5 span {
+	font-size: 12px;
+	background: linear-gradient(rgb(47 68 78), rgb(45 68 77));
+	width: 120px;
+	color: #fff;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.modalTitles {
+	padding-top: 10px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Tahoma", "system-ui", "-apple-system", "Arial", "BlinkMacSystemFont", 'Segoe UI';
+}
+
+#APPStoreModal .tutorialStep {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+#APPStoreModal .tutorialStep h3 {
+	color: #00A6FF;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+}
+
+#APPStoreModal .tutorialStep p {
+	color: #666 !important;
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	text-align: left !important;
+	padding-left: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+#APPStoreModal .tutorialStep p strong {
+	font-weight: bold;
+}
+
+#APPStoreModal .imgView {
+	width: 302px;
+	display: inline-block;
+	position: relative;
+}
+
+#APPStoreModal .swiper-h3text {
+	font-family: Tahoma;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 22px;
+}
+
+.modalTextBox {
+	width: 85%;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+.modalTextBox .texth4 {
+	color: #00A6FF;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.modalTextBox p.textp {
+	color: #666 !important;
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	text-align: left !important;
+	padding-left: 0 !important;
+	margin-bottom: 0 !important;
+}

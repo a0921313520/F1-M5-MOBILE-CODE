@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.079" x2="1" y2="1.228" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00a6ff"/>
+      <stop offset="1" stop-color="#3d61e9"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_12817" data-name="Group 12817" transform="translate(-3236 -12152)">
+    <rect id="Rectangle_5523" data-name="Rectangle 5523" width="64" height="64" transform="translate(3236 12152)" fill="#fff" opacity="0"/>
+    <g id="Group_12816" data-name="Group 12816">
+      <g id="审核不通过" transform="translate(3227.2 12119.6)">
+        <path id="Path_5416" data-name="Path 5416" d="M45.467,85.785a15.653,15.653,0,0,1,2.872-16.154A13.66,13.66,0,0,1,53.005,66.4a14.4,14.4,0,0,1,5.385-1.077V42.708A4.365,4.365,0,0,0,54.082,38.4H17.108A4.365,4.365,0,0,0,12.8,42.708V86.5a4.365,4.365,0,0,0,4.308,4.308H48.7A28.9,28.9,0,0,1,45.467,85.785ZM22.851,48.81H33.621a2.154,2.154,0,1,1,0,4.308H22.851a2.154,2.154,0,0,1,0-4.308Zm0,12.564H47.621a2.154,2.154,0,1,1,0,4.308H22.851c-1.077-.718-2.154-1.436-2.154-2.872C20.7,62.092,21.774,61.374,22.851,61.374ZM37.569,77.169H22.851a2.154,2.154,0,0,1,0-4.308H37.569a2.154,2.154,0,1,1,0,4.308Z" fill="url(#linear-gradient)"/>
+      </g>
+      <path id="Path_5419" data-name="Path 5419" d="M642.173,638.023l-4.211-4.21a9.136,9.136,0,1,0-2.579,2.578l4.211,4.211a1.351,1.351,0,0,0,1.905,0l.674-.673A1.352,1.352,0,0,0,642.173,638.023Zm-6.888-6.888a5.438,5.438,0,1,1,.547-2.344A5.465,5.465,0,0,1,635.285,631.135Z" transform="translate(2653.684 11569.583)" fill="#666"/>
+    </g>
+  </g>
+</svg>

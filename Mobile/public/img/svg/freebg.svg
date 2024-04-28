@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="343.001" height="183" viewBox="0 0 343.001 183">
+  <g id="Group_11209" data-name="Group 11209" transform="translate(-16 -502)">
+    <path id="Exclusion_1" data-name="Exclusion 1" d="M334.886,183H8a8.009,8.009,0,0,1-8-8V97.935c.01,2.916.047,6.209.114,10.066a16,16,0,0,0,0-32C.156,81.932.108,85.494.062,88.938.034,91.023.008,92.991,0,95.425L0,8A8.009,8.009,0,0,1,8,0H334.886a8.009,8.009,0,0,1,8,8V76a16,16,0,0,0,0,32v67A8.009,8.009,0,0,1,334.886,183Zm8-75.115h0v-23.4c.013,1.611.032,3.057.051,4.456C343,93.631,343.059,98.058,342.889,107.886Zm0-23.645h0c-.02-2.628-.019-5.246,0-8.241Z" transform="translate(16.001 502)" fill="#fff"/>
+    <line id="Line_63" data-name="Line 63" x2="292.887" transform="translate(39.5 593.5)" fill="none" stroke="#e3e3e8" stroke-width="1" stroke-dasharray="5"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+.backTopContainer {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    z-index: 99;
+    width: 1.9324rem;
+    height: 1.9324rem;
+    cursor: pointer;
+}
+.backTopContent {
+    width: 1.9324rem;
+    height: 1.9324rem;
+    overflow: hidden;
+    transition: all .3s;
+}
+.backTopHide {
+    display: none;
+}
+.backTop_icon {
+    svg {
+        width: 1.9324rem;
+        height: 1.9324rem;
+    }
+}

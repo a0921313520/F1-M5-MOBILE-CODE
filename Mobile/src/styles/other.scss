@@ -1,0 +1,265 @@
+// Header Tabs
+.login__main.header-bar-tabs {
+	background-color: transparent;
+	top: t.px2rem(11px);
+	bottom: 0;
+	padding: 0;
+	font-size: t.px2rem(12px);
+	.tabsOvalLogin-tab {
+		height: t.px2rem(30px);
+		line-height: t.px2rem(30px);
+	}
+	.tabsOvalLogin-tab-btn {
+		padding: 0;
+	}
+	.tabsOvalLogin-content-holder {
+		margin-top: 0;
+	}
+	.tabsOvalLogin-nav-list .tabsOvalLogin-tab {
+		color: #e8e8e8;
+	}
+	.tabsOvalLogin .tabsOvalLogin-nav-list .tabsOvalLogin-tab.tabsOvalLogin-tab-active {
+		color: $light-theme-color;
+	}
+	.tabsOvalLogin .tabsOvalLogin-nav-list .tabsOvalLogin-tab {
+		margin: 0;
+		.tab-tag {
+			display: inline;
+			border: 1px solid #fff;
+			border-radius: 4px;
+			margin-left: 4px;
+			padding: 2px 4px;
+			font-size: t.px2rem(10px);
+			&.maintain {
+				background: #ffdf63;
+				border-color: #ffdf63;
+				color: #000;
+			}
+		}
+		&.tabsOvalLogin-tab-disabled {
+			opacity: 0.8;
+		}
+	}
+	.tabsOvalLogin .tabsOvalLogin-nav-list .tabsOvalLogin-ink-bar {
+		background-color: #fff;
+	}
+	.tabsOvalLogin .tabsOvalLogin-nav {
+		width: t.px2rem(240px);
+		background: rgba(0, 0, 0, 0.12);
+	}
+}
+.page404__container,
+.main-maintain {
+	height: calc(100vh - 59px) !important;
+	.page404__header {
+		text-align: center;
+	}
+	.logo svg {
+		fill: #fff;
+		width:3rem;
+	}
+	.sport-service {
+		position: absolute;
+		right: 16px;
+	}
+}
+.page404__main {
+	padding: 0 24px;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url($base-path + '/img/404.jpg');
+	.page404__main__errImg {
+		width: 1.8rem;
+		margin: 24px auto 24px auto;
+	}
+	.page404__main__desc {
+		color: #bcbec3;
+		line-height: 24px;
+		margin-bottom: 24px;
+		text-align: center;
+		padding: 0 24px;
+	}
+}
+
+.page404__main .page404__main__contact,
+.main-maintain .maintain-contact {
+	padding: 13px 0;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #00a6ff;
+	color: #00a6ff;
+	border-radius: 8px;
+	text-decoration: none;
+	margin-bottom: 16px;
+}
+
+.page404__container,
+.main-maintain {
+	height: 100%;
+	.page404__header {
+		text-align: center;
+	}
+	.logo svg {
+		fill: #fff;
+		width: 3rem;
+	}
+	.sport-service {
+		position: absolute;
+		right: 16px;
+	}
+}
+.main__refresh {
+	font-size: 16px;
+	height: 44px;
+	margin-bottom: 16px;
+}
+.page404__main .page404__main__csBtn,
+.main-maintain .maintain-cs {
+	line-height: 1.15rem;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #00a6ff;
+	color: #00a6ff;
+	border-radius: 0.16rem;
+	text-decoration: none;
+	margin-bottom: 16px;
+	height: 1.28rem;
+}
+.maintenance-wrap {
+	z-index: 999999;
+}
+
+.main-maintain {
+	height: 100%;
+	.header-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.maintain-heading {
+		font-size: 20px;
+		color: #000;
+		font-weight: bold;
+	}
+	.maintain-desc {
+		color: #999999;
+		font-size: 14px;
+		margin-top: 8px;
+		margin-bottom: 24px;
+		line-height: 26px;
+	}
+	.maintain-body {
+		.countDown{
+			display: flex;	
+			gap:30px;
+			padding: 0 41px;
+			margin: 0 auto 27px auto;
+			.countDown_item{
+				display: flex;
+				flex-direction: column;
+				gap:9px;
+				.countDown_value{
+					background-color: #FFF;
+					width: 64px;
+					height: 76px;
+					color: #222;
+					font-size: 38px;
+					font-weight: 700;
+					line-height: normal;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 10px;
+				}
+				label{
+					color: #222;
+					font-size: 14px;
+					font-weight: 400;
+					line-height: normal;
+				}
+			}
+		}
+		background-image: url($base-path + '/img/Maintainence-Page.jpg');
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-size: 16px;
+		padding: 220px 24px 0 24px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	.restrict-body {
+		background-image: url($base-path + '/img/IP-Restricted.jpg');
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-size: 16px;
+		padding: 232px 24px 0 24px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.restrict-img {
+			width: 58px;
+			margin: 0 auto;
+		}
+		.maintain-desc {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+	.illegal-body {
+		height: calc(100vh - #{$header-height});
+		font-size: 16px;
+		padding: 0 24px 0 24px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.restrict-img {
+			width: 58px;
+			margin: 0 auto;
+		}
+		.maintain-heading {
+			margin-top: 24px;
+			font-size: 18px;
+		}
+		.maintain-desc {
+			padding: 8px;
+			font-size: 14px;
+			color: #999999;
+		}
+	}
+}
+
+/* 重置密码 */
+.Resetpassword {
+	background-color: white;
+	margin: 15px;
+	padding: 25px;
+	border-radius: 15px;
+	label {
+		margin: 15px 0px;
+		display: block;
+	}
+	.errorMsg {
+		color: #f92d2d;
+		padding: 10px 0;
+		font-size: 12PX;
+		line-height: 18px;
+	}
+}
+.ResetErrorMsg {
+	padding: 25px 1px 40px;
+	line-height: 20px;
+}

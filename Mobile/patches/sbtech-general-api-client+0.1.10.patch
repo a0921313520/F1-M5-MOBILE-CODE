@@ -1,0 +1,65 @@
+diff --git a/node_modules/sbtech-general-api-client/lib/http/fetch-with-retry.js b/node_modules/sbtech-general-api-client/lib/http/fetch-with-retry.js
+index 2acf4a6..3efe5a4 100644
+--- a/node_modules/sbtech-general-api-client/lib/http/fetch-with-retry.js
++++ b/node_modules/sbtech-general-api-client/lib/http/fetch-with-retry.js
+@@ -41,7 +41,7 @@ function fetchWithRetry(url, options, retryCheckers, attemptsLeft) {
+         var response, result, fetchWithRetryResponse, i;
+         return __generator(this, function (_a) {
+             switch (_a.label) {
+-                case 0: return [4 /*yield*/, window.fetch(url, options)];
++                case 0: return [4 /*yield*/, fetch(url, options)];
+                 case 1:
+                     response = _a.sent();
+                     result = null;
+diff --git a/node_modules/sbtech-general-api-client/lib/http/http-client.js b/node_modules/sbtech-general-api-client/lib/http/http-client.js
+index b94feff..12660b2 100644
+--- a/node_modules/sbtech-general-api-client/lib/http/http-client.js
++++ b/node_modules/sbtech-general-api-client/lib/http/http-client.js
+@@ -89,7 +89,7 @@ function attachToken(options, token) {
+ }
+ function checkStatus(response) {
+     if (!(response.status >= 200 && response.status < 300)) {
+-        throw new Error(response.statusText);
++        throw { status: response.status, response:response.statusText, json: response.json()};
+     }
+ }
+ function parseError(responseObject) {
+diff --git a/node_modules/sbtech-general-api-client/lib/platform-integration/host/namespace.js b/node_modules/sbtech-general-api-client/lib/platform-integration/host/namespace.js
+index 2bc2b06..a00d515 100644
+--- a/node_modules/sbtech-general-api-client/lib/platform-integration/host/namespace.js
++++ b/node_modules/sbtech-general-api-client/lib/platform-integration/host/namespace.js
+@@ -1,5 +1,5 @@
+ "use strict";
+ Object.defineProperty(exports, "__esModule", { value: true });
+-window['SBTech'] = window['SBTech'] || {};
+-exports.SBTech = window['SBTech'];
++//window['SBTech'] = window['SBTech'] || {};
++exports.SBTech = {};//window['SBTech'];
+ //# sourceMappingURL=namespace.js.map
+\ No newline at end of file
+diff --git a/node_modules/sbtech-general-api-client/lib/token/token-service.js b/node_modules/sbtech-general-api-client/lib/token/token-service.js
+index dece379..2bbc03f 100644
+--- a/node_modules/sbtech-general-api-client/lib/token/token-service.js
++++ b/node_modules/sbtech-general-api-client/lib/token/token-service.js
+@@ -58,7 +58,7 @@ var TokenService = (function () {
+     TokenService.prototype.startAutoRenew = function () {
+         var _this = this;
+         if (this.isInitialized && this.config.tokenRenewInterval && !this.autoRenewTimer) {
+-            this.autoRenewTimer = window.setInterval(function () { return _this.renew(); }, this.config.tokenRenewInterval);
++            this.autoRenewTimer = setInterval(function () { return _this.renew(); }, this.config.tokenRenewInterval);
+         }
+     };
+     TokenService.prototype.stopAutoRenew = function () {
+diff --git a/node_modules/sbtech-general-api-client/webpack.config.js b/node_modules/sbtech-general-api-client/webpack.config.js
+index a32d1cc..5f5bed3 100644
+--- a/node_modules/sbtech-general-api-client/webpack.config.js
++++ b/node_modules/sbtech-general-api-client/webpack.config.js
+@@ -7,7 +7,7 @@ module.exports = function (env) {
+     const isProd = nodeEnv === 'production';
+     const plugins = [
+         new webpack.ProvidePlugin({
+-            'window.fetch': "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
++            'fetch': "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
+             'Promise': "imports-loader?this=>global!exports-loader?global.Promise!core-js/es6/Promise",
+         }),
+         new webpack.DefinePlugin({

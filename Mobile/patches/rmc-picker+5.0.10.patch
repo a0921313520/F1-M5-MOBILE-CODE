@@ -1,0 +1,49 @@
+diff --git a/node_modules/rmc-picker/lib/Picker.js b/node_modules/rmc-picker/lib/Picker.js
+index 61b7cd5..53635bf 100644
+--- a/node_modules/rmc-picker/lib/Picker.js
++++ b/node_modules/rmc-picker/lib/Picker.js
+@@ -337,7 +337,7 @@ function (_React$Component) {
+ 
+       return passiveSupported;
+     }
+-  }, {
++  }/* , {
+     key: "componentWillReceiveProps",
+     value: function componentWillReceiveProps(nextProps) {
+       var _this4 = this;
+@@ -354,7 +354,13 @@ function (_React$Component) {
+ 
+       this.scrollHanders.setDisabled(nextProps.disabled);
+     }
+-  }, {
++  }
++  , {
++    key: "componentDidUpdate",
++    value: function componentDidUpdate() {
++      this.props.select(this.state.selectedValue, this.itemHeight, this.scrollToWithoutAnimation);
++    }
++  }*/, {
+     key: "shouldComponentUpdate",
+     value: function shouldComponentUpdate(nextProps, nextState) {
+       return this.state.selectedValue !== nextState.selectedValue || this.props.children !== nextProps.children;
+@@ -362,7 +368,19 @@ function (_React$Component) {
+   }, {
+     key: "componentDidUpdate",
+     value: function componentDidUpdate() {
+-      this.props.select(this.state.selectedValue, this.itemHeight, this.scrollToWithoutAnimation);
++      var _this4 = this;
++
++      if (this.state.selectedValue !== this.props.selectedValue) {
++        this.setState({
++          selectedValue: this.props.selectedValue
++        }, function () {
++          _this4.props.select(this.props.selectedValue, _this4.itemHeight, this.props.noAnimate ? _this4.scrollToWithoutAnimation : _this4.scrollTo);
++        });
++      } else {
++        this.props.select(this.state.selectedValue, this.itemHeight, this.scrollToWithoutAnimation);
++      }
++      
++      this.scrollHanders.setDisabled(this.props.disabled);
+     }
+   }, {
+     key: "getValue",

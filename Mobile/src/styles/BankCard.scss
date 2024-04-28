@@ -1,0 +1,740 @@
+/*个人账户*/
+#bankcard {
+	padding: 64px 16px 16px;
+	.clearfix::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.bankCardRemind {
+		position: absolute;
+		top: 368px;
+		left: 50%;
+		margin-left: -168px;
+		z-index: 999;
+		width: 336px;
+		text-align: center;
+		padding: 0 16px;
+	}
+	.bankCardRemind > div {
+		padding: 16px 16px;
+		background-color: #000000CC;
+		font-size: 12.8px;
+		color: #fff;
+		border-radius: 4.8px;
+		text-align: left;
+	}
+	.bankCardRemind .daosanjiao {
+		position: absolute;
+		top: -8px;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-bottom: 8px solid #000000CC;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+	}
+	.delete-span {
+		display: inline-block;
+		width: 78px;
+		height: 27px;
+		line-height: 27px;
+	}
+	.bankCard-item {
+		position: relative;
+		z-index: 10;
+		background-image: linear-gradient(to bottom right, #fb634e, #f14352);
+		border-radius: 10px;
+		padding: 16px;
+		color: #fff;
+		margin-bottom: 15px;
+		height: 130px;
+		box-shadow: 0px 2px 4px rgba(99, 99, 99, 0.1);
+		&.jianshe-item {
+			background-image: linear-gradient(to bottom right, #11b4f7, #3779d9);
+		}
+		&.nongye-item {
+			background-image: linear-gradient(to bottom right, #22b771, #00af91);
+		}
+	}
+	.bank-logo-wrapper {
+		display: inline-block;
+		vertical-align: top;
+		width: 40px;
+		height: 40px;
+		// padding:5px;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 50%;
+	}
+	.bank-detail {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 16px;
+		margin-bottom: 16px;
+	}
+	.watermark {
+		position: absolute;
+		z-index: 8;
+		right: -4.8px;
+		bottom: -4.8px;
+		height: 96px;
+		opacity: 0.2;
+	}
+	.watermark-else {
+		position: absolute;
+		z-index: 8;
+		right: 8px;
+		bottom: 8px;
+		height: 64px;
+		opacity: 0.1;
+	}
+
+	.dotted-add {
+		width: 100%;
+		height: 130px;
+		line-height: 130px;
+		border: 1px dashed #ccc;
+		border-radius: 10px;
+	}
+	.delete-span,
+	.delete-span-sure {
+		display: inline-block;
+		width: 78px;
+		height: 27px;
+		line-height: 27px;
+		border-radius: 14px;
+		margin-bottom: 12.8px;
+	}
+	.delete-span {
+		border: 1px solid #ccc;
+		background-color: #ccc;
+	}
+	.delete-span-sure {
+		border: 1px solid #666;
+	}
+}
+.add-modal {
+	.am-list-item.am-input-item {
+		padding-left: 0 !important;
+
+		input {
+			text-align: right;
+		}
+	}
+	.am-list-item .am-input-label,
+	.am-list-item .am-input-control input {
+		font-size: 14px;
+	}
+}
+
+.BankContent {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: auto;
+	background-color: #efeff4;
+	// height: 100%;
+	min-height: 960px;
+	.headTabs {
+		background-color: #00a6ff;
+		margin: 0 auto;
+		position: relative;
+		top: 0px;
+		z-index: 3;
+		padding-bottom: 14px;
+		div {
+			//width: 33.333%;
+			height: auto;
+			display: inline-block;
+			text-align: center;
+			position: relative;
+			//padding: 0 10px;
+			span {
+				margin: 0 auto;
+				position: relative;
+				margin-top: 9.6px;
+				color: #b4e4fe;
+				font-size: 12px;
+				padding-bottom: 10px;
+			}
+		}
+		.active {
+			span {
+				border-bottom: 3px solid white;
+				color: white;
+			}
+		}
+		.active::after {
+			background-color: white;
+		}
+	}
+
+	.bankList {
+		overflow: scroll;
+		border-bottom-width: 1;
+		border-color: #d2d2d2;
+		line-height: 20px;
+		padding: 0 15px;
+		.norecord-text {
+			color: #999999;
+			font-size: 12px;
+			padding-top: 10px;
+		}
+		.newCard {
+			margin: 0 auto;
+			border: 2px dashed #00a6ff;
+			border-radius: 8px;
+			height: 112px;
+			line-height: 112px;
+			margin-top: 16px;
+			position: relative;
+			color: #00a6ff;
+			text-align: center;
+			font-size: 12px;
+			font-weight: 500;
+			.ToDoAddBank {
+				margin-left: 5px;
+			}
+		}
+		.note {
+			font-size: 12px;
+			padding: 10px 0;
+			color: #999999;
+			text-align: center;
+			label {
+				color: #00a6ff;
+				text-decoration: underline;
+			}
+		}
+		.limit {
+			border: 0.8px solid #0000001F;
+			background-color: #fff;
+			border-radius: 8px;
+			padding: 20px 20px 5px;
+			margin-top: 16px;
+			position: relative;
+			.DataInfo {
+				padding-bottom: 15px;
+				.noteinfo {
+					svg {
+						width: 16px;
+						height: 16px;
+						padding-left: 10px;
+					}
+				}
+				.edit {
+					svg {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+			.Bankinfo-popover {
+				line-height: 20px;
+				top: 42px;
+				.popover_popoverInner__Z4giv {
+					padding: 15px;
+				}
+				.popover_popoverArrow__1n2Gy {
+					top: -8px;
+					left: -59px;
+				}
+				.popover_popoverClose__3kzHy {
+					svg {
+						margin: 10px 5px;
+					}
+				}
+			}
+			.lf {
+				font-size: 12px;
+				color: #999999;
+			}
+			.rt {
+				font-size: 14px;
+				color: #000000;
+			}
+		}
+		.BankList {
+			background-color: white;
+			padding: 15px 15px;
+			line-height: 30px;
+			margin: 10px 0px;
+			border-radius: 8px;
+			.setDefault {
+				margin-left: 5px;
+				color: #0ccc3c;
+				font-size: 12px;
+			}
+			.ToDodefault {
+				color: #00a6ff;
+				font-size: 12px;
+			}
+		}
+		.actionGroup {
+			.setDefault {
+				width: 80px;
+				height: 28.8px;
+				text-align: center;
+				line-height: 28.8px;
+				background-color: #0000000A;
+				color: #666666;
+				font-size: 11px;
+				border-radius: 16px;
+			}
+			.delete {
+				width: 80px;
+				height: 28.8px;
+				text-align: center;
+				line-height: 28.8px;
+				background-color: #0000000A;
+				color: #666666;
+				font-size: 12.8px;
+				border-radius: 16px;
+			}
+			.active {
+				background-color: transparent;
+				border: 0.8px solid #999999;
+			}
+		}
+		.actionGroup::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		.bankWrap {
+			width: 336px;
+			margin: 0 auto;
+			border: 0.8px solid #d9d9d9;
+			// background-color: #fff;
+			border-radius: 8px;
+			padding: 16px 11.2px;
+			margin-top: 16px;
+			position: relative;
+			.watermark {
+				position: absolute;
+				z-index: 8;
+				right: 8px;
+				bottom: 8px;
+				height: 56px;
+				opacity: 0.2;
+			}
+			.watermark-else {
+				position: absolute;
+				z-index: 8;
+				right: 8px;
+				bottom: 8px;
+				height: 64px;
+				opacity: 0.1;
+			}
+			.bankWrapTop {
+				position: relative;
+				height: 48px;
+				.imgCon {
+					width: 44.8px;
+					height: 44.8px;
+					background-color: #fff;
+					border-radius: 50%;
+					position: absolute;
+					left: 16px;
+					top: 1.6px;
+					> img {
+						width: 48px;
+						height: 48px;
+						position: absolute;
+						left: -1.6px;
+						top: -1.6px;
+					}
+				}
+
+				.bankName {
+					display: block;
+					position: absolute;
+					left: 80px;
+					top: 3.2px;
+					color: #fff;
+				}
+				.cardHolder {
+					display: block;
+					position: absolute;
+					left: 80px;
+					top: 22.4px;
+					font-size: 12.8px;
+					color: #FFFFFFCC;
+				}
+				.default {
+					display: block;
+					position: absolute;
+					right: 0px;
+					top: 8px;
+					font-size: 12.8px;
+					color: #FFFFFFCC;
+				}
+			}
+			.bankWrapBottom {
+				height: 48px;
+				line-height: 32px;
+				position: relative;
+				.cardNum {
+					display: block;
+					position: absolute;
+					left: 80px;
+					top: 0px;
+					color: #fff;
+					font-size: 19.2px;
+				}
+				.detail {
+					display: block;
+					position: absolute;
+					right: 16px;
+					top: 24px;
+					color: #fff;
+					font-size: 12.8px;
+					z-index: 99;
+				}
+			}
+			.bankWrapBottom::after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+	}
+	.walletAddress {
+		overflow: scroll;
+		padding-bottom: 144px;
+		border-bottom-width: 1;
+		border-color: #d2d2d2;
+		.newCard {
+			width: 336px;
+			margin: 0 auto;
+			border: 0.8px dashed #d9d9d9;
+			border-radius: 8px;
+			height: 96px;
+			line-height: 96px;
+			margin-top: 16px;
+			position: relative;
+			color: #999999;
+			text-align: center;
+		}
+		.actionGroup {
+			.setDefault {
+				width: 80px;
+				height: 28.8px;
+				text-align: center;
+				line-height: 28.8px;
+				background-color: #0000000A;
+				color: #666666;
+				font-size: 12.8px;
+				border-radius: 16px;
+			}
+			.delete {
+				width: 80px;
+				height: 28.8px;
+				text-align: center;
+				line-height: 28.8px;
+				background-color: #0000000A;
+				color: #666666;
+				font-size: 12.8px;
+				border-radius: 16px;
+			}
+			.active {
+				background-color: transparent;
+				border: 0.8px solid #999999;
+			}
+		}
+		.actionGroup::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		.bankWrap {
+			width: 336px;
+			margin: 0 auto;
+			border: 0.8px solid #d9d9d9;
+			background-color: #26a17b;
+			border-radius: 8px;
+			padding: 16px 11.2px;
+			margin-top: 16px;
+			position: relative;
+
+			.watermark {
+				position: absolute;
+				z-index: 8;
+				right: 8px;
+				bottom: 8px;
+				height: 56px;
+				opacity: 0.2;
+			}
+			.watermark-else {
+				position: absolute;
+				z-index: 8;
+				right: 8px;
+				bottom: 8px;
+				height: 64px;
+				opacity: 0.1;
+			}
+			.bankWrapTop {
+				position: relative;
+				height: 112px;
+				.imgCon {
+					width: 48px;
+					height: 48px;
+					position: absolute;
+					left: 16px;
+					top: 1.6px;
+					> img {
+						width: 48px;
+						height: 48px;
+					}
+				}
+				.bankNameCon {
+					display: block;
+					position: absolute;
+					left: 80px;
+					color: #fff;
+				}
+			}
+		}
+		.bankWrapBottom {
+			position: absolute;
+			top: 67.2px;
+			width: 100%;
+			.cardNum {
+				display: block;
+				color: #fff;
+				font-size: 12.8px;
+				width: 100%;
+				height: 32px;
+				line-height: 32px;
+				text-align: center;
+			}
+			.copy {
+				display: block;
+				width: 96px;
+				height: 32px;
+				line-height: 32px;
+				background-color: #fff;
+				color: #1c8eff;
+				border-radius: 32px;
+				margin: 0 auto;
+				border-radius: 32px;
+				text-align: center;
+			}
+		}
+		.bankWrapBottom::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+}
+.dateInput {
+	width: 256px;
+	height: 40px;
+	line-height: 36.8px;
+	border-radius: 8px;
+	background-color: #f6f6f6;
+	margin: 0 auto;
+}
+.dateInputP {
+	width: 256px;
+	text-align: left;
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+//添加银行卡
+#AddCard {
+	padding: 10px;
+	height: 100vh;
+	background-color: white;
+	.active {
+		background-color: #00a6ff !important;
+		color: #ffffff !important;
+	}
+	.submit {
+		padding: 15px;
+		width: 100%;
+		border: 0;
+		background-color: #efeff4;
+		color: #bcbec3;
+		border-radius: 8px;
+		margin-top: 20px;
+	}
+	.rc-select {
+		height: auto;
+	}
+	.addBankAccountModal{
+		.rc-select-selector {
+			background-color: white;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+		}
+		.bank-icon{
+			margin: 5px 5px 0 0 ;
+		}
+	}
+}
+
+.Fullscreen-Modal {
+	.BankDetail {
+		background-color: white;
+		padding: 15px;
+		line-height: 30px;
+		border-radius: 8px;
+		margin-bottom: 20px;
+		font-size: 12px;
+		label {
+			font-size: 12px;
+			color: #999999;
+			flex: .5;
+		}
+		.value {
+			flex: 1;
+		}
+	}
+	.HistoryDetail {
+		font-size: 12px;
+		color: #999999;
+		H4 {
+			font-size: 14px;
+			color: #000000;
+		}
+		hr {
+			width: 100%;
+			background-color: #0000000A;
+			height: 0.1px;
+			opacity: .4;
+		}
+		.History {
+			align-items: center;
+			background-color: #0000000A;
+			width: 210px;
+			justify-content: space-between;
+			border-radius: 20px;
+			padding: 1px 10px;
+			color: #666666;
+			margin-top: 7px;
+			margin-bottom: 10px;
+		}
+		.number {
+			color: #323232;
+			flex: .6;
+		}
+		.note {
+			color: #83630b;
+			line-height: 20px;
+			background-color: #fff5bf;
+			padding: 15px 15px;
+			border-radius: 8px;
+			margin-top: 10px;
+		}
+	}
+	.UsdtError {
+		margin: 0 0 15px;
+		padding: 10px;
+		background-color: #f5f5f5;
+		color: #666666;
+		font-size: 12px;
+		border-radius: 8px;
+		.txt {
+			margin-left: 10px;
+		}
+	}
+}
+
+.BankLimit {
+	.Error {
+		background-color: #f5f5f5;
+		padding: 15px;
+		border-radius: 8px;
+		margin-bottom: 10px;
+		color: #666666;
+		font-size: 12px;
+		.txt {
+			margin-left: 10px;
+		}
+	}
+	.Note {
+		background-color: #f5f5f5;
+		padding: 15px;
+		margin-top: 20px;
+		color: #999999;
+		font-size: 12px;
+		line-height: 20px;
+		border-radius: 8px;
+	}
+}
+
+//添加USDT钱包
+#WalletAddress {
+	padding: 15px;
+	.AddWalletAddress {
+		border: 2PX dashed #00a6ff;
+		border-radius: 8px;
+		height: 112px;
+		line-height: 112px;
+		margin-top: 16px;
+		position: relative;
+		color: #00a6ff;
+		text-align: center;
+		font-size: 12px;
+		width: 100%;
+		font-weight: 500;
+		svg {
+			margin-right: 10px;
+		}
+	}
+	.note {
+		font-size: 12px;
+		color: #999999;
+		padding: 40px;
+		label {
+			color: #00a6ff;
+			text-decoration: underline;
+		}
+	}
+	.WalletAddressList {
+		background-color: #ffffff;
+		width: 100%;
+		padding: 15px;
+		line-height: 35px;
+		border-radius: 8px;
+		margin-bottom: 15px;
+		label {
+			color: #000000;
+			font-size: 14px;
+		}
+		.item {
+			.green {
+				svg {
+					margin-right: 5px;
+				}
+			}
+			.address {
+				width: 85%;
+				word-break: break-all;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+.SkeletonTheme {
+	padding: 15px;
+}
+
+.bankIconName {
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+	.bankName {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

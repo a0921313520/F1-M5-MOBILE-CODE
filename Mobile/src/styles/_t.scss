@@ -1,0 +1,59 @@
+
+// $theme: light;
+$theme: light, dark;
+
+@function px2rem ($px) {
+	$rem: 37.5px;
+	@return ($px / $rem) + rem;
+}
+@function px2remVal ($px) {
+	$rem: 37.5px;
+	@return ($px / $rem);
+}
+@mixin background-s ($color...) {
+	@each $val in $theme {
+		.#{$val} & {
+			background-color: nth($color, index($theme, $val));
+		}
+	}
+}
+@mixin fill-s ($color...) {
+	@each $val in $theme {
+		.#{$val} & {
+			fill: nth($color, index($theme, $val));
+		}
+	}
+}
+@mixin color-s ($color...) {
+	@each $val in $theme {
+		.#{$val} & {
+			color: nth($color, index($theme, $val));
+		}
+	}
+}
+@mixin background-image-s ($color...) {
+	@each $val in $theme {
+		.#{$val} & {
+			background-image: url(nth($color, index($theme, $val)));
+		}
+	}
+}
+@mixin border-s ($color...) {
+	@each $val in $theme {
+		.#{$val} & {
+			border-color: nth($color, index($theme, $val));
+		}
+	}
+}
+
+@mixin themify() {
+	@each $val in $theme {
+		.#{$val} & {
+			@content ($val);
+		}
+	}
+}
+
+@function themed($themeVal, $color...) {
+	@return nth($color, index($theme, $themeVal));
+}

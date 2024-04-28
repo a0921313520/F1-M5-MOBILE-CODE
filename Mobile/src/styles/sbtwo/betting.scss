@@ -1,0 +1,3607 @@
+/*
+    投注头部
+ */
+/* @import "/font/number/style.css"; */
+
+.icon-spot {
+	padding-right: 0.125rem;
+}
+.icon-minus {
+	padding-right: 0.2rem;
+	vertical-align: baseline;
+}
+.icon-undefined {
+	//不支持的字 展示紅底黃字 高亮 便於發現
+	background-color: red;
+	color: yellow;
+	font-size: 8px;
+}
+.NumberBet {
+	letter-spacing: -0.175rem;
+}
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+.red {
+	color: #eb2121 !important;
+}
+.green {
+	color: #0ccc3c !important;
+}
+.black {
+	color: #000000 !important;
+}
+.gray {
+	color: #999999 !important;
+}
+.light-gray {
+	color: #bcbec3 !important;
+}
+.blue {
+	color: #00a6ff !important;
+}
+.Falseinput {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.set-animation {
+	@-webkit-keyframes rotation {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+
+	@keyframes rotation {
+		from {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+}
+.Betconfirm {
+	.confirm-btn-wrap {
+		display: flex;
+		button {
+			margin: 0.25rem;
+		}
+	}
+}
+.Error {
+	background: #fee0e0;
+	padding: 0.125rem 0.125rem !important;
+	border-radius: 0.125rem;
+	color: #eb2121;
+	margin-right: -0.125rem;
+	font-size: 12px;
+	height: 0.625rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.gift-freebet {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	&.system {
+		margin-top: 0.25rem;
+		margin-left: 0.25rem;
+		margin-right: 0.25rem;
+	}
+}
+.gift {
+	width: 2rem;
+	height: 1rem;
+	background-image: url($base-path + '/img/svg/betting/orange.svg');
+	background-repeat: no-repeat;
+	background-size: 110%;
+	background-position: center;
+	margin-left: -0.25rem;
+	padding-left: 0.375rem;
+	color: white;
+	font-size: 12px;
+	position: relative;
+	svg {
+		padding-left: 0.125rem;
+		width: 0.5rem;
+	}
+	.gift-alert {
+		position: absolute;
+		background-color: #363636;
+		width: 90vw;
+		left: 0.175rem;
+		top: 1.125rem;
+		z-index: 9;
+		border-radius: 0.25rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.375rem 0.25rem;
+		.j {
+			position: absolute;
+			top: -0.425rem;
+			padding: 0;
+			width: 0.75rem;
+			padding: 0;
+			margin: 0;
+		}
+		.left {
+			width: 65%;
+			line-height: 0.5rem;
+			small {
+				color: #d1d1d1;
+			}
+		}
+		.right {
+			svg {
+				fill: white;
+				width: 0.5rem;
+				margin-top: -0.25rem;
+				margin-bottom: 0.25rem;
+				margin-left: 1rem;
+			}
+			.btn {
+				background: white;
+				color: #000;
+				padding: 0 0.25rem;
+				border-radius: 0.175rem;
+			}
+		}
+	}
+}
+.freebet {
+	line-height: 16px;
+	font-size: 12px;
+}
+/* 投注状态框 */
+.Beting-Box-Status {
+	.Header {
+		justify-content: flex-start !important;
+		font-size: 14px !important;
+		h3 {
+			text-align: left;
+			padding-left: 0.375rem;
+		}
+		.B_Success {
+			width: 0.75rem;
+			height: 0.75rem;
+		}
+	}
+	ul {
+		li {
+			background: #efeff4;
+			padding: 0.25rem;
+			margin: 0.25rem;
+			border-radius: 0.25rem;
+			position: relative;
+		}
+		.team-name {
+			flex: 0 0 100%;
+			font-size: 14px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.125rem 0rem;
+			.vsname {
+				font-size: 17px;
+				color: #000000;
+				font-weight: bold;
+				width: 6rem;
+				.vs {
+					padding-right: 0.125rem;
+					padding-left: 0.25rem;
+				}
+			}
+			.dpvsname {
+				font-size: 14px;
+				color: #999999;
+				width: 4.5rem;
+			}
+			.rdpvsname {
+				font-size: 14px;
+				color: #000;
+				width: 3.375rem;
+				text-align: right;
+			}
+		}
+		p {
+			width: 100%;
+			text-align: right;
+			font-size: 12px;
+			padding: 0.05rem 0;
+		}
+	}
+	.Bottom-btn {
+		padding: 0.25rem;
+		.t {
+			padding: 0px 0.25rem;
+		}
+		.Bet-type {
+			border-bottom: 0.025rem solid #99999933;
+			position: relative;
+			padding: 10px 0rem;
+			.set-gray {
+				color: #666666;
+			}
+			span {
+				margin-left: 0.25rem;
+				font-size: 14px;
+			}
+			.BetAmt {
+				display: flex;
+				justify-content: space-between;
+				padding: 10px 10px 0px 0rem;
+			}
+		}
+		.Bet-amount {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.25rem;
+		}
+	}
+	.CantEnter {
+		pointer-events: none;
+		cursor: default;
+		opacity: 0.6;
+	}
+	button {
+		width: 100%;
+		border: 0;
+		padding: 0.25rem;
+		border-radius: 0.25rem;
+		background-color: #00a6ff;
+		color: white;
+		font-size: 17px;
+		margin-top: 0.25rem;
+	}
+	.whitebtn {
+		width: 100%;
+		padding: 0.25rem;
+		border-radius: 0.25rem;
+		border: 0.025rem solid #00a6ff;
+		font-size: 17px;
+		background-color: white;
+		margin-top: 0.25rem;
+		color: #00a6ff;
+	}
+
+	.B_Loading {
+		background: #fcaa1f;
+		border-radius: 0.75rem;
+		svg {
+			fill: white;
+		}
+	}
+	.B_Error {
+		background: white;
+		border-radius: 50%;
+	}
+}
+.Betting-header {
+	background-image: url($base-path + '/img/betting/header.png');
+	background-repeat: no-repeat;
+	height: 3rem;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #efeff4;
+	margin: 0.175rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+	.swiper-slide-data {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 4.125rem;
+		.divider {
+			width: 0.025rem;
+			background: #ffffff69;
+			height: 2.8rem;
+			overflow: hidden;
+			position: absolute;
+			left: 50%;
+		}
+	}
+	.swiper-pagination-bullet-active {
+		width: 0.4rem !important;
+		border-radius: 0.125rem;
+		background: #00a6ff !important;
+	}
+	.swiper-pagination-bullet {
+		width: 0.1rem;
+		height: 0.1rem;
+	}
+	.Betting-header-score {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 0.1rem;
+		padding-right: 0.1rem;
+		flex: 1;
+		li {
+			text-align: center;
+			color: #ffffff;
+			line-height: 0.5rem;
+			flex: 1;
+			img {
+				width: 0.625rem;
+				height: 0.625rem;
+			}
+			.team-name {
+				opacity: 0.8;
+				font-size: 12px;
+				white-space: nowrap;
+				overflow: hidden !important;
+				text-overflow: ellipsis;
+				word-break: keep-all;
+				width: 1.55rem;
+			}
+			.Game-date {
+				line-height: 0.25rem;
+				font-size: 8px;
+				margin-bottom: 0.1rem;
+			}
+			.Game-notRB {
+				line-height: 0.25rem;
+				font-size: 6px;
+				margin-top: 0.1rem;
+			}
+			.Game-team-pk {
+				max-height: t.px2rem(25px);
+				color: rgba(255, 255, 255, .5);
+				.notZero {
+					color: #fff;
+				}
+				span {
+					padding: 0.05rem;
+				}
+			}
+			.Game-number {
+				background-color: #eb2121;
+				text-align: center;
+				border-radius: 0.2rem;
+				color: white;
+				font-size: 12px;
+				width: 0.7rem;
+				height: 0.55rem;
+				margin-top: 0.25rem;
+				margin-right: auto;
+				margin-left: auto;
+				line-height: 0.55rem;
+			}
+			.red-card {
+				background: #eb2121;
+				padding: 0rem 0.075rem;
+				color: white;
+				font-size: 12px;
+				border-radius: 0.075rem;
+				&.noData {
+					background: none;
+				}
+			}
+		}
+	}
+}
+/* 游戏菜单 */
+.Betting-nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	//border-bottom: 0.025rem solid rgba(188, 190, 195, .47);
+	background-color: #efeff4;
+	position: relative;
+	&.freeze {
+		position: fixed;
+		top: t.px2rem($header-height);
+		left: 0;
+		right: 0;
+		z-index: 10;
+	}
+	.SportTabs {
+		width: 100%;
+		height: t.px2rem(34px);
+		flex-wrap: nowrap;
+		display: flex;
+		flex-direction: row;
+		background-color: #00a6ff;
+		color: #ffffff;
+		font-size: t.px2rem(12px);
+		line-height: t.px2rem(18px);
+		overflow-y: scroll;
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.SportTab {
+			min-width: t.px2rem(82px);
+			flex-shrink: 0;
+			padding: t.px2rem(8px) t.px2rem(16px);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			.wc2022-Icon {
+				width: 20px;
+				margin-right: 5px;
+			}
+			&.selected {
+				background-color: #ffffff;
+				color: #222222;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+			}
+		}
+		.wc2022-Tab {
+			background-image: url($base-path + '/sbtwo/wc2022-tab-bg.png');
+			background-repeat: no-repeat;
+			height: auto;
+			background-size: cover;
+			position: relative;
+			.hot {
+				background-color: #ffd139;
+				color: #222222;
+				position: absolute;
+				height: 20px;
+				width: 20px;
+				right: -2px;
+				top: -3px;
+				text-align: center;
+				border-radius: 0px 8px 0px 10px;
+				transform: scale(.8);
+				font-size: 12px;
+			}
+		}
+	}
+	.MarketTabs {
+		width: 100%;
+		height: t.px2rem(34px);
+		overflow: hidden;
+		flex-wrap: nowrap;
+		display: flex;
+		flex-direction: row;
+		background-color: #ffffff;
+		color: #666666;
+		font-size: t.px2rem(12px);
+		line-height: t.px2rem(17px);
+		.MarketTab {
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 0;
+			.InnerWrap {
+				padding: t.px2rem(9px) 0 t.px2rem(8px) 0;
+			}
+			&.selected {
+				color: #222222;
+				.InnerWrap {
+					padding: t.px2rem(9px) 0 t.px2rem(5px) 0;
+					border-bottom: 3px solid #00a6ff;
+				}
+			}
+		}
+	}
+	.Divider {
+		width: 100%;
+		height: 0;
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		.InnerDivider {
+			height: 0;
+			width: t.px2rem(348px);
+			border-bottom: solid 1px #efeff4;
+		}
+	}
+	.ButtonBox {
+		width: 100%;
+		height: t.px2rem(46px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #ffffff;
+		color: #666666;
+		padding-left: t.px2rem(4px);
+		padding-right: t.px2rem(12px);
+		.LeftBox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.button {
+				width: t.px2rem(76px);
+				height: t.px2rem(25px);
+				font-size: t.px2rem(12px);
+				line-height: t.px2rem(25px);
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				background-color: #efeff4;
+				border-radius: t.px2rem(40px);
+				margin-left: t.px2rem(4px);
+				&.selected {
+					color: #ffffff;
+					background-color: #00a6ff;
+				}
+			}
+		}
+		.RightBox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.Switchcontainer {
+				.Game-switch-text {
+					background-color: #efeff4;
+				}
+			}
+		}
+	}
+	.Nav-colse-icon {
+		width: 0.75rem;
+		height: 0.75rem;
+		background-color: #efeff4;
+		border-radius: 0.5rem;
+		text-align: center;
+		line-height: 0.425rem;
+		margin-left: t.px2rem(10px);
+		svg {
+			width: 0.425rem;
+			height: 0.425rem;
+		}
+	}
+
+	/* 手风琴 */
+	.rc-collapse {
+		background-color: #efeff4;
+		border-radius: 0.075rem;
+		border: 0.025rem solid #d9d9d9;
+		width: 100%;
+	}
+}
+
+/* 切换按钮 */
+.Switchcontainer {
+	label {
+		display: block;
+		width: 2.1rem;
+		height: 0.7rem;
+		font-size: 12px;
+		input:focus {
+			outline: none;
+		}
+	}
+	.Game-switch + .Game-switch-text {
+		width: 100%;
+		height: 100%;
+		//border: 0.025rem solid #fff;
+		background-color: #dedee3;
+		display: flex;
+		align-items: center;
+		position: relative;
+		border-radius: 0.5rem;
+	}
+	.Game-switch-text:before {
+		content: '联赛';
+		width: 1.175rem;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		transition: left 0.2s;
+		background-color: #00a6ff;
+		border-radius: 0.5rem;
+	}
+	.Game-switch:checked + .Game-switch-text:before {
+		content: '时间';
+		left: 50%;
+	}
+	.Game-switch + .Game-switch-text span {
+		display: inline-block;
+		width: 50%;
+		text-align: center;
+		color: #666666;
+	}
+}
+
+/* 投注详情 */
+#sr-widget {
+	width: 100%;
+}
+.Betting-list-detail {
+	.Betting-type {
+		background-image: url($base-path + '/img/betting/pkbg.png');
+		background-repeat: no-repeat;
+		height: 6.2rem;
+		overflow: hidden;
+		background-size: 100% 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #efeff4;
+		position: relative;
+		.Betting-header-top-buttons {
+			display: flex;
+			justify-content: space-between;
+			padding-left: 0.2rem;
+			padding-right: 0.2rem;
+			padding-top: 0.2rem;
+			width: 100%;
+			z-index: 1;
+		}
+		.Betting-header-bottom-buttons {
+			display: flex;
+			justify-content: flex-end;
+			padding-left: 0.2rem;
+			padding-right: 0.2rem;
+			padding-bottom: 0.2rem;
+			width: 100%;
+			z-index: 1;
+
+			//隱藏投注按鈕
+			> .bet-record-icon {
+				display: none;
+			}
+			//全屏按鈕？已廢棄
+			> .bet-scale-icon {
+				display: none;
+			}
+			//展示pin按鈕
+			> .tag-entry-icon {
+				display: block;
+			}
+		}
+		.Footer-menu {
+			max-width: 5.25rem;
+			margin: 0 auto;
+			border-radius: 0.375rem;
+			padding: 0.25rem;
+			display: flex;
+			color: white;
+			background-color: #0006;
+			font-size: 10px;
+			margin-bottom: -0.25rem; //下移
+			z-index: 1;
+			div {
+				width: 1.75rem;
+				text-align: center;
+				border-right: 0.025rem solid #999;
+				&.noData {
+					width: 100%;
+					color: #bcbec3;
+				}
+			}
+			div:last-child {
+				border: 0;
+			}
+		}
+		.Betting-header-score {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0rem 0.5rem;
+			li {
+				text-align: center;
+				color: #ffffff;
+				line-height: 0.625rem;
+				//padding: 0.25rem 0.875rem;
+				width: 2.75rem;
+				&.Game-info {
+					width: auto;
+				}
+				.pk-number {
+					background: #eb2121;
+					padding: 0rem 0.075rem;
+					color: white;
+					font-size: 12px;
+					border-radius: 0.075rem;
+					&.noData {
+						background: transparent;
+					}
+				}
+				.REDSVG {
+					width: 0.375rem;
+					height: 0.375rem;
+				}
+				img {
+					width: 1.2rem;
+					height: 1.2rem;
+				}
+				.team-name {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					opacity: 0.8;
+					font-size: 12px;
+					min-height: 1.3rem;
+				}
+				.Game-date {
+					line-height: 1rem;
+				}
+				.Game-notRB {
+					line-height: 1rem;
+					font-size: 12px;
+					margin-bottom: 0.25rem;
+				}
+				.Game-team-pk {
+					font-size: 35px;
+					//letter-spacing: 0.3rem;
+					font-weight: 500;
+					color: rgba(255, 255, 255, .5);
+					.notZero {
+						color: #fff;
+					}
+				}
+				.Game-number {
+					background-color: #eb2121;
+					text-align: center;
+					border-radius: 0.2rem;
+					color: white;
+					font-size: 12px;
+					width: 0.85rem;
+					height: 0.6rem;
+					margin: 0.25rem auto;
+					line-height: 0.55rem;
+				}
+			}
+		}
+		iframe,
+		.custom-video-warpper {
+			position: absolute;
+			z-index: 0;
+		}
+	}
+	.Collapselist .rc-collapse > .rc-collapse-item {
+		margin: 0.13rem 0.075rem;
+	}
+}
+
+.Detail-menu {
+	.Tabscontent-menu {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		background-color: white;
+		&.freeze {
+			position: fixed;
+			top: t.px2rem($header-height);
+			left: 0;
+			right: 0;
+			z-index: 10;
+		}
+		&.freeze-with-pin {
+			position: fixed;
+			top: (t.px2remVal($header-height) + 6.2) + rem;
+			left: 0;
+			right: 0;
+			z-index: 10;
+		}
+		.Tabscontent-menu-items {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			flex: 4;
+			height: 1rem;
+			overflow: hidden;
+		}
+		.Betting-add-svg {
+			span {
+				line-height: 0.25rem;
+			}
+			svg {
+				padding: 0rem 0.05rem;
+				height: 0.25rem;
+				width: 0.25rem;
+				vertical-align: text-top;
+			}
+		}
+		.list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0.25rem 0.175rem;
+			border: 0.025rem solid #ecedef;
+			color: #999999;
+			border-radius: 0.5rem;
+			margin: 0.125rem;
+			font-size: 12px;
+			background-color: #f5f5f8;
+			height: 0.75rem;
+		}
+		.active {
+			background-color: #00a6ff;
+			color: white;
+			border: 0.025rem solid #00a6ff;
+		}
+	}
+}
+.Collapselist {
+	&.freeze {
+		padding-top: 1rem; //留1rem高 才可以往下拖
+	}
+	.rc-collapse > .rc-collapse-item {
+		background: white;
+		border-radius: 0.25rem;
+	}
+	.rc-collapse {
+		border: 0;
+		margin: 0.125rem 0rem;
+		border-radius: 0.25rem;
+	}
+	.rc-collapse > .rc-collapse-item > .rc-collapse-header {
+		justify-content: flex-start;
+		flex-flow: unset;
+		padding: 0.125rem 0.25rem;
+	}
+	.title {
+		//padding: 0 0.25rem;
+		color: #000000;
+		font-weight: bold;
+		i {
+			position: absolute;
+			right: 0.25rem;
+			width: 0.625rem;
+			height: 0.625rem;
+			background: #f7f7f7;
+			text-align: center;
+			border-radius: 0.375rem;
+			color: #999999;
+			svg {
+				width: 0.375rem;
+			}
+		}
+		.active {
+			background-color: #00a6ff;
+		}
+	}
+	.rc-collapse-content {
+		padding: 0.125rem 0rem;
+		border-radius: 0.25rem !important;
+	}
+
+	.rc-collapse-content-box {
+		.Gun-herder {
+			display: flex;
+			justify-content: space-between;
+			padding: 0.125rem 0.5rem;
+			font-size: 14px;
+			color: #000;
+			div {
+				width: 45%;
+				img {
+					vertical-align: sub;
+					padding-right: 0.15rem;
+					width: 0.625rem;
+				}
+			}
+		}
+		.Header {
+			li {
+				background-color: white;
+				font-size: 17px;
+			}
+		}
+		.SelectionHeader {
+			li {
+				background-color: white !important;
+				font-weight: bold !important;
+				margin-bottom: 0 !important;
+			}
+		}
+		.Group-2 {
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			li {
+				background-color: #f7f7f7;
+				padding: 0.25rem 0.25rem;
+				margin: 0.125rem 0.25rem;
+				border-radius: 0.375rem;
+				color: #999999;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex: 0 0 40%;
+			}
+			.active {
+				background-color: #e6f6ff !important;
+				border: 1px solid #00a6ff !important;
+			}
+		}
+		.Group-3 {
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			li {
+				background-color: #f7f7f7;
+				padding: 0.25rem 0.5rem;
+				margin: 0.125rem 0.25rem;
+				border-radius: 0.375rem;
+				color: #999999;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+			}
+		}
+		ul {
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			//flex-wrap: wrap;
+			li {
+				background-color: #f7f7f7;
+				width: 40%;
+				padding: 0.25rem 0.25rem;
+				margin: 0.125rem 0.25rem;
+				border-radius: 0.375rem;
+				color: #999999;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				min-height: t.px2rem(36px);
+				b {
+					font-weight: 500;
+					color: #000;
+					position: relative;
+					.Betting-up-svg {
+						vertical-align: super;
+						padding-left: 0.125rem;
+					}
+					.Betting-down-svg {
+						vertical-align: super;
+						padding-left: 0.125rem;
+					}
+					img {
+						width: 0.175rem;
+						vertical-align: super;
+						position: absolute;
+						right: -0.175rem;
+					}
+				}
+			}
+		}
+	}
+}
+/* end */
+
+/* 底部动作框 */
+.ReactSwipeableBottomSheet--open {
+	border-radius: 0.375rem 0.375rem 0 0;
+	.dragger_wrapper {
+		margin: 0.25rem 0 0.25rem 0 !important;
+		display: none;
+	}
+	.sheet {
+		border-radius: 0.5rem 0.5rem 0rem 0rem;
+	}
+	/* 盘口类型弹出 */
+	.BottomSheet {
+		text-align: center;
+		width: 100%;
+		.Header {
+			background-color: #fff;
+			color: #000;
+			border-radius: 0.25rem 0.25rem 0rem 0rem;
+			padding: 0.45rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 17px;
+			position: fixed;
+			width: 100%;
+			h3 {
+				font-size: 17px;
+			}
+		}
+		ul {
+			padding-top: 1.625rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: stretch;
+			.active {
+				background: #00a6ff;
+				border: 0.025rem solid #00a6ff;
+				color: white;
+			}
+			li {
+				border: 0.025rem solid #ecedef;
+				background-color: #f5f5f8;
+				color: #999999;
+				text-align: center;
+				border-radius: 0.5rem;
+				margin: 0.125rem 0.325rem;
+
+				font-size: 14px;
+				padding: 0.25rem 0.5rem;
+			}
+		}
+	}
+	/* 盘口日期弹出 */
+	.BottomtimeSheet {
+		text-align: center;
+		width: 100%;
+		.Header {
+			background-color: #00a6ff;
+			color: white;
+			border-radius: 0.25rem 0.25rem 0rem 0rem;
+			padding: 0.45rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 17px;
+			position: fixed;
+			width: 100%;
+			h3 {
+				font-size: 17px;
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: stretch;
+			padding-top: 1.625rem;
+			.active {
+				background: #00a6ff;
+				border: 0.025rem solid #00a6ff;
+				color: white;
+			}
+			li {
+				border: 0.025rem solid #ecedef;
+				background-color: #f5f5f8;
+				color: #999999;
+				text-align: center;
+				border-radius: 0.5rem;
+				margin: 0.22rem;
+				font-size: 14px;
+				width: 1.45rem;
+				height: 0.75rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
+/* 盘口下注弹出 */
+.react-modal-sheet-container {
+	border-radius: 0.25rem 0.25rem 0rem 0rem !important;
+	overflow: hidden;
+	.BottomBetSheet {
+		width: 100%;
+		.Header {
+			background-color: #00a6ff;
+			color: white;
+			border-radius: 0.25rem 0.25rem 0rem 0rem;
+			padding: 0.3rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 17px;
+			position: fixed;
+			width: 100%;
+			z-index: 99;
+			.left {
+				display: flex;
+				align-items: center;
+				.Number {
+					background-color: #fcab23;
+					border-radius: 0.5rem;
+					width: 0.7rem;
+					height: 0.7rem;
+					text-align: center;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-left: 0.25rem;
+				}
+			}
+			.Center {
+				width: 100%;
+				position: relative;
+			}
+		}
+		.Beting-Box-Status {
+			.Betlist {
+				overflow-y: auto;
+				padding-top: 30px;
+				.CantPlay {
+					position: absolute;
+					background: rgba(0, 0, 0, .5);
+					width: 100%;
+					height: 100%;
+					left: 0;
+					right: 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					top: 0.025rem;
+					z-index: 8;
+					p {
+						padding: 0.25rem;
+						color: white;
+						font-weight: 600;
+						font-family: fangsong;
+						font-size: 14px;
+						height: 1rem;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: #eb2121;
+						border-radius: 0.25rem;
+						width: auto;
+					}
+					&.BetSuccess {
+						background: transparent;
+						p {
+							background: rgba(77, 235, 33, .5);
+							color: black;
+						}
+					}
+					&.Pending {
+						background: rgba(0, 0, 0, .05);
+						p {
+							background: rgb(235, 178, 33);
+							color: black;
+						}
+					}
+					&.OddsChanged {
+						background: rgba(0, 0, 0, .05);
+						p {
+							background: white;
+							color: black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 下拉Balance list 錢包清單
+.BottomBalanceListContainer{
+	>.react-modal-sheet-container{
+		height: fit-content !important;
+
+		.BottomBalanceListContent{
+			text-align: center;
+
+			h2{
+				font-size: 16px;
+				line-height: 22px;
+				padding: 11px 0;
+				font-weight: bold;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.161);
+			}
+			.listBox{
+				padding: 16px 23px  44px 23px;
+				.OneTransfer{
+					margin: 0;
+					margin-bottom: 16px;
+					padding: 0;
+				}	
+			}
+		}
+	}
+}
+
+/* end */
+
+/* 浮动日历icon 比赛时间 */
+.Bottomtime {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0.125rem;
+	background-color: #00a6ff;
+	z-index: 99;
+	width: 2.4rem;
+	padding: 0.125rem;
+	margin: 0 auto;
+	height: 1rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: white;
+	border-radius: 0.5rem;
+	svg {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+}
+
+/* 游戏大厅 联赛数据 */
+.Betting-list {
+	.Championlabel {
+		width: 100%;
+		display: block;
+		padding: 0px 10px 15px 0.25rem;
+		color: #999999;
+		font-size: 14px;
+	}
+	.ChampionTime {
+		padding: 0.25rem;
+		font-size: 12px;
+		font-weight: bold;
+		display: block;
+	}
+	.Champion {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.125rem;
+		padding: 0px 0.125rem;
+		.Team {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			img {
+				width: 0.625rem;
+				margin-right: 0.125rem;
+			}
+			.name {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-break: keep-all;
+				width: 3.375rem;
+				color: #000;
+				font-weight: 600;
+			}
+		}
+		.active {
+			background-color: #e6f6ff !important;
+			border: 1px solid #00a6ff !important;
+		}
+		.Right {
+			background-color: #f7f7f7;
+			height: 0.85rem;
+			justify-content: center;
+			border-radius: 0.125rem;
+			font-weight: bold;
+			color: #000;
+			.Locked {
+				width: 0.4rem;
+				height: 0.4rem;
+			}
+		}
+	}
+	.Games-Content {
+		border-bottom: 0.025rem solid #efeff4;
+		.header-group {
+			color: #bcbec3;
+			font-size: 13px;
+			background-color: white;
+			svg {
+				width: 0.5rem;
+				height: 0.5rem;
+				vertical-align: -0.15rem;
+			}
+		}
+		.row {
+			height: 1.08rem;
+			font-size: 0;
+			.list-data {
+				line-height: 0.625rem;
+				b {
+					width: 2.375rem;
+					display: block;
+					overflow: hidden;
+					float: right;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					word-break: keep-all;
+				}
+			}
+		}
+		.Numberset {
+			color: #bcbec3 !important;
+			line-height: 0.75rem;
+		}
+		.item {
+			box-sizing: border-box;
+			vertical-align: top;
+			height: 100%;
+			overflow-y: hidden;
+			overflow-x: hidden;
+			background-color: white;
+			display: inline-block;
+			font-size: 14px;
+			color: #000;
+			text-align: center;
+			padding: 0;
+			.active {
+				background-color: #e6f6ff !important;
+				border: 1px solid #00a6ff !important;
+			}
+			.Game-indicators {
+				background-color: #efeff4;
+				border-radius: 0.075rem;
+				text-align: center;
+				height: 0.85rem;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				color: #666666;
+				width: 2.1rem;
+				margin: 0.05rem;
+				small {
+					span {
+						margin: 0 0.05rem;
+					}
+				}
+				.Locked {
+					width: 0.4rem;
+					height: 0.4rem;
+				}
+			}
+			.Betting-jiao {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.Betting-jiao-svg {
+					width: t.px2rem(15px);
+					height: t.px2rem(15px);
+				}
+				.Betting-jiao-text {
+					font-size: 12px;
+				}
+			}
+			/* 盘口纵向显示 */
+			.table {
+				display: table;
+				border-collapse: collapse;
+				width: 100%;
+				position: relative;
+				.table-header-group {
+					display: table-header-group;
+					color: #bcbec3;
+					font-size: 13px;
+					background-color: white;
+					ul {
+						li {
+							padding: 0.25rem;
+						}
+					}
+					svg {
+						width: 0.5rem;
+						height: 0.5rem;
+						vertical-align: -0.15rem;
+					}
+				}
+				.table-row {
+					display: table-row;
+					.table-cell-swiper {
+						display: table-cell;
+						vertical-align: middle;
+						text-align: center;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						word-break: keep-all;
+						.white {
+							background-color: white;
+						}
+						.list-set {
+							background-color: #f7f7f7;
+							margin: 0.05rem;
+							svg {
+								width: 0.5rem;
+								height: 0.5rem;
+							}
+						}
+					}
+				}
+				.table-row-group {
+					display: table-row-group;
+				}
+				.swiper-list-icon {
+					width: 4.125rem;
+					height: 0.45rem;
+					margin-left: auto;
+					margin-right: 0.25rem;
+					text-align: center;
+					ul {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						height: 100%;
+						.active {
+							width: 0.35rem;
+							background-color: #bcbec3;
+						}
+						li {
+							background: #dcdce0;
+							width: 0.125rem;
+							height: 0.1rem;
+							border-radius: 0.25rem;
+							margin: 0 0.05rem;
+						}
+					}
+				}
+			}
+
+			.table-Lines {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				.table-column {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: center;
+					.table-header {
+						color: #bcbec3;
+						font-size: 13px;
+						background-color: white;
+						padding-bottom: 5px;
+						> .table-row {
+							> .table-cell-swiper {
+								padding: 0.25rem;
+								color: #666666;
+							}
+						}
+					}
+
+					.table-row {
+						.table-cell-swiper {
+							vertical-align: middle;
+							text-align: center;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							word-break: keep-all;
+
+							.white {
+								background-color: white;
+							}
+
+							.list-set {
+								background-color: #f7f7f7;
+								margin: 0.05rem;
+
+								svg {
+									width: 0.5rem;
+									height: 0.5rem;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.divider {
+				width: 0.025rem;
+				background: #bcbec3;
+				height: 100%;
+				margin-top: -0.5rem;
+			}
+
+			// .swiper-pagination-bullet-active {
+			// 	width: 0.4rem !important;
+			// 	border-radius: 0.125rem;
+			// 	background: #bcbec3 !important;
+			// }
+			// .swiper-pagination-bullet {
+			// 	width: 0.1rem;
+			// 	height: 0.1rem;
+			// }
+
+			.Number-black {
+				color: #000000;
+			}
+
+			small {
+				vertical-align: middle;
+				color: #666666;
+			}
+			.Games-list-team {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.Gametime {
+					padding: 0.2rem 0.15rem;
+					font-weight: 600;
+					font-size: 14px;
+				}
+				.Games-list-title-icon {
+					min-width: 1.5rem;
+					height: 0.7rem;
+					padding-right: 0.15rem;
+					background-color: #fde8e8;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 0rem 0rem 0.25rem 0rem;
+					color: red;
+					b {
+						padding-right: 0.125rem;
+						&.Games-list-small-font {
+							font-size: 10px;
+						}
+					}
+				}
+				.Betting-star {
+					padding-right: 0.25rem;
+					//margin-left: 0.122rem;
+					.Betting-star-svg {
+						width: t.px2rem(18px);
+						height: t.px2rem(18px);
+					}
+				}
+			}
+			.Game-logo {
+				width: 0.5rem;
+				vertical-align: middle;
+				margin: 0 0.125rem;
+				&.IM {
+					height: 0.5rem;
+				}
+			}
+			b {
+				vertical-align: middle;
+			}
+			.Game-score {
+				background: #eb2121;
+				padding: 0rem 0.075rem;
+				color: white;
+				font-size: 12px;
+				border-radius: 0.075rem;
+			}
+			.Betting-up-svg {
+				vertical-align: super;
+			}
+		}
+		.col-1 {
+			width: 32.3333%;
+		}
+		.col-2 {
+			width: 46.66666%;
+		}
+		.col-5 {
+			width: 10.1333333%;
+		}
+		.col-6 {
+			width: 49.1333333%;
+		}
+		.row-1 {
+			height: 100%;
+		}
+		.row-2 {
+			height: 300%;
+		}
+
+		//橫式/橫向展示
+		&.horizontal {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+			.Gametime {
+				padding: 0.2rem 0.15rem;
+				font-weight: 600;
+				font-size: 14px;
+			}
+			.Games-list-title-icon {
+				min-width: 1.5rem;
+				height: 0.7rem;
+				padding-right: 0.15rem;
+				background-color: #fde8e8;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0rem 0rem 0.25rem 0rem;
+				color: red;
+				b {
+					padding-right: 0.125rem;
+					&.Games-list-small-font {
+						font-size: 10px;
+					}
+				}
+				svg {
+					width: 0.5rem;
+					height: 0.5rem;
+					vertical-align: -0.15rem;
+				}
+			}
+			.Betting-star {
+				margin-left: 0.5rem;
+			}
+
+			> .horizontal-row {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+
+				//時間 關注 角球 玩法數
+				&.row1 {
+					align-items: flex-start;
+
+					//時間 關注
+					> .left-block {
+						flex: 2;
+						display: flex;
+						flex-direction: row;
+						justify-content: flex-start;
+						align-items: center;
+					}
+					//角球
+					> .center-block {
+						flex: 1;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					//玩法數
+					> .right-block {
+						flex: 2;
+						display: flex;
+						flex-direction: row;
+						justify-content: flex-end;
+						align-items: center;
+
+						> div {
+							padding-right: 0.25rem;
+						}
+					}
+				}
+
+				//隊伍比分
+				&.row2 {
+					height: t.px2rem(40px); //1.1rem;
+					.Number-black {
+						font-size: t.px2rem(17px);
+					}
+
+					.team-and-redcard {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						max-width: calc(100% - 1rem);
+					}
+
+					.TeamName {
+						line-height: t.px2rem(16px);
+					}
+
+					.Game-score-box {
+						width: 0.3514rem;
+						height: 0.5757rem;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-left: t.px2rem(11px);
+						margin-right: t.px2rem(11px);
+					}
+
+					.Game-score {
+						//line-height: t.px2rem(16px);
+						//margin-top: t.px2rem(8px);
+					}
+
+					//主隊
+					> .left-block {
+						flex: 3;
+						display: flex;
+						flex-direction: row;
+						justify-content: flex-end;
+						align-items: center;
+						position: relative;
+						.Number-black {
+						}
+						.TeamName {
+							//padding-right: 0.2703rem;
+							width: 100%;
+						}
+						> .team-and-redcard {
+							flex-direction: row;
+							margin-right: t.px2rem(10px);
+							/* > .TeamName {
+							}
+							 > .Game-score {
+								margin-left: 0.25rem;
+							} */
+						}
+					}
+
+					//中間的-或VS
+					> .center-block {
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						margin-left: 0.15rem;
+						margin-right: 0.15rem;
+						> .dash-word {
+							color: #bcbec3;
+						}
+
+						> .vs-word {
+							color: #666666;
+							font-weight: 600;
+						}
+					}
+
+					//客隊
+					> .right-block {
+						flex: 3;
+						display: flex;
+						flex-direction: row-reverse; //反向
+						justify-content: flex-end;
+						align-items: center;
+						position: relative;
+						.Number-black {
+						}
+						.TeamName {
+							//padding-left: 0.2703rem !important;
+							width: 100%;
+						}
+						> .team-and-redcard {
+							flex-direction: row-reverse;
+							margin-left: t.px2rem(10px);
+							/* > .TeamName {
+								text-align: right !important;
+							}
+							> .Game-score {
+								margin-right: 0.25rem;
+							} */
+						}
+					}
+				}
+
+				//賠率展示
+				&.row3 {
+					padding: 0.1rem;
+
+					.table-cell-swiper {
+						flex: 1;
+
+						> .list-set {
+							background-color: #efeff4;
+							margin: 0.05rem;
+							border-radius: 4px;
+
+							> .Game-indicators {
+								text-align: center;
+								height: 0.85rem;
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								color: #666666;
+								margin: 0.05rem;
+								padding-left: 0.2rem;
+								padding-right: 0.2rem;
+
+								> .Number-black {
+									color: #000000;
+								}
+
+								&.active {
+									background-color: #e6f6ff !important;
+									border: 1px solid #00a6ff !important;
+								}
+
+								small {
+									span {
+										margin: 0 0.05rem;
+									}
+								}
+
+								> .Locked,
+								.noData {
+									width: 0.4rem;
+									margin-left: calc(50% - 0.2rem);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.NullList {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		height: 2.925rem;
+		.bgw {
+			background-color: white;
+		}
+		li {
+			list-style: none;
+			flex: 0 0 45%;
+			background-color: #f7f7f7;
+			text-align: center;
+			color: #bcbec3;
+			margin: 0.05rem;
+			height: 0.85rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	.TeamName {
+		text-align: left !important;
+		padding-left: 0 !important;
+		padding-top: 0 !important;
+		font-size: t.px2rem(14px) !important;
+		color: #202939 !important;
+		vertical-align: middle;
+		white-space: nowrap;
+		overflow: hidden !important;
+		text-overflow: ellipsis;
+		word-break: keep-all;
+	}
+	.Game-title-icon {
+		color: #999999;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		word-break: keep-all;
+		img {
+			vertical-align: middle;
+			width: 0.6rem;
+			height: 0.6rem;
+			margin: 0 0.125rem;
+		}
+	}
+	.my-header-class {
+		background-color: #efeff4;
+	}
+	.Game-list-separator {
+		background-color: #efeff4;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: row;
+		height: t.px2rem(32px);
+		> .img-warpper {
+			width: t.px2rem(30px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			> img {
+				&.fav {
+					height: t.px2rem(18px);
+				}
+				&.running {
+					width: t.px2rem(30px);
+					height: t.px2rem(15px);
+				}
+				&.today {
+					width: t.px2rem(16.33px);
+					height: t.px2rem(16.33px);
+				}
+			}
+		}
+		> span {
+			margin-left: t.px2rem(6px);
+			color: #00a6ff;
+			font-size: t.px2rem(15px);
+			font-weight: bold;
+		}
+	}
+}
+
+.EmptyBox {
+	color: darkslategrey;
+	text-align: center;
+	line-height: 0.975rem;
+	padding-top: 3.75rem;
+	font-size: 15px;
+	.ShouCangicon {
+		svg {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+	}
+}
+
+.custom-bottom-sheet {
+	z-index: 8;
+	display: none;
+	background-color: "white";
+}
+
+.custom-bottom-sheet__body {
+	border-top-left-radius: 0.1rem;
+	border-top-right-radius: 0.1rem;
+}
+
+@media only screen and (max-width: 767px) {
+	.custom-bottom-sheet {
+		display: unset;
+	}
+}
+/* 数字快捷金额键盘 单位px 兼容横屏 */
+.BetAmountContent {
+	height: 100%;
+	position: relative;
+	display: grid;
+}
+.BetlotAmountContent {
+	height: 8.75rem;
+	position: relative;
+}
+
+.Bet-digit-keyboard {
+	//height: 10.95rem;
+	height: 77vh;
+	overflow: auto;
+	position: relative;
+	padding-top: 1.2865rem;
+	.CheckMore {
+		position: fixed;
+		z-index: 999;
+		width: 2.5rem;
+		height: 0.75rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 3.875rem;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		.btn {
+			width: 2.5rem;
+			border-radius: 0.5rem;
+			background: rgba(0, 0, 0, 0.5);
+			color: white;
+			font-size: 12px;
+			padding: 8px 0.25rem;
+			text-align: center;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			svg {
+				width: 0.5rem;
+				height: 0.5rem;
+			}
+		}
+	}
+	.CheckMore-bottom {
+		position: fixed;
+		z-index: 999;
+		width: 2.5rem;
+		height: 0.75rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		bottom: 4.1892rem;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		.btn {
+			width: 2.5rem;
+			border-radius: 0.5rem;
+			background: rgba(0, 0, 0, 0.5);
+			color: white;
+			font-size: 12px;
+			padding: 8px 0.25rem;
+			text-align: center;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			svg {
+				width: 0.5rem;
+				height: 0.5rem;
+			}
+		}
+	}
+	.Bottom-flex {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 3.625rem;
+		background: white;
+		padding-top: 0.375rem;
+		z-index: 99;
+	}
+	.NullTxt {
+		padding: 50% 0;
+		text-align: center;
+		font-size: 18px;
+	}
+	.BetTabs {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: #efeff4;
+		margin-bottom: 0.25rem;
+		position: fixed;
+		width: 100%;
+		z-index: 9;
+		.ActiveMenu {
+			background-color: white;
+			color: #00a6ff !important;
+		}
+		li {
+			flex: 1;
+			padding: 0.375rem;
+			color: #666666;
+			font-weight: bold;
+			font-size: 14px;
+		}
+	}
+	.Betlist {
+		padding: 1.375rem 0.2rem 7.5rem 0.2rem;
+		.errortxt {
+			text-align: center;
+			padding: 50% 0;
+		}
+		.CantPlay {
+			position: absolute;
+			background: rgba(0, 0, 0, .5);
+			width: 100%;
+			height: 100%;
+			left: 0;
+			right: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0.025rem;
+			z-index: 8;
+			p {
+				padding: 0.25rem;
+				color: white;
+				font-weight: 600;
+				font-family: fangsong;
+				font-size: 14px;
+				height: 1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #eb2121;
+				border-radius: 0.25rem;
+			}
+		}
+		.Settingsinput {
+			background-color: #efeff4;
+			padding: 0.25rem;
+			line-height: 0.75rem;
+			position: relative;
+			height: 100%;
+			.list {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.InputBox {
+					width: 45%;
+					position: relative;
+					background-color: white;
+					.icon {
+						position: absolute;
+						top: 0.05rem;
+						left: 0.25rem;
+						font-weight: bold;
+					}
+				}
+				.Inputactive {
+					border: 1px solid#00a6ff !important;
+				}
+				input {
+					background-color: white;
+					text-indent: 0.25rem;
+					font-size: 14px;
+					height: 0.875rem;
+					width: 100%;
+					border: 1px solid white;
+					border-radius: 0.2rem;
+					margin-bottom: 0.125rem;
+
+					box-sizing: border-box;
+					-web-kit-appearance: none;
+					-moz-appearance: none;
+					display: block;
+					outline: 0;
+					padding: 0 0.375rem;
+					text-decoration: none;
+					text-align: right;
+				}
+			}
+		}
+	}
+	.total-amount {
+		display: flex;
+		justify-content: space-between;
+		padding: 5px 0.5rem;
+	}
+	.BetingBtn {
+		text-align: center;
+		.Btn-left {
+			width: 20%;
+			font-size: 13px;
+		}
+		.Btn-right {
+			width: 70%;
+		}
+		button {
+			background-color: #efeff4;
+			padding: 0.25rem;
+			border: 0;
+			margin: 10px 0.125rem;
+			border-radius: 0.25rem;
+			font-size: 14px;
+			font-weight: bold;
+			color: #202939;
+		}
+	}
+	.Bet-digit-keyboard_area {
+		background: #efeff4;
+		margin: 10px 0;
+		border-radius: 0.25rem;
+		border-top: 1px solid #ddd;
+	}
+	.Betinputlist {
+		position: relative;
+		display: grid;
+		margin-bottom: 0.125rem;
+	}
+	.input-area {
+		display: flex;
+		align-items: center;
+		background: #efeff4;
+		height: 100%;
+		min-height: 3.125rem;
+		border-radius: 0.25rem;
+		margin-bottom: 0.175rem;
+		.left {
+			width: 9%;
+			background: #e2e2e8;
+			border-radius: 10px 0px 0px 0.25rem;
+			.btn-icon {
+				height: 100%;
+				position: absolute;
+				background: #e2e2e8;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.3rem;
+				border-radius: 10px 0px 0px 0.25rem;
+			}
+			svg {
+				width: 0.25rem;
+			}
+		}
+		.right {
+			width: 90%;
+			flex-wrap: wrap;
+			padding: 0.25rem;
+			.team-name {
+				flex: 0 0 100%;
+				font-size: 14px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 5px 0rem;
+				.Nameset {
+					width: 4.625rem;
+					padding-right: 0.25rem;
+				}
+				img {
+					vertical-align: top;
+					width: 0.25rem;
+					padding-top: 0.1rem;
+				}
+				.vsname {
+					font-size: 17px;
+					color: #000000;
+					font-weight: bold;
+					width: 5.5rem;
+					.vs {
+						padding-right: 0.125rem;
+						padding-left: 0.25rem;
+					}
+				}
+				.dpvsname {
+					font-size: 14px;
+					color: #999999;
+					width: 4.5rem;
+					padding: 0 0 0 0.3rem;
+				}
+				.rdpvsname {
+					font-size: 14px;
+					color: #000;
+					width: 4.25rem;
+					text-align: right;
+				}
+			}
+			.ActualBetAmount {
+				display: flex;
+				justify-content: flex-end;
+				width: 100%;
+				font-size: 12px;
+				padding: 0.125rem 0.075rem;
+				font-weight: bold;
+				label {
+					padding: 0 0.25rem;
+				}
+			}
+			p {
+				width: 100%;
+				text-align: right;
+				font-size: 12px;
+				padding: 2px 0;
+			}
+			.flex-box {
+				display: flex;
+				justify-content: space-between;
+				small {
+					text-align: left;
+				}
+			}
+		}
+		.item {
+			font-size: 28px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.InputBox {
+			width: 45%;
+			position: relative;
+			.icon {
+				position: absolute;
+				top: 0.275rem;
+				left: 0.25rem;
+				font-weight: bold;
+			}
+		}
+		.Inputactive {
+			border: 1px solid#00a6ff !important;
+		}
+		.input {
+			background: white;
+			text-indent: 0.25rem;
+			font-size: 14px;
+			height: 0.875rem;
+			width: 100%;
+			border: 1px solid white;
+			border-radius: 0.2rem;
+
+			box-sizing: border-box;
+			-web-kit-appearance: none;
+			-moz-appearance: none;
+			display: block;
+			outline: 0;
+			padding: 0 0.375rem;
+			text-decoration: none;
+			text-align: right;
+		}
+	}
+	.number-area {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		align-items: center;
+		text-align: center;
+		height: 5.625rem;
+		padding: 0.25rem;
+		//border-top: 1px solid #ddd;
+		.btn {
+			background: linear-gradient(#ffc107, #ff8a25) !important;
+			color: white !important;
+			font-weight: 400 !important;
+		}
+		.orgColor {
+			color: #ffa82b !important;
+			font-weight: 400 !important;
+		}
+		.item {
+			box-shadow: 0rem 0rem 0.25rem #00000017;
+			margin-top: 0.2rem;
+			flex: 0 0 22%;
+			background: #ffffff;
+			line-height: 0.75rem;
+			font-size: 17px;
+			border-radius: 0.75rem;
+			height: 1rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #999999;
+			margin: 0 0.125rem;
+		}
+	}
+}
+
+/* 串关浮窗 */
+.BetCartPopup {
+	width: 1.45rem;
+	height: 1.45rem;
+	border-radius: 0.853333rem 0 0 0.853333rem;
+	position: fixed;
+	left: 0;
+	bottom: 13%;
+	z-index: 100;
+	.Content {
+		width: 1.45rem;
+		height: 1.45rem;
+		border-radius: 50%;
+		background: linear-gradient(206.76deg, #00a6ff 35.41%, #00a6ff 84.96%);
+		display: flex;
+		align-items: center;
+		margin: 0.1333rem;
+		position: relative;
+		justify-content: center;
+		svg {
+			width: 0.75rem;
+		}
+		.num {
+			width: 0.7rem;
+			font-size: 10.6667px;
+			border-radius: 50%;
+			background: #fcab23;
+			color: #fff;
+			position: absolute;
+			top: -0.25rem;
+			right: -0.1rem;
+			height: 0.7rem;
+			text-align: center;
+			line-height: 0.7rem;
+		}
+	}
+}
+
+/* 投注板块余额 */
+.Balancedata {
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.MoneyNum {
+		background: #2196f3;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	svg {
+		width: 0.5rem;
+		margin-left: 0.25rem;
+	}
+
+}
+
+/* 详情头部 */
+.Betting-detail-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 11;
+	color: #fff;
+	background-color: #00a6ff;
+	width: 100%;
+	height: 1.3866666667rem;
+	line-height: 1.3866666667rem;
+	padding: 0 0.25rem;
+	box-sizing: border-box;
+	font-size: 14px;
+	align-items: center;
+	display: flex;
+	h3 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		span {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: keep-all;
+		}
+		.Game-logo {
+			width: 0.5rem;
+			vertical-align: middle;
+			margin: 0 0.125rem;
+		}
+	}
+	.back-icon svg {
+		width: 0.6933333333rem;
+		height: 0.6933333333rem;
+		vertical-align: -0.2rem;
+		fill: #fff;
+	}
+	.header-game-select {
+		display: inline-block;
+		width: 2.2933333333rem;
+		height: 1.0666666667rem;
+		line-height: 1.0666666667rem;
+		vertical-align: middle;
+		overflow: hidden;
+		margin: 0 0.16rem;
+		position: relative;
+		z-index: 100;
+		border-radius: 0.2rem;
+	}
+}
+.drawerc {
+	z-index: 100000;
+	width: 0;
+	.drawer-mask,
+	.drawerc {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+	.drawer-mask {
+		background-color: rgba(0, 0, 0, .3);
+		width: 100%;
+		transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+	}
+	.drawer-close {
+		position: absolute;
+		top: 0.25rem;
+		right: 0.25rem;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	.drawer {
+		position: fixed;
+		background-color: #00a6ff;
+		transition: transform .3s ease-in-out;
+		z-index: 9;
+		border-radius: 0.5rem;
+	}
+	.drawer-left {
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+	.drawer-right {
+		top: 0;
+		right: 0;
+		height: 100%;
+	}
+	.drawer-top {
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	.drawer-body {
+		background: #00a6ff;
+		color: white;
+		overflow: auto;
+		height: 69vh;
+		border-radius: 0.375rem;
+	}
+	.drawer-bottom {
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	.drawer-header {
+		padding: 0.4rem 0.6rem;
+		border-radius: 0.1rem 0.1rem 0 0;
+		background: #00a6ff;
+		color: white;
+		border-bottom: 0.025rem solid #00a6ff;
+		.drawer-header-title {
+			margin: 0;
+			font-size: 16px;
+			line-height: 0.55rem;
+			font-weight: 500;
+			color: white;
+			text-align: center;
+		}
+	}
+	.con {
+		.active {
+			background-color: white;
+			color: #000;
+		}
+		ul {
+			display: flex;
+			background: rgb(0 0 0 / 10%);
+			margin: 0.375rem;
+			padding: 0.25rem 1.5rem;
+			justify-content: space-between;
+			align-items: center;
+			color: white;
+			border-radius: 0.25rem;
+			li {
+				line-height: 0.5rem;
+				text-align: center;
+			}
+			.name {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-break: keep-all;
+				width: 2.125rem;
+				font-size: 14px;
+				img {
+					width: 0.95rem;
+					//height: 0.95rem;
+				}
+			}
+			.center {
+				p {
+					padding: 0.25rem;
+					font-size: 32px;
+					font-weight: 600;
+					margin-top: -0.125rem;
+					color: #000;
+					b {
+						font-weight: 500;
+					}
+				}
+				span {
+					background-color: #eb2121;
+					padding: 0.05rem 0.25rem;
+					border-radius: 0.375rem;
+					color: white;
+					font-size: 12px;
+				}
+				.color {
+					color: #7f7f7f;
+				}
+			}
+		}
+	}
+}
+
+// 推荐赛事弹窗
+.recommend-race-modal.Betting-list-detail {
+	background-image: url($base-path + '/img/pop-up-match-v2.png');
+	background-color: #004bef;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	border-radius: 0.35rem;
+	top: 1.6rem;
+	margin-bottom: 1.6rem;
+	.modal-info-content {
+		padding: 0.25rem;
+	}
+	.MINITXT {
+		text-align: center;
+		color: white;
+		font-size: 14px;
+	}
+	.recomend-wrapper.Betting-type {
+		height: auto;
+		background-image: none;
+		padding-bottom: 0 !important;
+		background-color: transparent;
+		color: #000;
+		&:first-child {
+			margin-top: 2.4rem;
+		}
+		.betting-item {
+			width: 100%;
+			padding: 10px 0;
+			border-radius: 0.2rem;
+			margin-bottom: 0.25rem;
+			background-color: #fff;
+			.Betting-header-score {
+				padding: 0;
+				li {
+					color: inherit;
+					font-weight: bold;
+					& p {
+						font-size: 12.8px;
+					}
+					.Game-team-pk {
+						color: #000;
+						margin-bottom: 0.1rem;
+					}
+					& > span {
+						font-size: 20px;
+						margin-top: 0.2rem;
+						font-weight: bold;
+						color: rgba(153, 153, 153, .5);
+					}
+				}
+			}
+			.betting-team-name {
+				text-align: center;
+				color: #999;
+				& img {
+					height: 0.6rem;
+					margin-right: 0.05rem;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				& > p {
+					font-size: 12.8px;
+					display: inline;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+.sport-svg-wrap.recommend {
+	position: absolute;
+	width: 0.85rem;
+	height: 0.85rem;
+	line-height: 0.85rem;
+	text-align: center;
+	margin: auto;
+	display: block;
+	bottom: -1.1rem;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .3);
+	border-radius: 50%;
+	svg {
+		width: 0.4rem;
+		fill: #fff;
+	}
+}
+
+/* 混合投注单选 */
+.SystemParlayBet {
+	background: #efeff4;
+	.ShowKeyboardBox {
+		p {
+			padding: 0.25rem;
+			text-align: right;
+			color: #bcbec3;
+			font-size: 12px;
+		}
+	}
+
+	.Inputdata {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 0.25rem;
+		position: relative;
+		input {
+			background: white;
+			text-indent: 0.25rem;
+			font-size: 14px;
+			height: 0.875rem;
+			width: 100%;
+			border: 1px solid white;
+			border-radius: 0.2rem;
+
+			box-sizing: border-box;
+			-web-kit-appearance: none;
+			-moz-appearance: none;
+			display: block;
+			outline: 0;
+			padding: 0 0.375rem;
+			text-decoration: none;
+			text-align: right;
+		}
+	}
+	.InputBox {
+		width: 100%;
+		position: relative;
+		.icon {
+			position: absolute;
+			top: 0.25rem;
+			left: 0.425rem;
+			font-weight: bold;
+		}
+
+		.Falseinput {
+			width: auto;
+			left: 0;
+			right: 0;
+		}
+	}
+	.Inputactive {
+		border: 1px solid#00a6ff !important;
+	}
+	.cap-list:first-child {
+		margin-top: 0rem;
+	}
+	.cap-list {
+		border-radius: 0.2rem;
+		overflow: hidden;
+		margin: 0.25rem;
+		background: #efeff4;
+		.cap-item {
+			margin-bottom: 0;
+			padding: 0;
+			justify-content: flex-start;
+			background: #efeff4;
+			.item-style {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 0.25rem;
+				border-radius: 0.2rem;
+				background-color: #fff;
+				line-height: 1.25rem;
+				height: 1.25rem;
+				padding: 0 0.5rem;
+				white-space: nowrap;
+				// &:not([disabled]):active {
+				// 	background-color: $light-active-color1;
+				// }
+			}
+			div.cap-item-circle {
+				background-color: #fff;
+				border-radius: 50%;
+				border: 0.025rem solid #00a6ff;
+				width: 0.45rem;
+				height: 0.45rem;
+				vertical-align: middle;
+				box-sizing: border-box;
+				transition: all .2s;
+				display: inline-block;
+				margin-right: 0.25rem;
+			}
+			div.cap-item-circle.curr {
+				border: 4px solid #00a6ff;
+			}
+		}
+	}
+}
+
+/* 免费投注 */
+.FreeBetlist {
+	padding: 10px 10px 0px 0.25rem;
+	label {
+		background-color: white;
+		border: 1px solid #ccc;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 0.25rem;
+		border-radius: 0.125rem;
+		svg {
+			width: 0.5rem;
+		}
+	}
+	small {
+		color: #fcab23;
+		padding: 4px 0.075rem;
+		font-size: 12px;
+		height: 0.5rem;
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-top: 0.2703rem;
+		span {
+			line-height: 16px;
+		}
+	}
+}
+.FreeBetbox {
+	.drawer-mask {
+		z-index: 9999999;
+	}
+	.drawer-bottom {
+		background-color: white;
+		z-index: 9999999;
+		.Header {
+			background-color: #efeff4;
+			padding: 10px 0.5rem;
+			color: #00a6ff;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		.drawer-body {
+			background-color: white;
+			border-radius: 0;
+		}
+	}
+}
+
+/* 横屏样式调整 */
+.MiniShow {
+	.Header {
+		background-color: #00a6ff;
+		color: white;
+		padding: 0.125rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		width: 100%;
+		z-index: 999;
+		font-size: 15px;
+		.left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 0.25rem;
+		}
+		.Number {
+			background-color: #fcab23;
+			border-radius: 0.5rem;
+			width: 0.6rem;
+			height: 0.6rem;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-left: 0.25rem;
+		}
+	}
+	.Betlist {
+		padding-top: 0.5405rem;
+	}
+
+	.Bet-digit-keyboard {
+		padding-top: 0.875rem;
+		z-index: 99;
+		height: 90vh;
+		overflow: visible;
+	}
+	.Bet-digit-keyboard .Bottom-flex {
+		bottom: 0;
+	}
+	.Bet-digit-keyboard .input-area .right .team-name .vsname {
+		width: 3.75rem;
+		font-size: 0.3784rem;
+	}
+	.Bet-digit-keyboard .input-area .right .team-name .dpvsname {
+		width: 2.25rem;
+	}
+	.Bet-digit-keyboard .input-area .right .team-name .Main_set.gray.dpvsname {
+		padding-left: 0.25rem !important;
+	}
+	.Bet-digit-keyboard .input-area .right .team-name {
+		.gray {
+			color: #999999 !important;
+			width: 2.75rem;
+			font-size: 0.3243rem;
+		}
+	}
+	.Bet-digit-keyboard .number-area .item {
+		box-shadow: 0rem 0rem 0.25rem #00000017;
+		margin-top: 0.2rem;
+		flex: 0 0 21%;
+		background: #ffffff;
+		border-radius: 0.75rem;
+		height: 0.875rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #999999;
+		margin: 0 0.125rem;
+		font-size: 12px;
+	}
+	.Bet-digit-keyboard .Betlist {
+		background: white;
+	}
+	.Bet-digit-keyboard .BetTabs li {
+		flex: unset;
+	}
+	.Bet-digit-keyboard .Betlist {
+		padding: 55px 8px 180px 0.2rem;
+	}
+	.ShowbalanceTxt {
+		top: 0.95rem;
+	}
+	.ShowbalanceTxt svg {
+		right: 0.625rem;
+	}
+	.Bet-digit-keyboard .BetTabs li {
+		font-size: 12px;
+		word-break: keep-all;
+	}
+	.Bet-digit-keyboard .input-area .right .team-name .dpvsname {
+		padding: 0 0 0 0.25rem;
+	}
+	.Bet-digit-keyboard .CheckMore {
+		top: 2.175rem;
+	}
+	.Beting-Box-Status .Header h3 {
+		font-size: 14px;
+	}
+	.Beting-Box-Status ul .team-name .vsname {
+		font-size: 15px;
+		width: 4rem;
+	}
+	.blue {
+		font-size: 18px;
+	}
+}
+
+.ShowbalanceTxt {
+	position: absolute;
+	background: #ffeda6;
+	color: #000;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 0.4054rem;
+	top: 1.2162rem;
+	z-index: 9999;
+	font-size: 16px;
+	svg {
+		position: absolute;
+		top: -0.39rem;
+		right: 0.8378rem;
+	}
+}
+
+.detail-header-drawer {
+	z-index: 10 !important;
+	& > .drawer-custom-mask {
+		z-index: 10 !important;
+		background-color: rgba(0, 0, 0, .3) !important;
+	}
+	& > .drawer-custom-content-wrapper {
+		width: auto !important;
+		height: auto !important;
+	}
+	& .detail-header-drawer-contents {
+		background: #00a6ff;
+		color: white;
+		overflow: auto;
+		width: 100vw;
+		height: 69vh;
+		border-radius: 0.375rem;
+
+		& > .drawer-header {
+			padding: 0.4rem 0.6rem;
+			border-radius: 0.1rem 0.1rem 0 0;
+			background: #00a6ff;
+			color: white;
+			border-bottom: 0.025rem solid #00a6ff;
+
+			& > .drawer-header-title {
+				margin: 0;
+				font-size: 16px;
+				line-height: 0.55rem;
+				font-weight: 500;
+				color: white;
+				text-align: center;
+			}
+		}
+
+		& > .con {
+			.active {
+				background-color: white;
+				color: #000;
+			}
+
+			ul {
+				display: flex;
+				background: rgb(0 0 0 / 10%);
+				margin: 0.375rem;
+				padding: 0.25rem .5rem;
+				justify-content: space-between;
+				align-items: center;
+				color: white;
+				border-radius: 0.25rem;
+
+				li {
+					line-height: 0.5rem;
+					text-align: center;
+				}
+
+				.name {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					word-break: keep-all;
+					width: 4.125rem;
+					font-size: 13px;
+
+					img {
+						width: 0.95rem;
+						//height: 0.95rem;
+					}
+					.name-txt {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+				}
+
+				.center {
+					p {
+						padding: 0.25rem;
+						font-size: 32px;
+						font-weight: 600;
+						margin-top: -0.125rem;
+						color: #000;
+
+						b {
+							font-weight: 500;
+						}
+					}
+
+					span {
+						background-color: #eb2121;
+						padding: 0.05rem 0.25rem;
+						border-radius: 0.375rem;
+						color: white;
+						font-size: 12px;
+					}
+
+					.color {
+						color: #7f7f7f;
+					}
+				}
+			}
+		}
+	}
+}
+
+.noEventData {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #efeff3;
+
+	& > .noEventData-icon {
+		width: 25vw;
+		height: 25vw;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	& > .noEventData-header {
+		font-size: 18px;
+		margin: 0.45rem;
+	}
+	& > .noEventData-desc1,
+	.noEventData-desc2 {
+		color: #999999;
+		font-size: 16px;
+		margin: 0.15rem;
+	}
+}
+
+.lazy-image-wrapper,
+.lazy-image-placeholder {
+	display: inline;
+}
+
+.arrow-right {
+	display: inline-block;
+	content: '';
+	transform: rotate(45deg);
+	margin-right: 0.2rem;
+	width: 0.25rem;
+	height: 0.25rem;
+	border-top: 0.05rem solid #bcbec3;
+	border-right: 0.05rem solid #bcbec3;
+}
+
+.EUROCUP-banner {
+	width: 100%;
+	height: t.px2rem(80px);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	margin-top: -0.05rem; //遮掉上面的小留白
+}
+
+//全場波膽-首屏列表
+.Betting-list {
+	.Games-Content.CorrectScore {
+		.TeamName {
+			width: auto;
+			max-width: 70%;
+		}
+		.ScoreBlock {
+			float: right;
+			height: 1.08rem;
+		}
+		.CorrectScoreBox {
+			padding-left: t.px2rem(4px);
+			padding-right: t.px2rem(4px);
+
+			//賠率框的樣式
+			.table-cell-swiper {
+				vertical-align: middle;
+				text-align: center;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-break: keep-all;
+
+				.white {
+					background-color: white;
+				}
+
+				.list-set {
+					background-color: #efeff4;
+					border-radius: 4px;
+					margin: 0.05rem;
+
+					> .Game-indicators {
+						text-align: center;
+						height: 0.85rem;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						color: #666666;
+						margin: 0.05rem;
+						padding-left: 0.2rem;
+						padding-right: 0.2rem;
+
+						> .Number-black {
+							color: #000000;
+							font-size: t.px2rem(16px);
+						}
+
+						&.active {
+							background-color: #e6f6ff !important;
+							border: 1px solid #00a6ff !important;
+						}
+
+						small {
+							span {
+								margin: 0 0.05rem;
+							}
+						}
+
+						> .Locked,
+						.noData {
+							width: 0.4rem;
+							margin-left: calc(50% - 0.2rem);
+						}
+					}
+
+					svg {
+						width: 0.5rem;
+						height: 0.5rem;
+					}
+				}
+			}
+
+			.CorrectScoreTitle {
+				margin-left: t.px2rem(4px);
+				font-size: t.px2rem(12px);
+				line-height: t.px2rem(22px);
+				color: #666666;
+			}
+			.CorrectScoreOdds {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				.CorrectScoreColumn {
+					flex: 1;
+					margin-left: t.px2rem(4px);
+					margin-right: t.px2rem(4px);
+				}
+			}
+			.CorrectScoreOther {
+				margin-left: t.px2rem(4px);
+				margin-right: t.px2rem(4px);
+			}
+
+			.CorrectScoreViewMore {
+				height: t.px2rem(49px);
+				color: #00a6ff;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				font-size: t.px2rem(12px);
+				line-height: t.px2rem(16px);
+				.CorrectScoreViewMoreArrow {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					margin-left: t.px2rem(4px);
+					svg {
+						width: t.px2rem(14px);
+						height: t.px2rem(14px);
+					}
+				}
+			}
+
+			.CorrectScoreNoViewMore {
+				height: t.px2rem(25px);
+			}
+		}
+		.NoCorrectScore {
+			width: 100%;
+			height: t.px2rem(33px);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			font-size: t.px2rem(12px);
+			line-height: t.px2rem(22px);
+			color: #999999;
+		}
+	}
+}
+
+//波膽-詳情頁
+.Collapselist {
+	.rc-collapse-content-box {
+		.CorrectScoreOdds {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			ul {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				margin-left: t.px2rem(4px);
+				margin-right: t.px2rem(4px);
+				li {
+					background-color: #f7f7f7;
+					padding: 0.25rem 0.5rem;
+					margin: 0.125rem 0.25rem;
+					border-radius: 0.375rem;
+					color: #999999;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+					&.Locked {
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.Games-content {
+	.Betting-list {
+		margin-top: 114px; //34+34+46+100
+		padding-bottom: 66px;
+	}
+}
+
+//分享賽事 彈窗
+.GameDetailSharePopupOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #00000080;
+	z-index: 99999999;
+}
+.GameDetailSharePopup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: none;
+	background: #efeff4;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	outline: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	.GameDetailSharePopupTopBox {
+		flex: 1;
+		width: 100%;
+		height: auto;
+		background-color: #00000080;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		padding-bottom: 40px;
+		.GameDetailSharePopupShareBox {
+			width: 343px;
+			height: 230px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.PromsDetailSharePopupShareBoxTop {
+				width: 343px;
+				height: 150px;
+				background-color: white;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: flex-start;
+				// padding-left: 5px;
+				// padding-right: 5px;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.GameDetailSharePopupShareBoxTop {
+				width: 343px;
+				height: 118px;
+				background-image: url($base-path + '/img/shareBgSmall.jpg'); //safari擷取不可超出範圍，所以需要剛好大小的小圖
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: flex-start;
+				padding-top: 25px;
+				padding-left: 5px;
+				padding-right: 5px;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				.GameDetailSharePopupShareBoxTopTeamBox {
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: center;
+					.ShareTeamImage {
+						height: 40px;
+					}
+					.ShareTeamName {
+						margin-top: 8px;
+						font-size: 12px;
+						font-weight: 400;
+						color: #ffffff;
+						line-height: 17px;
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+					}
+				}
+				.GameDetailSharePopupShareBoxTopLeagueBox {
+					flex: 1.5;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: center;
+					padding-top: 15px;
+					.ShareLeagueName {
+						font-size: 12px;
+						color: #ffffff;
+						line-height: 17px;
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+					}
+					.ShareVS {
+						margin-top: 8px;
+						font-size: 16px;
+						font-weight: 400;
+						color: #ffffff;
+						line-height: 22px;
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+			}
+			.GameDetailSharePopupShareBoxBottom {
+				width: 343px;
+				height: 112px;
+				background-color: #ffffff;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				padding-left: 16px;
+				padding-right: 16px;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+				.TimeShow {
+					color: #00000080;
+					font-size: 0.32rem;
+					padding-top: 5px;
+					line-height: 15px;
+				}
+				.GameDetailSharePopupShareBoxBottomLeft {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+					flex: 1;
+					padding-right: 8px;
+					.ShareLeagueName2 {
+						font-size: 16px;
+						font-weight: 600;
+						color: #222222;
+						line-height: 22px;
+					}
+					.ShareVS2 {
+						margin-top: 8px;
+						font-size: 12px;
+						color: #666666;
+						line-height: 17px;
+					}
+				}
+				.GameDetailSharePopupShareBoxBottomRight {
+					width: 80px;
+					height: 80px;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+	}
+	.PromsBoxBottom {
+		height: 290px !important;
+		background-color: white;
+	}
+	.GameDetailSharePopupBottomBox {
+		width: 100%;
+		height: 208px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		.GameDetailSharePopupBottomBoxTop {
+			width: 100%;
+			height: 118px;
+			background-color: #efeff4;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			.ShareButtonBox {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				margin-left: 24px;
+				.ShareButton {
+					width: 56px;
+					height: 56px;
+					border-radius: 8px;
+					background-color: #ffffff;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					svg {
+						width: 24px;
+						height: 24px;
+					}
+				}
+				.ShareText {
+					font-size: 12px;
+					color: #222222;
+					line-height: 22px;
+				}
+			}
+		}
+		.GameDetailSharePopupBottomBoxBottom {
+			width: 100%;
+			height: 90px;
+			background-color: #ffffff;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			.ShareCancelText {
+				margin-top: 24px;
+				margin-bottom: 31px;
+				font-size: 16px;
+				color: #00a6ff;
+				line-height: 22px;
+			}
+			.ShareCancelBar {
+				width: 134px;
+				height: 5px;
+				border-radius: 100px;
+				background-color: #000000;
+			}
+		}
+	}
+}
+
+.Home-Banner {
+	height: 120px;
+	width: 100%;
+}
+
+.highlightErrWrap {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	padding-right: 20px; 
+	justify-content: center; 
+	align-items: center;
+	
+	.highlightErrTitle {
+		padding: 0.25rem;
+		color: white;
+		font-weight: 600;
+		font-family: fangsong;
+		font-size: 14px;
+		height: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #eb2121;
+		border-radius: 0.25rem;
+	}
+	.errIcon {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+	.highlightErrStr {
+		color: #fff;
+		text-align: center;
+		margin-top: 8px;
+		line-height: 18px;
+	}
+}
+
+// 圓形
+.alert-circle {
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&.whiteCircle {
+		width: 0.5rem;
+		height: 0.5rem;
+		background-color: #fff;
+		font-size: 0.35rem;
+		color: #EB2122;
+	}
+
+	&.redCircle {
+		width: 0.75rem;
+		height: 0.75rem;
+		background-color: #EB2122;
+		font-size: 0.45rem;
+		color: #fff;
+	}
+}

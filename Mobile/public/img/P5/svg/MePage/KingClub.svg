@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.1" y1="0.058" x2="0.917" y2="0.925" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff98b5"/>
+      <stop offset="1" stop-color="#ef3a75"/>
+    </linearGradient>
+    <filter id="Rectangle_13" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#020202" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.599" stop-color="#fff" stop-opacity="0.906"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_10851" data-name="Group 10851" transform="translate(-191 -262)">
+    <g transform="matrix(1, 0, 0, 1, 191, 262)" filter="url(#Rectangle_13)">
+      <rect id="Rectangle_13-2" data-name="Rectangle 13" width="34" height="34" rx="8" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_12614" data-name="Group 12614" transform="translate(-1743 12684)">
+      <path id="Exclusion_1" data-name="Exclusion 1" d="M14.894,16H1.112a1.083,1.083,0,0,1-.828-.4,1.273,1.273,0,0,1-.277-.934L.884,5.787A1.081,1.081,0,0,1,1.964,4.8H3.4V4.534a4.605,4.605,0,0,1,9.21,0V4.8h1.454a1.082,1.082,0,0,1,1.08.987l.85,8.879a1.261,1.261,0,0,1-.274.934A1.092,1.092,0,0,1,14.894,16ZM4.777,8.27A.736.736,0,0,0,4,9.047a3.845,3.845,0,0,0,3.888,3.886,3.845,3.845,0,0,0,3.886-3.886.778.778,0,0,0-1.556,0,2.331,2.331,0,1,1-4.663,0A.737.737,0,0,0,4.777,8.27ZM8,1.6a2.96,2.96,0,0,0-2.98,2.934V4.8h5.959V4.534A2.959,2.959,0,0,0,8,1.6Z" transform="translate(1952 -12407)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+@use "t";
+
+.homeTipBox {
+  width: 64px;
+  z-index: 99999;
+}
+
+.homeTipText {
+  padding-top: 1.6px;
+}
+
+.homeTipRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 3.2px;
+}
+
+.homeTipProgress{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 3.2px;
+}
+
+.homeTipLine {
+  width: 4.8px;
+  height: 1.6px;
+  border-radius: 4.8px;
+  background-color: #fff;
+  margin: 0.8px;
+}
+
+.homeTipDot{
+  width: 1.6px;
+  height: 1.6px;
+  border-radius: 999em;
+  background-color: #808080;
+  margin: 0.8px;
+}
+
+.homeTipButton {
+  background-color: #fff;
+  border-radius: 3.2px;
+  padding: 0 4.8px;
+  color: #000;
+  position: relative;
+  right: -8px;
+}
+
+.homeTiptep1 {
+  top: 20px !important;
+  left: 22.4px !important;
+}
+
+.homeTipStep2 {
+  top: 20px !important;
+  left: auto;
+  right: 12.8px !important;
+}
+
+.homeTipStep3 {
+  top: 96px !important;
+  left: 12.8px !important;
+}
+
+.homeTipStep4 {
+  top: 92.8px !important;
+  left: auto;
+  right: 22.4px !important;
+}

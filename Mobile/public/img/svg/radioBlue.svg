@@ -1,0 +1,7 @@
+<svg id="check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="Rectangle" fill="#fff" stroke="#00a6ff" stroke-width="2">
+    <rect width="16" height="16" rx="8" stroke="none"/>
+    <rect x="1" y="1" width="14" height="14" rx="7" fill="none"/>
+  </g>
+  <rect id="Rectangle-2" data-name="Rectangle" width="8" height="8" rx="4" transform="translate(4 4)" fill="#00a6ff"/>
+</svg>

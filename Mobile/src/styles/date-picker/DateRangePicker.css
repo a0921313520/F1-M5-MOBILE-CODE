@@ -1,0 +1,167 @@
+.sport-calendar-wrap {
+	padding: 0 10px;
+}
+.always-show > span,
+.always-show .react-daterange-picker__calendar--closed {
+	display: block !important;
+}
+input.react-daterange-picker__inputGroup__input {
+	pointer-events: none;
+}
+.react-daterange-picker {
+	display: flex;
+	position: relative;
+}
+.react-daterange-picker,
+.react-daterange-picker *,
+.react-daterange-picker *:before,
+.react-daterange-picker *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.react-daterange-picker--disabled {
+	background-color: #f0f0f0;
+	color: #6d6d6d;
+}
+.react-daterange-picker__wrapper {
+	height: 40px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 0;
+	align-items: center;
+	font-size: 14px;
+}
+.react-daterange-picker__wrapper .react-daterange-picker__range-divider {
+	flex-basis: 16px;
+	height: 1px;
+}
+.react-daterange-picker__inputGroup {
+	min-width: calc((4px * 3) + 0.54em * 8 + 0.217em * 2);
+	height: 100%;
+	flex-grow: 1;
+	padding: 0 10px;
+	box-sizing: content-box;
+	text-align: right;
+	border: 1px solid #bcbec3;
+	border-radius: 8px;
+	position: relative;
+	pointer-events: none;
+}
+/* .react-daterange-picker__inputGroup:first-child,
+.react-daterange-picker__inputGroup:first-child {
+	background-color: #00a6ff29;
+}
+.react-daterange-picker__inputGroup:first-child,
+.react-daterange-picker__inputGroup:first-child input {
+	border-color: #00a6ff;
+	color: #00a6ff;
+} */
+.react-daterange-picker__inputGroup:first-child::before {
+	content: "Từ";
+	position: absolute;
+	left: 10px;
+	line-height: 40px;
+}
+.react-daterange-picker__inputGroup:last-child::before {
+	content: "Đến";
+	position: absolute;
+	left: 10px;
+	line-height: 40px;
+}
+.react-daterange-picker__inputGroup__divider {
+	padding: 1px 0;
+	white-space: pre;
+}
+.react-daterange-picker__inputGroup__input {
+	min-width: 0.54em;
+	height: 100%;
+	position: relative;
+	padding: 0 1px;
+	border: 0;
+	background: none;
+	font: inherit;
+	box-sizing: content-box;
+	-moz-appearance: textfield;
+}
+.react-daterange-picker__inputGroup__input::-webkit-outer-spin-button,
+.react-daterange-picker__inputGroup__input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.react-daterange-picker__inputGroup__input:invalid {
+	/* background: rgba(0, 166, 255, 0.1); */
+}
+.react-daterange-picker__inputGroup__input--hasLeadingZero {
+	margin-left: -0.54em;
+	padding-left: calc(1px + 0.54em);
+}
+.react-daterange-picker__button {
+	border: 0;
+	background: transparent;
+	padding: 4px 6px;
+}
+.react-daterange-picker__button:enabled {
+	cursor: pointer;
+}
+.react-daterange-picker__button:enabled:hover .react-daterange-picker__button__icon,
+.react-daterange-picker__button:enabled:focus .react-daterange-picker__button__icon {
+	stroke: #0078d7;
+}
+.react-daterange-picker__button:disabled .react-daterange-picker__button__icon {
+	stroke: #6d6d6d;
+}
+.react-daterange-picker__button svg {
+	display: inherit;
+}
+.react-daterange-picker__calendar {
+	/* width: 350px;
+  max-width: 100vw; */
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 56px !important;
+	left: 0;
+	z-index: 1;
+}
+.react-daterange-picker__calendar--closed {
+	display: none;
+}
+.react-daterange-picker__calendar .react-calendar {
+	width: 100%;
+	border-width: thin;
+}
+/* .react-daterange-picker--closed .react-daterange-picker__inputGroup:nth-child(3) {
+	background-color: #00a6ff29;
+	border-color: #00a6ff;
+	color: #00a6ff;
+}
+.react-daterange-picker--closed .react-daterange-picker__inputGroup:nth-child(3) .react-daterange-picker__inputGroup__input {
+	border-color: #00a6ff;
+	color: #00a6ff;
+} */
+
+.react-daterange-picker.endDate .react-daterange-picker__inputGroup:nth-child(3) {
+	background-color: #00a6ff29;
+	border-color: #00a6ff;
+	color: #00a6ff;
+}
+.react-daterange-picker.endDate .react-daterange-picker__inputGroup:nth-child(3) * {
+	color: #00a6ff;
+}
+
+
+/* .react-daterange-picker--closed .react-daterange-picker__inputGroup__input {
+	color: #00a6ff;
+} */
+.react-daterange-picker--open .react-daterange-picker__inputGroup:first-child {
+	background-color: #00a6ff29;
+}
+.react-daterange-picker--open .react-daterange-picker__inputGroup:first-child,
+.react-daterange-picker--open .react-daterange-picker__inputGroup:first-child input {
+	border-color: #00a6ff;
+	color: #00a6ff;
+}

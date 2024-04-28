@@ -1,0 +1,738 @@
+@import 'swiper/swiper.scss';
+
+.MiniGame {
+	position: fixed;
+	bottom: 0px;
+	margin: auto;
+	right: 5px;
+	height: 200px;
+	width: 128px;
+	img {
+		width: 100%;
+	}
+	.Close {
+		width: 15px;
+		height: 15px;
+		background-image: url($base-path + '/img/svg/close.svg');
+		background-repeat: NO-REPEAT;
+		position: absolute;
+		right: 5px;
+		top: 35px;
+		opacity: 0.5;
+	}
+}
+.withAppDownloadbar {
+	padding: 0;
+	.Home {
+		padding-top: 2.8rem;
+	}
+	.AppTop {
+		width: 100%;
+		padding: 10px 10px !important;
+		background-color: #00a6ff;
+	}
+}
+//首页
+.Home {
+	padding-top: 50px;
+	.swiper_container::after {
+		position: absolute;
+		left: -30%;
+		top: 0;
+		z-index: -1;
+		width: 160%;
+		height: 135px;
+		content: '';
+		border-radius: 0 0 80% 80%;
+		background-image: linear-gradient(126deg, #00a6ff 0%, #00a6ff 100%);
+	}
+	//幻灯片
+	.swiper_container {
+		min-height: 160px;
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 20px;
+		margin-top: -2px;
+		.card {
+			text-align: center;
+			width: 80%;
+			// height: 142px;
+			//background: rgba($color: #000, $alpha: 0.3);
+			//border: 1.6px solid rgba(0, 0, 0, 0.08);
+			box-sizing: border-box;
+			border-radius: 15px;
+			transition: 300ms;
+			transform: scale(0.87);
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:last-child {
+				margin-right: 0;
+			}
+			.image {
+				max-width: 100%;
+				max-height: 100%;
+				background-color: white;
+			}
+		}
+		.swiper-slide-active,
+		.swiper-slide-duplicate-active {
+			transform: scale(1.05);
+		}
+		.swiper-slide {
+			.placeholder {
+				text-align: center;
+			}
+		}
+	}
+	//跑马灯
+	.Notice {
+		height: 40px;
+		overflow: hidden;
+		padding: 10px;
+		background: #00a6ff;
+		padding: 0 10px;
+		border: 1px solid #00a6ff;
+		.swiper-slide {
+			color: white;
+			display: flex;
+			align-items: center;
+			svg {
+				margin-right: 5px;
+			}
+		}
+	}
+	//登陆前、登录后 显示的 快捷按钮和余额
+	.Content {
+		// padding: 0px 20px 20px;
+		.BlancButtonBox {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 5px;
+			button {
+				padding: 10px 5px;
+				min-width: 2.5rem;
+				font-size: 14px;
+				border-radius: 5px;
+				border: 0;
+				margin: 5px;
+				font-family: PingFang SC, Semibold;
+				font-weight: bold;
+			}
+			.Left {
+				transform: scale(0.85);
+				line-height: 20px;
+				color: #666666;
+				small {
+					color: #222222;
+				}
+				.Number {
+					font-size: 24px;
+					color: #00a6ff;
+					font-weight: 500;
+					display: flex;
+					align-items: center;
+					padding-top: 10px;
+					font-family: DINAlternate-Bold;
+					i {
+						margin-right: 5px;
+					}
+				}
+				.refresh {
+					margin-left: 10px;
+					svg {
+						width: 20px;
+						height: 24px;
+					}
+				}
+			}
+			.Right {
+				.LoginBox {
+					.Login {
+						background-color: #d3f0ff;
+						//color: #00a6ff;
+						color: #008dd9;
+					}
+					.Register {
+						background-color: #cbffd8;
+						//color: #0ccc3c;
+						color: #00a028;
+					}
+				}
+				.ActionBox {
+					display: flex;
+					.Btn {
+						display: flex;
+						flex-direction: column;
+						text-align: center;
+						font-size: 12px;
+						color: #222222;
+						svg {
+							width: 55px;
+							height: 55px;
+						}
+						.TargetName {
+							margin-top: -7px;
+						}
+					}
+				}
+			}
+		}
+		.MiNiBanner {
+			height: 10px;
+			// margin-top: 10px;
+			margin-bottom: 10px;
+			border-radius: 50px;
+			overflow: hidden;
+			//background: #efeff4;
+			//border: 1px solid #efeff4;
+			text-align: center;
+			padding: 10px;
+			animation: fadenum 1s;
+			animation-fill-mode: forwards;
+
+			@keyframes fadenum {
+				100% {
+					height: 100px;
+				}
+			}
+			.WalletBanner {
+				span {
+					width: 95% !important;
+				}
+				img {
+					border-radius: 50px;
+				}
+			}
+			.image {
+				width: 100%;
+			}
+			.swiper-container {
+				height: 100%;
+			}
+		}
+	}
+
+	/* 游戏区域 */
+	.GameBox {
+		background-color: white;
+		//height: 38vh;
+		border-radius: 10px 10px 0px 0px;
+		padding: 0.16rem 0.26667rem .3rem 0.26667rem;
+		min-height: 230px;
+		.GamesSkeleton {
+			padding-right: 10px;
+			> span {
+				display: flex;
+				margin: 10px 0;
+				.react-loading-skeleton {
+					margin: 10px 0 0 10px;
+				}
+			}
+		}
+
+		// .react-swipeable-tab-panelList {
+		// 	//padding: 20px;
+		// }
+		.react-swipeable-tab-tabList .ink {
+			height: 2px;
+		}
+		.GameTabs {
+			min-height: 230px;
+			.TabList {
+				height: 46px;
+			}
+			.PanelList {
+				//height: 300px;
+			}
+			::-webkit-scrollbar{
+				display: none;
+			  }
+			.react-swipeable-tab-iscroll {
+				overflow: auto;
+				white-space: nowrap;
+			}
+			.game-title {
+				display: block;
+				margin: 0rem 0.2rem;
+			}
+			.active {
+				font-weight: bold;
+				border-bottom: 0.05rem solid #00A6FF !important;
+			}
+			// .InstantGames {
+			// 	width: 100px !important;
+			// }
+			// .LiveCasino  {
+			// 	width: 75px !important;
+			// }
+			// .P2P {
+			// 	width: 75px !important;
+			// }
+			// .Slot {
+			// 	width: 75px !important;
+			// }
+			// .ESports {
+			// 	width: 70px !important;
+			// }
+			// .normalWidth {
+			// 	width: 100px !important;
+			// }
+			.active .inkLine {
+				height: 2px;
+				border-bottom: 2px solid #008dd9;
+				width: 50%;
+				position: relative;
+				margin: auto;
+				top: 10px;
+			}
+			.react-swipeable-tab-tab {
+				padding: 16px 0px 13px 0px;
+				font-size: 13px;
+				overflow: hidden;
+				width: fit-content !important;
+				border-bottom: 0.05rem solid transparent;
+			}
+			.ink {
+				display: none;
+			}
+			.gameCatNew {
+				position: absolute;
+				top: 2px;
+				right: -2px;
+			}
+			.gameCatNew2 {
+				position: absolute;
+				top: 2px;
+				right: 0;
+			}
+			.GameGroup {
+				display: flex;
+				overflow-x: auto;
+				height: 100%;
+				padding-top: 0.4rem;
+
+				.List {
+					height: 180px;
+					width: 140px;
+					overflow: hidden;
+					flex-shrink: 0;
+					margin-right: 13px;
+					border-radius: 12px;
+					position: relative;
+
+					.lazy-load-image-background.blur {
+						//background-color: #00a6ff;
+					}
+					.Container {
+						height: 100%;
+						display: flex;
+						align-items: center;
+						background-color: #00a6ff33;
+					}
+					.placeholder {
+						background-color: #efeff4;
+						height: 100%;
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					h4 {
+						position: absolute;
+						bottom: 10px;
+						text-align: center;
+						width: 100%;
+						color: #ffffff;
+						font-size: 16px;
+					}
+				}
+				.List.HOT::before {
+					content: "HOT";
+					position: absolute;
+					top: 15px;
+					left: -50px;
+					right: 0px;
+					bottom: 0;
+					-webkit-transform-origin: top;
+					z-index: 1;
+					width: 110px;
+					height: 20px;
+					transform: rotate(308deg);
+					text-align: center;
+					line-height: 20px;
+					color: white;
+					background-color: #fdb454;
+					//background-image: linear-gradient(178deg, #ffffff 0%, #d9d9d9 100%);
+					font-size: 12px;
+				}
+				.List.NEW::before {
+					content: "NEW";
+					position: absolute;
+					top: 15px;
+					left: -50px;
+					right: 0px;
+					bottom: 0;
+					-webkit-transform-origin: top;
+					z-index: 1;
+					width: 110px;
+					height: 20px;
+					transform: rotate(308deg);
+					text-align: center;
+					line-height: 20px;
+					color: white;
+					background-color: #ff4141;
+					//background-image: linear-gradient(178deg, #fbda61 0%, #ffa04d 100%);
+					font-size: 12px;
+				}
+				.List.RECOMMEND::before {
+					content: "推荐";
+					position: absolute;
+					top: 15px;
+					left: -50px;
+					right: 0px;
+					bottom: 0;
+					-webkit-transform-origin: top;
+					z-index: 1;
+					width: 110px;
+					height: 27px;
+					transform: rotate(308deg);
+					text-align: center;
+					line-height: 27px;
+					color: #f92d2d;
+					background-image: linear-gradient(178deg, #ffffff 0%, #d9d9d9 100%);
+					font-size: 14px;
+				}
+				.gameCatDesc {
+					background-color: #f8f9fa;
+					padding: 0 10px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					h2 {
+						color: #00a6ff;
+						padding: 10px;
+						font-size: 20px;
+						text-align: center;
+					}
+					.Desc {
+						text-align: center;
+						font-size: 12px;
+						color: #666666;
+					}
+					.More {
+						border: 1px solid #999999;
+						border-radius: 20px;
+						padding: 6px;
+						width: 85px;
+						color: #666666;
+						font-size: 12px;
+						text-align: center;
+						margin: 15px auto;
+					}
+				}
+				.Summary {
+					padding: 10px;
+					color: #222222;
+					text-align: center;
+					font-size: 12px;
+					margin-right: 13px;
+				}
+				.image {
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					opacity: 1;
+					transition: opacity .5s;
+				}
+				.image-loading {
+					width: 100%;
+					height: 100%;
+					opacity: .9;
+					transition: none;
+					transition: opacity 0.5s;
+					background-color: #00a6ff;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+			.GameGroup::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+	/* 合作伙伴 */
+	.Footer-wrapper {
+		//height: 126vh;
+		background: #eeeff0;
+		padding-bottom: 46px;
+		.languageDropDown {
+			background: #ffffff;
+			text-align: center;
+			width: 3.3rem;
+			border-radius: 0.3rem;
+			margin-right: 0.5rem;
+			.selection {
+				background: #ffffff !important;
+				justify-content: space-around !important;
+				.select-text {
+					color: #666666 !important;
+				}
+			}
+			ul {
+				width: 3.3rem !important;
+			}
+			a {
+				display: block;
+				border-radius: 8px 8px 0 0;
+				text-align: left !important;
+				height: 37px;
+				line-height: 37px;
+				padding: 0 10px;
+				font-size: 12px;
+				color: #6b6b6b;
+				background: white;
+				border: 1px solid#ebebeb;
+				overflow: hidden;
+				text-decoration: none;
+			}
+		}
+		.sponsorNew {
+			text-align: center;
+			color: #000000;
+			font-size: 0.4rem;
+			font-weight: 400;
+			p {
+				margin: 0.5rem 0rem;
+			}
+		}
+		label {
+			text-align: left;
+			padding: 15px;
+			color: #999999;
+			font-size: 12px;
+		}
+		.One {
+			padding: 10px 20px;
+			img {
+				height: 66px;
+			}
+		}
+		.item {
+			cursor: pointer;
+			background-repeat: no-repeat;
+			height: 37px;
+		}
+		.weibo {
+			width: 42px;
+			background-image: url($base-path + '/img/P5/icon/footer_socialmedia.webp?v=123');
+			background-position: 2px -122px;
+		}
+		.youku {
+			width: 50px;
+			background-image: url($base-path + '/img/P5/icon/youku.png?v=123');
+			background-size: 80% !important;
+			background-position: center;
+		}
+		.GameCareResponsibility {
+			width: 34PX;
+			height: 34PX;
+			background-position: -25PX -265PX;
+			background-image: url($base-path + '/img/P5/icon/footer_payment.webp');
+		}
+		.AboveAgeResponsibility {
+			width: 33PX;
+			height: 34PX;
+			background-position: -25PX -230PX;
+			background-image: url($base-path + '/img/P5/icon/footer_payment.webp');
+		}
+		.IovationSecurity {
+			width: 90px;
+			background-position: -4px -387px;
+			background-size: 200px;
+			background-image: url($base-path + '/img/P5/icon/footer_payment.webp');
+		}
+		.FirstCagayanLicenses {
+			width: 33px;
+			background-position: -25px -300px;
+			background-image: url($base-path + '/img/P5/icon/footer_payment.webp');
+		}
+		.media {
+			background-size: 75px;
+			height: 32px;
+		}
+		.Payment {
+			margin-left: 0.4rem;
+			.item {
+				min-width: 37PX;
+				background-image: url($base-path + '/img/P5/icon/footer_payment.webp');
+				margin: 0 3PX;
+			}
+			.AliPayPayment {
+				background-position: -26PX 4PX;
+			}
+			.ChinaUnionPayment {
+				background-position: -26PX -36PX;
+			}
+			.WeChat {
+				background-position: -26PX -77PX;
+			}
+			.JDPay {
+				background-position: -26PX -117PX;
+			}
+			.AstroPay {
+				background-position: -26PX -157PX;
+			}
+			.Usdt {
+				background-image: url($base-path + '/img/usdt.png');
+				width: 33PX;
+				height: 33PX;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				margin-left: 5PX;
+				margin-right: 6PX;
+				margin-top: 2PX;
+			}
+			.FastBank {
+				width: 56PX;
+				background-position: -15PX -194PX;
+			}
+		}
+		.Footer-txt {
+			background-color: #00a6ff;
+			line-height: 1.6;
+			margin-bottom: 16px;
+			text-rendering: optimizeLegibility;
+			color: white;
+			padding: 20px;
+			margin-top: 20px;
+			img {
+				border-radius: 10px;
+			}
+			small {
+				margin-top: 15px;
+			}
+			.Action {
+				line-height: 25px;
+				font-size: 12px;
+				padding-top: 15px;
+			}
+			.DisclaimerLine {
+				color: #8fd7ff;
+				font-size: 12px;
+				font-family: "Microsoft YaHei", "Arial", "HELVETICA", "Tahoma", "sans-serif";
+				transform: scale(0.85);
+				width: 100%;
+				// white-space: nowrap;
+				padding-top: 20px;
+				margin-bottom: 0.3rem;
+			}
+			.seoBtnBackground {
+				position: absolute;
+    			bottom: 75px;
+				width: 100%;
+				height: 3rem;
+				background: linear-gradient(0deg, rgba(0, 166, 255, 0.878) 37.3%, rgba(0, 166, 255, 0) 108.3%);
+			}
+			.seoBtn {
+				background: #007CBF;
+				border-radius: 1rem;
+				width: 2.5rem;
+				text-align: center;
+				color: #FFFFFF;
+				line-height: 1rem;
+				margin: auto;
+				margin-top: 1.5rem;
+			}
+			.seoArrow {
+				transition: rotate(180deg);
+			}
+			.seo {
+				.seoHeader {
+					font-size: 20px;
+					text-align: center;
+					font-weight: bold;
+					margin-top: 0.3rem;
+				}
+				.seoTitle {
+					margin-top: 0.2rem;
+					font-size: 14px;
+					font-weight: bold;
+				}
+				.seoSubTitle {
+					margin-top: 0.2rem;
+					font-size: 12px;
+					font-weight: bold;
+				}
+				p {
+					margin-top: 0.2rem;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+// .list{
+// 	height: auto;
+//     background: white;
+//     border-radius: 10px 10px 0 0;
+//     overflow: hidden;
+//     display: flex;
+//     align-items: center;
+// }
+
+.Announcement-Modal {
+	.modal-close:before,
+	.modal-close:after {
+		background: white;
+	}
+	.CSICON {
+		svg {
+			width: 20px;
+			margin-right: 7px;
+		}
+	}
+}
+
+.firstLoginModal {
+	padding: 0 !important;
+	top: 15% !important;
+	.modal-info-content {
+		padding: 0 !important;
+		background-image: url($base-path + '/img/firstLogin.jpg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		border-radius: 0.3rem;
+	}
+	.firstLoginContent {
+		margin-top: 5.5rem;
+		padding: 0.5rem;
+		.firstContent {
+			background: #EFEFF4;
+			padding: 0.3rem;
+			border-radius: 0.2rem;
+			margin-bottom: 0.2rem;
+		}
+	}
+	.firstLoginBtn {
+		background-color: #00A6FF;
+		color: #FFFFFF;
+		width: 100%;
+		text-align: center;
+		padding: 0.4rem;
+		border-radius: 0.2rem;
+	}
+	.firstLoginSkip {
+		text-align: center;
+		text-decoration: underline;
+		color: #00A6FF;
+		margin-top: 0.5rem;
+	}
+}

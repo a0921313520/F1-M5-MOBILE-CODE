@@ -1,0 +1,399 @@
+.Betting-detail-content.true {
+	.Betting-type {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: t.px2rem($header-height);
+		z-index: 2;
+	}
+	.Detail-menu {
+		margin-top: 6.2rem;
+	}
+	.smartnav {
+		margin-top: 6.2rem;
+	}
+	#Detail-menu-top-hide {
+		margin-top: 0;
+	}
+}
+
+.betting-animation-loading {
+	display: block;
+}
+.Betting-type {
+	svg {
+		width: 0.6rem;
+		height: 0.6rem;
+	}
+	.sport-svg-wrap {
+		z-index: 2;
+	}
+	.live-close-icon {
+		svg {
+			width: 0.34rem;
+			height: 0.34rem;
+			vertical-align: middle;
+			fill: #fff;
+		}
+	}
+	.bet-record-icon {
+	}
+	.bet-scale-icon,
+	.tag-entry-icon {
+		svg {
+			width: 0.54rem;
+			height: 0.6rem;
+		}
+	}
+}
+
+// .fullscreen-enabled .Betting-type {
+//     transform-origin: 0 0;
+//     transform: rotateZ(90deg) translateY(-100%);
+//     width: 100vh;
+//     height: 100vw;
+// }
+
+// m3u8 播放器样式
+// .custom-video-warpper, .fullscreen {
+.custom-video-warpper {
+	width: 100%;
+	max-height: 100%;
+	height: 100%;
+}
+.custom-video-warpper {
+	.video-js {
+		padding: 0 !important;
+		height: 100% !important;
+		max-height: 100%;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&::after {
+		content: "";
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.custom-video-warpper .custom-video-dimensions.vjs-fluid {
+	padding-top: 0;
+}
+.custom-video-warpper .video-js .vjs-big-play-button {
+	border-radius: 2em;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// 首页缩略窗口
+.home-betting-thumb-wrap {
+	#sr-widget {
+		width: 4rem;
+	}
+	position: fixed;
+	width: 100%;
+	height: 3rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 111;
+	background-color: #fff;
+	box-shadow: 0 -3px 4px #ddd;
+	display: flex;
+	// & > .fullscreen {
+	//     display: inline-block;
+	//     width: auto;
+	// }
+	.custom-video-warpper {
+		width: 4.5rem;
+		> .video-js {
+			> .vjs-tech {
+				height: auto;
+			}
+		}
+	}
+	.betting-list-wrap {
+		display: flex;
+		flex: 1.3;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0 10px 0 15px;
+		& > div {
+			height: 1rem;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			& > .team-name {
+				display: inline-block;
+				vertical-align: middle;
+				width: 3rem;
+			}
+			& > .pk-number {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 0.4rem;
+				color: #bcbec3;
+				.notZero {
+					font-weight: bold;
+					color: #000;
+				}
+			}
+			img {
+				height: 0.8rem;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+	> .detail-wrap {
+		//外面加一層，包裹裡面縮放後的絕對定位，並預留正確的空間
+		display: block;
+		position: relative;
+		height: 100%;
+		flex: 1;
+		overflow: hidden;
+		> .Betting-type.Betting-type-0 {
+			//賽事信息，用scale等比例縮小
+			position: absolute; //因為scale不會把佔用空間縮小，要用絕對定位消除影響
+			transform-origin: top left;
+			transform: scale(0.56, 0.5) translate(-50%); //縮放並且置中
+			top: -5%; //往上提一點
+			left: 50%; //和translate搭配置中
+			justify-content: center;
+
+			> .Betting-header-score {
+				align-items: flex-start;
+				> li {
+					&.Game-info {
+						width: 2rem; //中間比分區寬度
+
+						> .Game-number {
+							//時間
+							margin-top: 0.5rem;
+							maring-bottom: 0.2rem;
+						}
+
+						> span {
+							.REDSVG {
+								//角球圖
+							}
+							.REDSVG-NEXT {
+								//角球數量
+								font-size: 9px;
+							}
+						}
+					}
+				}
+			}
+
+			//scale整體縮放完 再微調裡面的東西就好(比zoom好用，zoom要一個一個調，而且safari對zoom的支援很差)
+			> .Footer-menu {
+				bottom: 1.4rem;
+			}
+		}
+	}
+
+	.home-thumb-close-icon {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0.3rem;
+		margin: auto;
+		height: 16px;
+		svg {
+			width: 16px;
+			height: 16px;
+			vertical-align: middle;
+		}
+	}
+}
+// 投注详情动画样式表
+.betting-animation-loading {
+	svg {
+		width: 46px;
+		height: 46px;
+		fill: #fff;
+	}
+}
+.visualization_wrap {
+	width: 100%;
+	.sr-content {
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&::before {
+		content: "";
+		width: 0;
+		height: 100%;
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+.Betting-list-detail.vendor-detail {
+	padding-top: 1.3866666667rem;
+}
+
+// 竖屏
+@media screen and (orientation: portrait) {
+}
+// 横屏
+@media screen and (orientation: landscape) {
+	body {
+		height: 100vh; //避免ios自動出現網址列
+	}
+	.Betting-detail-header .sport-svg-wrap.back-icon, .sport-svg-wrap.share-button,
+	.notification-message.recommend,
+	.BetCartPopup {
+		display: none;
+	}
+	.Betting-list-detail.vendor-detail {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		right: 0;
+		top: 0;
+		overflow: hidden scroll;
+		padding-top: 0;
+		background-color: #fff;
+		.Betting-detail-header,
+		.Detail-menu,
+		.Collapselist {
+			width: 40%;
+			transition: 0.3s ease-in-out;
+			transform: translateX(2000px);
+			z-index: 1001;
+			position: relative;
+		}
+		.Betting-detail-header {
+			z-index: 1003;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.Betting-detail-header.noEventDataLandscape {
+			height: 0 !important;
+			width: 0 !important;
+			display: none !important;
+			z-index: 0 !important;
+		}
+		.smartnav {
+			display: none;
+		}
+		.Betting-type {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 1000;
+			transition: 0.3s ease-in-out;
+
+			//按鈕內縮，因為有些手機會有圓角/瀏海/下巴擋住
+			> .Betting-header-top-buttons {
+				padding-left: 0.6rem;
+				padding-right: 0.6rem;
+				padding-top: 0.6rem;
+			}
+			> .Betting-header-bottom-buttons {
+				padding-left: 0.6rem;
+				padding-right: 0.6rem;
+				padding-bottom: 0.6rem;
+
+				//展示投注按鈕
+				> .bet-record-icon {
+					display: block;
+				}
+				//全屏按鈕？已廢棄
+				> .bet-scale-icon {
+					display: none;
+				}
+				//隱藏pin按鈕
+				> .tag-entry-icon {
+					display: none;
+				}
+			}
+
+			&.Betting-type-0 {
+				> .Betting-header-score {
+					margin-top: 1rem;
+				}
+			}
+
+			&.Betting-type-2 {
+				background-color: #000;
+				background-image: unset;
+				> iframe {
+					padding-bottom: 1.2rem; //iframe動畫會遮住投注按鈕，需要讓出來
+				}
+			}
+		}
+		//頭部賽事點擊->下拉菜單
+		.detail-header-drawer {
+			z-index: 1002 !important; //比頭部(Betting-detail-header) 的z-index 1003低1 這樣才能被蓋住
+			& > .drawer-custom-mask {
+				z-index: 1002 !important;
+			}
+			& > .drawer-custom-content-wrapper {
+				right: 0;
+				left: auto;
+				width: 40% !important;
+				height: 100vh !important;
+			}
+			& .detail-header-drawer-contents {
+				width: 100%;
+				height: 100%;
+				border-radius: 0;
+			}
+		}
+		//橫屏的投注購物車
+		.detail-minibet-drawer {
+			z-index: 2001 !important; //比頭部(Betting-detail-header) 的z-index 1003 高 這樣才能蓋過去
+			& > .drawer-custom-mask {
+				background-color: rgba(0, 0, 0, .3) !important;
+			}
+			& > .drawer-custom-content-wrapper {
+				width: 45% !important;
+			}
+		}
+		//橫屏的 玩法分組 捲動後固定在上方
+		.Detail-menu.freeze {
+			z-index: 2000;
+			position: fixed;
+			top: 0;
+			& > .Tabscontent-menu.freeze {
+				top: 0;
+			}
+		}
+	}
+	// .fullscreen-enabled {
+	//     .Betting-detail-header {
+	//         display: none!important;
+	//     }
+	// }
+}
+
+.Clickevent {
+	position: absolute;
+	width: 39%;
+	right: 0;
+	z-index: 9;
+	background: #10010154;
+	color: white;
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	justify-content: center;
+	padding-left: 6px;
+	svg {
+		fill: white;
+	}
+}

@@ -1,0 +1,371 @@
+#TransactionRecord {
+	.rc-select {
+		background-color: #0000000A;
+		margin: 9px 10px 10px 10px;
+		min-height: 25px;
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		border-radius: 20px;
+		padding: 0.1rem;
+		line-height: unset !important;
+		height: auto !important;
+		.rc-select-selection-placeholder {
+			margin-right: 0.1rem;
+		}
+		svg {
+			height: 17px;
+			width: 17px;
+			fill: #666666;
+		}
+	}
+	.typeSelect {
+		.form-item {
+			margin-bottom: 0;
+		}
+	}
+	.timeSelect {
+		background-color: #0000000A;
+		padding: 5px 0px 5px 5px;
+		margin: 10px;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		color: #666666;
+		justify-content: space-between;
+		// width: 190px;
+		padding: 5px 10px;
+		.TimeIcon {
+			margin-left: 10px;
+		}
+		.ToIcon {
+			margin: 0 5px;
+		}
+	}
+	.dateInput {
+		width: 208px;
+		height: 40px;
+		line-height: 36.8px;
+		border-radius: 8px;
+		background-color: #f6f6f6;
+		margin: 0 auto;
+	}
+	.clearfix::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.TransactionRecord {
+		.TransactionRecord-content {
+			padding: 15px;
+			.List {
+				flex-flow: column;
+				background-color: white;
+				padding: 15px;
+				border-radius: 8px;
+				line-height: 20px;
+				margin-bottom: 10px;
+				label {
+					font-weight: bold;
+					display: flex;
+					svg {
+						margin: 0 10px;
+					}
+				}
+				.Time {
+					font-size: 12px;
+					color: #999999;
+				}
+				.OrderId {
+					font-size: 12px;
+					color: #999999;
+					svg {
+						width: 16px;
+						padding-left: 8px;
+					}
+					.blueTick {
+						svg {
+							width: 0.45rem;
+						}
+					}
+				}
+				.Amount {
+					color: #222222;
+					font-size: 18px;
+					font-weight: bold;
+				}
+				.statusName {
+					font-size: 12px;
+				}
+				.Data{
+					.padding{
+						color: #F0A800;
+					}
+					.success{
+						color: #0CCC3C
+					}
+					.fail{
+						color: #EB2121;
+					}
+				}
+			}
+		}
+	}
+	.Confirm {
+		padding-top: 10px;
+		.note {
+			background-color: #fff5bf;
+			padding: 4px 8px;
+			font-size: 12px;
+			line-height: 17px;
+			color: #83630b;
+			border-radius: 4px;
+			width: 100%;
+			display: flex;
+			svg{
+				transform: translateY(-15%);
+			}
+		}
+		button {
+			width: 69px;
+			height: 29px;
+			padding: 0;
+			text-align: center;
+			font-size: 12px;
+		}
+		svg {
+			width: 15px;
+			//height: 15px;
+			margin-right: 5px;
+		}
+	}
+}
+.ResubmitTransactionModalDetail {
+	background-color: white;
+	.DetailItem {
+		background-color: white;
+		padding: 15px;
+		flex-flow: column;
+	}
+}
+.TransactionModalDetail {
+	background-color: #efeff4;
+	min-height: calc(150vh - 50px);
+	.blueTick {
+		svg {
+			width: 0.45rem;
+			margin-left: 0.1rem;
+		}
+	}
+	.DetailItem {
+		background-color: white;
+		padding: 15px;
+		flex-flow: column;
+		border-radius: 8px;
+		.Checkinfo {
+			font-size: 12px;
+			margin-top: 10px;
+			padding: 4px 8px;
+			width: fit-content;
+			height: fit-content;
+		}
+		.LogInfo {
+			line-height: 25px;
+		}
+		.StepsInfo {
+			padding: 15px 15px 15px 0;
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			margin: 20px 0;
+			.rc-steps-item-icon {
+				margin-right: 10px;
+				padding-top: 3px;
+			}
+		}
+		.SubmitInfo {
+			display: flex;
+			flex-direction: column;
+			// padding-top: 17px;
+			// border-top: 1px solid #CCC;
+			// gap:26px;
+			&.invisible{
+				display: none;
+			}
+			.transaction_note{
+				color: #222;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: normal;
+				.smallRiver_note{
+					padding-left: 10px;
+					list-style: decimal;
+					font-size: 12px;
+					line-height: 20px;
+					li{
+						list-style: unset;
+						padding-left: 3px;
+					}
+				}
+			}
+			.button_box{
+				display: flex;
+				// flex-wrap: wrap;
+				flex-wrap: wrap;
+    			flex-direction: row;
+				gap:0.3rem;
+				button{
+					font-size: 0.38rem;
+					width: 48%;
+					// flex-basis: 144px;
+					// flex-grow: 1;
+					&.onwRowBtn{
+						width: 100%;
+						font-size: 0.42rem;
+					}
+				}
+				&.reverse{
+					flex-direction: row-reverse;
+				}
+				&.invisible{
+					display: none;
+				}
+			}
+		}
+		.copy {
+			svg {
+				width: 17px;
+				padding-left: 5px;
+			}
+		}
+	}
+}
+
+.TransactionRecord-drawer {
+	.drawer-custom-content-wrapper{
+		height: fit-content !important;
+		.drawer-custom-content{
+			height: fit-content;
+			.exit {
+				position: absolute;
+				left: 0.4rem;
+				top: 0.4rem;
+				color: #00A6FF;
+				font-size: 0.45rem;
+			}
+			h2 {
+				text-align: center;
+				padding: 15px 15px 33px 15px;
+				font-size: 17px;
+			}
+			.Infolist {
+				background-color: white;
+				padding: 24px 16px;
+				margin: 10px 10px 54px 10px;
+				border-radius: 8px;
+
+				>div{
+					display: flex;
+					flex-direction: column;
+					gap:28px;
+				}
+
+				label {
+					color: #999999;
+					font-size: 12px;
+					width: 33%;
+				}
+				b {
+					padding-left: 20px;
+					width: 66%;
+					display: flex;
+    				align-items: center;
+					overflow: hidden;
+				}
+				.ctcNotice {
+					background: #EFEFF4;
+					padding: 0.3rem;
+					color: #999999;
+					border-radius: 0.2rem;
+				}
+			}
+		}
+	}
+}
+
+.Resubmitwarn {
+	background-color: #fff5bf;
+	padding: 10px;
+	font-size: 12px;
+	color: #83630b;
+	margin: 20px 0;
+	line-height: 20px;
+	border-radius: 8px;
+}
+.Resubmitinfo {
+	line-height: 35px;
+	label {
+		font-size: 12px;
+		color: #999999;
+		padding-right: 20px;
+		width: 50%;
+	}
+}
+
+.note-list {
+	text-align: left;
+	background-color: #fff5bf;
+	padding: 15px 25px;
+	margin-bottom: 25px;
+	margin-top: 20px;
+	color: #83630b;
+	line-height: 22px;
+	border-radius: 8px;
+	ol {
+		list-style: auto;
+		li {
+			list-style: auto;
+		}
+	}
+}
+
+.timeTransactionRecord {
+	background-color: #fff5bf;
+	margin: 10px;
+	padding: 15px;
+	color: #83630b;
+	font-size: 12px;
+	border-radius: 8px;
+}
+
+.resubmitDepositModal{
+	.modal-info-content{
+		padding-top: 30px;
+		p{
+			margin-bottom: 10px;
+			color: #222;
+			text-align: center;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: bold;
+			line-height: 20px; /* 125% */
+		}
+		ol{
+			text-align: start;
+			margin: 0 0 24px 26px;
+			li{
+				list-style-type: decimal;
+				color: #000;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 18px; /* 128.571% */
+			}
+		}
+	}
+	.modalInfo-footer {
+		display: flex;
+		justify-content: space-around;
+	}
+}

@@ -1,0 +1,284 @@
+$tabs-prefix-cls: rc-tabs;
+
+$easing-in-out: cubic-bezier(0.35, 0, 0.25, 1);
+
+$effect-duration: 0.3s;
+
+.rc-tabs-nav-operations-hidden {
+	display: none;
+}
+.default-tabs {
+	.#{$tabs-prefix-cls}-dropdown {
+		position: absolute;
+		background: #fefefe;
+		border: 1px solid black;
+		max-height: 200px;
+		overflow: auto;
+
+		&-hidden {
+			display: none;
+		}
+
+		&-menu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			&-item {
+				padding: 4px 8px;
+
+				&-selected {
+					background: #fff;
+				}
+
+				&-disabled {
+					opacity: 0.3;
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+	.#{$tabs-prefix-cls} {
+		&-content {
+			&-holder {
+				flex: auto;
+			}
+
+			display: flex;
+			width: 100%;
+
+			&-animated {
+				transition: margin 0.3s;
+			}
+		}
+
+		&-tabpane {
+			width: 100%;
+			flex: none;
+			outline: none;
+		}
+	}
+
+	.#{$tabs-prefix-cls} {
+		display: flex;
+
+		// ========================== Vertical ==========================
+		&-top,
+		&-bottom {
+			flex-direction: column;
+
+			.#{$tabs-prefix-cls}-ink-bar {
+				height: 3px;
+			}
+		}
+
+		&-top {
+			.#{$tabs-prefix-cls}-ink-bar {
+				bottom: 0;
+			}
+		}
+
+		&-bottom {
+			.#{$tabs-prefix-cls}-nav {
+				order: 1;
+			}
+
+			.#{$tabs-prefix-cls}-content {
+				order: 0;
+			}
+
+			.#{$tabs-prefix-cls}-ink-bar {
+				top: 0;
+			}
+		}
+
+		// ========================= Horizontal =========================
+		&-left,
+		&-right {
+			&.#{$tabs-prefix-cls}-editable .#{$tabs-prefix-cls}-tab {
+				padding-right: 32px;
+			}
+
+			.#{$tabs-prefix-cls}-nav-wrap {
+				flex-direction: column;
+			}
+
+			.#{$tabs-prefix-cls}-ink-bar {
+				width: 3px;
+			}
+
+			.#{$tabs-prefix-cls}-nav {
+				flex-direction: column;
+				min-width: 50px;
+
+				&-list {
+					flex-direction: column;
+				}
+
+				&-operations {
+					flex-direction: column;
+				}
+			}
+		}
+
+		&-left {
+			.#{$tabs-prefix-cls}-ink-bar {
+				right: 0;
+			}
+		}
+
+		&-right {
+			.#{$tabs-prefix-cls}-nav {
+				order: 1;
+			}
+
+			.#{$tabs-prefix-cls}-content {
+				order: 0;
+			}
+
+			.#{$tabs-prefix-cls}-ink-bar {
+				left: 0;
+			}
+		}
+	}
+
+	.#{$tabs-prefix-cls} {
+		&-rtl {
+			direction: rtl;
+		}
+
+		&-dropdown-rtl {
+			direction: rtl;
+		}
+	}
+
+	.#{$tabs-prefix-cls} {
+		font-size: t.px2rem(14px);
+		overflow: hidden;
+
+		// ========================== Navigation ==========================
+		&-nav {
+			display: flex;
+			flex: none;
+			position: relative;
+
+			&-measure,
+			&-wrap {
+				transform: translate(0);
+				position: relative;
+				display: inline-block;
+				flex: auto;
+				white-space: nowrap;
+				overflow: hidden;
+				display: flex;
+
+				&-ping-left::before,
+				&-ping-right::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					bottom: 0;
+				}
+				&-ping-left::before {
+					left: 0;
+					border-left: 1px solid #fff;
+				}
+				&-ping-right::after {
+					right: 0;
+					border-right: 1px solid #fff;
+				}
+
+				&-ping-top::before,
+				&-ping-bottom::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+				}
+				&-ping-top::before {
+					top: 0;
+					border-top: 1px solid #fff;
+				}
+				&-ping-bottom::after {
+					bottom: 0;
+					border-top: 1px solid #fff;
+				}
+			}
+
+			&-list {
+				display: flex;
+				position: relative;
+				transition: transform 0.3s;
+			}
+
+			// >>>>>>>> Operations
+			&-operations {
+				display: flex;
+
+				&-hidden {
+					position: absolute;
+					visibility: hidden;
+					pointer-events: none;
+				}
+			}
+
+			&-more {
+				border: 1px solid blue;
+				background: rgba(255, 0, 0, 0.1);
+			}
+			&-add {
+				border: 1px solid green;
+				background: rgba(0, 255, 0, 0.1);
+			}
+		}
+
+		&-tab {
+			border: 0;
+			font-size: t.px2rem(14px);
+			background: rgba(255, 255, 255, 0.5);
+			margin: 0;
+			display: flex;
+			outline: none;
+			cursor: pointer;
+			position: relative;
+			font-weight: lighter;
+			align-items: center;
+
+			&-btn,
+			&-remove {
+				border: 0;
+				background: transparent;
+			}
+
+			&-btn {
+				font-weight: inherit;
+				line-height: t.px2rem(40px);
+			}
+
+			&-remove {
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			&-active {
+				// padding-left: 30px;
+				font-weight: bolder;
+			}
+		}
+
+		&-ink-bar {
+			position: absolute;
+			background: #fff;
+			pointer-events: none;
+
+			&-animated {
+				transition: all 0.3s;
+			}
+		}
+
+		&-extra-content {
+			flex: none;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_12333" data-name="Group 12333" transform="translate(-692 -268)">
+    <rect id="Rectangle_2471" data-name="Rectangle 2471" width="20" height="20" transform="translate(692 268)" fill="#00a6ff" opacity="0"/>
+    <g id="Group_7733" data-name="Group 7733" transform="translate(692 268)">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="20" height="20" transform="translate(0)" fill="#00a6ff" opacity="0"/>
+      <g id="个人" transform="translate(0)">
+        <path id="Path_1" data-name="Path 1" d="M257.029,76.315m-6.191,0a6.19,6.19,0,1,0,6.19-6.19A6.19,6.19,0,0,0,250.839,76.315Z" transform="translate(-247.029 -70.125)" fill="#00a6ff"/>
+        <path id="Path_2" data-name="Path 2" d="M105.363,632.625H94.887a4.776,4.776,0,0,0-4.762,4.762v.476a1.4,1.4,0,0,0,1.429,1.429H108.7a1.4,1.4,0,0,0,1.429-1.429v-.476a4.776,4.776,0,0,0-4.762-4.762Z" transform="translate(-90.125 -619.292)" fill="#00a6ff"/>
+        <path id="Path_5240" data-name="Path 5240" d="M4018.467,356.333s2.938,3.513,6,0" transform="translate(-4011.467 -348.834)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

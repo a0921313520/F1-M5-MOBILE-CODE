@@ -1,0 +1,787 @@
+.verify-container {
+	padding: 16px;
+	font-size: 14px;
+	height: 100vh;
+	background-color: #fff;
+	.verify__topBox {
+		padding: 24px 16px;
+		background: #EFEFF4;
+		border-radius: 8px;
+
+		.verify__topBox__title {
+			font-size: 20px;
+		}
+
+		.verify__topBox__content {
+			font-size: 14px;
+			line-height: 20px;
+			margin: 16px 0;
+		}
+
+		.verify__topBox__btnWrap {
+			display: flex;
+			width: 100%;
+			justify-content: flex-end;
+			button {
+				color: #00a6ff;
+				border: 1px solid #00a6ff;
+				padding: 10px 18.5px;
+				border-radius: 8px;
+				background: transparent;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.verify__main {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 16px;
+		.verify__main__item {
+			text-align: center;
+			background: #EFEFF4;
+			border-radius: 8px;
+			padding: 0.5rem 0.32rem;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			flex: 1;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+			button {
+				max-width: 70%;
+				background: #00a6ff;
+				padding: 0.3rem;
+				color: #fff;
+				border-radius: 8px;
+				border: 0;
+				font-size: 11px;
+				margin-top: 4px;
+				&.overtime-disabled {
+					background: #e8e8e8;
+					color: #bcbec3;
+				}
+			}
+		}
+	}
+}
+
+.verify__notice__modal.modal-dialog {
+	height: 100%;
+	width: 100%;
+	border-radius: 0;
+	top: 0;
+	overflow: auto;
+	.modal-info-content,
+	.modal-info-title {
+		padding: 0;
+	}
+}
+
+.securityNotice__main {
+	padding: 32px 16px;
+	font-size: 14px;
+	color: #666666;
+	line-height: 20px;
+	.noticeSpace {
+		height: 20px;
+	}
+}
+
+.securityNotice__banner {
+	width: 100%;
+}
+
+.underline_a {
+	color: #00a6ff;
+	//text-decoration: underline;
+	font-size: 14px;
+}
+
+.verifyPhoneMail__main {
+	padding: 24px 16px;
+	background: #fff;
+	.verifyPhoneMail__heading {
+		color: #000000;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.verifyPhoneMail__title{
+		color: #999;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.verifyPhoneMail__text {
+		color: #999999;
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	.verifyPhoneMail__input__heading,
+	.verifyPhoneMail__input__text {
+		line-height: 18px;
+		font-size: 12px;
+		text-align: center;
+	}
+	.verifyPhoneMail__input__heading {
+		color: #000000;
+		margin-bottom: 3px;
+	}
+	.verifyPhoneMail__input__text {
+		color: #666666;
+	}
+	.verifyPhoneMail__line {
+		background: #c4c4c4;
+		height: .1px;
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.verifyPhoneMail__phone__input {
+		display: flex;
+		margin: 12px 0;
+	}
+	.verifyPhoneMail__phone__prefix,
+	.verifyPhoneMail__phone__number {
+		height: 44px;
+		display: flex;
+		align-items: center;
+		background: #efeff4;
+		border-radius: 8px;
+		font-size: 14px;
+	}
+	.verifyPhoneMail__phone__prefix {
+		width: 44px;
+		justify-content: center;
+		margin-right: 10px;
+	}
+	.verifyPhoneMail__phone__number {
+		flex: 1;
+		margin-left: 9px;
+		padding: 0 16px;
+		font-weight: 400;
+		&.email_line{
+			margin-left: 0;
+		}
+	}
+	.getVerfiyCodeBtn {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+	.changeVoiceOrSms{
+		&.graybg{
+			background-color: #EFEFF4;
+			padding-bottom: 20px;
+			.changePhoneOTP{
+				width: 84%;
+			}
+		}
+	}
+	.changePhoneOTP {
+		margin: 0 auto;
+		color: #00A6FF;
+		border: 0.04rem solid #00A6FF;
+		background: transparent;
+		font-weight: 500;
+		&.disabled{
+			border: 0.04rem solid transparent;
+			background: transparent !important;
+		}
+
+	}
+	.changePhoneOTP:active {
+		background: transparent !important;
+	}
+	.verifyPhoneMail__notice {
+		margin-top: 8px;
+		background: #f7f7fc;
+		width: 100%;
+		padding: 5px 16px;
+		border-radius: 8px;
+		font-size: 12px;
+		color: #666666;
+		margin-bottom: 24px;
+		line-height: 16px;
+		.underline_a {
+			font-size: 12px;
+		}
+		.Live_Chat{
+			text-decoration: underline
+		}
+	}
+	.verifyPhoneMail__code {
+		padding: 16px 10px;
+		background: #efeff4;
+		border-radius: 8px 8px 0 0;
+		margin-top: 15px;
+	}
+	.verifyPhoneMail__code__input {
+		display: flex;
+		&.codeError {
+			.otp-input-container {
+				input {
+					border-color: #eb2121;
+				}
+			}
+		}
+	}
+	.otp-input-container {
+		justify-content: space-between;
+		width: 90%;
+		margin: 16px auto 0;
+		> div {
+			flex: 1;
+			justify-content: center;
+		}
+		input {
+			border: 1px solid #d6d6d6;
+			flex: 1;
+			margin: 0 2px;
+			height: 38px;
+			background: white;
+			border-radius: 4px;
+			font-size: 16px;
+			padding: 0;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	.verifyBtn {
+		margin: 17px auto 0;
+		background: #0ccc3c !important;
+		color: #fff !important;
+		font-size: 16px;
+		width: 90%;
+		font-weight: 600;
+	}
+	.disabledBtn {
+		background: #efeff4;
+		color: #999999;
+	}
+	.disabledBtn2 {
+		background: #d4d7dd !important;
+		color: #999999 !important;
+	}
+	.progressbar_container {
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+
+	.BG_whiteColor_black {
+		background: white !important;
+		color: #222222 !important;
+		font-size: 16px;
+	}
+
+	.BG_buleColor_white {
+		background: #00a6ff !important;
+		color: #fff !important;
+		font-size: 16px;
+	}
+
+	.NameDisabledBtn {
+		font-size: 16px;
+		pointer-events: none;
+	}
+	.underline_a{
+		width: 100%;
+		line-height: 50px;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+#ChangePwd {
+	padding: 0 16px;
+	.ChangePwd__notice {
+		background: #fff5bf;
+		color: #83630b;
+		border-radius: 8px;
+		padding: 12px 16px;
+		width: 100%;
+		line-height: 20px;
+		margin-top: 24px;
+		margin-bottom: 32px;
+	}
+	.ChangePwd___confirmInput {
+		margin-top: 8px;
+	}
+}
+
+.verify__overTime {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	width: 100%;
+	padding: 30px;
+	line-height: 25px;
+	.verify__overTime__title {
+		font-size: 18px;
+		font-weight: bold;
+		margin-top: 24px;
+		margin-bottom: 16px;
+	}
+	.verify__overTime__desc {
+		color: #999999;
+		font-size: 14px;
+	}
+	.footerBtn {
+		display: flex;
+		button {
+			margin: 10px;
+		}
+		.whitebtn {
+			margin: 10px;
+			background: white;
+			color: #00a6ff;
+			border-color: #00a6ff;
+			border: 1px solid #00a6ff;
+		}
+	}
+}
+//提款验证
+.WithdrawalVerify {
+	min-height: calc(100vh - 25px);
+	background-color: white;
+	.rc-steps-item-finish {
+		.rc-steps-item-icon {
+			background: #00a6ff;
+		}
+	}
+	.rc-steps-item-active {
+		.rc-steps-item-icon {
+			background: #00a6ff;
+		}
+	}
+
+	.rc-steps-item-wait {
+		.rc-steps-item-icon {
+			background: white;
+		}
+	}
+	.rc-steps-icon {
+		svg {
+			margin-top: 7px;
+		}
+	}
+	.Content {
+		.list {
+			padding: 45px 0 10px !important;
+			hr {
+				background-color: #e3e3e8;
+				border: 0.1px solid #e3e3e8;
+				opacity: .7;
+				margin: 20px 0;
+			}
+			.form-item label {
+				font-size: 14px;
+			}
+			.TimeIcon {
+				position: absolute;
+				right: 15px;
+				top: 12px;
+			}
+			.TimeBox {
+				border: 1px solid #cccccc;
+				padding: 10px;
+				border-radius: 8px;
+				justify-content: space-between;
+			}
+		}
+	}
+}
+.Verify-box {
+	padding: 15px;
+	center {
+		color: #666666;
+		margin-bottom: 30PX;
+		img {
+			margin-bottom: 10px;
+		}
+		p {
+			line-height: 22px;
+		}
+	}
+	.AddressData {
+		height: 46px;
+		align-items: center;
+		justify-content: flex-start !important;
+		span {
+			margin: 5px;
+		}
+	}
+	.Content {
+		.bankcard_vry_inner {
+			padding: 20px 0;
+			background-color: white;
+			border-radius: 8px;
+			margin-bottom: 20px;
+			.form-item {
+				label {
+					font-size: 16px;
+					color: #333333;
+					font-weight: bold;
+				}
+			}
+		}
+		.list {
+			background-color: white;
+			padding: 10px 20px;
+			//border-radius: 8px;
+			line-height: 24px;
+			//margin-bottom: 20px;
+			h3 {
+				color: #333333;
+			}
+			.note {
+				font-size: 14px;
+				color: #666666;
+				margin: 10px 0;
+				line-height: 18px;
+			}
+			.input__wrap input {
+				border: 1px solid #cccccc;
+			}
+			.form-item {
+				margin-bottom: 0;
+			}
+		}
+		.verifyPhoneMail__main {
+			.send-btn {
+				background: #35c95b;
+				width: auto;
+				min-width: 100px;
+				margin: 0px 0px 0px 10px;
+				height: 43px;
+			}
+			.verifyPhone__notice {
+				margin-top: 8px;
+				width: 100%;
+				border-radius: 8px;
+				font-size: 12px;
+				color: #666666;
+			}
+			.verifyPhoneMail__code {
+				padding: 16px 10px;
+			}
+			.disabledBtn {
+				width: auto;
+				min-width: 100px;
+				margin: 0px 0px 0px 10px;
+				height: 43px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.otp-input-container input {
+				background: white;
+				//height: 13.6592px;
+				width: 75% !important;
+			}
+			.WithdrawalVerificationPhoneMail__text {
+				border-radius: 7px;
+				padding: 10px 0;
+				display: flex;
+				//justify-content: center;
+				margin-top: 10px;
+				//background: #fee0e0;
+				background-color: white;
+				line-height: 20px;
+				color: #999999;
+			}
+			.verifyPhoneMail__text {
+				border-radius: 7px;
+				padding: 10px;
+				display: flex;
+				//justify-content: center;
+				margin-top: 10px;
+				//background: #fee0e0;
+				.error {
+					color: rgb(235, 33, 33);
+					//white-space: nowrap;
+					transform: scale(0.85);
+					border-radius: 8px;
+				}
+			}
+			.ErrorShow {
+				background: #fee0e0;
+			}
+			.verifyPhoneMail__time_text {
+				border-radius: 7px;
+				padding: 10px;
+				display: flex;
+				justify-content: center;
+				margin-top: 10px;
+				.error {
+					white-space: nowrap;
+					transform: scale(0.75);
+					padding: 15px;
+					border-radius: 8px;
+				}
+			}
+			.EditnumberShow {
+				height: 44px;
+				display: flex;
+				align-items: center;
+				background: white;
+				border-radius: 8px;
+				font-size: 14px;
+				flex: 1 1;
+				margin-left: 9px;
+				border: 1px solid #ddd;
+				padding: 0 10px;
+			}
+			.verifyPhoneMail__phone__Editnumber {
+				height: 44px;
+				display: flex;
+				align-items: center;
+				background: #efeff4;
+				border-radius: 8px;
+				font-size: 14px;
+				flex: 1;
+				margin-left: 9px;
+				//padding: 0 16px;
+			}
+		}
+		.btn-disable {
+			background-color: #e1e1e6 !important;
+			font-size: 16px;
+		}
+		.nocheck {
+			color: #00a6ff;
+			padding: 16px;
+			text-align: center;
+			font-size: 16px;
+		}
+		.btn-submit {
+			background: #00a6ff !important;
+			color: white;
+			svg {
+				fill: white;
+			}
+		}
+	}
+
+	.verifyPhoneMail__text {
+		border-radius: 7px;
+		padding: 10px;
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 10px;
+		//background: #fee0e0;
+		.error {
+			color: rgb(235, 33, 33);
+			white-space: nowrap;
+			border-radius: 8px;
+			font-size: 11px;
+		}
+	}
+	.verifyPhoneMail__time_text {
+		margin-top: 13px;
+		display: flex;
+		justify-content: center;
+		font-size: 12px;
+		color: #999999;
+	}
+
+	.NameFocus {
+		border: 1px solid red;
+		border-radius: 8px;
+		// box-shadow:0 0 0 1px rgb(255, 24, 24);
+		& :focus {
+			border: 0;
+			box-shadow: 0 0 0 1px rgb(255, 24, 24);
+			outline: 0;
+		}
+	}
+	.verifyPhoneMail__phone__Editnumber__box {
+		flex: 1 1;
+	}
+}
+
+.WithdrawalVerify {
+	.verifyPhoneMail__main {
+		padding: 15px 0px;
+	}
+	.verifyPhoneMail__main .verifyPhoneMail__text {
+		padding: 5px 0 !important;
+	}
+	.verifyPhoneMail__main .disabledBtn {
+		width: 100% !important;
+		margin: 0 !important;
+	}
+	.verifyPhoneMail__phone__number {
+		margin-left: 0px !important;
+	}
+}
+
+.SendBtnSubmit {
+	.left {
+		margin-right: 10px;
+		background-color: white;
+		border: 1px solid #00a6ff;
+		color: #00a6ff;
+		margin-right: 10px;
+	}
+	.SendDisabledBtn {
+		background-color: #efeff4;
+		color: #bcbec3;
+	}
+}
+
+.OpenSendCodeModal {
+	.modal-info-title {
+		background-color: #00a6ff;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px;
+		border-radius: 10px 10px 0 0;
+	}
+}
+
+.VerificationBankModal {
+	h2 {
+		margin: 25px 0 0;
+	}
+	.note {
+		text-align: center;
+		line-height: 20px;
+		padding: 25px;
+		color: #666666;
+		font-size: 14px;
+	}
+	.modalInfo-footer-cancel {
+		border: 1px solid #00a6ff;
+		background-color: white;
+		color: #00a6ff;
+	}
+}
+
+.VerifyWarn {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
+	line-height: 20px;
+	padding-top: 60%;
+	img {
+		padding-bottom: 25px;
+	}
+	.verify__overTime__desc {
+		padding-top: 20px;
+		color: #666666;
+	}
+}
+
+.passwordSuccessModal {
+	width: 5.7rem;
+	text-align: center;
+	min-height: 4rem;
+	.note {
+		margin-top: 0.7rem;
+		font-size: 0.45rem;
+		font-weight: bold;
+	}
+	&.modal-dialog .modal-info-content{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+.verifyModal{
+	.modal-info-content{
+		text-align: center;
+		img{
+			margin-bottom: 9px;
+		}
+		.verify{
+			.description{
+				margin-bottom: 24px;
+				color: #666;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: normal;
+			}
+			.verify_box{
+				background-color: #FFF;
+				text-align: left;
+				padding: 17px 16px 22px;
+				border-radius: 8px;
+				label{
+					color: #2C2C2C;
+					font-size: 14px;
+					font-weight: 500;
+					line-height: normal;
+					margin-bottom: 10px;
+				}
+				.requirement{
+					color: #666;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: normal;
+					margin-bottom: 10px;
+				}
+				.input_set{
+					display: flex;
+					gap:9px;
+					.form-item{
+						margin-bottom: 0;
+						input{
+							width: 190px;
+							height: 44px;
+						}
+					}
+					button{
+						height: 44px;
+					}
+				}
+			}
+			&.skippable{
+				.input_set{
+					flex-direction: column;
+					gap:22.5px;
+					input{
+						width: 100% !important;
+					}
+				}
+				.verifyLater{
+					color: #00A6FF;
+					text-align: center;
+					font-size: 16px;
+					font-weight: 500;
+					line-height: normal;
+					margin-top: 19px;
+				}
+				
+			}
+			.submit-btn {
+				margin-top: 20px;
+				&:disabled {
+					color: #BCBEC3 !important;
+					background: #DFDFDF !important;
+				}
+			}
+		}
+	}
+}
+.realNameVisible {
+	.modal-info-content {
+		div:first-child {
+			margin: 0.2rem 0.1rem 0.5rem 0.1rem;
+		}
+	}
+}
+// .sport-message-success {
+// 	div {
+// 		width: 4rem;
+// 	}
+// 	.sport-svg-wrap {
+// 		width: 4rem !important;
+// 	}
+// }

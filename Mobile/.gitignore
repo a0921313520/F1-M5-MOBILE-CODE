@@ -1,0 +1,20 @@
+node_modules
+build
+out
+.next
+bundles
+export
+.idea
+.prettierrc
+public/sw.js
+.vscode
+.DS_Store
+
+.Central-Payment
+Central-Payment
+
+
+# Sentry
+next.config.original.js
+
+

@@ -1,0 +1,40 @@
+.SelfExclusionModal {
+    top: calc(50vh - 5.173rem); // 194px/37.5
+    border-radius: t.px2rem(16px);
+    min-height: t.px2rem(194px) !important;
+    .modal-info-title {
+        background-color: #00A6FF;
+        border-top-left-radius: t.px2rem(16px);
+        border-top-right-radius: t.px2rem(16px);
+        color: #FFFFFF !important;
+        font-size: t.px2rem(16px);
+        height: t.px2rem(44px);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+    }
+    .modal-info-content {
+        padding: t.px2rem(24px) t.px2rem(16px) t.px2rem(16px) t.px2rem(16px);
+        .SelfExclusionModalContent {
+            font: normal normal normal t.px2rem(14px)/t.px2rem(22px) PingFang SC;
+            .SelfExclusionModalCS {
+                color: #00a6ff;
+            }
+        }
+
+        .SelfExclusionModalButton {
+            background-color: #00A6FF;
+            color: #FFFFFF;
+            font: normal normal 600 t.px2rem(16px)/t.px2rem(22px) PingFang SC;
+            border-radius: t.px2rem(8px);
+            height: t.px2rem(44px);
+            display: flex;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

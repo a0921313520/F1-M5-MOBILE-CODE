@@ -1,0 +1,53 @@
+.sbtwo-header-wrapper.rule-header {
+    background-color: #ff7600;
+    position: relative;
+    div:last-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+.letiantang-rule-wrap .rule-content > h4 {
+    color: #ff7600;
+}
+.rule-content {
+    color: #999;
+    background-color: #fff;
+    padding: 0 14px;
+    padding-bottom: 20px;
+    line-height: 1.7;
+    & > h4 {
+        padding: 10px 0;
+        padding-top: 24px;
+        margin-bottom: 14px;
+    }
+    & > ul {
+        list-style: decimal;
+        padding-left: 18px;
+        margin-bottom: 18px;
+    }
+    & > ol {
+        list-style: circle;
+        padding-left: 18px;
+        margin-bottom: 18px;
+    }
+    li {
+        padding-bottom: 10px;
+    }
+}
+
+.im-rule-wrap {
+    margin: 16px;
+    background-color: #fff;
+    .rc-collapse-header {
+        padding: 0 16px!important;
+        padding-right: 0!important;
+        background-color: #3a3a3a;
+        color: #fff!important;
+    }
+    svg {
+        fill: #fff!important;
+    }
+}

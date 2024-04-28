@@ -1,0 +1,263 @@
+//提前兌現按鈕區 負責下半部圓角
+.cashout-button-box {
+  border: 0;
+  background-color: #fff;
+  border-bottom-left-radius: t.px2rem(8px);
+  border-bottom-right-radius: t.px2rem(8px);
+  margin-bottom: t.px2rem(8px);
+  padding: t.px2rem(8px);
+  padding-top: 0;
+  &.empty {
+    padding: 0;
+  }
+
+  //按鈕包裹
+  >.cashout-button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:0;
+    background-color: #EFEFF4;
+    border-radius: t.px2rem(8px);
+    min-height: t.px2rem(44px);
+    font-size: t.px2rem(16px);
+    color: #fff;
+
+    //提交按鈕
+    &.cashout-button-notyet {
+      background-color: #00A6FF;
+      &.block {
+        background-color: #EFEFF4;
+        color: #000;
+      }
+    }
+
+    //提交前 重複確認
+    &.cashout-button-confirming-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: t.px2rem(16px);
+      width: 100%;
+      >.cashout-button-confirming-money {
+        color:#00A6FF;
+        font-size: t.px2rem(20px);
+        line-height: t.px2rem(20px);
+      }
+      >.cashout-button-confirming-text {
+        color:#000000;
+        font-size: t.px2rem(14px);
+        line-height: t.px2rem(28px);
+      }
+      >.cashout-button-confirming-button-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: t.px2rem(16px);
+        width: 100%;
+        >.cashout-button-confirming-button {
+          min-height: t.px2rem(44px);
+          width: calc(50vw - 0.85rem); //100vh - (16*3+8*2)/37.5 再除以2
+          border: 1px #00A6FF solid;
+          border-radius: t.px2rem(8px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &.cancel {
+            background-color: #EFEFF4;
+            color: #00A6FF;
+          }
+          &.submit {
+            background-color: #00A6FF;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    //新價格
+    &.cashout-button-newprice-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: t.px2rem(16px);
+      width: 100%;
+      >.cashout-button-newprice-money {
+        color:#00A6FF;
+        font-size: t.px2rem(20px);
+        line-height: t.px2rem(20px);
+      }
+      >.cashout-button-newprice-text {
+        color:#000000;
+        font-size: t.px2rem(14px);
+        line-height: t.px2rem(28px);
+      }
+      >.cashout-button-newprice-button-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: t.px2rem(16px);
+        width: 100%;
+        >.cashout-button-newprice-button {
+          min-height: t.px2rem(44px);
+          width: calc(50vw - 0.85rem); //100vh - (16*3+8*2)/37.5 再除以2
+          border-radius: t.px2rem(8px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &.decline {
+            background-color: #F00001;
+            color: #FFFFFF;
+          }
+          &.accept {
+            background-color: #34C75D;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+
+    //處理中
+    &.cashout-button-process-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      >.cashout-button-process-loader {
+        border: 3px solid #EFEFF4;
+        border-radius: 50%;
+        border-top: 3px solid #999999;
+        width: 0.5rem;
+        height: 0.5rem;
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+      }
+      >.cashout-button-process-text {
+        margin-left: t.px2rem(8px);
+        color: #999999;
+      }
+    }
+
+    //成功
+    &.cashout-button-done {
+      color: #0CCC3C;
+      background-color: #DBFDD9;
+    }
+    //失敗
+    &.cashout-button-fail {
+      color: #F00001;
+      background-color: #FF252529;
+    }
+    //拒絕
+    &.cashout-button-decline {
+      color: #F00001;
+      background-color: #FF252529;
+    }
+
+  }
+}
+
+//提前兌現 彈窗
+.cashout-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.cashout-popup {
+  position: absolute;
+  left: t.px2rem(16px);
+  right: t.px2rem(16px);
+  bottom: t.px2rem(21px);
+  border: none;
+  background: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: t.px2rem(8px);
+  outline: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  >.cashout-popup-progress {
+    height: t.px2rem(5px);
+    background-color: #00A6FF;
+  }
+  >.csahout-popup-wager {
+    width: 100%;
+    padding: 0;
+    padding-left: t.px2rem(8px);
+    padding-right: t.px2rem(8px);
+    >.bet-records-collapse {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      >.cashout-popup-status {
+        padding-top: t.px2rem(6px);
+        padding-bottom: t.px2rem(6px);
+        padding-left: t.px2rem(12px);
+        padding-right: t.px2rem(12px);
+        font-size: t.px2rem(12px);
+        border-radius: t.px2rem(24px);
+        &.green {
+          background-color: #DBFDD9;
+          color:#0CCC3C;
+        }
+        &.red {
+          background-color: #FF252529;
+          color: #F00001;
+        }
+      }
+    }
+
+
+    >.race-content.mix-race-content {
+      > .race-time-info-wrap .race-result-wrap {
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  }
+  >.cashout-popup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:0;
+    background-color: #00A6FF;
+    border-radius: t.px2rem(8px);
+    min-height: t.px2rem(44px);
+    font-size: t.px2rem(16px);
+    color: #fff;
+    align-self: center;
+    width: calc(100% - 0.64rem);
+    margin-bottom: t.px2rem(12px);
+  }
+}
+
+//過濾數據按鈕
+.cashout-filter-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: t.px2rem(16px);
+  margin-top: t.px2rem(8px);
+  height: t.px2rem(50px);
+  padding: 0 t.px2rem(16px);
+  border-radius: t.px2rem(8px);
+  color: #666666;
+
+}

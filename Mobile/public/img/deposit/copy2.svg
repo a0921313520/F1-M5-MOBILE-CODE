@@ -1,0 +1,8 @@
+<svg id="Copy_icon" data-name="Copy icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16.002" viewBox="0 0 16 16.002">
+  <rect id="Rectangle_5459" data-name="Rectangle 5459" width="16" height="16" fill="#00a6ff" opacity="0"/>
+  <g id="copy" transform="translate(0 0.002)">
+    <path id="Path_5381" data-name="Path 5381" d="M83.657,204.8H72.8a1.1,1.1,0,0,0-1.123,1.067v11.2a1.1,1.1,0,0,0,1.123,1.067H83.657a1.1,1.1,0,0,0,1.123-1.067v-11.2A1.1,1.1,0,0,0,83.657,204.8Zm-.374,11.911H73.177V206.222H83.282Z" transform="translate(-71.68 -202.133)" fill="#00a6ff"/>
+    <path id="Path_5382" data-name="Path 5382" d="M230.4,52.267a1.1,1.1,0,0,1,1.123-1.067h10.854a1.1,1.1,0,0,1,1.123,1.067v11.2a1.1,1.1,0,0,1-1.123,1.067H242V52.622H230.4Z" transform="translate(-227.499 -51.2)" fill="#00a6ff"/>
+    <path id="Path_5383" data-name="Path 5383" d="M261.12,430.613a.55.55,0,0,1,.561-.533h5.053a.55.55,0,0,1,.561.533v.356a.55.55,0,0,1-.561.533h-5.053a.55.55,0,0,1-.561-.533Zm0,3.467a.549.549,0,0,1,.561-.533h3.368a.55.55,0,0,1,.561.533v.356a.55.55,0,0,1-.561.533h-3.368a.55.55,0,0,1-.561-.533Z" transform="translate(-257.658 -423.502)" fill="#00a6ff"/>
+  </g>
+</svg>

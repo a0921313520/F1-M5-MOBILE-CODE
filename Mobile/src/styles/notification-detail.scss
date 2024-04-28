@@ -1,0 +1,26 @@
+.noti-wrapper {
+    padding: 15px;
+    line-height: 1.4;
+    .noti-time, .noti-bottom-sign {
+        margin: 8px 0;
+        color: #BCBEC3;
+        font-size: 12px;
+    }
+    .noti-detail-content {
+        color: #666;
+        & > img {
+            width: 100%;
+        }
+        .noti-detail-link {
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        a {
+            color: #00A6FF;
+        }
+        .noti-detail-article {
+            padding: 15px 0;
+
+        }
+    }
+}

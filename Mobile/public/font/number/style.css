@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot?v8viu7');
+	src: url('fonts/icomoon.eot?v8viu7#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?v8viu7') format('truetype'), url('fonts/icomoon.woff?v8viu7') format('woff'),
+		url('fonts/icomoon.svg?v8viu7#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eb1f:before {
+	content: "\eb1f";
+}
+.icon-caf2e:before {
+	content: "\caf2e";
+}
+.icon-a3eda:before {
+	content: "\a3eda";
+}
+.icon-e2fae:before {
+	content: "\e2fae";
+}
+.icon-4daec:before {
+	content: "\4daec";
+}
+.icon-d39a:before {
+	content: "\d39a";
+}
+.icon-f6e21:before {
+	content: "\6fe21";
+}
+.icon-e31da:before {
+	content: "\e31da";
+}
+.icon-de31e:before {
+	content: "\de31e";
+}
+.icon-bf3b9:before {
+	content: "\bf3b9";
+}

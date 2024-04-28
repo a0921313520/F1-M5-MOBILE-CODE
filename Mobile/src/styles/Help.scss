@@ -1,0 +1,61 @@
+#HelpBox {
+	padding: 0px 10px;
+	margin: 15px 5px;
+
+	// iframe[style] {
+	// 	background-color: white;
+	// 	font-size: 12px;
+	// 	line-height: 20px;
+	// 	//padding: 15px;
+	// 	overflow: auto;
+	// 	img {
+	// 		width: 100%;
+	// 		margin: 10px 0;
+	// 	}
+	// }
+	.rc-collapse {
+		background-color: transparent;
+		border: 0;
+	}
+	.rc-collapse-header {
+		color: #222222;
+		font-size: 14px;
+	}
+	.rc-collapse-item {
+		background-color: white;
+		margin: 10px 0 0 0;
+		padding: 15px;
+		border-radius: 8px;
+		.rc-collapse-content-box {
+			padding: 10px 0px 0px 20px;
+			font-size: 13px;
+			color: #222222;
+			.list-item {
+				padding: 15px 0px;
+				border-bottom: 1px solid #f3f3f3;
+				justify-content: space-between;
+			}
+		}
+	}
+	.Detail-item {
+		background-color: white;
+		font-size: 12px;
+		line-height: 20px;
+		padding: 15px;
+		overflow: auto;
+		img {
+			width: 100% !important;
+			height: auto !important;
+			margin: 10px 0;
+		}
+
+		table{
+			max-width: 100%;
+			margin: 0 auto;
+			th,td{
+				border: 1px solid grey;
+				text-align: center;
+			}
+		}
+	}
+}

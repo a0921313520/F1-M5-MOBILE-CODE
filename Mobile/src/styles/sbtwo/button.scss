@@ -1,0 +1,60 @@
+.sportBtn {
+    position: relative;
+    font-weight: 400;
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    cursor: pointer;
+    transition: all .2s cubic-bezier(.645,.045,.355,1);
+    user-select: none;
+    touch-action: manipulation;
+    height: 48px;
+    padding: 4px 15px;
+    width: 100%;
+    border-width: 0;
+    border-radius: 6px;
+    outline: none;
+    color: #fff;
+    background: $light-theme-color;
+    border-color: $light-theme-color;
+    &:not(:disabled):active {
+        background: $light-theme-active-color;
+        border-color: $light-theme-active-color;
+    }
+    &:disabled, &.loading {
+        color: #bcbec3;
+        background: #efeff4;
+        pointer-events: none;
+        svg {
+            fill: #bcbec3;
+        }
+    }
+    &[type="link"] {
+        background: transparent;
+        border-color: transparent;
+        display: inline;
+        font-size: 12px;
+        color: $light-theme-color;
+        width: auto;
+        height: auto;
+        padding: 0;
+        outline: none;
+        &:active {
+            color: $light-theme-active-color;
+            background-color: transparent;
+        }
+    }
+    &.inline {
+        width: auto;
+        display: inline-block!important;
+    }
+    &.radius {
+        border-radius: 24px;
+    }
+    &.ghost {
+        background-color: transparent;
+        color: $light-theme-color;
+        border: 1px solid $light-theme-color;
+    }
+}

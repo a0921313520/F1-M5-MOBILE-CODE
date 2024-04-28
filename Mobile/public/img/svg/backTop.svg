@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <filter id="btn-base" x="0" y="0" width="80" height="80" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#333" flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_11183" data-name="Group 11183" transform="translate(-750 -1034)">
+    <g transform="matrix(1, 0, 0, 1, 750, 1034)" filter="url(#btn-base)">
+      <g id="btn-base-2" data-name="btn-base" transform="translate(18 14)" fill="#fff" stroke="#e1e1e1" stroke-width="1">
+        <rect width="44" height="44" rx="22" stroke="none"/>
+        <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" fill="none"/>
+      </g>
+    </g>
+    <g id="icon-up" transform="translate(778 1057.8)">
+      <path id="wrap" d="M0,24H24V0H0Z" fill="#fff" opacity="0"/>
+      <path id="a" d="M9.479.205a.66.66,0,0,0-.956,0L.2,8.743a.715.715,0,0,0,0,.989l1.114,1.152a.66.66,0,0,0,.956,0L9,3.991l6.733,6.892a.66.66,0,0,0,.956,0L17.8,9.732a.715.715,0,0,0,0-.989Z" transform="translate(2.999 6.857)" fill="#333"/>
+    </g>
+  </g>
+</svg>

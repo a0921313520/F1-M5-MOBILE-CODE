@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>FUN88</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content="baiyanyun" />
+    <meta name="description" content="FUN88">
+    <link rel="stylesheet" href="appinstall/css/swiper.min.css">
+    <link rel="stylesheet" href="appinstall/css/index.css?v=0817s">
+    <link rel="stylesheet" href="appinstall/css/landpage.css?v=0817">
+</head>
+
+<body>
+    <div class="landpage">
+        <input id="copyBox" class="copyBox" value="" style="opacity:0;height: 0px;">
+        <div class="header">
+            <div class="back">
+                <img class="logoWrapperImg" src="appinstall/images/landpage/back_icon.png" alt="logo">
+            </div>
+            <div class="logo">
+                <img class="logoWrapperImg" src="appinstall/images/logo.png" alt="logo">
+            </div>
+            <div id="OpenLive">
+                <a class='downloadBtnBox1 downloadBtnBox2' id='downloadBtnBox2'
+                    href="https://blackberry.hihi2u.net//livechat/fun88_vn?RegionCode=VN" target="_blank"
+                    style="text-decoration: none;">
+                    <div style="padding-left: 11px;">
+                        <img style="width: 27px;" src="appinstall/images/landpage/cs_icon.svg" alt="livtha">
+                    </div>
+                    <div>
+                        <p style="color: #fff; font-size: 12px;">HỔ TRỢ
+                        <p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="main">
+            <img src='appinstall/images/landpage/main.png' />
+        </div>
+        <div class="loading_button">
+            TẢI APP NGAY
+        </div>
+        <div class="status_bar">
+            <div class="status">
+                <div class="active">20%</div>
+            </div>
+            <div class="cancel">Hủy</div>
+        </div>
+        <div class="guide">
+            <span>Xem Hướng Dẫn Cài Đặt Tại Đây</span>
+        </div>
+    </div>
+
+
+
+    <div id='modalK' class="modal">
+        <div class="modalWrap">
+            <div class="modalContainer">
+                <div class="swiper-container4">
+                    <h3 class="swiper-h3text">Lưu Ý</h3>
+                    <img src="appinstall/images/landpage/check.svg" alt="">
+                    <h4>Tải Thành Công</h4>
+                    <p>Nhấp vào “Tin Cậy” để tiến hành cài đặt ngay</p>
+                    <div class="closeButton" id="downloadButtonENT">
+                        <div class='close'>Tin Cậy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='ENTcerModal' class="modal">
+        <div class="modalWrap">
+            <div class="modalContainer">
+                <div>
+                    <h3 class="swiper-h3text">Hướng dẫn cài đặt</h3>
+                </div>
+                <div class="img-container">
+                    <div class="img-box">
+                        <img src="appinstall/images/slide/slide_1.png" alt="">
+                        <img src="appinstall/images/slide/slide_2.png" alt="">
+                        <img src="appinstall/images/slide/slide_3.png" alt="">
+                        <img src="appinstall/images/slide/slide_4.png" alt="">
+                        <img src="appinstall/images/slide/slide_5.png" alt="">
+                        <img src="appinstall/images/slide/slide_6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- MDM ios-->
+
+    <script type="text/javascript" charset="UTF-8" src="js/jquery.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/swiper.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/install.min.js"></script>
+
+    <script type="text/javascript">
+        $('.guide').on('click', function () {
+            $('#ENTcerModal').show();
+        })
+        function isMobileIOS() {
+            var isMobile = {
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                }
+            };
+
+            return isMobile.iOS();
+        }
+        $(function () {
+            $(".loading_button").show();
+            // if (!isMobileIOS()) {
+            //     window.location.href = "./Appinstall.html"
+            // }
+
+            $('.close').click(function () {
+                $('#ENTcerModal').hide()
+                $('#modalK').hide()
+            })
+
+            // 是否是ios下safari浏览 器
+            function isMobileSafari() {
+                var ua = navigator.userAgent;
+                // IOS系统
+                if (/ OS \d/.test(ua)) {
+                    // 不是Chrome
+                    if (!~ua.indexOf('CriOS')) {
+                        // 开头必须为Mozilla
+                        if (!ua.indexOf('Mozilla')) {
+                            // 结尾需为：Safari/xxx.xx
+                            if (/Safari\/[\d\.]+$/.test(ua)) {
+                                if (navigator.vendor === 'Apple Computer, Inc.') {
+                                    var is_firefox = navigator.userAgent.indexOf('FxiOS') > -1;
+                                    if (is_firefox) {
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                } else {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+        });
+        // 模拟加载
+        var loadingCount = 0;
+        var _timger = null;
+        function loadingCer() {
+            _timger = setInterval(() => {
+                loadingCount += 1;
+                $(".status_bar .active").css({ "width": loadingCount + "%" })
+                $(".status_bar .active").text(loadingCount + "%")
+                if (loadingCount >= 99) {
+                    clearInterval(_timger);
+                    $('.status_bar .status').css('width', '100%')
+                    $(".cancel").hide()
+                }
+            }, 20);
+        }
+        $(".loading_button").click(function () {
+            $(".loading_button").hide();
+            $(".status_bar").css({ "display": "flex" });
+            loadingCer();
+
+
+            setTimeout(function () {
+                $(".status_bar .active").css({ "width": "100%" })
+                $(".status_bar .active").text("100%")
+                setTimeout(function () {
+                    $('#modalK').show();
+
+                }, 2000)
+            }, 2100)
+
+
+
+        })
+        $(".cancel").click(function () {
+            clearInterval(_timger);
+        })
+
+        let affCode = "";
+        let F1iOSEnt = ""
+
+        function checkAffQueryString(querystring) {
+            if (querystring !== '') {
+                var urlParams = new URLSearchParams(querystring);
+                if (urlParams.has('aff')) {
+                    affCode = 'affcode&' + urlParams.get('aff')
+                    var t = document.getElementById("copyBox");
+                    t.value = affCode;
+                }
+                if (urlParams.has('affCode')) {
+                    affCode = 'affcode&' + urlParams.get('affCode')
+                    var t = document.getElementById("copyBox");
+                    t.value = affCode;
+                }
+                if (urlParams.has('affcode')) {
+                    affCode = 'affcode&' + urlParams.get('affcode')
+                    var t = document.getElementById("copyBox");
+                    t.value = affCode;
+                }
+            }
+        };
+
+        checkAffQueryString(window.location.search);
+
+
+        function getPromoList() {
+            let urls = "https://www.zdhrb60.com/CMSFiles/F1APP/downloadLinkF1M3.json?v=" + Math.random();
+
+            if (window.location.href.indexOf("f1m2apstag.fun88") > -1) {
+                urls = "https://www.zdhrb60.com/CMSFiles/F1APP/ST_downloadLinkF1M2.json?v=" + Math.random();
+            }
+            fetch(
+                urls,
+                {
+                    method: "GET"
+                }
+            )
+                .then(response => (headerData = response.json()))
+                .then(data => {
+                    F1iOSEnt = data.F1iOSEnt
+
+
+                })
+        }
+        getPromoList();
+
+
+
+        $('#downloadButtonENT').click(function () {
+            var clipboard = new ClipboardJS('#downloadButtonENT', {
+                text: function () {
+                    return affCode;
+                }
+            });
+
+
+            setTimeout(() => {
+                window.location.href = F1iOSEnt
+            }, 500)
+            getTinstall()
+        })
+
+        $('.cancel').click(function () {
+            let affCodeUrl = ''
+            if (affCode) {
+                affCodeUrl = '?' + affCode.replace(/&/g, '=')
+            }
+            window.location.href = './Appinstall.html' + affCodeUrl
+        })
+
+        $('.back').click(function () {
+            let affCodeUrl = ''
+            if (affCode) {
+                affCodeUrl = '?' + affCode.replace(/&/g, '=')
+            }
+            window.location.href = './Appinstall.html' + affCodeUrl
+        })
+
+        $('#ENTcerModal.modal .modalWrap').click(function (e) {
+            console.log(e.target)
+            if ($(e.target).attr('class') == 'modalWrap') {
+                $('#ENTcerModal').hide()
+            }
+        })
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        var piwikKey = '';
+        var windowHost = window.location.host;
+        if (windowHost.search("zdhrb60") != -1) {
+            piwikKey = 'daea3c03-9ac6-43e2-93f2-f0116de1824b'
+        } else {
+            piwikKey = '3665e372-eafc-4c8e-befd-84d1da9b7e2a'
+        }
+
+        (function (window, document, script, dataLayer, id) {
+            function stgCreateCookie(a, b, c) { var d = ""; if (c) { var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString() } document.cookie = a + "=" + b + d + "; path=/" } var isStgDebug = (window.location.href.match("stg_debug") || window.document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+            window[dataLayer] = window[dataLayer] || [], window[dataLayer].push({ start: (new Date).getTime(), event: "stg.start" }); var scripts = document.getElementsByTagName(script)[0], tags = document.createElement(script), dl = "dataLayer" != dataLayer ? "?dataLayer=" + dataLayer : ""; tags.async = !0, tags.src = "//analytics.gavelz.com/containers/" + id + ".js" + dl, isStgDebug && (tags.src = tags.src + "?stg_debug"), scripts.parentNode.insertBefore(tags, scripts);
+            !function (a, n, i, t) { a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) { a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () { var a = [].slice.call(arguments, 0), t = a; "string" == typeof a[0] && (t = { event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1) }), window[dataLayer].push(t) } }(i[c]) }(window, "ppms", ["tm", "cp", "cm"]);
+        })(window, document, 'script', 'piwikDataLayer', piwikKey);
+
+
+        function piwikChange(eventCategory, category, action, name) {
+            /*PiWA 追中*/
+            console.log(eventCategory, category, action, name, '---------追中')
+            if (eventCategory == undefined) {
+                return;
+            }
+            let data = eventCategory.replace(/[&\|\\\*^%/$#@\-]/g, "");
+            if (typeof _paq === 'object') {
+                if (category) {
+                    _paq.push(["trackEvent", category, action, name]);
+                } else {
+                    _paq.push(["trackEvent", data, "touch"]);
+                }
+            }
+        }
+
+
+    </script>
+    <script type="text/javascript">
+        //Tinstall 获取affcode
+        window.onload = () => {
+            getTinstall()
+        }
+        function getTinstall() {
+            TInstall.setHost("https://apifeaffcodegetE.com")
+            var data = TInstall.parseUrlParams()
+            TInstall.getInstall("2O5KVT", data, function (res) { })
+        }
+    </script>
+</body>
+
+</html>

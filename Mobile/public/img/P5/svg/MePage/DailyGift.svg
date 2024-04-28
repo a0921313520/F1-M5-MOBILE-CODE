@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.1" y1="0.058" x2="0.917" y2="0.925" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#97c7fe"/>
+      <stop offset="1" stop-color="#4268f9"/>
+    </linearGradient>
+    <filter id="Rectangle_13" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#020202" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.599" stop-color="#fff" stop-opacity="0.906"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_10851" data-name="Group 10851" transform="translate(-191 -262)">
+    <g transform="matrix(1, 0, 0, 1, 191, 262)" filter="url(#Rectangle_13)">
+      <rect id="Rectangle_13-2" data-name="Rectangle 13" width="34" height="34" rx="8" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_12620" data-name="Group 12620" transform="translate(-311 -20393)">
+      <rect id="Rectangle_5491" data-name="Rectangle 5491" width="16" height="16" transform="translate(520 20670)" opacity="0" fill="url(#linear-gradient-2)"/>
+      <g id="Group_12598" data-name="Group 12598" transform="translate(520.585 20671.441)">
+        <path id="gift_4_" data-name="gift (4)" d="M.928,76.06a.927.927,0,0,0,.928.928H6.494V72.349H.928Zm12.988-8.349H12.7a2.528,2.528,0,0,0,.293-1.16A2.555,2.555,0,0,0,10.437,64c-1.206,0-1.986.618-2.986,1.98C6.45,64.618,5.671,64,4.465,64a2.555,2.555,0,0,0-2.551,2.551,2.492,2.492,0,0,0,.293,1.16H.928A.927.927,0,0,0,0,68.639v2.319a.465.465,0,0,0,.464.464H14.379a.465.465,0,0,0,.464-.464V68.639A.927.927,0,0,0,13.916,67.711Zm-9.454,0a1.16,1.16,0,1,1,0-2.319c.577,0,1,.1,2.5,2.319Zm5.975,0h-2.5c1.49-2.218,1.9-2.319,2.5-2.319a1.16,1.16,0,1,1,0,2.319ZM8.349,76.988h4.639a.927.927,0,0,0,.928-.928V72.349H8.349Z" transform="translate(0 -64)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

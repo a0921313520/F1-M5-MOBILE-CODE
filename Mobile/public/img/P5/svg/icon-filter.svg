@@ -1,0 +1,8 @@
+<svg id="icon-filter" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="icon">
+    <rect id="wrap" width="16" height="16" fill="none"/>
+    <rect id="wrap-2" data-name="wrap" width="12" height="1.5" rx="0.75" transform="translate(2 3)" fill="#fff"/>
+    <rect id="wrap-3" data-name="wrap" width="8" height="1.5" rx="0.75" transform="translate(4 7)" fill="#fff"/>
+    <rect id="wrap-4" data-name="wrap" width="4" height="1.5" rx="0.75" transform="translate(6 11)" fill="#fff"/>
+  </g>
+</svg>

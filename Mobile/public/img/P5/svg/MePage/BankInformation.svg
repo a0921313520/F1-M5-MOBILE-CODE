@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <g id="Group_7431" data-name="Group 7431" transform="translate(-43 -325)">
+    <rect id="Rectangle_2410" data-name="Rectangle 2410" width="18" height="18" transform="translate(43 325)" fill="#fff" opacity="0"/>
+    <path id="银行卡" d="M55.085,153.493h-13.5a2.25,2.25,0,0,1-2.25-2.25V141.118a2.25,2.25,0,0,1,2.25-2.25h13.5a2.25,2.25,0,0,1,2.25,2.25v10.125a2.25,2.25,0,0,1-2.25,2.25m-13.5-1.125h13.5a1.125,1.125,0,0,0,1.125-1.125v-7.875H40.46v7.875a1.125,1.125,0,0,0,1.125,1.125Zm13.5-12.375h-13.5a1.125,1.125,0,0,0-1.125,1.125v1.125H56.21v-1.125a1.125,1.125,0,0,0-1.125-1.125" transform="translate(3.665 187.418)" fill="#78909c"/>
+    <line id="Line_49" data-name="Line 49" x2="5.143" transform="translate(46.214 334.643)" fill="none" stroke="#00a6ff" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_50" data-name="Line 50" x2="2.571" transform="translate(46.214 337.214)" fill="none" stroke="#00a6ff" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+</svg>

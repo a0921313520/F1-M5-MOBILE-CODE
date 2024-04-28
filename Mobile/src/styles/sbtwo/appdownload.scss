@@ -1,0 +1,183 @@
+@use "../t";
+
+.sbtwo-appdb-wrapper {
+  width: 100%;
+  height: t.px2rem(68px);
+  padding: t.px2rem(7px) 0;
+  background-color: #EFEFF4;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  > .appdb-button-close {
+    width: t.px2rem(13px);
+    height: t.px2rem(54px);
+    margin-left: t.px2rem(8px);
+    margin-right: t.px2rem(13px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: t.px2rem(13px);
+      height: t.px2rem(13px);
+      fill: #555555;
+    }
+  }
+
+  > .appdb-icon {
+    width: t.px2rem(54px);
+    height: t.px2rem(54px);
+    margin-right: t.px2rem(27px);
+  }
+
+  > .appdb-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+
+    > .appdb-desc-line1 {
+      font-size: t.px2rem(14px);
+      font-weight: bold;
+      color: #000000;
+    }
+
+    > .appdb-desc-line2 {
+      margin-top: t.px2rem(5px);
+      font-size: t.px2rem(12px);
+      color: #4B4B4B;
+    }
+  }
+
+  > .appdb-button-download {
+    width: t.px2rem(68px);
+    height: t.px2rem(28px);
+    background-color: #00A5FE;
+    font-size: t.px2rem(11px);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-right: t.px2rem(8px);
+    margin-left: t.px2rem(12px);
+  }
+}
+
+.sbtwo-appd-modal-wrapper {
+  > .modal-mask {
+    background-color: rgba(31, 31, 31, 0.6) !important;
+  }
+
+  > .appd-modal {
+    top: t.px2rem(133px) !important;
+    background-color: #EFEFF4;
+    border-radius: 16px;
+    width: t.px2rem(343px);
+
+    > .modal-info-content {
+      padding: 0 !important;
+      height: 222px;
+
+      > .appdm-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 0 !important;
+
+        > .appdm-header {
+          width: t.px2rem(343px);
+          height: 100px;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+        }
+
+        > .appdm-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          padding: t.px2rem(16px);
+
+          > .appdm-row {
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: t.px2rem(16px);
+            border-radius: 8px;
+            margin-bottom: t.px2rem(8px);
+
+            > .appdm-row-icon {
+              width: t.px2rem(58px);
+              height: t.px2rem(58px);
+              margin-right: t.px2rem(8px);
+            }
+
+            > .appdm-row-desc {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              flex: 1;
+
+              > .appdm-row-desc-line1 {
+                font-size: t.px2rem(16px);
+                font-weight: bold;
+                color: #000000;
+              }
+
+              > .appdm-row-desc-line2 {
+                margin-top: t.px2rem(8px);
+                font-size: t.px2rem(13px);
+                color: #999999;
+              }
+            }
+
+            > .appdm-row-button {
+              width: t.px2rem(74px);
+              height: t.px2rem(36px);
+              background-color: #33C85D;
+              font-size: t.px2rem(15px);
+              color: #FFFFFF;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: t.px2rem(17px);
+            }
+
+            &.appdm-row2 {
+              margin-bottom: 0;
+            }
+          }
+
+
+        }
+      }
+
+      > .appdm-close-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 17px;
+
+        > .appdm-close-button {
+          svg {
+            width: t.px2rem(34px);
+            height: t.px2rem(34px);
+          }
+        }
+      }
+    }
+  }
+}

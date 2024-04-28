@@ -1,0 +1,110 @@
+@use "t";
+@import './variable';
+
+.drawerWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 0%;
+	max-width: $max-width;
+	transition: width 0s ease .3s, height 0s ease .3s;
+	z-index: 9999999;
+}
+.drawerWrap .drawerContentWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999;
+	overflow: auto;
+	max-width: $max-width;
+	transform: translate(-100%, 0);
+	// transition: transform .3s cubic-bezier(.9, 0, .3, .7), box-shadow .3s cubic-bezier(.9, 0, .3, .7);
+	transition: transform .3s cubic-bezier(.78, .14, .15, .86), opacity .3s cubic-bezier(.78, .14, .15, .86),
+		box-shadow .3s cubic-bezier(.78, .14, .15, .86);
+}
+.drawerWrap.top .drawerContentWrapper {
+	top: 0;
+	left: auto;
+	bottom: auto;
+	right: auto;
+	transform: translate(0, -100%);
+}
+.drawerWrap.bottom .drawerContentWrapper {
+	top: auto;
+	left: auto;
+	bottom: 0;
+	right: auto;
+	transform: translate(0, 100%);
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+.drawerWrap.left .drawerContentWrapper {
+	top: auto;
+	left: 0;
+	bottom: auto;
+	right: auto;
+	overflow: hidden;
+	transform: translate(-100%, 0);
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+.drawerWrap.right .drawerContentWrapper {
+	top: auto;
+	left: auto;
+	bottom: auto;
+	right: 0;
+	transform: translate(100%, 0);
+	border-top-left-radius: 16px;
+	border-bottom-left-radius: 16px;
+}
+.drawerContentWrapper .drawerContent {
+	height: 100%;
+	overflow: auto;
+	background: #efeff4;
+	
+}
+.drawerWrap .drawerMask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	z-index: 99999998;
+	filter: alpha(opacity=50);
+	transition: opacity .3s linear, height 0s ease .3s;
+	@include t.background-s(rgba(255,255,255,0.65), rgba(255,255,255,0.65));
+}
+.drawerWrap.drawerOpen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: none;
+}
+.drawerWrap.drawerOpen .drawerMask {
+	height: 100%;
+	opacity: .5;
+	transition: none;
+	animation: antdDrawerFadeIn .3s cubic-bezier(.7, .3, .1, 1);
+	background-color: black;
+}
+.drawerWrap.drawerOpen .drawerContentWrapper {
+	transform: translate(0, 0);
+	box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+}
+@keyframes antdDrawerFadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: .5;
+	}
+}
+

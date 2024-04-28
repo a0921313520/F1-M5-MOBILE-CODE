@@ -1,0 +1,296 @@
+[
+    {
+        "Name": "工商银行",
+        "Img": "gongshangyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "招商银行",
+        "Img":"zhaoshangyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "建设银行",
+        "Img":"zhongguojiansheyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "农业银行",
+        "Img":"zhongguonongyeyinhang.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "交通银行",
+        "Img":"jiaotongyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "中国银行",
+        "Img":"zhongguoyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "上海浦东发展银行",
+        "Img":"shanghaipudongfazhanyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "广东发展银行",
+        "Img":"guangfayinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "东莞农村商业银行",
+        "Img":"dongkuannongcunshangyeyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "中信银行",
+        "Img":"zhongxinyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "中国民生银行",
+        "Img":"zhongguominshengyinhang.png",   
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "中国邮政银行",
+        "Img":"zhongguoyouzhengcuxuyinhang.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "兴业银行",
+        "Img":"xinyeyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "华夏银行",
+        "Img":"huaxiayinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "平安银行",
+        "Img":"pinganyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "广西农村信用社",
+        "Img":"nongcunxingyonghezuoshe.png",   
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "广州银行",
+        "Img":"guangzhouyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "南京银行",
+        "Img":"nanjingyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "广州农村商业银行",
+        "Img":"guangzhounongcunshangyeyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "光大银行",
+        "Img":"zhongguoguangdayinhang.png",
+        "BackgroundColor":"#B546DB"
+    },
+    {
+        "Name": "温州银行",
+        "Img":"wenzhouyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "重庆农村商业银行",
+        "Img":"chongqingnongcunshangyeyinhang.png",  
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "上海农商银行",
+        "Img":"shanghainongshangyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "浙江省农村信用社",
+        "Img":"nongcunxingyonghezuoshe.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "云南农村信用社",
+        "Img":"nongcunxingyonghezuoshe.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "厦门银行",
+        "Img":"xiamenyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "福建省农村信社农商银行",
+        "Img":"nongcunxingyonghezuoshe.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "珠海华润银行",
+        "Img":"zhuhaihuarunyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "广东省农信",
+        "Img":"guangdongshengnongxing.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "北京银行",
+        "Img":"beijingyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "东莞银行",
+        "Img":"dongguanyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "上海银行",
+        "Img":"shanghaiyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "渤海银行",
+        "Img":"bohaiyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "浙商银行",
+        "Img":"zheshangyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "杭州银行",
+        "Img":"hangzhouyinhang.png",
+        "BackgroundColor":"#368EE8"
+
+    },
+    {
+        "Name": "宁波银行",
+        "Img":"ningboyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "江苏银行",
+        "Img":"jiangsuyinhang.png",
+         "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "广东南粤银行",
+        "Img":"guangdongnanyueyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "陕西信合",
+        "Img":"nongcunxingyonghezuoshe.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "海南省农村信用社",
+        "Img":"nongcunxingyonghezuoshe.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "深圳发展银行",
+        "Img":"shenzhenfazhanyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "广发银行",
+        "Img":"guangfayinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "成都银行",
+        "Img":"chengduyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "河北银行",
+        "Img":"hebeiyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "福建海峡银行",
+        "Img":"fujianhaixiayinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "富滇银行",
+        "Img":"fudianyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "哈尔滨银行",
+        "Img":"haerbinyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "汉口银行",
+        "Img":"hankouyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "廊坊银行",
+        "Img":"langfangyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "中国光大银行",
+        "Img":"zhongguoguangdayinhang.png",
+        "BackgroundColor":"#B546DB"
+    },
+    {
+        "Name": "东莞银行",
+        "Img":"dongguanyinhang.png"
+    },
+    {
+        "Name": "中原银行",
+        "Img":"zhongyuanyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "平顶山银行",
+        "Img":"pingdingshanyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "郑州银行",
+        "Img":"zhengzhouyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "安徽银行",
+        "Img":""
+    },
+    {
+        "Name": "包商银行",
+        "Img":"baoshangyinhang.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "徽商银行",
+        "Img":"huishangyinhang.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "绍兴银行",
+        "Img":"shaoxinyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "江西省农村信用社",
+        "Img":"nongcunxingyonghezuoshe.png",
+        "BackgroundColor":"#04AD90"
+    }
+]

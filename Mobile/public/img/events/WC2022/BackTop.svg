@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="46" viewBox="0 0 51 46">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_16807" data-name="Rectangle 16807" width="18.078" height="18.078" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Back_to_Top_CN" data-name="Back to Top CN" transform="translate(-281 -682.699)">
+    <rect id="Rectangle_16812" data-name="Rectangle 16812" width="51" height="46" rx="17" transform="translate(281 682.699)" fill="#25aee1" opacity="0.73"/>
+    <g id="Group_13532" data-name="Group 13532" transform="translate(119 -48.966)">
+      <text id="回到顶部" transform="translate(188 769)" fill="#fff" font-size="10" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="-20" y="0">回到</tspan><tspan y="0" font-family="MicrosoftJhengHeiUIRegular, Microsoft JhengHei UI">顶</tspan><tspan y="0">部</tspan></text>
+      <g id="Group_13531" data-name="Group 13531" transform="translate(178.665 737.665)">
+        <g id="Group_13530" data-name="Group 13530" clip-path="url(#clip-path)">
+          <path id="Path_8737" data-name="Path 8737" d="M9.04,0A9.039,9.039,0,1,1,0,9.038,9.047,9.047,0,0,1,9.04,0M16.27,9.035A7.231,7.231,0,1,0,9.049,16.27,7.232,7.232,0,0,0,16.27,9.035" fill="#fff"/>
+          <path id="Path_8738" data-name="Path 8738" d="M70.213,91.732l-3.888,3.842-1.233-1.234,5.1-5.1L75.3,94.349l-1.214,1.214-3.876-3.831" transform="translate(-61.163 -83.85)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

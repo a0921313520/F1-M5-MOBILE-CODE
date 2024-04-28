@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <g id="Group_11108" data-name="Group 11108" transform="translate(-0.253 0.16)">
+    <g id="Rectangle_5238" data-name="Rectangle 5238" transform="translate(0.253 -0.16)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="18" height="18" stroke="none"/>
+      <rect x="0.5" y="0.5" width="17" height="17" fill="none"/>
+    </g>
+    <g id="Group_11108-2" data-name="Group 11108" transform="translate(2.253 -0.16)">
+      <path id="ID_Card" data-name="ID Card" d="M91.472,0a1.992,1.992,0,0,1,2.006,1.979V15.172a1.992,1.992,0,0,1-2.006,1.979h-10.7a1.992,1.992,0,0,1-2.006-1.979V1.979A1.992,1.992,0,0,1,80.775,0Zm0,1.319h-10.7a.664.664,0,0,0-.669.66V15.172a.664.664,0,0,0,.669.66h10.7a.664.664,0,0,0,.669-.66V1.979a.664.664,0,0,0-.669-.66Z" transform="translate(-78.769 0)" fill="#859aa5"/>
+      <path id="ID_Card-2" data-name="ID Card" d="M88.193,12.605a.594.594,0,1,1,0,1.187H85.385a.594.594,0,1,1,0-1.187h2.808Zm1.337-1.979a.594.594,0,1,1,0,1.187H84.048a.594.594,0,1,1,0-1.187H89.53ZM86.789,4.755a2.573,2.573,0,1,1-2.607,2.573,2.59,2.59,0,0,1,2.607-2.573Zm0,1.187a1.385,1.385,0,1,0,1.4,1.385,1.395,1.395,0,0,0-1.4-1.385Z" transform="translate(-79.435 -0.732)" fill="#00a6ff"/>
+    </g>
+  </g>
+</svg>

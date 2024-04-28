@@ -1,0 +1,398 @@
+.tutorial__wrap {
+    height: 100%;
+    .tutorial__border__wrap {
+        position: relative;
+        padding: 40px;
+        border-top: 1px solid #efeff4;
+        max-width: 500px;
+        margin: 0 auto;
+        &.border-hide {
+            border-top: 0;
+        }
+        &.noTitle {
+            padding: 14px 40px;
+        }
+        &.three-box {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    .tutorial__tag {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #00a6ff;
+        color: #fff;
+        padding: 6px 16px;
+        border-radius: 0 0 16px 0;
+    }
+    .tutorial__heading {
+        color: #666666;
+        line-height: 20px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 24px;
+        &.tutorial__heading__first {
+            margin-top: 2px;
+        }
+    }
+    .tutorial__box {
+        margin-top: 25px;
+        display: flex;
+        > div {
+            flex: 1;
+        }
+    }
+    .modal-prompt-info,
+    .modal-waining-info {
+        padding: 12px;
+        margin: 0 16px 10px 16px;
+    }
+}
+
+$betBoxWidth: 63px;
+.tutorial__betLeft {
+    .tutorial__betLeft__odd {
+        font-size: 12px;
+        color: #999999;
+    }
+    .tutorial__betLeft__title {
+        width: $betBoxWidth;
+        min-width: $betBoxWidth;
+        border-radius: 20px 0 0 20px;
+        background: #00a6ff;
+        padding: 6px 8px;
+        position: relative;
+        color: #fff;
+        font-size: 12px;
+        &::before {
+            content: url($base-path + '/img/tutorial/blueUser.svg');
+            position: absolute;
+            z-index: 100000;
+            right: -9px;
+            top: -9px;
+            color: #fff;
+        }
+
+        &.grayStyle {
+            background: #82838a;
+            &::before {
+                content: url($base-path + '/img/tutorial/grayUser.svg');
+                position: absolute;
+                z-index: 100000;
+                right: -9px;
+                top: -9px;
+                color: #fff;
+            }
+        }
+
+        &.redStyle {
+            background: #fe4f60;
+            &::before {
+                content: url($base-path + '/img/tutorial/redUser.svg');
+                position: absolute;
+                z-index: 100000;
+                right: -9px;
+                top: -9px;
+                color: #fff;
+            }
+        }
+    }
+    .tutorial__betLeft__img {
+        position: absolute;
+        right: -43px;
+        top: -13px;
+    }
+}
+
+.tutorial__betRight {
+    .tutorial__betRight__odd {
+        font-size: 12px;
+        color: #999999;
+        text-align: right;
+    }
+    .tutorial__betRight__title {
+        width: $betBoxWidth;
+        min-width: $betBoxWidth;
+        border-radius: 0 20px 20px 0;
+        background: #fe4f60;
+        padding: 6px 8px 6px 12px;
+        position: relative;
+        color: #fff;
+        float: right;
+        font-size: 12px;
+        text-align: right;
+        &::before {
+            content: url($base-path + '/img/tutorial/redUser.svg');
+            position: absolute;
+            z-index: 100000;
+            left: -9px;
+            top: -9px;
+            color: #fff;
+        }
+    }
+    .tutorial__betRight__img {
+        position: absolute;
+        left: -43px;
+        top: -13px;
+    }
+}
+
+.tutorial__score__wrap {
+    .tutorial__score,
+    .tutorial__score__title {
+        text-align: center;
+    }
+    .tutorial__score__title {
+        color: #999999;
+        font-size: 12px;
+    }
+    .tutorial__score {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+}
+
+.information__main.tutorial__wrap .tabsNormal-content-holder {
+    background: #fff;
+    padding: 0;
+}
+
+.information__main.tutorial__wrap.betting-wrap .tabsNormal-content-holder {
+    background: initial;
+}
+.tutorial__score__wrap {
+    margin-top: 8px;
+}
+
+.tutorial__betLeft__odd,
+.tutorial__betRight__odd {
+    margin-bottom: 8px;
+}
+
+.tutorial__wrap .tutorial__border__wrap > .tutorial__heading {
+}
+
+.tutorial__wrap .tutorial__border__wrap > .tutorial__heading {
+    margin-top: 2px;
+}
+
+.tutorial__wrap .tutorial__border__wrap > .tutorial__heading ~ .tutorial__heading {
+    margin-top: 24px;
+}
+
+.tutorial__threeBox {
+    .tutorial__betLeft .tutorial__betLeft__title {
+        width: $betBoxWidth;
+        font-size: 12px;
+        word-break: keep-all;
+    }
+}
+
+.mockBetting__header {
+    padding: 8px;
+    .mockBetting__header__title {
+        color: #666666;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .mockBetting__header__content {
+        color: #999999;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+}
+
+.mockScoreBox__wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 31px 8px 31px;
+    min-width: 400px;
+    margin: 0 auto;
+    .tutorial__score__wrap {
+        margin-top: 0;
+        flex: 1;
+    }
+    .mockScoreBox__team {
+        display: flex;
+        align-items: center;
+        flex: 1.5;
+        font-size: 13.5px;
+        font-weight: bold;
+        line-height: 18px;
+    }
+}
+.mock__game__wrap {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    .table-Lines {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 8px;
+    }
+    .table-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1;
+        height: 100%;
+    }
+    .table-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1;
+    }
+    .list-set {
+        margin: 0.05rem;
+    }
+    .item small {
+        vertical-align: middle;
+        color: #bcbec3;
+    }
+    .Game-indicators small span {
+        margin: 0 0.05rem;
+    }
+    .Number-black {
+        color: #000;
+        &.NumberUp {
+            color: #EB2121;
+        }
+        &.NumberDown {
+            color: #0CCC3C;
+        }
+    }
+    .Game-indicators {
+        background-color: #f7f7f7;
+        border-radius: 0.075rem;
+        text-align: center;
+        height: 1.06rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #bcbec3;
+        width: 100%;
+        margin: .05rem;
+
+        border: 1px solid #f7f7f7;
+        &.active {
+            border: 1px solid #00a6ff;
+            background-color: #e6f6ff;
+        }
+    }
+    .table-item {
+        width: 95%;
+    }
+}
+
+.mockbet-result-title {
+    margin: 16px 8px;
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+}
+
+.mockbet-result-main {
+    background: #fff;
+    .mockbet-result-header {
+        font-size: 16px;
+        border-bottom: 1px solid #d2d2d2;
+        margin: 0 16px;
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mockbet-result-content {
+        padding: 16px;
+        .mockbet-result-item {
+            margin-top: 24px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #666666;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.CTCTutorial_content{
+    position: relative;
+}
+.tutorial-bet-btn{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    width: 63%;
+    >button{
+        padding: 13px 0;
+        border-radius: 8px;
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .goPlay{
+        background: #00A6FF;
+        border: 1px solid #00A6FF;
+        margin-bottom: 16px;
+    }
+    .readAgain{
+        background: transparent;
+        border: 1px solid #fff;
+    }
+}
+
+.betTutorial__wrap .swiper-slide > img{
+    width: 89%;
+}
+
+.mockbet-numberSvg{
+    &.up{
+        svg{
+            fill: #EB2121;
+        }
+    }
+    &.down{
+        svg{
+            fill: #0CCC3C;
+        }
+    }
+    svg{
+        width: 6px;
+        margin-left: 1px;
+        vertical-align: 3px;
+        height: auto;
+        .a{
+            opacity: 1;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .tutorial__betRight .tutorial__betRight__title {
+        padding: 6px 8px 6px 8px;
+    }
+    .tutorial__wrap .tutorial__border__wrap {
+        padding: 40px 15px;
+    }
+    .tutorial__wrap .tutorial__border__wrap.noTitle {
+        padding: 14px 15px;
+    }
+    .tutorial__wrap .tutorial__border__wrap.three-box {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+}

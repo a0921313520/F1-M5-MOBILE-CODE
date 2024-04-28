@@ -1,0 +1,359 @@
+// tabsOval
+.tabsOval-nav {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 14px 0;
+	background: $light-theme-color;
+}
+.tabsOval-extra-content {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	svg {
+		fill: #fff;
+	}
+}
+.tabsOval-nav-list {
+	display: flex;
+	position: relative;
+	transition: transform 0.3s;
+	width: 100%;
+	color: #ccedff;
+	background: #0ea0f0;
+	border-radius: 50px;
+	.tabsOval-tab {
+		flex: 1;
+		text-align: center;
+		//color: #bcbec3;
+		margin: 2px;
+		&.tabsOval-tab-active {
+			color: $light-theme-color;
+		}
+	}
+}
+
+.tabsOval-nav-measure,
+.tabsOval-nav-wrap {
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	display: flex;
+	width: 6.5rem;
+}
+.tabsOval-ink-bar {
+	background: #ffffff;
+	height: 85%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.tabsOval-top .tabsOval-ink-bar {
+	bottom: 0;
+}
+// .tabsOval-top .tabsOval-ink-bar,
+// .tabsOval-bottom .tabsOval-ink-bar {
+//     height: 3px;
+// }
+.tabsOval-ink-bar-animated {
+	transition: all 0.3s;
+}
+.tabsOval-ink-bar {
+	position: absolute;
+	// background: $light-theme-color;
+	pointer-events: none;
+	height: 100% !important;
+	border-radius: 16px;
+	z-index: -1;
+}
+.tabsOval-tab-btn {
+	padding: 7px 0;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+// tabs login
+.tabsOvalLogin-tabpane,
+.tabsOval-tabpane {
+	&:focus {
+		outline: none;
+	}
+}
+.tabsOvalLogin-nav-list {
+	display: flex;
+	position: relative;
+	transition: transform 0.3s;
+	width: 100%;
+	.tabsOvalLogin-tab {
+		flex: 1;
+		text-align: center;
+		color: #bcbec3;
+		margin: 2px;
+		&.tabsOvalLogin-tab-active {
+			color: #ffffff;
+			font-weight: bold;
+		}
+	}
+
+	.tabsOvalLogin-ink-bar {
+		background: $light-theme-color;
+	}
+}
+.tabsOvalLogin-nav {
+	display: flex;
+	flex: none;
+	position: relative;
+	background: #0000000a;
+	border-radius: 50px;
+	width: 200px;
+	margin: 0 auto;
+}
+.tabsOvalLogin-nav-measure,
+.tabsOvalLogin-nav-wrap {
+	position: relative;
+	display: inline-block;
+	flex: auto;
+	white-space: nowrap;
+	overflow: hidden;
+	display: flex;
+}
+.tabsOvalLogin-top .tabsOvalLogin-ink-bar {
+	bottom: 0;
+}
+.tabsOvalLogin-ink-bar-animated {
+	transition: all 0.3s;
+}
+.tabsOvalLogin-ink-bar {
+	position: absolute;
+	// background: $light-theme-color;
+	pointer-events: none;
+	height: 100%;
+	border-radius: 16px;
+	z-index: -1;
+}
+.tabsOvalLogin-tab-btn {
+	padding: 7px 0;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+// tabsNormal
+.tabsNormal-nav {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	// padding: 10px 0;
+	background: $light-theme-color;
+}
+.tabsNormal-nav-list {
+	display: flex;
+	position: relative;
+	transition: transform 0.3s;
+	width: 100%;
+	color: #ccedff;
+	.tabsNormal-tab {
+		flex: 1;
+		text-align: center;
+		color: #ccedff;
+		display: flex;
+		justify-content: center;
+		&.tabsNormal-tab-active {
+			color: #fff;
+		}
+	}
+}
+
+.tabsNormal-nav-measure,
+.tabsNormal-nav-wrap {
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+}
+.tabsNormal-ink-bar {
+	background: #ffffff;
+	height: 3px;
+}
+
+.tabsNormal-top .tabsNormal-ink-bar {
+	display: none;
+	bottom: 0;
+}
+// .tabsOval-top .tabsOval-ink-bar,
+// .tabsOval-bottom .tabsOval-ink-bar {
+//     height: 3px;
+// }
+.tabsNormal-ink-bar-animated {
+	transition: all 0.3s;
+}
+.tabsNormal-ink-bar {
+	position: absolute;
+	pointer-events: none;
+	z-index: -1;
+}
+.tabsNormal-tab-btn {
+	padding: 10px 0;
+	// width: 60px;
+	&:focus {
+		outline: none;
+	}
+}
+
+.tabsNormal-tab-active .tabsNormal-tab-btn {
+	border-bottom: 3px solid #fff;
+}
+
+.tabsNormal-tabpane {
+	&:focus {
+		outline: none;
+	}
+}
+
+.tutorial-tabs .tabsNormal-tab-btn {
+	width: 100%;
+}
+
+.DefaultTabs {
+	.TransactionRecord-nav-list {
+		transform: translate(0px, 0px);
+		display: flex;
+		justify-content: space-between;
+		background-color: #00a6ff;
+		padding: 0px;
+		align-items: center;
+		.TransactionRecord-tab {
+			flex: 0 0 33%;
+			text-align: center;
+			outline: none;
+		}
+		.TransactionRecord-tab-active {
+			border-bottom: 3px solid white;
+			padding: 20px 10px;
+		}
+	}
+	.rc-tabs-tab {
+		border: 0;
+		font-size: 14px;
+		background: rgba(255, 255, 255, 0.5);
+		margin: 0;
+		display: flex;
+		outline: none;
+		cursor: pointer;
+		position: relative;
+		font-weight: lighter;
+		align-items: center;
+	}
+	.rc-tabs-tab-btn,
+	.rc-tabs-tab-remove {
+		border: 0;
+		background: transparent;
+	}
+	.rc-tabs-tab-btn {
+		font-weight: inherit;
+		line-height: 32px;
+	}
+	.rc-tabs-tab-remove:hover {
+		color: #00a6ff;
+	}
+	.rc-tabs-tab-active {
+		font-weight: bolder;
+	}
+	.rc-tabs-ink-bar {
+		position: absolute;
+		background: white;
+		pointer-events: none;
+	}
+	.rc-tabs-ink-bar-animated {
+		transition: all 0.3s;
+	}
+	.rc-tabs-extra-content {
+		flex: none;
+	}
+}
+
+//投注记录ui 调整
+.betRecordstabs {
+	// .tabsOvalLogin-nav {
+	// 	background-color: transparent;
+	// }
+}
+
+.tabsNormal_iframe_game_wallet-nav {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	// padding: 10px 0;
+	background: #FFF;
+}
+.tabsNormal_iframe_game_wallet-nav-list {
+	display: flex;
+	position: relative;
+	transition: transform 0.3s;
+	width: 100%;
+	color: #ccedff;
+	.tabsNormal_iframe_game_wallet-tab {
+		flex: 1;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		color: #666;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: normal;
+		border-bottom: 1px solid #E3E3E8;
+		&.tabsNormal_iframe_game_wallet-tab-active {
+			color: #00A6FF;
+		}
+	}
+}
+
+.tabsNormal_iframe_game_wallet-nav-measure,
+.tabsNormal_iframe_game_wallet-nav-wrap {
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+}
+.tabsNormal_iframe_game_wallet-ink-bar {
+	background: #ffffff;
+	height: 3px;
+}
+
+.tabsNormal_iframe_game_wallet-top .tabsNormal_iframe_game_wallet-ink-bar {
+	background-color: #00A6FF;
+	bottom: 0;
+	left:var(--tabsNormal_iframe_game_wallet-ink-bar__left) !important;
+	width: var(--tabsNormal_iframe_game_wallet-ink-bar__width) !important;
+	z-index: 100;
+}
+
+.tabsNormal_iframe_game_wallet-ink-bar-animated {
+	transition: all 0.3s;
+}
+.tabsNormal_iframe_game_wallet-ink-bar {
+	position: absolute;
+	pointer-events: none;
+	z-index: -1;
+}
+.tabsNormal_iframe_game_wallet-tab-btn {
+	padding: 10px 0 3px;
+	width: 60px;
+	&:focus {
+		outline: none;
+	}
+}
+
+.tabsNormal_iframe_game_wallet-tabpane {
+	&:focus {
+		outline: none;
+	}
+}

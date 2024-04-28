@@ -1,0 +1,16 @@
+#KingClub {
+	background-image: url($base-path + '/img/a95xj-qr93j.webp');
+	background-position: top center;
+	height: calc(100vh + 50px);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #002041;
+	.Note {
+		padding: 15px;
+		background-color: #fff5bf;
+		color: #83630b;
+	}
+	.BG {
+		width: 100%;
+	}
+}

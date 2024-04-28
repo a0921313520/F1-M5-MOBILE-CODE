@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.15" x2="0.883" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2ce3fc"/>
+      <stop offset="1" stop-color="#32c7f7"/>
+    </linearGradient>
+    <filter id="Rectangle_14" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#020202" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.599" stop-color="#fff" stop-opacity="0.906"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_12603" data-name="Group 12603" transform="translate(-162 -268)">
+    <g transform="matrix(1, 0, 0, 1, 162, 268)" filter="url(#Rectangle_14)">
+      <rect id="Rectangle_14-2" data-name="Rectangle 14" width="34" height="34" rx="8" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_12602" data-name="Group 12602" transform="translate(-1)">
+      <rect id="Rectangle_8" data-name="Rectangle 8" width="16" height="16" transform="translate(181 283)" fill="#fff" opacity="0"/>
+      <g id="转账_1_" data-name="转账 (1)" transform="translate(182 285)">
+        <path id="Subtraction_13" data-name="Subtraction 13" d="M12.449,11.7H1.573a1.341,1.341,0,0,1-.611-.144,1.678,1.678,0,0,1-.5-.382,1.881,1.881,0,0,1-.337-.555A1.851,1.851,0,0,1,0,9.941V1.772A1.937,1.937,0,0,1,.411.5,1.43,1.43,0,0,1,1.571,0h10.8a1.685,1.685,0,0,1,1.216.448A1.829,1.829,0,0,1,14.045,1.8v8a2.148,2.148,0,0,1-.125.735,1.949,1.949,0,0,1-.343.6,1.643,1.643,0,0,1-.512.409A1.325,1.325,0,0,1,12.449,11.7ZM3.923,6.224a.636.636,0,0,0-.67.593.636.636,0,0,0,.67.593H8.965l-.829.744a.58.58,0,0,0,0,.878.749.749,0,0,0,.978,0l1.953-1.756a.609.609,0,0,0,.147-.2.531.531,0,0,0,.071-.264.624.624,0,0,0-.582-.586.787.787,0,0,0-.124-.01.689.689,0,0,0-.087.005Zm1.97-4.186a.733.733,0,0,0-.489.18L3.45,3.961a.576.576,0,0,0-.192.541.647.647,0,0,0,.665.527h6.692a.638.638,0,0,0,.67-.6.638.638,0,0,0-.67-.6H5.549l.832-.745a.569.569,0,0,0,0-.871A.732.732,0,0,0,5.892,2.038Z" transform="translate(0 0)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>

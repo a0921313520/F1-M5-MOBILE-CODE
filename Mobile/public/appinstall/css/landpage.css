@@ -1,0 +1,167 @@
+.landpage {
+    background: url('../images/landpage/bg.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 15px;
+    background-position: 0 -60px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.logoWrapperImg {
+    width: 110px;
+}
+
+
+.back img {
+    width: 36px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 150px;
+}
+
+.main img {
+    width: 300px;
+}
+
+.landpage .logoWrapper img {
+    margin-top: 15px;
+}
+
+.status_bar,
+.loading_button {
+    position: absolute;
+    bottom: 88px;
+    width: 94%;
+    left: 3%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #07A6FF;
+    font-size: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.loading_button {
+    background: #F0F0F0;
+}
+
+.status_bar .status {
+    width: 75%;
+    font-size: 16px;
+    color: #000000;
+    background: #F0F0F0;
+    border-radius: 8px;
+
+}
+
+.status_bar .status .active {
+    width: 20%;
+    background: #00A6FF;
+    color: #F0F0F0;
+    border-radius: 8px;
+}
+
+.status_bar .cancel {
+    font-size: 14px;
+    width: 23%;
+    height: 44px;
+    line-height: 44px;
+    background: #F0F0F0;
+    color: #000000;
+    border-radius: 8px;
+}
+
+.guide {
+    position: absolute;
+    bottom: 38px;
+    font-size: 14px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.guide span {
+    color: #00A6FF;
+    text-decoration: underline;
+}
+
+.guide img {
+    width: 18px;
+    margin-right: 14px;
+}
+
+#modalK {
+    text-align: center;
+    font-size: 14px;
+}
+
+#modalK img {
+    width: 52px;
+    margin-top: 20px;
+}
+
+#modalK h3 {
+    height: 50px;
+    line-height: 50px;
+    background-color: #00A6FF;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+#modalK img {
+    color: #666666;
+}
+
+#modalK .closeButton {
+    margin: 15px 0;
+}
+
+#modalK .swiper-h3text {
+    color: #fff;
+    font-weight: bold;
+    padding-top: 0px;
+}
+
+#modalK h4 {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#modalK p {
+    color: #666;
+    padding: 0 60px;
+}
+
+#modalK .close {
+    background-color: #00A6FF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#ENTcerModal .modalWrapHeader {
+    height: 20%;
+    background-color: rgba(0, 0, 0, .6)
+}

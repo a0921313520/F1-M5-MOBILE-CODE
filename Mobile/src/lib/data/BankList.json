@@ -1,0 +1,203 @@
+[
+    {
+        "Name": "Ngân hàng thương mại cổ phần Hàng hải Việt Nam",
+        "Img": "maritimebank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "NHTMCP Quan Doi (MB)",
+        "Img":"mb.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "NHTMCP VN Thinh Vuong(VP Bank)",
+        "Img":"vpbank.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "NHTMCP Xuat Nhap Khau (Eximbank)",
+        "Img":"eximbank.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng Á Châu (ACB)",
+        "Img":"asiacommercialbank.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "Ngân hàng Ngoại Thương (VCB)",
+        "Img":"vietcombank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng Kỹ Thương Việt Nam (TECHCOMBANK)",
+        "Img":"techcombank.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "Ngân hàng Sài Gòn Thương Tín (SACOMBANK)",
+        "Img":"sacombank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng Quốc tế (VIB)",
+        "Img":"vib.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng Công Thương Việt Nam (VietinBank)",
+        "Img":"vietinbank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng Phát Triển Nhà TPHCM (HDBANK)",
+        "Img":"hdbank.png",   
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng Nông nghiệp & Phát triển Nông thôn Việt Nam (AGRIBANK)",
+        "Img":"agribank.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng ANZ Việt Nam",
+        "Img":"card.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "Ngân hàng HSBC",
+        "Img":"card.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng Phát triển TP. Hồ Chí Minh (HDBank)",
+        "Img":"hdbank.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân hàng Đông Á",
+        "Img":"dongabank.png",   
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng TMCP Bản Việt",
+        "Img":"vietcapitalbank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng TMCP Đại Á",
+        "Img":"daiabank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng TMCP Quốc Dân (NCB)",
+        "Img":"nationalcitizenbankncb.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân hàng TMCP Việt Á",
+        "Img":"vietnamasiacommercialjointstockbank.png",
+        "BackgroundColor":"#B546DB"
+    },
+    {
+        "Name": "Ngân hàng Tiền Phong (TPBank)",
+        "Img":"tienphongbank.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân Hàng Bảo Việt (Bao Viet Bank)",
+        "Img":"baovietbank.png",  
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng Xây dựng (CB)",
+        "Img":"contructionbankcb.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "Ngân hàng Bưu điện Liên Việt (LienVietPostBank)",
+        "Img":"lienvietpostbank.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng TMCP An Bình",
+        "Img":"anbinhbank.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng TMCP Bắc Á",
+        "Img":"bacabank.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "Ngân hàng TMCP Đại Dương (OceanBank)",
+        "Img":"oceanbank.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng TMCP Dầu khí toàn cầu (GPBank)",
+        "Img":"globalpetrocommercialjointstockbank.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân hàng TMCP Đông Nam Á (SeABank)",
+        "Img":"seabank.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân hàng TMCP Kiên Long",
+        "Img":"kienlongbank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng TMCP Nam Á",
+        "Img":"namabank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng TMCP Phương Đông (OCB)",
+        "Img":"ocb.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân hàng TMCP Phương Nam",
+        "Img":"bohaiyinhang.png",
+        "BackgroundColor":"#368EE8"
+    },
+    {
+        "Name": "Ngân hàng TMCP Sài Gòn (SCB)",
+        "Img":"saigoncommercialbankscb.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng TMCP Sài Gòn-Hà Nội (SHB)",
+        "Img":"saigonhanoicommercialjointstockbankshb.png",
+        "BackgroundColor":"#368EE8"
+
+    },
+    {
+        "Name": "Ngân hàng Việt Nam Thương Tín (Viet Bank)",
+        "Img":"vietnamthuongtincommercialjointstockbank.png",
+        "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân hàng Xăng dầu Petrolimex (PG Bank)",
+        "Img":"pgbank.png",
+         "BackgroundColor":"#F7A93E"
+    },
+    {
+        "Name": "Ngân hàng Đại Chúng Việt Nam (PVcomBank)",
+        "Img":"pvcommercialbank.png",
+        "BackgroundColor":"#E14c59"
+    },
+    {
+        "Name": "Ngân hàng Đầu tư và Phát triển Việt Nam (BIDV)",
+        "Img":"bidv.png",
+        "BackgroundColor":"#04AD90"
+    },
+    {
+        "Name": "Ngân hàng TIMO",
+        "Img":"timobank.png",
+        "BackgroundColor":"#04AD90"
+    }
+]

@@ -1,0 +1,2050 @@
+@mixin freeChargeLabel {
+	content: "免手续费";
+	width: 54px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 10px;
+	background-color: #eb2121;
+	position: absolute;
+	top: -1px;
+	text-align: center;
+	right: -1px;
+	color: #fff;
+}
+.WalletBanner {
+	padding: 12px 10px 0px 10px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	min-height: 70px;
+	width: 100%;
+	img {
+		border-radius: 8px;
+	}
+	.recommend {
+		//top: 1px;
+		background-color: transparent;
+		position: absolute;
+		z-index: 9;
+		top: 8px;
+		bottom: 0;
+		right: 10px;
+		width: 35px;
+		height: 35px;
+		margin: unset;
+		left: unset;
+		svg {
+			fill: #222222;
+			width: 12px;
+		}
+	}
+	img {
+		width: 100%;
+		// max-width: 100%;
+		// max-height: 100%;
+	}
+}
+.deposit-list-wrap {
+	margin: $left-right-distance-small;
+	margin-top: 10px;
+	background-color: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	.depositIWMMButton {
+		width: calc(100% - 0.427rem); //(8px*2)/37.5 = 0.427rem
+		background-color: #35c95b;
+		border-radius: t.px2rem(8px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: t.px2rem(16px);
+		color: #ffffff;
+		height: t.px2rem(44px);
+		margin: t.px2rem(8px);
+		margin-top: t.px2rem(16px);
+		margin-bottom: t.px2rem(6px);
+		border-radius: 8px 8px 0 0;
+	}
+	.deposit-list {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		padding: 10px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		margin-left: -4px;
+		margin-right: -4px;
+		.deposit-item {
+			flex: 0 0 20%;
+			min-width: 0;
+			font-size: t.px2rem(12px);
+			margin-bottom: 8px;
+			text-align: center;
+			padding-left: 4px;
+			padding-right: 4px;
+			position: relative;
+			&.new::after {
+				content: "新";
+				width: 20px;
+				height: 16px;
+				line-height: 16px;
+				font-size: 9px;
+				border-radius: 0 8px 0 8px;
+				background-color: #eb2121;
+				position: absolute;
+				top: 8PX;
+				text-align: center;
+				right: 3PX;
+				color: #fff;
+				transform: scale(0.8);
+			}
+			&.fast::after {
+				content: "极速";
+				width: 30px;
+				height: 16px;
+				line-height: 16px;
+				font-size: 9px;
+				border-radius: 0 8px 0 8px;
+				background-color: rgb(33, 87, 235);
+				position: absolute;
+				top: 8PX;
+				text-align: center;
+				right: 2px;
+				color: #fff;
+				transform: scale(0.8);
+			}
+			&.active > div {
+				color: #fff;
+				background-color: $light-theme-color;
+
+				span {
+					color: #ffffff;
+					font-size: 12PX;
+				}
+			}
+			& > div {
+				border: 1px solid #e3e3e8;
+				margin-top: 8px;
+				border-radius: 8px;
+				padding-bottom: 8px;
+				padding-top: t.px2rem(36px);
+				overflow: hidden;
+				position: relative;
+				span {
+					white-space: nowrap;
+					color: #222222;
+					font-size: 12PX;
+					transform: scale(.9);
+					display: block;
+					margin-top: 2px;
+				}
+				i {
+					display: block;
+					width: 39px;
+					height: 30px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+			}
+		}
+	}
+}
+.deposit-content-wrap {
+	margin: $left-right-distance-xsmall;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	padding-bottom: 100px;
+	.form-item .input__wrap input {
+		font-size: 14px;
+	}
+	.input__wrap input:disabled {
+		font-size: 16px;
+	}
+	.form-wrap {
+		padding: $left-right-distance-xsmall;
+		padding-top: 16px;
+		padding-bottom: 1px;
+		border-radius: 8px;
+		background-color: #fff;
+		.cap-item-content {
+			line-height: 1.4;
+			margin-left: 6px;
+			.cap-item-title {
+				font-size: 13px;
+				color: #000;
+				margin-bottom: 2px;
+			}
+			.cap-item-notice {
+				font-size: 11px;
+				color: #999999;
+			}
+		}
+		.cap-list {
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-between;
+			> .cap-item {
+				flex: 1;
+				white-space: initial;
+				height: auto;
+				justify-content: flex-start;
+				.cap-item-circle {
+					margin-right: 7px;
+				}
+			}
+		}
+		.cap-list .cap-item {
+			padding: 11px 6px;
+			border: 1px solid #e6e6eb;
+			font-size: 12px;
+			line-height: 16px;
+			flex: 0 0 47%;
+			margin: 5px 4px;
+			position: relative;
+			&.cap-item-M {
+				flex: 0 1 47%;
+				justify-content: flex-start;
+				div.cap-item-circle {
+					margin-right: 8px;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			div.cap-item-circle {
+				min-width: 14px;
+				width: 14px;
+				height: 14px;
+				font-size: 14px;
+				&.curr {
+					border-width: 3px;
+				}
+			}
+			.newIcon {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+		.cap-list.ctc-cap-list .cap-item {
+			flex: 0 1 50%;
+			border: 0;
+			margin: 0;
+			padding: 5px 6px;
+		}
+		.cap-list.ctc-cap-list .cap-item-insideWrap {
+			display: flex;
+			justify-content: left;
+			align-items: center;
+			border: 1px solid #e6e6eb;
+			border-radius: 8px;
+			padding: 11px 10px;
+			height: 100%;
+			width: 100%;
+		}
+		button[type="primary"] {
+			margin-bottom: 16px;
+		}
+	}
+	.depo-btn-submit.btn-disable button {
+		color: #bcbec3 !important;
+		background: #efeff4 !important;
+		font-weight: bold;
+	}
+}
+.ctcfreeCharge {
+	position: relative;
+	&::after {
+		@include freeChargeLabel;
+		border-radius: 0 8px 0 8px;
+	}
+}
+.secCtcfreeCharge {
+	top: -16px;
+	right: -7px;
+}
+.ctcMethodType-wrap {
+	margin: 11px 0 3px 0;
+	label {
+		display: block;
+		font-size: 12px;
+		padding-bottom: 8px;
+		color: #666666;
+	}
+	.ctcMethodType-banks-wrap {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+	.ctcMethodType-item-wrap {
+		flex: 0 1 50%;
+		border: 0;
+		margin: 0;
+		padding: 5px 6px;
+		.ctcMethodType-item {
+			display: flex;
+			justify-content: left;
+			align-items: center;
+			border-radius: 8px;
+			padding: 8px 0;
+			font-size: 13px;
+			border: 1px solid #e6e6eb;
+			position: relative;
+			line-height: 18px;
+			color: #999;
+			height: 100%;
+			width: 100%;
+			flex-flow: column;
+			&.ctcMethodType-active {
+				background: #00a6ff;
+				color: #fff;
+			}
+		}
+
+		img {
+			display: block;
+			width: 66%;
+			margin-bottom: 8px;
+			margin-top: 10px;
+		}
+	}
+}
+
+.modal-prompt-info,
+.modal-waining-info {
+	background-color: #fff5bf;
+	color: #83630b;
+	font-size: t.px2rem(12px);
+	border-radius: 8px;
+	padding: 10px 16px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+
+.modal-waining-notice {
+	background-color: #f5f5f5;
+	color: #666666;
+	font-size: t.px2rem(12px);
+	border-radius: 8px;
+	padding: 10px 16px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+
+.form-item {
+	margin-bottom: 14px;
+	&.clear-margin {
+		margin-bottom: 0;
+	}
+	&.other-account {
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	label {
+		display: block;
+		font-size: t.px2rem(12px);
+		padding-bottom: 8px;
+		color: $light-color1;
+	}
+	.input__wrap input {
+		padding: 15px;
+		font-size: t.px2rem(12px);
+	}
+	.cap-list {
+		margin: 0;
+	}
+}
+
+.sport-input-disabled {
+	color: #00a6ff;
+	height: auto;
+	line-height: initial;
+	background: #f3f3f3;
+	border-radius: 8px;
+	font-size: t.px2rem(12px);
+	width: 100%;
+	text-align: left;
+	button {
+		padding: 12px;
+		border: 1px solid #e6e6eb;
+	}
+}
+
+.deposit-help-wrap {
+	margin-top: 20px;
+}
+.deposit-help-wrap > h4 {
+	line-height: 1.7;
+	color: #666;
+	margin-bottom: 10px;
+	font-size: t.px2rem(14px);
+	padding-left: 20px;
+}
+.deposit-help-wrap > ul {
+	padding: 0 18px 0 30px;
+	margin-bottom: 10px;
+	font-size: t.px2rem(12px);
+}
+.deposit-help-wrap > ul > li {
+	color: #666;
+	line-height: 1.4;
+	list-style: decimal;
+	line-height: 20px;
+}
+.deposit-help-wrap > ul .li-title {
+	color: #666;
+	line-height: 1.4;
+	line-height: 20px;
+}
+.deposit-help-wrap > ul.noStyle > li,
+.deposit-help-wrap > ul > li.noStyle {
+	list-style: none;
+}
+
+.deposit-help-wrap .ant-btn.ant-btn-link,
+.inline.ant-btn.ant-btn-link {
+	padding: 0;
+	height: auto;
+}
+
+.error-color {
+	color: red !important;
+}
+// 钱包充值方式图标
+.deposit-list-wrap .deposit-list .deposit-item .payments-sprite {
+	display: inline-block;
+	background-image: url($base-path + '/img/deposit/payments/payments_sprites.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: 12px;
+	&.LB {
+		background-position: -36PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.UP {
+		background-position: -599PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.BCM {
+		background-position: -485PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.BC {
+		background-position: -75PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.ALB {
+		background-position: -148PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.OA {
+		background-position: -111PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.WC {
+		background-position: -188PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.WCLB {
+		background-position: -223PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.JDP {
+		background-position: -339PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.AP {
+		background-position: -685PX -7PX !important;
+		width: 50PX;
+		height: 40PX;
+		top: 14PX;
+	}
+	&.CC {
+		background-position: -299PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.QQ {
+		background-position: 7PX -3PX !important;
+		width: 40PX;
+		height: 30PX;
+	}
+	&.PPB {
+		background-position: -412PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.CTC {
+		background-position: -450PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+	&.SR {
+		background-position: -636PX -7PX !important;
+		width: 40PX;
+		height: 40PX;
+	}
+}
+
+.deposit-list-wrap .deposit-list .deposit-item.active .payments-sprite {
+	&.LB {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: 6PX -4PX !important;
+	}
+	&.UP {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: -478PX -7PX !important;
+	}
+	&.PPB {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: -329PX -7PX !important;
+	}
+	&.WC {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: -103PX -7PX !important;
+	}
+	&.WCLB {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: -139PX -7PX !important;
+	}
+	&.ALB {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: -64PX -7PX !important;
+	}
+	&.OA {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: -28PX -7PX !important;
+	}
+	&.SR {
+		background-image: url($base-path + '/img/deposit/payments/payments_sprites_active.png');
+		background-position: -517PX -8PX !important;
+	}
+}
+
+// 右侧单据
+.sport-deposit-container {
+	.sport-deposit-receipt {
+		&:not(:last-child) {
+			border-bottom: 1px solid #efeff4;
+		}
+	}
+}
+.sport-deposit-receipt {
+	color: #222;
+	background-color: #fff;
+	margin-bottom: 20px;
+	font-size: t.px2rem(12px);
+	h2 {
+		font-weight: bold;
+		font-size: t.px2rem(14px);
+		line-height: 1.4;
+		margin: 0;
+	}
+	.item-label {
+		color: #999;
+	}
+	.item-content {
+		color: #666;
+		display: flex;
+		align-items: center;
+	}
+	.item-copy {
+		color: #00a6ff;
+		margin-left: 16px;
+		svg {
+			width: 20px;
+		}
+	}
+	.item-transactionId {
+		color: #666666;
+		font-size: 14px;
+		max-width: initial !important;
+	}
+	.CopySet {
+		svg {
+			width: 19px !important;
+			height: 19px !important;
+		}
+	}
+	.item-wrap {
+		display: flex;
+		line-height: 1.4;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.ant-btn {
+			padding-right: 0;
+			& > span {
+				max-width: none;
+			}
+		}
+	}
+	ul > li {
+		.Copy-Box {
+			.item-copy {
+				max-width: 100% !important;
+			}
+		}
+		padding: 5px 10px;
+		span:not(.ant-form-item-children) {
+			display: inline-block;
+			padding: 3px 0;
+		}
+		span:not(.item-label):not(.ant-form-item-children) {
+			// max-width: 70%;
+			text-align: right;
+		}
+		.item-wrap-100 {
+			position: relative;
+			min-width: 100%;
+			text-align: left !important;
+			margin-top: 9px;
+			display: flex !important;
+			justify-content: space-between;
+		}
+	}
+	.ant-form-item-control {
+		line-height: 32px;
+	}
+	.other-account-wrap {
+		padding: 14px 20px;
+		text-align: center;
+	}
+	.ant-btn.ant-btn-link {
+		height: auto;
+		&.tlc-inline-btn {
+			padding: 0;
+			position: absolute;
+			top: 0;
+			right: 10px;
+			line-height: 28px;
+			& > span {
+				max-width: initial;
+			}
+		}
+	}
+	.walletAddress-label {
+		min-width: 80%;
+		overflow-x: auto;
+		flex: 1;
+		max-width: initial !important;
+		text-align: left !important;
+		word-break: break-all;
+	}
+}
+.red-set {
+	color: #f11818 !important;
+}
+.upload-loading-set {
+	margin-top: -8px;
+	line-height: 15px;
+}
+.name-deposit-lb {
+	display: block;
+	font-size: t.px2rem(12px);
+	padding-bottom: 8px;
+	color: #666666;
+	padding-top: 10px;
+}
+.imgname {
+	width: 70%;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+}
+.setfixs {
+	display: flex;
+	align-items: center;
+}
+.cscontent {
+	justify-content: flex-start !important;
+	padding-left: 10px;
+}
+//本地银行上传收据
+.sport-deposit-upload {
+	padding: 10px;
+	border-radius: 7px;
+	background-color: white;
+	.item-label {
+		color: #666666;
+		font-size: 12px;
+		.TuiJian {
+			background-color: #ffe273;
+			padding: 3px;
+			border-radius: 5px;
+			margin-left: 10PX;
+			color: #000;
+		}
+	}
+	.upload {
+		position: relative;
+		img {
+			padding-right: 7px;
+			padding-top: 2px;
+		}
+		.imgname {
+			display: flex;
+			width: 100%;
+			justify-content: flex-start;
+			padding-left: 10px;
+			color: #000;
+		}
+		.file_btn {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 1;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			height: 100%;
+		}
+		.cs {
+			color: #00a6ff;
+		}
+		background: #f5f5f5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 45px;
+		margin-top: 10px;
+		color: #999999;
+		font-size: 13px;
+	}
+}
+.filebtn {
+	background: #efeff4 !important;
+	border-color: #efeff4 !important;
+	color: #bcbec3 !important;
+}
+#updataset {
+	background: #f5f5f5;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 5px;
+	margin: 10px 0;
+	align-items: center;
+	padding-left: 10px;
+	#setbtn {
+		width: 90px;
+		height: 35px;
+		margin: 10px 5px;
+	}
+}
+.btn-content-set {
+	P {
+		padding: 20px 0;
+		color: #666666;
+		font-size: 15px;
+		line-height: 20px;
+	}
+	.btn-content-file {
+		display: flex;
+		.left {
+			background-color: white;
+			color: #00a6ff;
+		}
+		button {
+			border: 1px solid #00a6ff;
+			width: 80%;
+			margin: 20px 10px 0px 0px;
+		}
+	}
+	.Modal_file_btn {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		height: 100%;
+	}
+}
+
+// 右侧充值结果
+.lb-third-step-wrap {
+	margin: 0 8px 8px 8px;
+	padding-top: 1px;
+	.sport-deposit-receipt {
+		border-radius: 8px;
+		padding: 32px 16px 0 16px;
+	}
+	.scuccess {
+		margin-top: 6px;
+		color: $light-success-color;
+	}
+	.check-success {
+		font-size: 17px;
+		font-weight: bold;
+	}
+	.sport-svg-wrap svg {
+		width: t.px2rem(50px);
+		height: t.px2rem(50px);
+		margin: 10px 0 15px 0;
+		fill: $light-success-color;
+	}
+	& > p {
+		margin: 10px 0 20px;
+	}
+	.FinishStep-notice-text {
+		color: #999999;
+		text-align: center;
+		line-height: 20px;
+		margin-bottom: 24px;
+		font-size: 12px;
+		padding-top: 10px;
+	}
+}
+
+.has-error .input__wrap input,
+.has-error textarea {
+	border-color: #eb2121;
+	box-shadow: 0 0 0 2px rgba(241, 93, 121, 0.14);
+}
+.input-error-message {
+	color: #eb2121;
+	font-size: t.px2rem(12px);
+	background-color: #fee0e0;
+	border-radius: 8px;
+	margin-top: 0px;
+	padding: 10px 16px;
+	/* height: 0px; */
+	line-height: 18px;
+	// line-height: 0px;
+	transform: scale(0);
+}
+.input-info-message {
+	font-size: 12px;
+	background: #d6f0ff;
+	color: #00a6ff;
+	padding: 12px 16px;
+	width: 100%;
+	border-radius: 8px;
+	margin-top: 8px;
+	line-height: 20px;
+	// transform: scale(0);
+}
+.sprot-bottom-scale {
+	&-appear,
+	&-appear-active,
+	&-appear-done,
+	&-enter,
+	&-enter-active,
+	&-enter-done,
+	&-exit,
+	&-exit-active,
+	&-exit-done {
+		transform-origin: top;
+		animation-duration: 0.16s;
+		animation-fill-mode: both;
+		animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+		animation-play-state: paused;
+	}
+	&-appear,
+	&-appear-active,
+	&-appear-done,
+	&-enter,
+	&-enter-active,
+	&-enter-done {
+		animation-name: scaleFadeIn;
+		animation-play-state: running;
+	}
+	&-exit,
+	&-exit-active,
+	&-exit-done {
+		animation-name: scaleFadeOut;
+		animation-play-state: running;
+	}
+}
+
+.rc-select-dropdown .rc-select-item-option-content {
+	width: 95%;
+}
+div.rc-select {
+	//display: block;
+	height: 44px;
+	line-height: 44px;
+	border: 1px solid #e6e6eb;
+	font-size: t.px2rem(12px);
+	border-radius: 8px;
+	.rc-select-selector {
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
+	}
+	.rc-select-selection-placeholder {
+		color: #666666;
+	}
+	.rc-select-selection-search {
+		display: none;
+	}
+	.rc-select-arrow {
+		height: 40px;
+	}
+}
+
+@keyframes scaleFadeIn {
+	0% {
+		// height: 0px;
+		// line-height: 0px;
+		margin-top: 0px;
+		transform: scale(0);
+	}
+	100% {
+		// height: 40px;
+		// line-height: 40px;
+		margin-top: 8px;
+		transform: scale(1);
+	}
+}
+@keyframes scaleFadeOut {
+	0% {
+		height: 40px;
+		line-height: 40px;
+		margin-top: 8px;
+		transform: scale(1);
+	}
+	100% {
+		height: 0px;
+		line-height: 0px;
+		margin-top: 0px;
+		transform: scale(0);
+	}
+}
+
+.disabled-input-box {
+	background: #efeff4;
+	color: #999999;
+	width: 100%;
+	padding: 14.5px 12px;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+.wrong-acc-wrap {
+	padding: 15px;
+	border-radius: 8px;
+	background-color: #fff;
+	margin-top: 8px;
+	margin-bottom: 24px;
+	.rc-collapse {
+		border: 0;
+		background: #fff;
+	}
+	.rc-collapse > .rc-collapse-item {
+		background: #fff;
+	}
+	.rc-collapse-content-box {
+		margin-top: 21px;
+	}
+	.rc-collapse > .rc-collapse-item > .rc-collapse-header {
+		font-size: 12px;
+	}
+}
+.third-step-wrap {
+	.rc-steps-item-active .rc-steps-item-title {
+		color: #00a6ff !important;
+		font-weight: normal;
+	}
+	.rc-steps-item-title {
+		color: #bcbec3 !important;
+		font-weight: normal;
+	}
+	.rc-steps-item-description {
+		color: #666 !important;
+	}
+}
+.trirdParty-wrap {
+	.modal-info-content {
+		height: 100%;
+	}
+	#iframe_test {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.wallet-prompt-ctc {
+	.modal-info-title {
+		background: #00a6ff;
+		color: #fff;
+		padding: 11px 0;
+	}
+	.ctc-pay-method-item {
+		text-align: center;
+		margin-bottom: 32px;
+		font-size: 13px;
+	}
+	.modalInfo-footer-cancel {
+		background: #fff;
+		border: 1px solid;
+		color: #00a6ff;
+	}
+	.modalInfo-footer {
+		> button {
+			font-size: 16px;
+		}
+	}
+}
+.ctcfreeChargeModal {
+	.modal-info-content {
+		position: relative;
+	}
+	.modal-info-content::after {
+		@include freeChargeLabel;
+		border-radius: 0 0 0 8px;
+	}
+}
+.ctc-pay-receipt {
+	.ctc-pay-method {
+		text-align: center;
+		font-size: 13px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #efeff4;
+		img {
+			margin-bottom: 4px;
+		}
+	}
+	.item-wrap {
+		border-bottom: 1px solid #efeff4;
+	}
+	.ctc-pay-notice {
+		background: #d6f0ff;
+		color: #00a6ff;
+		padding: 12px 16px;
+		width: 100%;
+		border-radius: 8px;
+		margin-top: 16px;
+		line-height: 20px;
+	}
+}
+
+.SuggestedAmountDiv {
+	position: relative;
+	width: 100%;
+	height: auto;
+	background-color: #e3e3e8;
+	border-radius: 4px;
+	padding: 16px;
+	color: #000;
+	font-size: 12px;
+	border: 0;
+	margin-top: 16px;
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+	.arrow {
+		position: absolute;
+		top: -10px;
+		left: 10px;
+		border-bottom: 12px solid #e3e3e8;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+	}
+	p {
+		text-align: left;
+		height: 10px;
+		line-height: 10px;
+		color: #666666;
+	}
+	ul::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	ul {
+		li {
+			font-size: 14px;
+			float: left;
+			width: 22%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			margin-right: 1.5%;
+			margin-left: 1.5%;
+			margin-top: 13px;
+			border: 0;
+			border-radius: 4px;
+			background: white;
+			cursor: pointer;
+			&:hover {
+				background-color: #00a6ff;
+				color: white;
+			}
+			&.true {
+				background-color: #00a6ff;
+				color: white;
+			}
+		}
+	}
+}
+
+#thirdParty-iframe {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.thirdParty-modal {
+	.header-wrapper .back-icon svg {
+		width: 14px;
+	}
+}
+
+.depo-btn-submit {
+	margin-top: 24px;
+}
+.depositTutorial-btn-wrap {
+	display: flex;
+	justify-content: center;
+	margin-top: 19px;
+	padding-bottom: 16px;
+	.depositTutorial-btn {
+		border-radius: 50px;
+		font-size: 14px;
+		background: #fff;
+		line-height: 22px;
+		padding: 12px 16px;
+		color: #666666;
+	}
+}
+.CTCTutorial__modal,
+.betTutorial__wrap {
+	background: #efeff4;
+	.swiper-slide {
+		margin-bottom: 40px;
+		&.lastFlow {
+			.CTCTutorial-readMore {
+				display: none;
+			}
+		}
+		&.swiper-slide-active {
+			&.lastFlow {
+				.CTCTutorial-readMore {
+					display: block;
+				}
+			}
+		}
+
+		> img {
+			width: 95%;
+			border-radius: 15px;
+		}
+	}
+
+	.CTCTutorial-readMore {
+		background: #fff;
+		border-radius: 16px;
+		margin: 0 16px;
+		// min-height: 579px;
+		padding: 32px 0;
+		.CTCTutorial-readMore-title {
+			font-size: 14px;
+			color: #000;
+			padding: 0 20px;
+			line-height: 22px;
+			margin-bottom: 11px;
+		}
+		.CTCTutorial-line {
+			margin: 24px;
+			height: 1px;
+			background: #efeff4;
+		}
+	}
+	.modal-info-content {
+		height: 100%;
+	}
+	.CTCTutorial_content {
+		margin-top: 25px;
+		text-align: center;
+		padding-bottom: 30px;
+		.swiper-container-horizontal > .swiper-pagination-bullets {
+			display: flex;
+			justify-content: center;
+			bottom: 7px !important;
+			gap:8px;
+			position: absolute;
+			width: 100%;
+			top:96%;
+		}
+		.swiper-pagination-bullet {
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: #B8B8B8;
+			transition: all 0.5s;
+		}
+		.swiper-pagination-bullet-active {
+			width: 16px ;
+			border-radius: 20%;
+			background: #00a6ff;
+		}
+	}
+	.tabsNormal-tab-btn {
+		width: 100%;
+	}
+	.tabsNormal-nav-wrap {
+		font-size: 12px;
+	}
+}
+.CTCTutorial-readMore-wrap {
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	&.three {
+		> div {
+			width: calc(33.33333% - 12px);
+		}
+	}
+	&.two {
+		> div {
+			width: calc(50% - 12px);
+		}
+	}
+	> div {
+		text-align: center;
+		color: #666666;
+		margin: 6px 6px 0 6px;
+		box-sizing: border-box;
+		border-radius: 8px;
+		padding: 7px 0;
+		&.hasBg {
+			background-color: #efeff4;
+		}
+		img {
+			width: 100%;
+			margin-bottom: 4px;
+		}
+	}
+	.Crypto-icon {
+		max-width: 101px;
+		height: 35px;
+		margin: 0 auto;
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-image: url($base-path + '/img/deposit/CTCTutorial/tutorial_icons.png');
+		&.houbi {
+			background-position: -592px 0;
+		}
+	}
+}
+.paymentMethod-wrap {
+	.paymentMethod-amount {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 14px 16px;
+		background: #fff;
+		border-radius: 8px;
+		.amount-title {
+			color: #999;
+			font-size: 12px;
+		}
+		.amount-number {
+			color: #000;
+			font-size: 20px;
+		}
+		.amount-icon {
+			font-size: 14px;
+		}
+	}
+	.paymentMethod-options {
+		position: relative;
+		background: #fff;
+		padding: 16px 8px;
+		border-radius: 8px;
+		margin-top: 20px;
+		&:before {
+			content: "\a";
+			border-style: solid;
+			border-width: 0 12px 15px 12px;
+			border-color: transparent transparent #fff transparent;
+			position: absolute;
+			top: -5px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.options-notice {
+			font-size: 12px;
+			color: #999;
+			margin-bottom: 16px;
+		}
+		.options-btns {
+			display: flex;
+			> div {
+				border-radius: 8px;
+				border: 1px solid #00a6ff;
+				padding: 12px 0;
+				text-align: center;
+				font-size: 14px;
+				flex: 1;
+			}
+			.options-btn-1 {
+				color: #00a6ff;
+				margin-right: 5px;
+			}
+			.options-btn-2 {
+				margin-left: 5px;
+				color: #fff;
+				background: #00a6ff;
+			}
+		}
+	}
+}
+.ALB_block_show {
+	visibility: visible;
+}
+.ALB_block_hide {
+	visibility: hidden;
+	height: 0;
+}
+
+$USDTModalBtnWidth: 87%;
+.USDT-modal {
+	top: 3%;
+	margin-bottom: 150px;
+	.modal-info-content {
+		padding: 0;
+	}
+	img {
+		width: 100%;
+	}
+	button {
+		width: $USDTModalBtnWidth;
+		font-size: 16px;
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -$USDTModalBtnWidth/2;
+	}
+}
+
+.FinishStep-btn-wrap {
+	> button {
+		font-size: 16px;
+	}
+}
+
+.CTCTutorial-tab-title {
+	line-height: 16px;
+}
+
+.invoice2-popup-wrap {
+	.invoice2-popup-content {
+		font-size: 18px;
+		line-height: 24px;
+		padding: 20px 0;
+		text-align: center;
+	}
+}
+
+.hashInput-wrap {
+	> div {
+		width: 100%;
+	}
+}
+
+.ctcSecBtn.btn-disable {
+	button {
+		color: #bcbec3 !important;
+		background: #efeff4 !important;
+	}
+}
+
+.ctc-sec-btnWrap {
+	display: flex;
+	height: 48px;
+	> div {
+		flex: 1;
+	}
+	button {
+		font-size: 16px;
+		border-radius: 8px;
+	}
+	.ctc-ok-btn {
+		margin-left: 15px;
+	}
+	.ctc-cancel-btn {
+		border: 1px solid #00a6ff;
+		background: #fff;
+		color: #00a6ff;
+		&:active {
+			background: initial;
+		}
+	}
+}
+
+.textarea-default {
+	width: 100%;
+	padding: 12px;
+	background: #fff;
+	color: #000;
+	border: 0;
+	border-radius: 8px;
+	box-sizing: border-box;
+	border: 1px solid #f3f3f3;
+	transition: all 0.2s;
+	outline: none;
+	resize: none;
+	font-family: auto;
+	font: 400 16px Arial;
+}
+
+.importantModal-wrap {
+	color: #666666;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+/* 优惠申请后的状态页 */
+.PromoDepositStatus {
+	padding: 10px;
+	.DepositStatus {
+		height: 323px;
+		background: #ffffff;
+		border-radius: 8px;
+		padding: 10px;
+		margin-bottom: 20px;
+		.icon {
+			text-align: center;
+			line-height: 30px;
+			padding-top: 20px;
+			font-size: 17px;
+		}
+		.Amount {
+			display: flex;
+			justify-content: space-between;
+			padding: 25px 10px;
+			label {
+				color: #999999;
+			}
+			b {
+				font-size: 20px;
+				font-weight: 500;
+			}
+		}
+		.Content {
+			border: 1px solid #e3e3e8;
+			padding: 20px;
+			border-radius: 8px;
+			text-align: center;
+			line-height: 25px;
+			label {
+				font-size: 16px;
+			}
+			.list {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 10px;
+				label {
+					font-size: 12px;
+					color: #666666;
+				}
+			}
+		}
+	}
+	.Btn {
+		//background-color: #ffffff;
+		border: 0.027rem solid #00a6ff;
+		border-radius: 1.7296px;
+		width: 100%;
+		padding: 6.4864px;
+		text-align: center;
+		color: #00a6ff;
+	}
+
+	.Btn.active {
+		background-color: #00a6ff;
+		color: #ffffff;
+		margin-bottom: 20px;
+	}
+}
+
+._Todeposit {
+	margin-top: 10px;
+	background: white !important;
+	border: 1px solid #00a6ff !important;
+	color: #00a6ff !important;
+	font-size: 16px;
+}
+
+.PromoContent {
+	border: 1px solid #e3e3e8;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 25px;
+	label {
+		font-size: 16px;
+	}
+	.list {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 10px;
+		label {
+			font-size: 12px;
+			color: #666666;
+		}
+	}
+}
+
+//本銀-存款銀行變更提示
+.LB-Modal {
+	top: calc(50vh - 2.67rem); // 100px/37.5 = 2.67rem
+	.modal-info-title {
+		background-color: #00a6ff;
+		color: #ffffff;
+		font-size: t.px2rem(16px);
+		line-height: t.px2rem(22px);
+		padding: t.px2rem(11px) 0 t.px2rem(11px) 0;
+	}
+	.modal-info-content {
+		font-size: t.px2rem(14px);
+		color: #666666;
+		padding: t.px2rem(24px) t.px2rem(16px) t.px2rem(24px) t.px2rem(16px);
+		.confirm-btn-wrap {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			button {
+				span {
+					font-size: t.px2rem(16px);
+				}
+			}
+		}
+	}
+}
+
+.verifyBtn_notice {
+	width: 90% !important;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-size: 16px;
+}
+.Send-Modal {
+	.modal-info-title {
+		background: #00a6ff;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+		font-weight: 500;
+		font-size: 17px;
+	}
+	.modal-info-content {
+		text-align: center;
+	}
+	.confirm-btn-wrap {
+		justify-content: center;
+		width: 100%;
+		button:first-child {
+			display: none;
+		}
+		button {
+			width: 100%;
+		}
+	}
+	.modal-close::before,
+	.modal-close::after {
+		background-color: #fff;
+
+	}
+}
+
+.ERRORSHOW {
+	background-color: #fee0e0;
+	padding: 5px 10PX;
+	border-radius: 6px;
+	color: #eb2121;
+	font-size: 12px;
+}
+
+.ModalErrorShow {
+	.confirm-btn-wrap {
+		justify-content: center !important;
+		flex: 1;
+		button:first-child {
+			display: none;
+		}
+		button {
+			width: 100% !important;
+		}
+	}
+}
+
+.Deposit-SkeletonTheme {
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	> span {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+
+.Deposit__VerifyModal {
+	.content {
+		padding: 30px 10px 0px;
+		line-height: 23px;
+		text-align: center;
+	}
+	img {
+		width: 64px;
+		height: 64px;
+	}
+	.footerBtn {
+		width: 100%;
+		margin-top: 25px;
+		.whitebtn {
+			background-color: white;
+			border: 1px solid #00a6ff;
+			color: #00a6ff;
+		}
+		button {
+			margin: 10px;
+		}
+	}
+}
+
+.DepositVerify {
+	height: 100VH;
+	background-color: #efeff4;
+	.DepositVerifySet {
+		.verifyPhoneMail__text {
+			padding: 0 !important;
+			background-color: white;
+		}
+	}
+}
+
+.ModalErrorShow {
+	.errorTxt {
+		margin: 10px 0 20px;
+		line-height: 20px;
+	}
+}
+
+//網銀彈窗
+.PPB-Modal {
+	.PPB-Modal-content {
+		padding-bottom: 0.2rem !important;
+	}
+	.PPB-Modal-text {
+		line-height: 20px;
+		margin-bottom: 0.3rem;
+	}
+	.PPB-Modal-text2 {
+		text-align: center;
+		vertical-align: center;
+		color: #222222;
+		font-size: t.px2rem(18px);
+		margin-top: t.px2rem(16px);
+		margin-bottom: t.px2rem(40px);
+		padding-bottom: 0 !important;
+	}
+	.modal-info-title {
+		background-color: #00a6ff;
+		color: #ffffff;
+		font-size: t.px2rem(16px);
+		line-height: t.px2rem(22px);
+		padding: t.px2rem(11px) 0 t.px2rem(11px) 0;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.modal-info-content {
+		font-size: t.px2rem(14px);
+		color: #666666;
+		padding: t.px2rem(24px) t.px2rem(16px) t.px2rem(24px) t.px2rem(16px);
+		button {
+			span {
+				font-size: t.px2rem(16px);
+			}
+		}
+
+		.PPB-Modal-button-yes {
+			margin-bottom: t.px2rem(20px);
+		}
+	}
+	.detail {
+		padding: 10px;
+		background-color: #f3f3f3;
+		font-size: t.px2rem(12px);
+		color: #222222;
+		line-height: 18px;
+		border-radius: 8px;
+	}
+	dt {
+		line-height: 18px;
+		color: #000;
+		font-size: t.px2rem(14px);
+		span {
+			color: red;
+		}
+		&.lastTip {
+			padding: 10px;
+			background-color: #fff5bf;
+			font-size: t.px2rem(12px);
+			color: #83630b;
+			border-radius: 8px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+//小額存款 彈窗
+.SR-Modal {
+	top: calc(50vh - 2.67rem); // 100px/37.5 = 2.67rem
+	.SR-Modal-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	//放大 比較好按
+	.SR-Modal-close-container {
+		align-self: flex-end;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: t.px2rem(28px);
+		height: t.px2rem(28px);
+		margin-right: t.px2rem(-7px);
+		margin-top: t.px2rem(-7px);
+	}
+	.SR-Modal-close {
+		width: t.px2rem(14px);
+		height: t.px2rem(14px);
+	}
+	.SR-Modal-warning {
+		width: t.px2rem(54px);
+		height: t.px2rem(54px);
+	}
+	.SR-Modal-desc {
+		margin-top: t.px2rem(16px);
+		margin-bottom: t.px2rem(16px);
+		text-align: center;
+		line-height: t.px2rem(24px);
+		font-size: t.px2rem(13px);
+		font-weight: 600;
+	}
+}
+
+.ppb-step2-info {
+	.ppb-count-down {
+		color: #f11818;
+		font-size: t.px2rem(18px);
+	}
+	.sr-count-down {
+		color: #f11818;
+		font-size: t.px2rem(16px);
+	}
+
+	.copy2-copied-icon-container {
+		margin-left: t.px2rem(16px);
+	}
+
+	.ppb-deposit-amount-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-bottom: #efeff4 1px solid;
+
+		.ppb-deposit-amount-wrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			.ppb-deposit-amount-flag {
+				color: #0ccc3c;
+				font-size: t.px2rem(24px);
+			}
+			.sr-deposit-amount-flag {
+				color: #000000;
+				font-size: t.px2rem(24px);
+			}
+			.ppb-deposit-amount {
+				color: #0ccc3c;
+				font-size: t.px2rem(32px);
+				margin-right: t.px2rem(8px);
+			}
+			.sr-deposit-amount {
+				color: #000000;
+				font-size: t.px2rem(32px);
+				margin-right: t.px2rem(8px);
+			}
+			.sr-deposit-amount-copy-container {
+				margin-right: -53px;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+			}
+		}
+		.ppb-deposit-amount-desc {
+			color: #f11818;
+			font-size: t.px2rem(12px);
+			margin-top: t.px2rem(12px);
+			margin-bottom: t.px2rem(20px);
+		}
+		.sr-deposit-amount-desc {
+			color: #999999;
+			font-size: t.px2rem(12px);
+			margin-top: t.px2rem(12px);
+			margin-bottom: t.px2rem(20px);
+		}
+	}
+
+	.sport-deposit-receipt {
+		border-bottom: none !important;
+		margin-bottom: 0 !important;
+	}
+
+	.item-content {
+		color: #000000;
+
+		.copy2-action-icon {
+			margin-left: t.px2rem(16px);
+		}
+	}
+
+	.ppb-deposit-notice {
+		color: #f11818;
+		font-size: t.px2rem(12px);
+		padding: t.px2rem(6px);
+		margin-bottom: t.px2rem(10px);
+		line-height: 15px;
+	}
+	.sr-deposit-notice {
+		color: #000000;
+		font-size: t.px2rem(12px);
+		padding: t.px2rem(6px);
+		margin-bottom: t.px2rem(10px);
+		> .underline_a {
+			font-size: t.px2rem(12px);
+		}
+	}
+}
+
+.ppb-step2-qr {
+	margin-top: t.px2rem(8px);
+	padding-bottom: t.px2rem(12px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.ppb-qrcode-desc {
+		color: #999999;
+		font-size: t.px2rem(12px);
+	}
+	.ppb-qrcode-wrapper {
+		margin: t.px2rem(8px);
+		padding: t.px2rem(8px);
+		border-radius: t.px2rem(8px);
+		border: #ececec 1px solid;
+	}
+}
+
+.ppb-step2-button {
+	button {
+		span {
+			font-size: t.px2rem(16px);
+		}
+	}
+}
+
+.copy2-action-icon {
+	width: t.px2rem(14px);
+	height: t.px2rem(14px);
+	background-image: url($base-path + '/img/deposit/copy2.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.copy2-copied-icon-container {
+	width: t.px2rem(14px);
+	height: t.px2rem(14px);
+}
+.copy2-copied-icon-show {
+	background-image: url($base-path + '/img/deposit/copy2-copied.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.SRSuggestedAmountDiv {
+	position: relative;
+	width: 100%;
+	height: auto;
+	color: #000;
+	font-size: 12px;
+	border: 0;
+	margin-top: -8px;
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+	ul::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	ul {
+		li {
+			font-size: 14px;
+			float: left;
+			width: 22%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			margin-right: 1.5%;
+			margin-left: 1.5%;
+			margin-top: 13px;
+			border: 1px solid #e3e3e8;
+			border-radius: 4px;
+			background: white;
+			cursor: pointer;
+			&:hover {
+				background-color: #00a6ff;
+				color: white;
+			}
+			&.true {
+				background-color: #00a6ff;
+				color: white;
+			}
+			&.disabled {
+				background-color: #efeff4;
+				border: 0 !important;
+				color: #bcbec3;
+			}
+		}
+	}
+	> .cannotdeposit {
+		margin-top: 8px;
+		color: #eb2121;
+	}
+}
+
+.input__wrap {
+	&.hide {
+		display: none;
+	}
+}
+
+.lastDepositBox {
+	text-align: left;
+	padding: 15px 0 30px 0;
+	color: #666666;
+	margin-top: -15px;
+
+	.Center {
+		background-color: #efeff4;
+		padding: 20px 25px;
+		text-align: left;
+		line-height: 20px;
+		border-radius: 10px;
+		margin: 10px 0 15px 0;
+	}
+}
+
+.IWMMPopover {
+	padding: 15px 5px;
+	background-color: #e0fce7;
+	margin: 7px 9px 10px 7px;
+	color: #208139;
+	position: relative;
+	margin-top: -5px;
+	border-radius: 0px 0px 8px 8px;
+	font-size: 13PX;
+}
+.IWMMPopover::after {
+	content: "";
+	position: absolute;
+	top: -8px;
+	left: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	right: 0;
+	margin: 0 auto;
+	width: 2px;
+	border-bottom: 15px solid #e0fce7;
+}
+
+.DetailsPageInfo {
+	background-color: white;
+	margin: 15px 15px;
+	border-radius: 8px;
+	padding: 10px;
+	.EndInfo {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		img {
+			margin: 10px;
+		}
+		b {
+			margin: 10px;
+		}
+		center {
+			color: #666666;
+			margin: 10px;
+			line-height: 20px;
+		}
+	}
+}
+.chargesHandling {
+	.modal-info-title {
+		font-weight: normal;
+		font-size: t.px2rem(16px);
+	}
+	.deposit-result {
+		.detail {
+			padding: 10px;
+			background-color: #f3f3f3;
+			font-size: t.px2rem(12px);
+			color: #222222;
+			line-height: 18px;
+			border-radius: 8px;
+		}
+		dt {
+			line-height: 18px;
+			color: #000;
+			font-size: t.px2rem(14px);
+			span {
+				color: red;
+			}
+			&.lastTip {
+				padding: 10px;
+				background-color: #fff5bf;
+				font-size: t.px2rem(12px);
+				color: #83630b;
+				border-radius: 8px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.button_sportBtn__mSDS3 {
+		font-size: t.px2rem(16px);
+	}
+}

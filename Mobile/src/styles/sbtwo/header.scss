@@ -1,0 +1,236 @@
+@use "../t";
+
+.sbtwo-header-wrapper {
+	width: 100%;
+	height: t.px2rem($header-height);
+	line-height: t.px2rem($header-height);
+	padding: $left-right-distance-small;
+	box-sizing: border-box;
+	font-size: t.px2rem(15px);
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	@include t.themify() using($val) {
+		color: t.themed($val, #fff, #000);
+		background-color: t.themed($val, $light-theme-color, $light-theme-color);
+	}
+
+	.rc-tabs-nav-operations {
+		height: initial;
+		line-height: initial;
+	}
+
+	.tabs .rc-tabs-ink-bar {
+		border-radius: t.px2rem(16px);
+	}
+
+	&.header-bar {
+		text-align: center;
+		position: relative;
+
+		.header-tools-wrapper {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 10px;
+			margin: auto;
+		}
+	}
+
+	.back-icon,
+	.down-arrow {
+		//position: absolute;
+		//left: 10px;
+		line-height: inherit;
+		z-index: 1000;
+
+		svg {
+			width: t.px2rem(26px);
+			height: t.px2rem(26px);
+			vertical-align: -0.2rem;
+			fill: #fff;
+		}
+	}
+
+	.header-menu-btn {
+		display: inline-block;
+		position: relative;
+	}
+
+	.unread-dot {
+		width: 6px;
+		height: 6px;
+		background: red;
+		position: absolute;
+		right: 0;
+		top: 18px;
+		border-radius: 50%;
+	}
+	.header-game-menu {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+		.Active {
+			border-bottom: 2px solid white;
+			height: 45px;
+		}
+		.menu-item {
+			position: relative;
+			.maintenance {
+				position: absolute;
+				width: 35px;
+				font-size: 12px;
+				top: 3px;
+				right: -17px;
+				transform: scale(.8);
+				background-color: #ffeda6;
+				color: #704708;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				border-radius: 3px;
+			}
+		}
+	}
+	.header-game-select {
+		display: inline-block;
+		width: t.px2rem(90px);
+		height: t.px2rem(40px);
+		line-height: t.px2rem(40px);
+		vertical-align: middle;
+		overflow: hidden;
+		margin: 0 t.px2rem(6px);
+		position: relative;
+		z-index: 100;
+		border-radius: 8px;
+
+		& > div {
+			padding: 0 t.px2rem(8px);
+
+			& > span {
+				float: right;
+			}
+
+			&:first-child {
+				border-top-right-radius: 8px;
+				border-top-left-radius: 8px;
+			}
+
+			&:last-child {
+				border-bottom-width: 0 !important;
+				border-bottom-right-radius: 8px;
+				border-bottom-left-radius: 8px;
+			}
+		}
+
+		&.open {
+			overflow: visible;
+			background-color: #fff;
+			color: #000;
+
+			& > div {
+				&:first-child {
+					color: $light-theme-color;
+				}
+
+				background-color: #fff;
+				border-bottom: 1px solid #ddd;
+			}
+
+			svg {
+				fill: $light-theme-color;
+			}
+		}
+
+		.header-select-svg {
+			float: right;
+		}
+
+		svg {
+			fill: #fff;
+			vertical-align: -0.08rem;
+			width: t.px2rem(20px);
+			height: t.px2rem(20px);
+		}
+	}
+
+	&.header-search {
+		display: flex;
+	}
+
+	.header-search-wrapper {
+		display: flex;
+		align-items: center;
+		margin-left: t.px2rem(30px);
+		width: 100%;
+
+		> .input__wrap {
+			width: 100%;
+			flex: 1;
+			line-height: 1;
+
+			> input {
+				padding: 10px 12px;
+				padding-left: 38px;
+				border-radius: 20px;
+			}
+
+			> input::placeholder {
+				color: #dadada;
+			}
+
+			.loginSVG svg {
+				width: 14px;
+			}
+
+			.clear-input-val {
+				opacity: unset;
+				background-color: #efeff4;
+				right: 70px;
+
+				> .span {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 18px;
+					height: 18px;
+				}
+			}
+
+			.button-search {
+				position: absolute;
+				right: 2px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				height: 33px;
+				width: 52px;
+				border-radius: 20px;
+				background: #00a6ff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 14px;
+			}
+		}
+
+		& > span {
+			flex-basis: 60px;
+			text-align: center;
+		}
+	}
+}
+
+.AviatorHeader {
+	// .rc-collapse {
+	// 	width: 120px;
+	// 	border-radius: 8px;
+	// 	text-align: left;
+	// 	padding-left: 10px;
+	// 	margin-right: 10px;
+	// 	overflow: hidden;
+	// }
+	// .rc-collapse-header {
+	// 	line-height: 15px !important;
+	// }
+}

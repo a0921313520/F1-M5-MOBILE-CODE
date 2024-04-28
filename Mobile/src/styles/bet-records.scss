@@ -1,0 +1,244 @@
+.Bettingrecord {
+	.selectTab {
+		background: #ffffff38 0% 0% no-repeat padding-box;
+		border-radius: 14px;
+		padding: 8px 10px;
+		font-size: 12px;
+		display: flex;
+		margin-left: 10px;
+		svg {
+			margin: 0 0 0 10px;
+		}
+	}
+	.dropdown-arrow svg {
+		fill: white;
+	}
+	.dropdown-single svg {
+		fill: white;
+	}
+	.Header .Navbar-left {
+		.note {
+			padding-bottom: 5px;
+			svg {
+				width: 18px;
+			}
+		}
+		.sanjiao {
+			display: block;
+			width: 0;
+			height: 0;
+			border-width: 0 6px 7px;
+			border-style: solid;
+			border-color: transparent transparent #363636;
+			position: absolute;
+			left: 29%;
+			top: -7px;
+		}
+	}
+	.Bettingrecord-popover {
+		line-height: 20px;
+		top: 42px;
+		width: 94%;
+		left: 12px;
+		z-index: 9;
+		> div {
+			display: flex;
+			justify-content: flex-end;
+		}
+		.popover_popoverArrow__1n2Gy {
+			top: -8px !important;
+			left: -93px !important;
+		}
+		.popover_popoverClose__3kzHy svg {
+			right: 15px;
+			top: 5px;
+			bottom: unset;
+		}
+		.popover_popoverInner__aTBYO {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 80%;
+		}
+		.popover_popoverClose___BKPU {
+			svg {
+				bottom: initial;
+			}
+		}
+	}
+	.Filter {
+		background-color: #00a6ff;
+		color: #fff;
+		padding: 15px;
+		.Filter-left {
+			.Button {
+				border: 0.0625rem solid #fff;
+				border-radius: 30px;
+				font-size: 12px;
+				padding: 4px 10px;
+				svg {
+					width: 17px;
+					height: 17px;
+					margin: 0 5px;
+				}
+			}
+		}
+	}
+	.Content {
+		margin: 15px;
+		padding-bottom: 100px;
+		&.hedeBottom{
+			padding-bottom: 10px;
+		}
+
+		.Betrecords-total {
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0rem 0.125rem 0.25rem rgb(99 99 99 / 10%);
+			line-height: 25px;
+			padding: 16px;
+			margin-bottom: 10px;
+		}
+	}
+	.Shadow-wrapper {
+		background: #fff;
+		margin-top: 16px;
+		border-radius: 10px;
+		box-shadow: 0rem 0.125rem 0.25rem rgb(99 99 99 / 10%);
+		padding: 16px;
+	}
+	.betrecord-item {
+		position: relative;
+		font-size: 12px;
+		color: #999;
+		.Title {
+			padding: 0 .625rem .625rem 10px;
+			border-bottom: 0.0625rem solid #f3f3f3;
+			dt {
+				position: relative;
+				width: 40px;
+				height: 40px;
+				img {
+					width: 100%;
+					border-radius: 50%;
+				}
+			}
+			dd {
+				padding-left: 15px;
+				h2 {
+					padding-bottom: 10px;
+					color: #222222;
+				}
+				.dl-time {
+					padding-bottom: 3px;
+					color: #666666;
+				}
+				.dl-text {
+					display: block;
+				}
+			}
+		}
+		.am-icon-right {
+			position: absolute;
+			right: 20px;
+			top: 24px;
+		}
+		.betrecord-amount-wrap {
+			padding-top: 10px;
+			.betrecord-amount {
+				line-height: 35px;
+			}
+		}
+
+		ul li {
+			line-height: 25px;
+		}
+	}
+	.color-grey {
+		color: #222222;
+	}
+	.color-green {
+		color: #42d200;
+	}
+	.color-red {
+		color: #f92d2d;
+	}
+	.Header {
+		.Navbar-right {
+			.vip-customer-service {
+				width: 30px;
+				height: 30px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	.backToTop{
+		width: 40px;
+		height: 40px;
+		position: fixed;
+		right: 30px;
+		bottom: 80px;
+		background-color: #fff;
+		border-radius: 50%;
+		z-index: 1;
+		font-size: 24px;
+		text-align: center;
+		padding-top: 5px;
+		box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+	}
+	.noMore{
+		line-height: 40px;
+		color: #999;
+	}
+	.loading-gif{
+		width: 50%;
+		line-height: 40px;
+		color: #999;
+		margin: auto;
+		.share-loading{
+			width: 20px;
+			background-image: url($base-path + "/img/P5/icon/loading.gif");
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 5px;
+		}
+	}
+}
+
+.autoCenter {
+	height: calc(100vh - 265px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Time-btn {
+	span {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		.timer-box{
+			position: relative;
+			.time-bg {
+				width: 30px;
+				height: 30px;
+				background-image: url($base-path + '/img/loading.png');
+				background-size: cover;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #ACACAC;
+				animation: spin 1s infinite;
+			}
+			.time{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -40%);
+			}
+		}
+	}
+}
